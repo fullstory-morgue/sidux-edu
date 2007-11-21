@@ -1,5 +1,9 @@
 sidux-edu (0.1) unstable; urgency=low
 
-  * Initial release. 
+  [ Fabian Wuertz ]
+  * Initial release.
 
- -- Fabian Wuertz <xadras@sidux.com>  Tue, 06 Nov 2007 16:29:35 -0500
+  [ Horst Tritremmel ]
+  * changed to automake1.10
+
+ -- Horst Tritremmel <hjt@sidux.com>  Wed, 21 Nov 2007 22:04:17 +0100

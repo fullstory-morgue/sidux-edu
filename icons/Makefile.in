@@ -484,8 +484,9 @@ uninstall-am: uninstall-kde-icons  uninstall-info-am
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
+
 #>+ 2
-KDE_DIST=hi32-app-seminarix_informatik.png hi48-app-seminarix.png Makefile.in hi32-app-seminarix_physik.png hi32-app-seminarix_allgemein.png hi32-app-seminarix_chemie.png hi32-app-seminarix_musik.png hi32-app-seminarix_mathematik.png hi32-app-seminarix.png hi32-app-seminarix_kunst.png hi32-app-seminarix_erdkunde.png hi16-app-seminarix.png hi22-app-seminarix.png hi32-app-seminarix_religion.png hi64-app-seminarix.png hi96-app-seminarix.png hi32-app-seminarix_technik.png Makefile.am hi32-app-seminarix_lernspiele.png hi32-app-seminarix_sprachen.png 
+KDE_DIST=hi32-app-seminarix_informatik.png hi48-app-seminarix.png Makefile.in hi32-app-seminarix_physik.png hi32-app-seminarix_allgemein.png hi32-app-seminarix_chemie.png hi32-app-seminarix_musik.png hi32-app-seminarix_mathematik.png hi32-app-seminarix.png hi32-app-seminarix_kunst.png hi32-app-seminarix_erdkunde.png hi16-app-seminarix.png hi22-app-seminarix.png hi32-app-seminarix_religion.png hi64-app-seminarix.png hi96-app-seminarix.png hi32-app-seminarix_technik.png hi32-app-seminarix_lernspiele.png Makefile.am hi32-app-seminarix_sprachen.png 
 
 #>+ 2
 docs-am:

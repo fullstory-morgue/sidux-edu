@@ -715,6 +715,7 @@ install-data-local:
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
+
 #>+ 3
 edu.moc: $(srcdir)/edu.h
 	$(MOC) $(srcdir)/edu.h -o edu.moc
@@ -727,7 +728,7 @@ clean-metasources:
 	-rm -f  edu.moc
 
 #>+ 2
-KDE_DIST=Makefile.in sidux-edu.desktop edudialog.ui Makefile.am siduxEduInstallApp 
+KDE_DIST=Makefile.in edudialog.ui sidux-edu.desktop Makefile.am siduxEduInstallApp 
 
 #>+ 4
 clean-ui:
