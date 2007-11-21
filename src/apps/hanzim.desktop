@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Hanzim
+Icon=hanzim
+Exec=hanzim
+TryExec=hanzim
+Package=hanzim
+Description=Einfach, einfaches Chinesisch lernen.
+Categories=Seminarix-Sprachen

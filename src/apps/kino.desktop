@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Kino
+Icon=kino
+Exec=kino
+TryExec=kino
+Package=kino
+Description=Mit Kino lassen sich Dateien von einer Videokamera &uuml;ber einen Firewire-Anschluss auf den Rechner laden, bearbeiten und schneiden.
+Categories=Seminarix-Kunst

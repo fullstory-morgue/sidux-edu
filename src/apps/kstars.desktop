@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=KStars
+Icon=kstars
+Exec=kstars
+TryExec=kstars
+Package=kstars
+Description=Astroprogramm und Bestandteil des KDE-Projekts Planetarium.
+Categories=Seminarix-Musik

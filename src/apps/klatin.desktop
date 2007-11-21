@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=KLatin
+Icon=klatin
+Exec=klatin
+TryExec=klatin
+Package=klatin
+Description=Bietet Wiederholungsprogramme für die lateinische Sprache. Es gibt drei Teile, in denen verschiedene Bereiche der Sprache geübt werden können, und zwar: Wortschatz, Grammatik und ein Testverfahren zur korrekten Bildung von Verben. Zusätzlich werden eine Reihe von Wiederholungsübungen angeboten, die zum Selbststudium genutzt werden können. Im Bereich Wortschatz ist ein XML-File eingebaut zur Übersetzung von zahlreichen Wörtern in andere Sprachen. KLatin fragt den Benutzer nach der korrekten Übersetzung dieser Wörter in einem Multiple-Choice-Verfahren. Im Bereich Grammatik fragt das Programm nach bestimmten Formen des Verbs oder des Nomens, z.B. dem Ablativ Singular oder der 1. Person Indikativ Passiv Plural, hier aber nicht im Multiple-Choice Format. Unter Einstellungen sind verschiedene Sprachkombinationsmöglichkeiten einstellbar. Dieses Paket ist Bestandteil des offiziellen KDE Edutainment Moduls.
+Categories=Seminarix-Sprachen

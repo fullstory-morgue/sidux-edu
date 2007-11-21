@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=KPDF
+Icon=kpdf
+Exec=kpdf
+TryExec=kpdf
+Package=kpdf
+Description=Stellt das weitverbreitete PDF-Format dar.
+Homepage=http://kpdf.kde.org/
+Categories=Seminarix-Allgemein
+
+

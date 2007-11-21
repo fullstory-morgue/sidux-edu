@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=TuxMath
+Icon=tuxmath
+Exec=tuxmath
+TryExec=tuxmath
+Package=tuxmath
+Description=Tuxmath ist ein Mathematiktrainer für Kinder. Das Spielprinzip ähnelt Missile Command, sprich es fallen Matheaufgaben vom Himmel und Tux muss die richtige Lösung in seinen Abwehrlaser eingeben. Sonst werden die Städte zerstört.
+Homepage=http://www.newbreedsoftware.com/tuxmath/
+Categories=Seminarix-Lernspiele

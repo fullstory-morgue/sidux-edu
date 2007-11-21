@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=KVocTrain
+Icon=kvoctrain
+Exec=kvoctrain
+TryExec=kvoctrain
+Package=kvoctrain
+Description=KVocTrain ist ein kleines Werkzeug, das Ihnen beim Lernen des Vokabulars hilft, wenn Sie versuchen, eine fremde Sprache zu lernen. Sie können Ihre eigene Datenbank mit den Wörtern, die Sie benötigen, erzeugen. Es dient als Ersatz für Karteikarten. Sie erinnern sich vermutlich an den Einsatz von Karteikarten in der Schule. Wenn Ihnen die Übersetzung bekannt war, haben Sie sie zur Seite gelegt. Laden Sie bitte als Erstes die "Beispieldatei". Dieses Paket ist Bestandteil des offiziellen KDE-Edutainment-Moduls.
+Categories=Seminarix-Sprachen

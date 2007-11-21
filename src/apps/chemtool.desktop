@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=ChemTool
+Icon=chemtool
+Exec=chemtool
+TryExec=chemtool
+Package=chemtool
+Description=Chemtool ist ein 2D-Moleküleditor, mit dem organische Moleküle zusammengesetzt oder Moleküle im mol- und pdb-Format eingefügt werden können, (wobei die importierten Moleküle z.T. noch bearbeitet werden können. 3D-Moleküle können ebenfalls importiert und in 2D-Versionen übersetzt werden.) Die erzeugten Moleküle können in verschiedenen Formaten exportiert werden. (Das Programm besitzt ein Hilfsprogramm, mit dem man Summenformeln bestimmen und Molmassen berechnen lassen kann.)
+Homepage=http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html
+Categories=Seminarix-Chemie
+

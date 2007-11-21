@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+  
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/kde.mk
+
+### Libtool and Automake updates
+#post-patches:: debian/stamp-autothings-update
+#debian/stamp-autothings-update:
+#	cp -f /usr/share/libtool/libtool.m4 $(DEB_SRCDIR)/admin/libtool.m4.in
+#	cp -f /usr/share/libtool/ltmain.sh  $(DEB_SRCDIR)/admin/ltmain.sh
+#	for f in /usr/share/automake-1.9/*; do \
+#		if  test -f $$f && \
+#			test -f $(DEB_SRCDIR)/admin/`basename $$f`; then \
+#			cp -f $$f $(DEB_SRCDIR)/admin; \
+#		fi; \
+#	done
+#	touch $@
+#
+#clean::
+#	rm -f debian/stamp-autothings-update
+

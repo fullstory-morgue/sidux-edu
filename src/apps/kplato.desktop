@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KPlato
+Icon=kplato
+Exec=kplato
+TryExec=kplato
+Package=kplato
+Description=KPlato ist ein Programm zur Projektplanung und -verwaltung der KOffice-Suite. Aufgrund des Entwicklungsstandes und einer damit verbundenen Instabilität sollte KPlato derzeit nicht in wichtigen Arbeitsumgebungen eingesetzt werden.
+Homepage=http://www.koffice.org/kplato/
+Categories=Seminarix-Allgemein

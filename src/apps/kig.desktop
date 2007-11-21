@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KIG
+Icon=kig
+Exec=kig
+TryExec=kig
+Package=kig
+Description=Interaktive Geometrie unter Linux
+Homepage=http://edu.kde.org/kig/
+Categories=Seminarix-Mathematik

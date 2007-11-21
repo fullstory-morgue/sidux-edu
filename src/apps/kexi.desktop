@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Kexi
+Icon=kexi
+Exec=kexi
+TryExec=kexi
+Package=kexi
+Description=Kexi ist ein freier und offener Datenbank-Manager und wird als Alternative zu MS-Access entwickelt. Kexi kann zum Erzeugen von Datenbakschemata, zum Ändern, Eintragen, Abfragen und Verwalten von Daten einer Datenbank verwendet werden. Es können mit kexi Formulare erstellt werden, um eine maßgeschneiderte Benutzeroberfläche für die Datenverwaltung zu erhalten. Alle Datenbankobjekte wie Tabellen, Abfragen und Formulare werden in einer relationalen Datenbank vorgehalten. Es können Daten aus einer Mysql- oder PostgreSQL-Datenbank übernommen werden, um sie mit kexi weiter zu nutzen und es können Kexi-Datenbankdateien auf einen MySQL oder PostgreSQL-Server exportiert werden. Darüberhinaus kann Kexi MS-Access-Datenbank-Tabellen übernehmen. Makros, sowie die Programmiersprachen Python und Ruby werden unterstützt (noch im Entwicklungszustand)
+Homepage=http://www.kexi-project.org/
+Categories=Seminarix-Allgemein

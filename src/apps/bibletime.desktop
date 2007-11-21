@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=BibleTime
+Icon=bibletime
+Exec=bibletime
+TryExec=bibletime
+Package=bibletime
+Description=Zurück zu den Wurzeln: Die Bibel in verschiedenen Sprachen, nachinstallierbare Losungen und Wörterbücher erleichtern die Arbeit im Religionsunterricht. Auch Kirchenväter sind mit ihren Erkenntnissen installierbar.
+Homepage=http://www.bibletime.info/de/index.html
+Categories=Seminarix-Religion

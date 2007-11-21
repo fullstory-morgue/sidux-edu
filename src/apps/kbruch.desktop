@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KBruch
+Icon=kbruch
+Exec=kbruch
+TryExec=kbruch
+Package=kbruch
+Description=Übungsprogramm zu Bruchrechnung  - aus dem Projekt edu.kde.org. KBruch ist ein Programm für Bruchrechnen-Übungen. Für Übungen zu Addition/Multiplikation/Division, zum Vergleichen, zum Umrechnen und zum Faktorisieren/Kürzen.
+Homepage=http://edu.kde.org/kbruch
+Categories=Seminarix-Mathematik

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KEduca
+Icon=keduca
+Exec=keduca
+TryExec=keduca
+Package=keduca
+Description=Mit Hilfe dieses Programms lassen sich Tests und Abfragen zu beliebigen Inhalten als auch Multiple-Choice-Abfragen entwickeln und am Rechner durchführen. Das Programm KEduca-Builder erlaubt das Erstellen der Urform.
+Homepage=http://edu.kde.org/keduca/
+Categories=Seminarix-Allgemein

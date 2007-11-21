@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=wxMaxima
+Icon=wxmaxima
+Exec=wxmaxima
+TryExec=wxmaxima
+Package=wxmaxima
+Description=Graphische Oberfläche für das Computeralgebrasystem(cas) maxima<br><br>Maxima ist ein freies und leistungsfähiges Computeralgebrasystem.<br>Einige Funktionen und Fähigkeiten:<ul><li>Lösen von Gleichungssystemen</li><li>Grenzwertermittlung</li><li>Trigonometrische Berechnungen</li><li>Polynommanipulationen</li><li>Differenzieren sowie Lösung von Differenzialgleichungen 1. und 2. Ordnung</li><li>Integrieren</li><li>Matrizen</li><li>diverse Anwendungen der Wahrscheinlichkeitsrechnung</li></ul><br>und vieles mehr. <br> (wx)Maxima kann Funktionen grafisch in 2- und 3-dimensionalen Funktionsgrafen darstellen und auch ausdrucken lassen.
+Categories=Seminarix-Mathematik

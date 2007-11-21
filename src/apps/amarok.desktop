@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Amarok
+Icon=amarok
+Exec=amarok
+Package=amarok
+Type=Application
+Description=Unter Linux ein weit verbreitetes Audio Wiedergabeprogramm
+Homepage=http://amarok.kde.org/
+Categories=Seminarix-Musik

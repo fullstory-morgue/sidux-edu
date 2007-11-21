@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KTouch
+Icon=ktouch
+Exec=ktouch
+TryExec=ktouch
+Package=ktouch
+Description=KTouch ist ein Übungsprogramm zum Maschinenschreiben für KDE. Zunächt stellen Sie das gewünschte Tastaturlayout (vermutlich de) ein. Unter "Lektion bearbeiten" Standardlektionen auswählen ud dort eine der ...german...xml-Dateien anklicken.
+Homepage=http://edu.kde.org/ktouch/
+Categories=Seminarix-Lernspiele

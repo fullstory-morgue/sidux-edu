@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=xsane
+Icon=xsane
+Exec=xsane
+TryExec=xsane
+Package=xsane
+Description=xsane ist eine Anwendung zum scannen.
+Homepage=http://www.xsane.org/
+Categories=Seminarix-Allgemein

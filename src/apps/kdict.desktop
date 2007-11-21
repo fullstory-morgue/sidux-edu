@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KDict
+Icon=kdict
+Exec=kdict
+TryExec=kdict
+Package=kdict
+Description=Umfangreiches Wörterbuch aus dem KDE-Projekt, das inzwischen für mehr als 15 Sprachen zur Verfügung steht.
+Homepage=http://www.dict.org/
+Categories=Seminarix-Sprachen

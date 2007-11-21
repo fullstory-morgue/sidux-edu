@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Krita
+Icon=krita
+Exec=krita
+TryExec=krita
+Package=krita
+Description=Bildbearbeitungsprogramm aus dem KOffice-Projekt mit Zeichen-, aber auch Spassfunktionen.
+Homepage=http://www.koffice.org/krita/
+Categories=Seminarix-Kunst

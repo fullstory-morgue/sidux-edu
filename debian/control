@@ -1,0 +1,14 @@
+Source: sidux-edu
+Section: admin
+Priority: extra
+Maintainer: Fabian Wuertz <xadras@sidux.com>
+Build-Depends: cdbs, debhelper (>= 5), automake1.9, kdelibs4-dev
+Standards-Version: 3.7.2
+
+Package: sidux-edu
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends:
+Description: sidux-edu
+ ...
+

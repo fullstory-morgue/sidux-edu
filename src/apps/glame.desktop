@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Glame
+Icon=glame
+Exec=glame
+TryExec=glame
+Package=glame
+Description=LINUX-Audio-Editor, umfangreiche Bearbeitungsmöglichkeiten, Schwerpunkt Bearbeitung durch diverse Effekte, Kreation neuer Effekte durch Kombinationen sogenannter Bausteine. Ein interessantes Programm, im schulischen Bereich aber eher für Arbeitsgemeinschaften im Bereich Ton und Technik geeignet.
+Homepage=http://glame.sourceforge.net/
+Categories=Seminarix-Musik

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Scribus
+Icon=scribus
+Exec=scribus
+TryExec=scribus
+Package=scribus
+Description=Rahmenorientiertes und professionell einsetzbares DeskTopPublishing-Programm, mit dessen Hilfe auch Spezialaufgaben im Bereich von Seitengestaltung gelöst werden können. Das ist dann besonders interessant, wenn Gestaltgesetze aus der Wahrnehmungspsychologie bei der Erarbeitung von Arbeitsblättern ernst genommen werden.
+Homepage=http://www.scribus.net
+Categories=Seminarix-Allgemein

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KSnapshot
+Icon=ksnapshot
+Exec=ksnapshot
+TryExec=ksnapshot
+Package=ksnapshot
+Descrition=Mit KSnapshot kann man auf einfache Weise Screenshots des Desktops erstellen. Diese können entweder automatisch durch eine Zeitverzögerung erstellt werden oder aber nach Mausklick des Users. Je nach Auswahl macht KSnapshot einen Screenshot des kompletten Deskopbereichs oder nur von einem bestimmten Bereich.
+Homepage=http://www.kde.de/software/screenshots/graphik.php
+Categories=Seminarix-Kunst

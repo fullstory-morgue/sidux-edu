@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KChart
+Icon=kchart
+Exec=kchart
+TryExec=kchart
+Package=kchart
+Description=KChart ist das Diagramm-Erstellungsprogramm der KOffice-Suite . Es kann gut dazu genutzt werden, um Diagramme in Koffice-Dokumente einzubinden, z.B. in Kword dem KOffice-Textverarbeitungsprogramm oder KPresenter, dem KOffice-Präsentationsprogramm.
+Homepage=http://www.koffice.org/kchart/
+Categories=Seminarix-Allgemein

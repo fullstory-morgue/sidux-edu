@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KSpread
+Icon=kspread
+Exec=kspread
+TryExec=kspread
+Package=kspread
+Description=KSpread ist eine Tabellenkalkulation, die auch komplexe mathematische Formeln und Statistik beherrscht. Ebenfalls aus dem KOffice-Projekt.
+Homepage=http://www.koffice.org/kspread/
+Categories=Seminarix-Mathematik
