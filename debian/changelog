@@ -1,4 +1,6 @@
-sidux-edu (0.1) unstable; urgency=low
+sidux-edu (0.1.0) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
 
   [ Fabian Wuertz ]
   * Initial release.
@@ -8,4 +10,13 @@ sidux-edu (0.1) unstable; urgency=low
   * changed name of desktop symbol from sidux-edu to sidux seminarix
     appstarter
 
- -- Horst Tritremmel <hjt@sidux.com>  Thu, 22 Nov 2007 11:11:17 +0100
+  [ Stefan Lippers-Hollmann ]
+  * remove empty Recommends.
+  * fix short description.
+  * add long description.
+  * remove empty debian/install.
+  * please don't ship ./src/apps/*.desktop, that stuff is unmaintainable -
+    what about shipping links and using readlink() at runtime to determine if
+    the packages are installed?
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 22 Nov 2007 23:58:25 +0100

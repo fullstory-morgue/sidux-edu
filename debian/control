@@ -8,7 +8,6 @@ Standards-Version: 3.7.2
 Package: sidux-edu
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends:
-Description: sidux-edu
- ...
-
+Description: program starter and menu system for educational applications
+ generic menu system to act dynamically on installed packages and describe 
+ their uses for educational purposes
