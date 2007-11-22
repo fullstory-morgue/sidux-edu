@@ -3,5 +3,6 @@ Encoding=UTF-8
 Type=Application
 Exec=sidux-edu
 Icon=seminarix
-Name=sidux-edu
+Name=sidux seminarix appstarter
+Name[de]=sidux seminarix Programmstarter
 Categories=sidux

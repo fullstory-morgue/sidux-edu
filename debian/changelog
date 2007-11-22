@@ -5,5 +5,7 @@ sidux-edu (0.1) unstable; urgency=low
 
   [ Horst Tritremmel ]
   * changed to automake1.10
+  * changed name of desktop symbol from sidux-edu to sidux seminarix
+    appstarter
 
- -- Horst Tritremmel <hjt@sidux.com>  Wed, 21 Nov 2007 22:04:17 +0100
+ -- Horst Tritremmel <hjt@sidux.com>  Thu, 22 Nov 2007 11:11:17 +0100

@@ -716,6 +716,7 @@ install-data-local:
 .NOEXPORT:
 
 
+
 #>+ 3
 edu.moc: $(srcdir)/edu.h
 	$(MOC) $(srcdir)/edu.h -o edu.moc
