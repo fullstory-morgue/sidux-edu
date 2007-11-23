@@ -20,4 +20,8 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
     the packages are installed?
   * remove empty debian/links.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 23 Nov 2007 00:00:57 +0100
+  [ Fabian Wuertz ]
+  * amarok, childsplay & tuxmath desktop files fixed
+  * "All/Just installed programs" combobox inserted
+
+ -- Fabian Wuertz <xadras@sidux.com>  Fri, 23 Nov 2007 14:17:45 +0100

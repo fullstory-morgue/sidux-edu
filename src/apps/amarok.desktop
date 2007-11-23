@@ -2,6 +2,7 @@
 Name=Amarok
 Icon=amarok
 Exec=amarok
+TryExec=amarok
 Package=amarok
 Type=Application
 Description=Unter Linux ein weit verbreitetes Audio Wiedergabeprogramm

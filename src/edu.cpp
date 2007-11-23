@@ -31,6 +31,7 @@
 #include <qwidgetstack.h>
 #include <qlistbox.h>
 #include <qtextbrowser.h>
+#include <qcombobox.h>
 
 #include <klistview.h>
 #include <klistbox.h>
@@ -148,14 +149,26 @@ void edu::getApps()
 	QStringList names;
 	QStringList icons;
 	QListViewItemIterator it( listView );
-	while ( it.current() ) {
-		if ( it.current()->text(6).contains(category) )
+	if( comboBox->currentItem() == 0 )
+		while ( it.current() )
 		{
-			names.append( it.current()->text(0) );
-			icons.append( it.current()->text(1) );
+			if ( it.current()->text(6).contains(category) )
+			{
+				names.append( it.current()->text(0) );
+				icons.append( it.current()->text(1) );
+			}
+			++it;
 		}
-		++it;
-	}
+	else
+		while ( it.current() )
+		{
+			if ( it.current()->text(6).contains(category) and it.current()->text(7) == "TRUE" )
+			{
+				names.append( it.current()->text(0) );
+				icons.append( it.current()->text(1) );
+			}
+			++it;
+		}
 
 	QPixmap icon;
 	for(uint i = 0; i < names.count(); i++)
@@ -333,9 +346,14 @@ void edu::aboutKDE()
 	about->show();
 }
 
-void edu::manual()
+void edu::siduxManual()
 {
 	kapp->invokeBrowser( "/usr/share/sidux-manual/index.html" );
+}
+
+void edu::seminarixManual()
+{
+	kapp->invokeBrowser( "/usr/share/seminarix-handbuch/de/index.html" );
 }
 
 void edu::homepage()

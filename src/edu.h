@@ -59,7 +59,8 @@ class edu : public EduDialog
 		virtual void disableButtons();
 		virtual void about();
 		virtual void aboutKDE();
-		virtual void manual();
+		virtual void siduxManual();
+		virtual void seminarixManual();
 		virtual void homepage();
 		virtual void searchApp();
 

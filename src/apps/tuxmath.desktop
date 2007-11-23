@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=TuxMath
-Icon=tuxmath
+Icon=/usr/share/tuxmath/images/icons/icon.png
 Exec=tuxmath
 TryExec=tuxmath
 Package=tuxmath
