@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=gnuplot
 Icon=gnuplot
-Exec=gnuplot
+Exec=x-terminal-emulator -e gnuplot
 TryExec=gnuplot
 Package=gnuplot
 Description=Gnuplot ist ein mächtiges kommandozeilenorientiertes interaktives Plotprogramm und wird auch von graphisch basierten Programmen wie wxmaxima genutzt. Das Programm dient dem Erstellen von 2D- und 3D-Graphen von Datenfeldern und Funktionen. Es unterstützt zahlreiche Ausgabeformate einschließlich Treiber für zahlreiche Drucker, (La)TeX, (x)fig, Postscript, u.s.w.. <br><br>Die Datenfelder und selbsterstellten Funktionen können durch eine interne C-artige Programmiersprache gesteuert werden. Gnuplot kann auch mit komplexen Zahlen arbeiten.

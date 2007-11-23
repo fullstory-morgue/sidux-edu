@@ -5,4 +5,4 @@ Exec=kstars
 TryExec=kstars
 Package=kstars
 Description=Astroprogramm und Bestandteil des KDE-Projekts Planetarium.
-Categories=Seminarix-Musik
+Categories=Seminarix-Physik
