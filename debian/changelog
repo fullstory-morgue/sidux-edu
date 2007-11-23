@@ -23,5 +23,6 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   [ Fabian Wuertz ]
   * amarok, childsplay & tuxmath desktop files fixed
   * "All/Just installed programs" combobox inserted
+  * Additional Packages marker added
 
- -- Fabian Wuertz <xadras@sidux.com>  Fri, 23 Nov 2007 14:17:45 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Fri, 23 Nov 2007 19:34:07 +0100

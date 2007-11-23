@@ -26,6 +26,7 @@ install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
 	cp -aR $(srcdir)/apps $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/
+	cp -aR $(srcdir)/list $(DESTDIR)$(sharedir)/
 
 
 # translation

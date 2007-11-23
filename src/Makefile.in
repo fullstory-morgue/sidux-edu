@@ -706,6 +706,7 @@ install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
 	cp -aR $(srcdir)/apps $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/
+	cp -aR $(srcdir)/list $(DESTDIR)$(sharedir)/
 
 # translation
 #messages: rc.cpp
@@ -714,8 +715,6 @@ install-data-local:
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
-
-
 
 #>+ 3
 edu.moc: $(srcdir)/edu.h
@@ -729,7 +728,7 @@ clean-metasources:
 	-rm -f  edu.moc
 
 #>+ 2
-KDE_DIST=Makefile.in edudialog.ui sidux-edu.desktop Makefile.am siduxEduInstallApp 
+KDE_DIST=edudialog.h sidux-edu Makefile.in edudialog.ui sidux-edu.desktop Makefile.am siduxEduInstallApp 
 
 #>+ 4
 clean-ui:
@@ -778,7 +777,7 @@ bcheck-am:
 
 
 #>+ 11
-sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/edu.cpp $(srcdir)/main.cpp edudialog.cpp  edu.moc edudialog.moc
+sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/edu.cpp $(srcdir)/main.cpp $(srcdir)/edudialog.cpp  edu.moc edudialog.moc
 	@echo 'creating sidux_edu.all_cpp.cpp ...'; \
 	rm -f sidux_edu.all_cpp.files sidux_edu.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> sidux_edu.all_cpp.final; \

@@ -65,8 +65,9 @@ void edu::load()
 
 	loadKonsole();
 	konsoleFrame->installEventFilter( this );
-	execWidgetStack->raiseWidget(1);
-	homepageWidgetStack->raiseWidget(1);
+	execPushButton->hide();
+	homepagePushButton->hide();
+	addtionalPushButton->hide();
 	widgetStack->raiseWidget(3);
 
 	// setup leftmenu
@@ -87,6 +88,22 @@ void edu::getAllApps()
 	listView->clear();
 	QStringList apps = QDir( "/usr/share/sidux-edu/apps").entryList( QDir::Files );
 
+
+	QStringList seminarixApps;
+    QFile file( "/usr/share/sidux-edu/list/seminarix.list" );
+    if ( file.open( IO_ReadOnly ) ) {
+        QTextStream stream( &file );
+        QString line;
+        int i = 1;
+        while ( !stream.atEnd() ) {
+            line = stream.readLine(); // line of text excluding '\n'
+            printf( "%3d: %s\n", i++, line.latin1() );
+            seminarixApps += line;
+        }
+        file.close();
+    }
+
+
 	for( QStringList::Iterator it = apps.begin(); it != apps.end(); ++it )
 	{
 		KDesktopFile file( "/usr/share/sidux-edu/apps/"+*it );
@@ -105,6 +122,10 @@ void edu::getAllApps()
 			item->setText( 7, "TRUE" );
 		else
 			item->setText( 7, "FALSE" );
+		if( seminarixApps.contains( file.readEntry("Package") ) )
+			item->setText( 8, "TRUE" );
+		else
+			item->setText( 8, "FALSE" );
 	}
 
 
@@ -152,7 +173,7 @@ void edu::getApps()
 	if( comboBox->currentItem() == 0 )
 		while ( it.current() )
 		{
-			if ( it.current()->text(6).contains(category) )
+			if ( it.current()->text(6).contains(category) and it.current()->text(7) == "TRUE" )
 			{
 				names.append( it.current()->text(0) );
 				icons.append( it.current()->text(1) );
@@ -162,7 +183,7 @@ void edu::getApps()
 	else
 		while ( it.current() )
 		{
-			if ( it.current()->text(6).contains(category) and it.current()->text(7) == "TRUE" )
+			if ( it.current()->text(6).contains(category) )
 			{
 				names.append( it.current()->text(0) );
 				icons.append( it.current()->text(1) );
@@ -236,7 +257,7 @@ void edu::execApp()
 	}
 	else
 	{
-		if(KMessageBox::Yes == KMessageBox::questionYesNo(this, "Das Programm "+appsListBox->currentText()+" ist nicht installiert! Moechten sie es installieren?")  )
+		if(KMessageBox::Yes == KMessageBox::questionYesNo(this, "Das Programm "+appsListBox->currentText()+" ist nicht installiert! Moechten sie es aus dem Internet herunterladen und installieren?")  )
 		{
 			categoriesListView->hide();
 			searchLineEdit->hide();
@@ -284,20 +305,36 @@ void edu::enableButtons()
 	else
 		execPushButton->setText("Programm starten");
 
-	execWidgetStack->raiseWidget(0);
+	execPushButton->show();
 
 	QString homepage = listView->findItem(app, 0, Qt::ExactMatch )->text(5);
 	if( homepage != "")
-		homepageWidgetStack->raiseWidget(0);
+		homepagePushButton->show();
 	else
-		homepageWidgetStack->raiseWidget(1);
+		homepagePushButton->hide();
+
+
+	QString isSeminarix = listView->findItem(app, 0, Qt::ExactMatch )->text(8);
+	if( isSeminarix == "TRUE" )
+		addtionalPushButton->hide();
+	else
+		addtionalPushButton->show();
+		
 }
 
 void edu::disableButtons()
 {
-	execWidgetStack->raiseWidget(1);
-	homepageWidgetStack->raiseWidget(1);
+	execPushButton->hide();
+	homepagePushButton->hide();
+	addtionalPushButton->hide();
 }
+
+
+void edu::additionalPackage()
+{
+	KMessageBox::information(this, "Zusaetzliches Paket" );
+}
+
 
 //------------------------------------------------------------------------------
 //--- load console -------------------------------------------------------------
