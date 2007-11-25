@@ -319,7 +319,6 @@ void edu::enableButtons()
 		addtionalPushButton->hide();
 	else
 		addtionalPushButton->show();
-		
 }
 
 void edu::disableButtons()

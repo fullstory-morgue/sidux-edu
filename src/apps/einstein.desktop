@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Einstein Puzzle
+Icon=einstein
+Exec=einstein
+TryExec=einstein
+Package=einstein
+Description=Einstein Puzzle ist ein Programm, das eher für im logischen Denken höher begabte Menschen gedacht ist. Es geht darum, ein Raster mit 6x6 Feldern nach bestimmten, sich verändernden Regeln mit Symbolen zu füllen. Das Programm verfügt über eine englischsprachige Hilfe.
+Homepage=http://games.flowix.com/en/index.html
+Categories=Seminarix-Lernspiele

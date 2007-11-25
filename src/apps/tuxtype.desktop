@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Tuxtype
+Icon=/usr/share/tuxtype/tuxtype.xpm
+Exec=tuxtype
+TryExec=tuxtype
+Package=tuxtype
+Description=Tuxtype ist eine Übungssoftware, mit deren Hilfe Kinder spielend den Umgang mit der Tastatur lernen.<br>Das Spielprinzip ähnelt dem Programm 'Missile Command', was bedeutet, dass Fische mit Buchstaben vom oberen Ende des Bildschirms fallen, die Tux fangen und essen soll. Hierzu muss man den entsprechenden Buchstaben erwischen, bzw. das richtige Wort eingeben.<br>Es gibt verschiedene Spielmodi zum Auswählen - vom Tippen einzelner Buchstaben bis hin zu langen Wörtern. Dabei werden drei Schwierigkeitsstufen angeboten
+Homepage=http://tuxtype.sourceforge.net/
+Categories=Seminarix-Lernspiele

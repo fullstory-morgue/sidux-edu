@@ -24,6 +24,8 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * amarok, childsplay & tuxmath desktop files fixed
   * "All/Just installed programs" combobox inserted
   * Additional Packages marker added
-  * gnuplot, hebcal & kstar desktop files fixed 
+  * gnuplot, hebcal & kstar desktop files fixed
+  * kdeTray added
+  * new apps added
 
- -- Fabian Wuertz <xadras@sidux.com>  Fri, 23 Nov 2007 19:44:00 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Sun, 25 Nov 2007 13:22:31 +0100

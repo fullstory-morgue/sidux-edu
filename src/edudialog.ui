@@ -96,6 +96,9 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
                     <widget class="QTextBrowser" row="3" column="0" rowspan="1" colspan="4">
                         <property name="name">
                             <cstring>descriptionTextBrowser</cstring>

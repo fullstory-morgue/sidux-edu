@@ -17,13 +17,16 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-
-#include "edu.h"
+#include <systray.h>
+#include <unique.h>
+#include <edu.h>
 
 #include <kapplication.h>
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
 #include <klocale.h>
+#include <kdebug.h>
+
 
 
 static KCmdLineOptions options[] =
@@ -35,7 +38,7 @@ static KCmdLineOptions options[] =
 int main(int argc, char **argv)
 {
 	// specify data for About dialog
-	KAboutData* about = new KAboutData("edu", "sidux-seminarix", "");
+	KAboutData* about = new KAboutData("seminarix", "sidux-seminarix", "");
 
 	about->setProgramLogo( QImage("/usr/share/icons/hicolor/32x32/apps/seminarix.png") );
 	about->setShortDescription( "sidux-seminarix" );
@@ -56,28 +59,17 @@ int main(int argc, char **argv)
 
 	KCmdLineArgs::init(argc, argv, about);
 	KCmdLineArgs::addCmdLineOptions( options );
-	KApplication app;
-	edu *mainWin = 0;
 
-	if (app.isRestored())
-	{
-		//RESTORE(edu_main);
-	}
-	else
-	{
-		// no session.. just start up normally
-		KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
-		/// @todo do something with the command line args here
 
-		mainWin = new edu( );
-		app.setMainWidget( mainWin );
-		mainWin->show();
 
-		args->clear();
-	}
+	Unique app;
+	// start program
+	kdDebug() << "creating first instance" << endl;
+	SysTray* tray = new SysTray();
+	app.setMainWidget(tray);
+	tray->show();
 
-	// mainWin has WDestructiveClose flag by default, so it will delete itself.
 	return app.exec();
 }
 

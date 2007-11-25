@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Gambas
+Icon=gambas
+Exec=gambas
+TryExec=gambas
+Package=gambas
+Description=Gambas ist eine sehr leistungsfähige Entwicklungsumgebung mit einem Basic-Dialekt, die ein wenig an VisualBasic erinnert
+Homepage=http://gambas.sourceforge.net/
+Categories=Seminarix-Informatik

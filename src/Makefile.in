@@ -57,11 +57,14 @@ am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" \
 	"$(DESTDIR)$(xdg_appsdir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
-am_sidux_edu_OBJECTS = edu.$(OBJEXT) main.$(OBJEXT)
+am_sidux_edu_OBJECTS = edu.$(OBJEXT) main.$(OBJEXT) unique.$(OBJEXT) \
+	systray.$(OBJEXT)
 #>- sidux_edu_OBJECTS = $(am_sidux_edu_OBJECTS)
-#>+ 4
+#>+ 6
 sidux_edu_final_OBJECTS = sidux_edu.all_cpp.o 
-sidux_edu_nofinal_OBJECTS = edu.$(OBJEXT) main.$(OBJEXT) edudialog.$(OBJEXT)
+sidux_edu_nofinal_OBJECTS = edu.$(OBJEXT) main.$(OBJEXT) unique.$(OBJEXT) \
+	systray.$(OBJEXT) edudialog.$(OBJEXT)\
+unique.moc.o systray.moc.o 
 @KDE_USE_FINAL_FALSE@sidux_edu_OBJECTS = $(sidux_edu_nofinal_OBJECTS)
 @KDE_USE_FINAL_TRUE@sidux_edu_OBJECTS = $(sidux_edu_final_OBJECTS)
 am__DEPENDENCIES_1 =
@@ -354,16 +357,16 @@ xdg_menudir = @xdg_menudir@
 AM_CPPFLAGS = $(all_includes)
 
 # these are the headers for your project
-noinst_HEADERS = edu.h
+noinst_HEADERS = edu.h unique.h systray.h
 
 # let automoc handle all of the meta source files (moc)
 #>- METASOURCES = AUTO
 KDE_ICON = AUTO
 
 # the application source, library search path, and link libraries
-#>- sidux_edu_SOURCES = edu.cpp edudialog.ui main.cpp
+#>- sidux_edu_SOURCES = edu.cpp edudialog.ui main.cpp  unique.cpp systray.cpp
 #>+ 1
-sidux_edu_SOURCES=edu.cpp  main.cpp edudialog.cpp
+sidux_edu_SOURCES=edu.cpp  main.cpp  unique.cpp systray.cpp edudialog.cpp
 sidux_edu_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
 sidux_edu_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
 
@@ -478,6 +481,8 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/edu.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/systray.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/unique.Po@am__quote@
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	if $(CXXCOMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ $<; \
@@ -717,6 +722,13 @@ install-data-local:
 .NOEXPORT:
 
 #>+ 3
+unique.moc.cpp: $(srcdir)/unique.h
+	$(MOC) $(srcdir)/unique.h -o unique.moc.cpp
+
+#>+ 2
+mocs: unique.moc.cpp
+
+#>+ 3
 edu.moc: $(srcdir)/edu.h
 	$(MOC) $(srcdir)/edu.h -o edu.moc
 
@@ -724,8 +736,15 @@ edu.moc: $(srcdir)/edu.h
 mocs: edu.moc
 
 #>+ 3
+systray.moc.cpp: $(srcdir)/systray.h
+	$(MOC) $(srcdir)/systray.h -o systray.moc.cpp
+
+#>+ 2
+mocs: systray.moc.cpp
+
+#>+ 3
 clean-metasources:
-	-rm -f  edu.moc
+	-rm -f  unique.moc.cpp edu.moc systray.moc.cpp
 
 #>+ 2
 KDE_DIST=edudialog.h sidux-edu Makefile.in edudialog.ui sidux-edu.desktop Makefile.am siduxEduInstallApp 
@@ -777,11 +796,11 @@ bcheck-am:
 
 
 #>+ 11
-sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/edu.cpp $(srcdir)/main.cpp $(srcdir)/edudialog.cpp  edu.moc edudialog.moc
+sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/edu.cpp $(srcdir)/main.cpp $(srcdir)/unique.cpp $(srcdir)/systray.cpp $(srcdir)/edudialog.cpp unique.moc.cpp systray.moc.cpp  edu.moc edudialog.moc
 	@echo 'creating sidux_edu.all_cpp.cpp ...'; \
 	rm -f sidux_edu.all_cpp.files sidux_edu.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> sidux_edu.all_cpp.final; \
-	for file in edu.cpp main.cpp edudialog.cpp ; do \
+	for file in edu.cpp main.cpp unique.cpp systray.cpp edudialog.cpp unique.moc.cpp systray.moc.cpp ; do \
 	  echo "#include \"$$file\"" >> sidux_edu.all_cpp.files; \
 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> sidux_edu.all_cpp.final; \
 	done; \
@@ -812,13 +831,15 @@ no-final-install:
 kde-rpo-clean:
 	-rm -f *.rpo
 
-#>+ 7
+#>+ 9
 nmcheck: 
 edu.lo: edu.moc 
 edu.o: edu.moc 
 nmcheck-am: nmcheck
 $(srcdir)/edu.cpp: edudialog.h 
 $(srcdir)/main.cpp: edudialog.h 
+$(srcdir)/unique.cpp: edudialog.h 
+$(srcdir)/systray.cpp: edudialog.h 
 
 #>+ 15
 edudialog.cpp: $(srcdir)/edudialog.ui edudialog.h edudialog.moc

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=wxMaxima
-Icon=wxmaxima
+Icon=/usr/share/wxMaxima/icons/maximaicon.xpm
 Exec=wxmaxima
 TryExec=wxmaxima
 Package=wxmaxima

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=KVerbos
+Icon=kverbos
+Exec=kverbos
+TryExec=kverbos
+Package=kverbos
+Description=Mit KVerbos können die Schüler spanische Verbformen lernen. Das Programm schlägt ein Verb und eine Zeit vor und die Schüler geben entsprechend die verschiedenen Formen ein. Das Programm korrigiert die Benutzereingaben und gibt eine Rückmeldung. Die Schüler können die Liste von Verben verändern. Das Programm kann regelmäßige Verbformen selbst generieren. Unregelmäßige Verbformen können vom Benutzer eingegeben werden. Wenn eine Form eines Verbes unsicher sein könnte, bietet das Internet gute Quellen.<br><br>Die interessanteste Funktion in der neuesten Version ist die Benutzung von KFeeder. Das ist ein separates Programm, dass der Benutzer selbst installieren muss, wenn er es benutzen will. Wenn es installiert ist, wird der Lernprozess in KFeeder angezeigt. Ein Hund rennt herum und wird mit Knochen gefüttert, wenn Sie ein guter Schüler sind. Ansonsten wird er die meiste Zeit faul herumliegen (leicht verändert aus der Einführung des Anwenderhandbuches von KVerbos übernommen).<br><br>Unter dem Hilfe-Button im Programm Kverbos kann man auch ein ausführliches Anwenderhanbuch in deutscher Sprache anwählen. 
+Homepage=http://edu.kde.org/kverbos/
+Categories=Seminarix-Sprachen

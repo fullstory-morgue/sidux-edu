@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=gTans
+Icon=gtans_icon
+Exec=gtans
+TryExec=gtans
+Package=gtans
+Description=Elektonische Version des chinesischen Knobel-Legespiels Tangram
+Homepage=http://gtans.sourceforge.net/
+Categories=Seminarix-Lernspiele

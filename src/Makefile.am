@@ -2,7 +2,7 @@
 AM_CPPFLAGS = $(all_includes)
 
 # these are the headers for your project
-noinst_HEADERS = edu.h
+noinst_HEADERS = edu.h unique.h systray.h
 
 # let automoc handle all of the meta source files (moc)
 METASOURCES = AUTO
@@ -10,7 +10,7 @@ METASOURCES = AUTO
 KDE_ICON = AUTO
 
 # the application source, library search path, and link libraries
-sidux_edu_SOURCES = edu.cpp edudialog.ui main.cpp
+sidux_edu_SOURCES = edu.cpp edudialog.ui main.cpp  unique.cpp systray.cpp
 sidux_edu_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
 sidux_edu_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
 

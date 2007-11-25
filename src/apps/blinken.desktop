@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=blinKen
+Icon=blinken
+Exec=blinken
+TryExec=blinken
+Package=blinken
+Description=<b>Merken von Tasten- und Tonfolgen- Gedächtnistraining</b><br><br>Bei BlinKen geht es darum, sich immer länger werdende Tasten- bzw. Tonfolgen zu merken, stellt also eine besondere Form des Gedächtnistrainings dar. Auf dem Spielgerät von blinKen sind 4 verschiedenfarbige Knöpfe und jeder hat seinen eigenen individuellen Ton. Während des Spieles leuchten die Knöpfe in zufälliger Reihenfolge, die der Spieler sich merken und wiederholen muss. Wenn der Spieler es schafft, die Sequenz in der richtigen Reihenfolge wiederzugeben, erreicht er die nächste Spielstufe, in der er die gleiche Sequenz plus einer Weiteren Taste wiedergeben muss. Wenn die Reihenfolge einmal falsch ist, hat der Spieler verloren und muss von vorne beginnen. Das Ziel des Spiels ist es, möglichst viele Punkte zu erreichen. Jede erfolgreiche Runde bringt einen Punkt, eine erfolgreiche Folge von 8 Knöpfen ergibt also 8 Punkte in der Bestenliste. Für das Merken der Tonfolgen ist eine betriebsbereite Soundkarte mit Lautsprecher oder Kopfhörer erforderlich.<br><br>Unter dem Hilfe-Button (Buchsysmbol) kann man das deutschsprachige Handbuch aufrufen.
+Homepage=http://edu.kde.org/blinken/
+Categories=Seminarix-Lernspiele
