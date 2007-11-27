@@ -28,7 +28,7 @@
 #include <qtooltip.h>
 #include <qtimer.h>
 #include <klocale.h>
-#include <kapplication.h>
+#include <kprocess.h>
 
 
 
@@ -67,12 +67,16 @@ void SysTray::appStarter()
 
 void SysTray::siduxManual()
 {
-	kapp->invokeBrowser( "/usr/share/sidux-manual/index.html" );
+	KProcess *proc = new KProcess;
+	*proc << "x-www-browser" << "/usr/share/sidux-manual/index.html";
+	proc->start();
 }
 
 void SysTray::seminarixManual()
 {
-	kapp->invokeBrowser( "/usr/share/seminarix-handbuch/de/index.html" );
+	KProcess *proc = new KProcess;
+	*proc << "x-www-browser" << "/usr/share/seminarix-handbook/de/index.htmll";
+	proc->start();
 }
 
 void SysTray::mousePressEvent(QMouseEvent* e)

@@ -23,7 +23,7 @@
 
 #include <klocale.h>
 #include <kiconloader.h>
-#include <kapp.h>
+#include <kapplication.h>
 #include <kprocess.h>
 
 #include <qpushbutton.h>
@@ -73,8 +73,8 @@ void edu::load()
 	execPushButton->hide();
 	homepagePushButton->hide();
 	addtionalPushButton->hide();
-	widgetStack->raiseWidget(3);
-	//widgetStack->raiseWidget(2);
+	//widgetStack->raiseWidget(3);
+	widgetStack->raiseWidget(2);
 
 	// setup leftmenu
 	categoriesListView->setAlternateBackground( QColor(237, 244, 249) );
@@ -135,7 +135,6 @@ void edu::getAllApps()
 
 
 
-
 	for( QStringList::Iterator it = apps.begin(); it != apps.end(); ++it )
 	{
 
@@ -146,6 +145,7 @@ void edu::getAllApps()
 		int found = 0;
 		QString desktopPath;
 		QString package;
+		QString exec;
 		QFile file2( "/usr/share/sidux-edu/apps/"+*it );
 		file2.open( IO_ReadOnly );
 		QTextStream stream2( &file2 );
@@ -166,7 +166,8 @@ void edu::getAllApps()
 			else if ( line.contains("DesktopPath=") )
 			{
 				desktopPath = line.mid(12);
-				found++;
+				if( desktopPath != "console" and desktopPath != "none")
+					found++;
 			}
 			else if ( line.contains("Categories=") )
 			{
@@ -183,23 +184,48 @@ void edu::getAllApps()
 				item->setText( 4, line.mid(12) );
 				found++;
 			}
+			else if ( line.contains("Exec=") )
+			{
+				exec = line.mid(5);
+				found++;
+			}
 		}
 		file2.close();
 
 		if( seminarixApps.contains( package ) )
 			item->setText( 8, "TRUE" );
 		else
-			item->setText( 8, "FALSE" );
+			item->setText( 8, "TRUE" );
 
 
-		// *.desktop file
-		KDesktopFile file3( desktopPath );
-		item->setText( 1, file3.readIcon() );
-		item->setText( 2, file3.readEntry("Exec") );
-		if( file3.readEntry("Exec") != "" )
-			item->setText( 7, "TRUE" );
+	
+		if( desktopPath == "console" )
+		{
+			item->setText( 2, "x-terminal-emulator --noclose -e "+exec );
+			if( QFile::exists(exec) )
+				item->setText( 7, "TRUE" );
+			else
+				item->setText( 7, "FALSE" );
+		}
+		else if( desktopPath == "none" )
+		{
+			item->setText( 2, exec );
+			if( QFile::exists(exec) )
+				item->setText( 7, "TRUE" );
+			else
+				item->setText( 7, "FALSE" );
+		}
 		else
-			item->setText( 7, "FALSE" );
+		{
+			// *.desktop file
+			KDesktopFile file3( desktopPath );
+			item->setText( 1, file3.readIcon() );
+			item->setText( 2, file3.readEntry("Exec") );
+			if( file3.readEntry("Exec") != "" )
+				item->setText( 7, "TRUE" );
+			else
+				item->setText( 7, "FALSE" );
+		}
 
 	}
 
@@ -449,12 +475,16 @@ void edu::aboutKDE()
 
 void edu::siduxManual()
 {
-	kapp->invokeBrowser( "/usr/share/sidux-manual/index.html" );
+	KProcess *proc = new KProcess;
+	*proc << "x-www-browser" << "/usr/share/sidux-manual/index.html";
+	proc->start();
 }
 
 void edu::seminarixManual()
 {
-	kapp->invokeBrowser( "/usr/share/seminarix-handbuch/de/index.html" );
+	KProcess *proc = new KProcess;
+	*proc << "x-www-browser" << "/usr/share/seminarix-handbook/de/index.htmll";
+	proc->start();
 }
 
 void edu::homepage()

@@ -1,0 +1,7 @@
+Name=hebcal
+Package=hebcal
+Description=hebcal enthält einen immerwährenden jüdischen Kalender. Hebcal ist ein Programm, das die Tage im Jüdischen Kalender für ein gegebenes gregorianisches Jahr ausdruckt. Hebcal kann flexibel die Ereignisse im Jüdischen Kalender anzeigen.
+Homepage=http://www.hebcal.com/
+Categories=Religion
+DesktopPath=console
+Exec=/usr/bin/hebcal

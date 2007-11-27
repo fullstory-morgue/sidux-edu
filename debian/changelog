@@ -28,5 +28,7 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * kdeTray added
   * new apps added
   * *.desktop->*.pmap (apps without desktop file deleted
-
- -- Fabian Wuertz <xadras@sidux.com>  Tue, 27 Nov 2007 02:07:09 +0100
+  * no *.desktop file problem fiex
+  * x-www-browser problem fixed
+  * handbook link fixed
+ -- Fabian Wuertz <xadras@sidux.com>  Tue, 27 Nov 2007 13:08:43 +0100

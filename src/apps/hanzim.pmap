@@ -1,0 +1,6 @@
+Name=Hanzim
+Package=hanzim
+Description=Einfach, einfaches Chinesisch lernen.
+Categories=Sprachen
+DesktopPath=none
+Exec=/usr/bin/hanzim
