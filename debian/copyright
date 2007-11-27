@@ -10,7 +10,7 @@ Copyright:
 
 	The following icon is form kgeography
 	(c) Albert Astals Cid <tsdgeos@terra.es>
-	kgeography.png               icons/Erdkunde.png
+	kgeography.png               icons/hi32-app-seminarix_erdkunde.png
 
 	The following icons are from kde-icons-nuovext
 	(C) 2005 Alexandre Moore <alexandre.moore@gmail.com>
@@ -18,24 +18,24 @@ Copyright:
 	play.png                     in src/edudialog.ui
 	cancel.png                   in src/edudialog.ui
 	kontact_contacts.png         in src/edudialog.ui
+	kfm_home-alt.png             icons/hi32-app-seminarix_start.png
 
 	The following icons are from kdelibs-data
 	(c) 2002 Kalle Dalheimer <kalle@kde.org> and many others
-	music_eightnote.png          icons/Musik.png
-	launch.png                   icons/Physik.png
+	music_eightnote.png          icons/hi32-app-seminarix_musik.png
+	launch.png                   icons/hi32-app-seminarix_physik.png
 	about_kde.png                in src/edudialog.ui
 
 	The following icons are from kdebase-data
 	(c) Stephan Kulow <coolo@kde.org> and many others.
-	edu_mathematics.png          icons/Mathematik.png
-	edu_miscellaneous.png        icons/Allgemein.png
-	edu_science.png              icons/Chemie.png
-	package_network.png          icons/E-Learning.png
-	package_games_board.png      icons/Lernspiel.png
-	package_development.png      icons/Informatik.png
-	package_graphics.png         icons/Kunst.png
-	package_utilities.png        icons/Technik.png
-	locale.png                   icons/Sprachen.png
+	edu_mathematics.png          icons/hi32-app-seminarix_mathematik.png
+	edu_miscellaneous.png        icons/hi32-app-seminarix_allgemein.png
+	edu_science.png              icons/hi32-app-seminarix_chemie.png
+	package_games_board.png      icons/hi32-app-seminarix_lernspiel.png
+	package_development.png      icons/hi32-app-seminarix_informatik.png
+	package_graphics.png         icons/hi32-app-seminarix_kunst.png
+	package_utilities.png        icons/hi32-app-seminarix_technik.png
+	locale.png                   icons/hi32-app-seminarix_sprachen.png
 
 	The following icon are from sidux-icons
 	(c) 2007 cathbard <cathbard@gmail.com>

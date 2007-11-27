@@ -9,8 +9,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>745</width>
-            <height>502</height>
+            <width>799</width>
+            <height>541</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -57,7 +57,7 @@
             <property name="minimumSize">
                 <size>
                     <width>140</width>
-                    <height>443</height>
+                    <height>482</height>
                 </size>
             </property>
             <property name="maximumSize">
@@ -556,7 +556,7 @@
                         <property name="minimumSize">
                             <size>
                                 <width>460</width>
-                                <height>360</height>
+                                <height>380</height>
                             </size>
                         </property>
                         <property name="maximumSize">
@@ -590,25 +590,6 @@
                                 <bool>true</bool>
                             </property>
                         </widget>
-                        <widget class="QPushButton">
-                            <property name="name">
-                                <cstring>siduxManualPushButton</cstring>
-                            </property>
-                            <property name="geometry">
-                                <rect>
-                                    <x>82</x>
-                                    <y>230</y>
-                                    <width>80</width>
-                                    <height>60</height>
-                                </rect>
-                            </property>
-                            <property name="text">
-                                <string></string>
-                            </property>
-                            <property name="pixmap">
-                                <pixmap>image5</pixmap>
-                            </property>
-                        </widget>
                         <widget class="QLabel">
                             <property name="name">
                                 <cstring>textLabel1</cstring>
@@ -616,7 +597,7 @@
                             <property name="geometry">
                                 <rect>
                                     <x>52</x>
-                                    <y>300</y>
+                                    <y>320</y>
                                     <width>130</width>
                                     <height>20</height>
                                 </rect>
@@ -632,12 +613,52 @@
                         </widget>
                         <widget class="QPushButton">
                             <property name="name">
+                                <cstring>siduxManualPushButton</cstring>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>82</x>
+                                    <y>250</y>
+                                    <width>80</width>
+                                    <height>60</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string></string>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>image5</pixmap>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel1_2</cstring>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>242</x>
+                                    <y>320</y>
+                                    <width>162</width>
+                                    <height>20</height>
+                                </rect>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>12</pointsize>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>seminarix Handbuch</string>
+                            </property>
+                        </widget>
+                        <widget class="QPushButton">
+                            <property name="name">
                                 <cstring>seminarixManualPushButton</cstring>
                             </property>
                             <property name="geometry">
                                 <rect>
                                     <x>282</x>
-                                    <y>230</y>
+                                    <y>250</y>
                                     <width>80</width>
                                     <height>60</height>
                                 </rect>
@@ -654,33 +675,12 @@
                         </widget>
                         <widget class="QLabel">
                             <property name="name">
-                                <cstring>textLabel1_2</cstring>
-                            </property>
-                            <property name="geometry">
-                                <rect>
-                                    <x>242</x>
-                                    <y>300</y>
-                                    <width>162</width>
-                                    <height>20</height>
-                                </rect>
-                            </property>
-                            <property name="font">
-                                <font>
-                                    <pointsize>12</pointsize>
-                                </font>
-                            </property>
-                            <property name="text">
-                                <string>seminarix Handbuch</string>
-                            </property>
-                        </widget>
-                        <widget class="QLabel">
-                            <property name="name">
                                 <cstring>textLabel3</cstring>
                             </property>
                             <property name="geometry">
                                 <rect>
                                     <x>32</x>
-                                    <y>120</y>
+                                    <y>130</y>
                                     <width>380</width>
                                     <height>70</height>
                                 </rect>

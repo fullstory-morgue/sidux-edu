@@ -35,4 +35,8 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   [ Horst Tritremmel ]
   * s/index.htmll/index.html
 
- -- Horst Tritremmel <hjt@sidux.com>  Tue, 27 Nov 2007 13:28:37 +0100
+  [ Fabian Wuertz ]
+  * "Back to startpage" added
+  * .desktop: "seminarix Programmstater" -> "Programmstarter"
+
+ -- Fabian Wuertz <xadras@sidux.com>  Tue, 27 Nov 2007 21:13:19 +0100

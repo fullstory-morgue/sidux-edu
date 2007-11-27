@@ -73,8 +73,8 @@ void edu::load()
 	execPushButton->hide();
 	homepagePushButton->hide();
 	addtionalPushButton->hide();
-	//widgetStack->raiseWidget(3);
-	widgetStack->raiseWidget(2);
+	widgetStack->raiseWidget(3);
+	//widgetStack->raiseWidget(2);
 
 	// setup leftmenu
 	categoriesListView->setAlternateBackground( QColor(237, 244, 249) );
@@ -93,16 +93,10 @@ void edu::getCategories()
 {
 	QStringList categories = QDir( "/usr/share/sidux-edu/categories").entryList( QDir::Files );
 
-	//categoriesListView->setSorting(FALSE);
-	//categoriesListView->setSortOrder(FALSE);
-	//KListViewItem * item = new KListViewItem( categoriesListView, 0 );
-	//item->setText(  0, "Start" );
-	//item->setPixmap(0, icon );
-
 	QPixmap icon;
-	for( QStringList::Iterator it = categories.begin(); it != categories.end(); ++it )
+	for(uint i =  categories.count(); i > 0; i--)
 	{
-		KDesktopFile file( "/usr/share/sidux-edu/categories/"+*it );
+		KDesktopFile file( "/usr/share/sidux-edu/categories/"+categories[i-1] );
 		icon = loader->loadIcon( file.readIcon(), KIcon::Desktop, 36);
 
 		KListViewItem * item = new KListViewItem( categoriesListView, 0 );
@@ -110,6 +104,11 @@ void edu::getCategories()
 		item->setPixmap(0, icon );
 	}
 
+	categoriesListView->setSorting(-1);
+	icon = loader->loadIcon( "seminarix_start", KIcon::Desktop, 36);
+	KListViewItem * item1 = new KListViewItem( categoriesListView, 0 );
+	item1->setText(  0, "Start" );
+	item1->setPixmap(0, icon );
 
 }
 
@@ -253,7 +252,7 @@ void edu::getApps()
 
 	if( category == "Start")
 	{
-		widgetStack->raiseWidget(0);
+		widgetStack->raiseWidget(3);
 		return;
 	}
 
@@ -354,11 +353,11 @@ void edu::execApp()
 			searchLineEdit->hide();
 			widgetStack->raiseWidget(1);
 			QStrList run;
-			run.append( "siduxEduInstallApp" );
+			run.append( "/usr/share/sidux-edu/sh/appinstaller" );
 			run.append( package );
 	
 			// run command
-			terminal()->startProgram( "siduxEduInstallApp", run );
+			terminal()->startProgram( "appinstaller", run );
 			connect( konsole, SIGNAL(destroyed()), SLOT( back() ) );
 		}
 	}

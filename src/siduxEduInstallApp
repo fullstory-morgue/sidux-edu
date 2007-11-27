@@ -3,7 +3,7 @@
 # Fabian Wuertz
 # License: GPL
 
-SELF="siduxEduInstallApp"
+SELF="/usr/share/sidux-edu/sh/appinstaller"
 
 ###
 # source distro-defaults

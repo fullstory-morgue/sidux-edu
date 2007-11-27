@@ -17,7 +17,6 @@
 
 
 
-
 srcdir = @srcdir@
 top_srcdir = @top_srcdir@
 VPATH = @srcdir@
@@ -53,8 +52,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
-am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" \
-	"$(DESTDIR)$(xdg_appsdir)"
+am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
 am_sidux_edu_OBJECTS = edu.$(OBJEXT) main.$(OBJEXT) unique.$(OBJEXT) \
@@ -69,8 +67,6 @@ unique.moc.o systray.moc.o
 @KDE_USE_FINAL_TRUE@sidux_edu_OBJECTS = $(sidux_edu_final_OBJECTS)
 am__DEPENDENCIES_1 =
 sidux_edu_DEPENDENCIES = $(am__DEPENDENCIES_1)
-binSCRIPT_INSTALL = $(INSTALL_SCRIPT)
-SCRIPTS = $(bin_SCRIPTS)
 DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
 am__depfiles_maybe = depfiles
@@ -372,7 +368,7 @@ sidux_edu_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
 
 # application
 xdg_apps_DATA = sidux-edu.desktop
-bin_SCRIPTS = siduxEduInstallApp
+#bin_SCRIPTS = siduxEduInstallApp
 sharedir = $(pkgdatadir)
 #>- all: all-am
 #>+ 1
@@ -453,25 +449,6 @@ clean-binPROGRAMS:
 sidux-edu$(EXEEXT): $(sidux_edu_OBJECTS) $(sidux_edu_DEPENDENCIES) 
 	@rm -f sidux-edu$(EXEEXT)
 	$(CXXLINK) $(sidux_edu_LDFLAGS) $(sidux_edu_OBJECTS) $(sidux_edu_LDADD) $(LIBS)
-install-binSCRIPTS: $(bin_SCRIPTS)
-	@$(NORMAL_INSTALL)
-	test -z "$(bindir)" || $(mkdir_p) "$(DESTDIR)$(bindir)"
-	@list='$(bin_SCRIPTS)'; for p in $$list; do \
-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-	  if test -f $$d$$p; then \
-	    f=`echo "$$p" | sed 's|^.*/||;$(transform)'`; \
-	    echo " $(binSCRIPT_INSTALL) '$$d$$p' '$(DESTDIR)$(bindir)/$$f'"; \
-	    $(binSCRIPT_INSTALL) "$$d$$p" "$(DESTDIR)$(bindir)/$$f"; \
-	  else :; fi; \
-	done
-
-uninstall-binSCRIPTS:
-	@$(NORMAL_UNINSTALL)
-	@list='$(bin_SCRIPTS)'; for p in $$list; do \
-	  f=`echo "$$p" | sed 's|^.*/||;$(transform)'`; \
-	  echo " rm -f '$(DESTDIR)$(bindir)/$$f'"; \
-	  rm -f "$(DESTDIR)$(bindir)/$$f"; \
-	done
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -609,9 +586,9 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile $(PROGRAMS) $(SCRIPTS) $(DATA) $(HEADERS)
+all-am: Makefile $(PROGRAMS) $(DATA) $(HEADERS)
 installdirs:
-	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"; do \
+	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"; do \
 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
 	done
 install: install-am
@@ -664,7 +641,7 @@ info-am:
 
 install-data-am: install-data-local install-xdg_appsDATA
 
-install-exec-am: install-binPROGRAMS install-binSCRIPTS
+install-exec-am: install-binPROGRAMS
 
 install-info: install-info-am
 
@@ -690,28 +667,28 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
-	uninstall-info-am uninstall-xdg_appsDATA
+uninstall-am: uninstall-binPROGRAMS uninstall-info-am \
+	uninstall-xdg_appsDATA
 
 .PHONY: CTAGS GTAGS all all-am check check-am clean clean-binPROGRAMS \
 	clean-generic clean-libtool ctags distclean distclean-compile \
 	distclean-generic distclean-libtool distclean-tags distdir dvi \
 	dvi-am html html-am info info-am install install-am \
-	install-binPROGRAMS install-binSCRIPTS install-data \
-	install-data-am install-data-local install-exec \
-	install-exec-am install-info install-info-am install-man \
-	install-strip install-xdg_appsDATA installcheck \
-	installcheck-am installdirs maintainer-clean \
+	install-binPROGRAMS install-data install-data-am \
+	install-data-local install-exec install-exec-am install-info \
+	install-info-am install-man install-strip install-xdg_appsDATA \
+	installcheck installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags uninstall uninstall-am uninstall-binPROGRAMS \
-	uninstall-binSCRIPTS uninstall-info-am uninstall-xdg_appsDATA
+	uninstall-info-am uninstall-xdg_appsDATA
 
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
 	cp -aR $(srcdir)/apps $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/list $(DESTDIR)$(sharedir)/
+	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/
 
 # translation
 #messages: rc.cpp
@@ -747,7 +724,7 @@ clean-metasources:
 	-rm -f  unique.moc.cpp edu.moc systray.moc.cpp
 
 #>+ 2
-KDE_DIST=edudialog.h sidux-edu Makefile.in edudialog.ui sidux-edu.desktop Makefile.am siduxEduInstallApp 
+KDE_DIST=Makefile.in sidux-edu.desktop edudialog.h sidux-edu edudialog.ui Makefile.am 
 
 #>+ 4
 clean-ui:
@@ -796,7 +773,7 @@ bcheck-am:
 
 
 #>+ 11
-sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/edu.cpp $(srcdir)/main.cpp $(srcdir)/unique.cpp $(srcdir)/systray.cpp $(srcdir)/edudialog.cpp unique.moc.cpp systray.moc.cpp  edu.moc edudialog.moc
+sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/edu.cpp $(srcdir)/main.cpp $(srcdir)/unique.cpp $(srcdir)/systray.cpp $(srcdir)/edudialog.cpp $(srcdir)/unique.moc.cpp $(srcdir)/systray.moc.cpp  edu.moc edudialog.moc
 	@echo 'creating sidux_edu.all_cpp.cpp ...'; \
 	rm -f sidux_edu.all_cpp.files sidux_edu.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> sidux_edu.all_cpp.final; \

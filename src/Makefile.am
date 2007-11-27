@@ -19,7 +19,7 @@ sidux_edu_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
 # application
 xdg_apps_DATA = sidux-edu.desktop
 bin_PROGRAMS = sidux-edu
-bin_SCRIPTS = siduxEduInstallApp
+#bin_SCRIPTS = siduxEduInstallApp
 
 sharedir = $(pkgdatadir)
 install-data-local:
@@ -27,6 +27,7 @@ install-data-local:
 	cp -aR $(srcdir)/apps $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/list $(DESTDIR)$(sharedir)/
+	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/
 
 
 # translation
