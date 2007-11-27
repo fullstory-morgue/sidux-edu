@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=KFormula
-Icon=kformula
-Exec=kformula
-TryExec=kformula
-Package=kformula
-Description=KFormula stammt aus dem KOffice-Projekt und ist dafür ausgelegt, Formeln zu zeichnen.
-Homepage=http://www.koffice.org/kformula/
-Categories=Seminarix-Mathematik

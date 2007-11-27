@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Kivio
-Icon=kivio
-Exec=kivio
-TryExec=kivio
-Package=kivio
-Description=Ebenfalls aus dem KOffice-Projekt stammt die Anwendung Kivio, mit deren Hilfe Flussdiagramme hergestellt und Statistiken bearbeitet werden können.
-Homepage=http://www.koffice.org/kivio/
-Categories=Seminarix-Mathematik;Seminarix-Informatik

@@ -1,0 +1,6 @@
+Name=Kalzium
+DesktopPath=/usr/share/applications/kde/kalzium.desktop
+Package=kalzium
+Homepage=http://edu.kde.org/kalzium/
+Categories=Chemie
+Description=Kalzium ist ein Programm über das Periodensystem, das über alles informiert, was das PSE an Sachinhalten enthält. (Zudem kann die Entwicklung des PSE von Mendelejew bis heute anhand einer Zeitleiste schrittweise nachvollzogen werden.) Es enthält verschiedene interaktive Features, die zahlreiche Fakten für Schüler aller Jahrgangsstufen zugänglich macht, (darunter auch ein Quiz oder die Möglichkeit Molekülmassen zu berechnen.)

@@ -1,0 +1,6 @@
+Name=xsane
+DesktopPath=/usr/share/applications/xsane.desktop
+Package=xsane
+Homepage=http://www.xsane.org/
+Categories=Allgemein
+Description=xsane ist eine Anwendung zum scannen.

@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=KSociograma
-Icon=ksociograma
-Exec=ksociograma
-TryExec=ksociograma
-Package=KSociograma
-Description=Soziometrische Analyse für Beziehungen, auch solche in Schule und Seminar: Wer mit wem und mit diesem, aber ohne jenen. (Der admin startet mit dem Passwort ksocio).
-Homepage=http://www.kde-apps.org/content/show.php?content=12666
-Categories=Seminarix-Allgemein

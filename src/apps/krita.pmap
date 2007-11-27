@@ -1,0 +1,6 @@
+Name=Krita
+DesktopPath=/usr/share/applications/kde/krita.desktop
+Package=krita
+Homepage=http://www.koffice.org/krita/
+Categories=Kunst
+Description=Bildbearbeitungsprogramm aus dem KOffice-Projekt mit Zeichen-, aber auch Spassfunktionen.

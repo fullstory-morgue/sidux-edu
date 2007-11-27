@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=KmPlot
-Icon=kmplot
-Exec=kmplot
-TryExec=kmplot
-Package=kmplot
-Description=Funktionenplotter, ebenfalls aus dem Projekt edu.kde.org.
-Homepage=http://edu.kde.org/kmplot/
-Categories=Seminarix-Mathematik

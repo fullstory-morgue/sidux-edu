@@ -1,0 +1,6 @@
+Name=Gimp
+DesktopPath=/usr/share/applications/gimp.desktop
+Package=gimp
+Homepage=http://www.gimp.org
+Categories=Kunst
+Description=Außerordentlich mächtiges Programm zu Bearbeitung und Manipulation von Grafikdateien, vergleichbar mit teuren und proprietären Profiprodukten. Steht auch unter anderen Betriebssystemen zur Verfügung.

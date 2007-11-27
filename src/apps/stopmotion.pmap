@@ -1,0 +1,6 @@
+Name=stopmotion
+DesktopPath=/usr/share/applications/stopmotion.desktop
+Package=stopmotion
+Homepage=http://developer.skolelinux.no/info/studentgrupper/2005-hig-stopmotion
+Categories=Kunst
+Description=Video- und Animationsprogramm, mit dem StopMotionszenen hergestellt werden können.

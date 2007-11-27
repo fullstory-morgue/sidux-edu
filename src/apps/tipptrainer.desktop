@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Tipptrainer
-Icon=/usr/share/tipptrainer/logo.png
-Exec=tipptrainer
-TryExec=tipptrainer
-Package=tipptrainer
-Description=Tipptrainer dient dem Erlernen und Festigen des 10-Finger-Tippsystems. Dafür stehen dem Schüler zahlreiche Lektionen für das Tippen bestimmter Buchstabenkombinationen und Texte zur Verfügung. Es gibt dabei Kurse für Anfänger und Fortgeschrittene.
-Homepage=http://tipptrainer.pingos.org/index.shtml
-Categories=Seminarix-Lernspiele

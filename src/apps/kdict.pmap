@@ -1,0 +1,6 @@
+Name=KDict
+DesktopPath=/usr/share/applications/kde/kdict.desktop
+Package=kdict
+Homepage=http://www.dict.org/
+Categories=Sprachen
+Description=Umfangreiches Wörterbuch aus dem KDE-Projekt, das inzwischen für mehr als 15 Sprachen zur Verfügung steht.

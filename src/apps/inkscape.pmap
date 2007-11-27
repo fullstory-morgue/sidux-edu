@@ -1,0 +1,5 @@
+Name=Inkscape
+DesktopPath=/usr/share/applications/inkscape.desktop
+Package=inkscape
+Categories=Kunst
+Description=Inkscape ist ein OpenSource Vektorgrafikeditor, dessen F&auml;higkeiten mit denen von Illustrator, Freehand, CorelDraw oder Xara vergleichbar sind. Inkscape verwendet das SVG-Dateiformat (Scalable Vector Graphics). Unter anderem erm&ouml;glicht Inkscape die Arbeit mit verschiedenen Formen, Pfaden, Texten, Markierungen, Klonen, Transparenzeffekten (alpha), Transformationen, Farbverl&auml;ufen, Mustern und Gruppen. Au&szlig;erdem unterst&uuml;tzt Inkscape auch Creative-Commons-Metadaten, Knotenbearbeitung, Ebenen, komplexe Pfadoperationen, Bitmaptracing, pfadgebundene Texte, objektumflie&szlig;enden Text, direkte XML-Bearbeitung und vieles mehr. Es k&ouml;nnen Formate wie Postscript, EPS, JPEG, PNG und TIFF importiert werden. Exportiert werden PNG sowie verschiedene vektorbasierte Formate. Steht auch unter anderen Betriebssystemen zur Verf&uuml;gung.

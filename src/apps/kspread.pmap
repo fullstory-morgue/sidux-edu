@@ -1,0 +1,6 @@
+Name=KSpread
+DesktopPath=/usr/share/applications/kde/kspread.desktop
+Package=kspread
+Homepage=http://www.koffice.org/kspread/
+Categories=Mathematik
+Description=KSpread ist eine Tabellenkalkulation, die auch komplexe mathematische Formeln und Statistik beherrscht. Ebenfalls aus dem KOffice-Projekt.

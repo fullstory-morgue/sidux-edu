@@ -1,0 +1,6 @@
+Name=Pingus
+DesktopPath=/usr/share/applications/pingus.desktop
+Package=pingus
+Homepage=http://pingus.seul.org/
+Categories=Lernspiele
+Description=Pingus ist ein freier Clone des schönen alten Spiels "Lemminge": Retten Sie die Pinguine!

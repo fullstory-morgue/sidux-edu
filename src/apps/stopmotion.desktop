@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=stopmotion
-Icon=stopmotion
-Exec=stopmotion
-TryExec=stopmotion
-Package=stopmotion
-Description=Video- und Animationsprogramm, mit dem StopMotionszenen hergestellt werden können.
-Homepage=http://developer.skolelinux.no/info/studentgrupper/2005-hig-stopmotion
-Categories=Seminarix-Kunst

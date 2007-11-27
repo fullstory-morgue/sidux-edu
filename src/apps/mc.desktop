@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Midnight Commander
-Icon=mc
-Exec=x-terminal-emulator -e mc
-TryExec=mc
-Package=mc
-Description=Der Midnight Commander arbeitet auf der Kommandozeilenebene mit der aus alten Zeiten bekannten Zweifenstertechnik.
-Homepage=http://www.ibiblio.org/mc/
-Categories=Seminarix-Allgemein

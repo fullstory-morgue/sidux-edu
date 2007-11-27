@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=KolourPaint
-Icon=kolourpaint
-Exec=kolourpaint
-TryExec=kolourpaint
-Package=kolourpaint
-Description=Einfaches Mal- und Zeichenprogramm für den KDE.
-Homepage=http://kolourpaint.sourceforge.net/
-Categories=Seminarix-Kunst

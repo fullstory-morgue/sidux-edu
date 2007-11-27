@@ -1,0 +1,6 @@
+Name=KBruch
+DesktopPath=/usr/share/applications/kde/kbruch.desktop
+Package=kbruch
+Homepage=http://edu.kde.org/kbruch
+Categories=Mathematik
+Description=Übungsprogramm zu Bruchrechnung  - aus dem Projekt edu.kde.org. KBruch ist ein Programm für Bruchrechnen-Übungen. Für Übungen zu Addition/Multiplikation/Division, zum Vergleichen, zum Umrechnen und zum Faktorisieren/Kürzen.

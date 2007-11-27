@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=KImageMapEditor
-Icon=kimagemapeditor
-Exec=kimagemapeditor
-TryExec=kimagemapeditor
-Package=kimagemapeditor
-Description=Mit KImageMapEditor lassen sich Bilder so bearbeiten, dass festgelegte Teile des Bildes z.B. einen Link enthalten können. Hilfreich bei Webprojekten.
-Homepage=http://www.nongnu.org/kimagemap
-Categories=Seminarix-Allgemein

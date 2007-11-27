@@ -1,0 +1,5 @@
+Name=Weltzeitenuhr
+DesktopPath=/usr/share/applications/kde/kworldclock.desktop
+Package=kworldclock
+Categories=Physik
+Description=Das Programm zeigt an, wo in der Welt es gerade dunkel und wo es hell ist. Auch die Lokalzeit in allen größeren Städten kann dargestellt werden. Das Programm kann sowohl als Einzelanwendung laufen wie auch in der KDE-Taskleiste.

@@ -27,5 +27,6 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * gnuplot, hebcal & kstar desktop files fixed
   * kdeTray added
   * new apps added
+  * *.desktop->*.pmap (apps without desktop file deleted
 
- -- Fabian Wuertz <xadras@sidux.com>  Sun, 25 Nov 2007 13:22:31 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Tue, 27 Nov 2007 02:07:09 +0100

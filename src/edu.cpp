@@ -42,11 +42,16 @@
 #include <kaboutapplication.h>
 #include <kaboutkde.h>
 
+
 #include <kdesktopfile.h>
 #include <kdirlister.h>
 #include <qdir.h>
+#include <kconfigbase.h>
 
 #include "edu.h"
+
+
+#include "kconfigbackend.h"
 
 edu::edu(QWidget *parent, const char *name, const QStringList &)
 :EduDialog(parent, name)
@@ -69,6 +74,7 @@ void edu::load()
 	homepagePushButton->hide();
 	addtionalPushButton->hide();
 	widgetStack->raiseWidget(3);
+	//widgetStack->raiseWidget(2);
 
 	// setup leftmenu
 	categoriesListView->setAlternateBackground( QColor(237, 244, 249) );
@@ -83,58 +89,15 @@ void edu::load()
 //------------------------------------------------------------------------------
 
 
-void edu::getAllApps()
-{
-	listView->clear();
-	QStringList apps = QDir( "/usr/share/sidux-edu/apps").entryList( QDir::Files );
-
-
-	QStringList seminarixApps;
-    QFile file( "/usr/share/sidux-edu/list/seminarix.list" );
-    if ( file.open( IO_ReadOnly ) ) {
-        QTextStream stream( &file );
-        QString line;
-        int i = 1;
-        while ( !stream.atEnd() ) {
-            line = stream.readLine(); // line of text excluding '\n'
-            printf( "%3d: %s\n", i++, line.latin1() );
-            seminarixApps += line;
-        }
-        file.close();
-    }
-
-
-	for( QStringList::Iterator it = apps.begin(); it != apps.end(); ++it )
-	{
-		KDesktopFile file( "/usr/share/sidux-edu/apps/"+*it );
-		//app.append( file.readComment() );
-
-		QListViewItem * item = new QListViewItem( listView, 0 );
-		//item->setPixmap(0, statusImg);
-		item->setText( 0, file.readName() );
-		item->setText( 1, file.readIcon() );
-		item->setText( 2, file.readEntry("Exec") );
-		item->setText( 3, file.readEntry("Package") );
-		item->setText( 4, file.readEntry("Description") );
-		item->setText( 5, file.readEntry("Homepage") );
-		item->setText( 6, file.readEntry("Categories") );
-		if( file.tryExec() )
-			item->setText( 7, "TRUE" );
-		else
-			item->setText( 7, "FALSE" );
-		if( seminarixApps.contains( file.readEntry("Package") ) )
-			item->setText( 8, "TRUE" );
-		else
-			item->setText( 8, "FALSE" );
-	}
-
-
-}
-
 void edu::getCategories()
 {
 	QStringList categories = QDir( "/usr/share/sidux-edu/categories").entryList( QDir::Files );
 
+	//categoriesListView->setSorting(FALSE);
+	//categoriesListView->setSortOrder(FALSE);
+	//KListViewItem * item = new KListViewItem( categoriesListView, 0 );
+	//item->setText(  0, "Start" );
+	//item->setPixmap(0, icon );
 
 	QPixmap icon;
 	for( QStringList::Iterator it = categories.begin(); it != categories.end(); ++it )
@@ -149,6 +112,101 @@ void edu::getCategories()
 
 
 }
+
+void edu::getAllApps()
+{
+	listView->clear();
+	QStringList apps = QDir( "/usr/share/sidux-edu/apps").entryList( QDir::Files );
+
+	QString line;
+
+
+	// get basic seminarix apps
+	QStringList seminarixApps;
+	QFile file1( "/usr/share/sidux-edu/list/seminarix.list" );
+	file1.open( IO_ReadOnly );
+	QTextStream stream1( &file1 );
+	while ( !stream1.atEnd() )
+	{
+		line = stream1.readLine(); // line of text excluding '\n'
+		seminarixApps += line;
+	}
+	file1.close();
+
+
+
+
+	for( QStringList::Iterator it = apps.begin(); it != apps.end(); ++it )
+	{
+
+		// create listitem
+		QListViewItem * item = new QListViewItem( listView, 0 );
+
+		// mpam file
+		int found = 0;
+		QString desktopPath;
+		QString package;
+		QFile file2( "/usr/share/sidux-edu/apps/"+*it );
+		file2.open( IO_ReadOnly );
+		QTextStream stream2( &file2 );
+		while ( !stream2.atEnd() and found < 6 )
+		{
+			line = stream2.readLine(); // line of text excluding '\n'
+			if( line.contains("Name=") )
+			{
+				item->setText( 0, line.mid(5) );
+				found++;
+			}
+			else if( line.contains("Package=") )
+			{
+				package = line.mid(8);
+				item->setText( 3, package );
+				found++;
+			}
+			else if ( line.contains("DesktopPath=") )
+			{
+				desktopPath = line.mid(12);
+				found++;
+			}
+			else if ( line.contains("Categories=") )
+			{
+				item->setText( 6, line.mid(11) );
+				found++;
+			}
+			else if ( line.contains("Homepage=") )
+			{
+				item->setText( 5, line.mid(9) );
+				found++;
+			}
+			else if ( line.contains("Description=") )
+			{
+				item->setText( 4, line.mid(12) );
+				found++;
+			}
+		}
+		file2.close();
+
+		if( seminarixApps.contains( package ) )
+			item->setText( 8, "TRUE" );
+		else
+			item->setText( 8, "FALSE" );
+
+
+		// *.desktop file
+		KDesktopFile file3( desktopPath );
+		item->setText( 1, file3.readIcon() );
+		item->setText( 2, file3.readEntry("Exec") );
+		if( file3.readEntry("Exec") != "" )
+			item->setText( 7, "TRUE" );
+		else
+			item->setText( 7, "FALSE" );
+
+	}
+
+
+}
+
+
 
 //------------------------------------------------------------------------------
 //-- main widget ---------------------------------------------------------------
@@ -165,7 +223,14 @@ void edu::getApps()
 	appsListBox->clear();
 	descriptionTextBrowser->clear();
 
-	QString category = "Seminarix-"+categoriesListView->selectedItems().first()->text(0);
+	QString category = categoriesListView->selectedItems().first()->text(0);
+
+	if( category == "Start")
+	{
+		widgetStack->raiseWidget(0);
+		return;
+	}
+
 
 	QStringList names;
 	QStringList icons;
@@ -331,7 +396,7 @@ void edu::disableButtons()
 
 void edu::additionalPackage()
 {
-	KMessageBox::information(this, "Zusaetzliches Paket" );
+	KMessageBox::information(this, "Zusaetzliches Paket!" );
 }
 
 

@@ -1,0 +1,6 @@
+Name=KLogic
+DesktopPath=/usr/share/applications/klogic.desktop
+Package=klogic
+Homepage=http://www.a-rostin.de/klogic/indexd.html
+Categories=Technik
+Description=KLogic ist eine Anwendung zum einfachen Entwurf und zur Simulation von Digitalschaltungen. KLogic ermöglicht einen einfachen Aufbau von Schaltungen aus Standardkomponenten wie UND, ODER, XOR, und Flipflops wie RS und JK. Um komplexere und wiederverwendbare Schaltungen zu entwerfen, können Teilschaltungen gespeichert und wiederverwendet werden.

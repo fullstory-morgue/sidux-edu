@@ -1,0 +1,5 @@
+Name=KWordQuiz
+DesktopPath=/usr/share/applications/kde/kwordquiz.desktop
+Package=kwordquiz
+Categories=Sprachen
+Description=Ist ein Werkzeug, das mit Flashkarten arbeitet und dem Benutzer helfen soll, seinen Wortschatz auszubauen. Es kann zum Erlernen einer Sprache angewandt werden oder zum Training einer Fachterminologie. Das Programm eröffnet den Zugriff auf verschiedene Wortschatz-Datenbanken. Unterstützt werden .kvtml.files, die von anderen KDE-Programmen genutzt werden, wie z.B. KVocTrain, .wql files, die von WORD Quiz für Windows genutzt werden, .cvs files mit durch Kommata abgetrenntem Text und .xml. gz files erstellt von der Anwendung Pauker. Dieses Paket ist Bestandteil des offiziellen Edutainment Moduls.

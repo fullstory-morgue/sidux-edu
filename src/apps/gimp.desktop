@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Gimp
-Icon=gimp
-Exec=gimp
-TryExec=gimp
-Package=gimp
-Description=Außerordentlich mächtiges Programm zu Bearbeitung und Manipulation von Grafikdateien, vergleichbar mit teuren und proprietären Profiprodukten. Steht auch unter anderen Betriebssystemen zur Verfügung.
-Homepage=http://www.gimp.org
-Categories=Seminarix-Kunst

@@ -1,0 +1,6 @@
+Name=Kiten
+DesktopPath=/usr/share/applications/kde/kiten.desktop
+Package=kiten
+Homepage=http://edu.kde.org/kiten/
+Categories=Sprachen
+Description=Kiten beinhaltet drei wesentliche Funktionen:<ul>

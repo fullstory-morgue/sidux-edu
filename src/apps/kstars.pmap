@@ -1,0 +1,5 @@
+Name=KStars
+DesktopPath=/usr/share/applications/kde/kstars.desktop
+Package=kstars
+Categories=Physik
+Description=Astroprogramm und Bestandteil des KDE-Projekts Planetarium.

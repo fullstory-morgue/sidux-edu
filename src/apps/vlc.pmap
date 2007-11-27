@@ -1,0 +1,6 @@
+Name=VLC
+DesktopPath=/usr/share/applications/vlc.desktop
+Package=vlc
+Homepage=http://www.videolan.org/vlc/
+Categories=Allgemein
+Description=Der VLC Media Player (anfänglich VideoLAN Client) ist ein hoch portabler, freier Medienspieler sowohl für diverse Audio- und Videocodecs und Dateiformate, als auch DVDs, VCDs. VLC unterstützt unterschiedliche Streaming-Protokolle.

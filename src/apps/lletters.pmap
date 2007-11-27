@@ -1,0 +1,6 @@
+Name=Linux Letters and Numbers
+DesktopPath=/usr/share/applications/lletters.desktop
+Package=lletters
+Homepage=http://lln.sourceforge.net/
+Categories=Lernspiele;Sprachen
+Description=Ein Programm für Kinder im Im Vor- und Grundschulalter, um die Bedeutung von Zahlen und Buchstaben zu lernen.<br>Nach einem Mausklick auf eine Zahl oder einen Buchstaben wird das Bild eines Gegenstands mit dem entsprechenden Anfangsbuchstaben (bzw. die entsprechende Anzahl von Gegenständen bei einer Zahl)inklusive Schreibweise angezeigt.<br>Leider liegt dieses Programm nur in Englisch und Französisch vor - dadurch eignet es sich allerdings auch für etwas ältere Kinder, um Grundbegriffe in einer Fremdsprache kennen zu lernen.

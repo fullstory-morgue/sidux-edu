@@ -1,0 +1,6 @@
+Name=Gambas
+DesktopPath=/usr/share/applications/gambas.desktop
+Package=gambas
+Homepage=http://gambas.sourceforge.net/
+Categories=Informatik
+Description=Gambas ist eine sehr leistungsfähige Entwicklungsumgebung mit einem Basic-Dialekt, die ein wenig an VisualBasic erinnert

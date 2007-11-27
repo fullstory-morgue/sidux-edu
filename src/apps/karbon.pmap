@@ -1,0 +1,6 @@
+Name=Karbon
+DesktopPath=/usr/share/applications/kde/karbon.desktop
+Package=karbon
+Homepage=http://www.koffice.org/karbon/
+Categories=Kunst
+Description=Mit der zum KOffice-Projekt geh&ouml;renden Anwendung lassen sich skalierbare Grafiken herstellen und &auml;ndern.

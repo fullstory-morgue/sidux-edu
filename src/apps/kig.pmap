@@ -1,0 +1,6 @@
+Name=KIG
+DesktopPath=/usr/share/applications/kde/kig.desktop
+Package=kig
+Homepage=http://edu.kde.org/kig/
+Categories=Mathematik
+Description=Interaktive Geometrie unter Linux

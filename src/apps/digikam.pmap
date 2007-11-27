@@ -1,0 +1,6 @@
+Name=Digikam
+DesktopPath=/usr/share/applications/kde/digikam.desktop
+Package=digikam
+Homepage=http://www.digikam.org/
+Categories=Kunst
+Description=Mit Digikam lassen sich die digitalen Bildern von der Digitalkamera auf die Festplatte kopieren. Zahlreiche und mächtige Bilderbearbeitungsmöglichkeiten. Wenn Sie mit dem Programm auf der Live-CD arbeiten wollen, müsssen Sie natürlich für die Produkte ein beschreibbares Medium einbinden.

@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=KView
-Icon=kview
-Exec=kview
-TryExec=kview
-Package=kview
-Description=KView, vormals KuickShow ist Bestandteil des KDE-Projekts. Der Bildbrowser beherrscht viele Formate (GIF, JPEG, PNG, BMP, XBM, XPM, TIFF, PBM (P1), PGM (P2), PPM (P3), PBMRAW (P4), PGMRAW (P5) und PPMRAW (P6). Eine Unterstützung von Slideshows ist ebenfalls vorgesehen.
-Homepage=http://www.ph.unimelb.edu.au/~ssk/kde/kview/kview.html
-Categories=Seminarix-Kunst

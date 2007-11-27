@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Childsplay
-Icon=logo_cp_48x48.xpm
-Exec=childsplay
-TryExec=childsplay
-Package=childsplay
-Description=Childsplay ist eine Sammlung von Lernspielen für Kinder, ähnlich GCompris. Childsplay enthält u.a. Mathe-, Schreibspiele und kann um andere Spiele erweitert werden.
-Homepage=http://childsplay.sourceforge.net/
-Categories=Seminarix-Lernspiele

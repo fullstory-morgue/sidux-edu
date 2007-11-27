@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=KTurtle
-Icon=kturtle
-Exec=kturtle
-TryExec=kturtle
-Package=kturtle
-Description=Programmieren mit LOGO. Projekt aus dem KDE-EDU Bereich.
-Homepage=http://edu.kde.org/kturtle/
-Categories=Seminarix-Informatik

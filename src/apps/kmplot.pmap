@@ -1,0 +1,6 @@
+Name=KmPlot
+DesktopPath=/usr/share/applications/kde/kmplot.desktop
+Package=kmplot
+Homepage=http://edu.kde.org/kmplot/
+Categories=Mathematik
+Description=Funktionenplotter, ebenfalls aus dem Projekt edu.kde.org.

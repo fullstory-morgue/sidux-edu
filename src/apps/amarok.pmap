@@ -1,0 +1,6 @@
+Name=Amarok
+DesktopPath=/usr/share/applications/kde/amarok.desktop
+Package=amarok
+Homepage=http://amarok.kde.org/
+Categories=Musik
+Description=Unter Linux ein weit verbreitetes Audio Wiedergabeprogramm

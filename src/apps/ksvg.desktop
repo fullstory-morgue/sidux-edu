@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=KSVG
-Icon=ksvg
-Exec=ksvg
-TryExec=ksvg
-Package=ksvg
-Description=Bei KSVG handelt es sich um eine KDE-spezifische Implementierung des vom World Wide Web Consortium empfohlenen SVG-Standards. Obwohl KSVG grundlegend als Plugin für den Webbrowser Konqueror entworfen wurde, können SVG-Dateien auch problemlos in jeder anderen beliebigen KDE-Applikation eingebunden und angezeigt werden, da KSVG die KParts-Komponenten-Technologie verwendet.
-Homepage=http://www.gnome.org/projects/dia/
-Categories=Seminarix-Kunst

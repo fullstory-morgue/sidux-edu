@@ -1,0 +1,6 @@
+Name=KPDF
+DesktopPath=/usr/share/applications/kde/kpdf.desktop
+Package=kpdf
+Homepage=http://kpdf.kde.org/
+Categories=Allgemein
+Description=Stellt das weitverbreitete PDF-Format dar.
