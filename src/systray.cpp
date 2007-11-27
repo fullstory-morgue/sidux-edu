@@ -75,7 +75,7 @@ void SysTray::siduxManual()
 void SysTray::seminarixManual()
 {
 	KProcess *proc = new KProcess;
-	*proc << "x-www-browser" << "/usr/share/seminarix-handbook/de/index.htmll";
+	*proc << "x-www-browser" << "/usr/share/seminarix-handbook/de/index.html";
 	proc->start();
 }
 

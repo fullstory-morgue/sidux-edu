@@ -31,4 +31,8 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * no *.desktop file problem fiex
   * x-www-browser problem fixed
   * handbook link fixed
- -- Fabian Wuertz <xadras@sidux.com>  Tue, 27 Nov 2007 13:08:43 +0100
+
+  [ Horst Tritremmel ]
+  * s/index.htmll/index.html
+
+ -- Horst Tritremmel <hjt@sidux.com>  Tue, 27 Nov 2007 13:28:37 +0100
