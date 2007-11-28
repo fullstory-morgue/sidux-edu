@@ -357,7 +357,7 @@ void edu::execApp()
 			run.append( package );
 	
 			// run command
-			terminal()->startProgram( "appinstaller", run );
+			terminal()->startProgram( "/usr/share/sidux-edu/sh/appinstaller", run );
 			connect( konsole, SIGNAL(destroyed()), SLOT( back() ) );
 		}
 	}
@@ -421,7 +421,7 @@ void edu::disableButtons()
 
 void edu::additionalPackage()
 {
-	KMessageBox::information(this, "Zusaetzliches Paket!" );
+	KMessageBox::information(this, "Das installieren von zusaetzlichen Paketen geschiet auf eigenes Risiko!" );
 }
 
 

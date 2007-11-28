@@ -40,5 +40,7 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * .desktop: "seminarix Programmstater" -> "Programmstarter"
   * mv siduxEduAppinstaller sh/appinstaller
   * BROKEN: appinstaller isn't executable
+  * appinstaller problem fixed
+  * addtional package message changed
 
- -- Fabian Wuertz <xadras@sidux.com>  Tue, 27 Nov 2007 21:14:06 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Wed, 28 Nov 2007 14:05:11 +0100
