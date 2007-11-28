@@ -1,6 +1,6 @@
 Name=gnuplot
 Package=gnuplot
-Description=Gnuplot ist ein mächtiges kommandozeilenorientiertes interaktives Plotprogramm und wird auch von graphisch basierten Programmen wie wxmaxima genutzt. Das Programm dient dem Erstellen von 2D- und 3D-Graphen von Datenfeldern und Funktionen. Es unterstützt zahlreiche Ausgabeformate einschließlich Treiber für zahlreiche Drucker, (La)TeX, (x)fig, Postscript, u.s.w.. <br><br>Die Datenfelder und selbsterstellten Funktionen können durch eine interne C-artige Programmiersprache gesteuert werden. Gnuplot kann auch mit komplexen Zahlen arbeiten.
+Description=Gnuplot ist ein m&auml;chtiges kommandozeilenorientiertes interaktives Plotprogramm und wird auch von graphisch basierten Programmen wie wxmaxima genutzt. Das Programm dient dem Erstellen von 2D- und 3D-Graphen von Datenfeldern und Funktionen. Es unterst&uuml;tzt zahlreiche Ausgabeformate einschlie&szlig;lich Treiber f&uuml;r zahlreiche Drucker, (La)TeX, (x)fig, Postscript, u.s.w.. <br><br>Die Datenfelder und selbsterstellten Funktionen k&ouml;nnen durch eine interne C-artige Programmiersprache gesteuert werden. Gnuplot kann auch mit komplexen Zahlen arbeiten.
 Homepage=http://gnuplot.sourceforge.net/
 Categories=Mathematik
 DesktopPath=console

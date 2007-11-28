@@ -1,6 +1,6 @@
 Name=itools
 Package=itools
-Description=Itools enthält islamische Hijri-Kalender- und Betzeitwerkzeuge. Es ist eine Sammlung von Konsolen-Befehlen, die die ITL Bibliothek nutzen. Folgende Befehle sind verfügbar: <br>* ical: Zeigt einen Hijri-Kalender an.<br>* idate: Umfangreicher hijri-/gregorianischer Datumskonverter.<br>* ipraytime: Betzeiten und Kibla-Rechner sowie Zeitablauftabellengenerator.<br>* ireminder: Erinnerer an Betzeiten (Perl-Skript).
+Description=Itools enth&auml;lt islamische Hijri-Kalender- und Betzeitwerkzeuge. Es ist eine Sammlung von Konsolen-Befehlen, die die ITL Bibliothek nutzen. Folgende Befehle sind verf&uuml;gbar: <br>* ical: Zeigt einen Hijri-Kalender an.<br>* idate: Umfangreicher hijri-/gregorianischer Datumskonverter.<br>* ipraytime: Betzeiten und Kibla-Rechner sowie Zeitablauftabellengenerator.<br>* ireminder: Erinnerer an Betzeiten (Perl-Skript).
 Homepage=http://www.arabeyes.org/project.php?proj=ITL
 Categories=Religion
 DesktopPath=console

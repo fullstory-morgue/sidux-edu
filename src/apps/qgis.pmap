@@ -1,6 +1,6 @@
 Name=QGis
 Package=qgis-plugin-grass
-Description=Wie auch GRASS ein geografisches Informationssystem mit freiem Geodatenviewer. Er bietet Support für Vektor- und Rasterdaten.
+Description=Wie auch GRASS ein geografisches Informationssystem mit freiem Geodatenviewer. Er bietet Support f&uuml;r Vektor- und Rasterdaten.
 Homepage=http://www.grass-gis.de
 Categories=Erdkunde
 DesktopPath=none

@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/kde/kformula.desktop
 Package=kformula
 Homepage=http://www.koffice.org/kformula/
 Categories=Mathematik
-Description=KFormula stammt aus dem KOffice-Projekt und ist dafür ausgelegt, Formeln zu zeichnen.
+Description=KFormula stammt aus dem KOffice-Projekt und ist daf&uuml;r ausgelegt, Formeln zu zeichnen.

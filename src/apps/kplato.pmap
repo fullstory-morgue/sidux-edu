@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/kde/kplato.desktop
 Package=kplato
 Homepage=http://www.koffice.org/kplato/
 Categories=Allgemein
-Description=KPlato ist ein Programm zur Projektplanung und -verwaltung der KOffice-Suite. Aufgrund des Entwicklungsstandes und einer damit verbundenen Instabilität sollte KPlato derzeit nicht in wichtigen Arbeitsumgebungen eingesetzt werden.
+Description=KPlato ist ein Programm zur Projektplanung und -verwaltung der KOffice-Suite. Aufgrund des Entwicklungsstandes und einer damit verbundenen Instabilit&auml;t sollte KPlato derzeit nicht in wichtigen Arbeitsumgebungen eingesetzt werden.

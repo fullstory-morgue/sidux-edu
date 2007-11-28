@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/dia-common.desktop
 Package=dia
 Homepage=http://www.gnome.org/projects/dia/
 Categories=Kunst
-Description=Dia ist inspiriert worden durch das proprietäre  Programm 'Visio'. Mit Dia können die verschiedenen Arten von Diagrammen, Flussdiagrammen und Strukturzeichnungen angefertigt werden. Auch Logikschaltungen und Netzwerke sind darstellbar. Die Produkte können in verschiedene Formate wie EPS, SVG, XFIG, WMF und PNG exportiert werden.
+Description=Dia ist inspiriert worden durch das propriet&auml;re  Programm 'Visio'. Mit Dia k&ouml;nnen die verschiedenen Arten von Diagrammen, Flussdiagrammen und Strukturzeichnungen angefertigt werden. Auch Logikschaltungen und Netzwerke sind darstellbar. Die Produkte k&ouml;nnen in verschiedene Formate wie EPS, SVG, XFIG, WMF und PNG exportiert werden.

@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/audacity.desktop
 Package=audacity
 Homepage=http://audacity.sourceforge.net/
 Categories=Musik
-Description=Audio-Editor, freie Software. Erhältlich für Windows, Mac (OS 9 und OS X) sowie Linux. Flexibles Audio-Programm, das den Vergleich mit proprietären Programmen nicht zu scheuen braucht. Eine echte Alternative für schulisches Recording und Editing zum Nulltarif. MIDI-Import, virtuelle Mehrspurtechnik, Undo-Funktion sowie das Arbeiten in verschiedensten Formaten und Samplingraten lassen professionelle Ergebnisse zu.
+Description=Audio-Editor, freie Software. Erh&auml;ltlich f&uuml;r Windows, Mac (OS 9 und OS X) sowie Linux. Flexibles Audio-Programm, das den Vergleich mit propriet&auml;ren Programmen nicht zu scheuen braucht. Eine echte Alternative f&uuml;r schulisches Recording und Editing zum Nulltarif. MIDI-Import, virtuelle Mehrspurtechnik, Undo-Funktion sowie das Arbeiten in verschiedensten Formaten und Samplingraten lassen professionelle Ergebnisse zu.

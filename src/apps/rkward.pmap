@@ -1,0 +1,5 @@
+Name=RKWard
+Package=rkward
+Description=RKWard ist eine graphische Benutzeroberfl&auml;che f&uuml;r die Skriptsprache R. R bietet ein breites Feld an Funktionen zum l&ouml;sen statistischer Probleme. Daneben l&auml;sst sich R ohne Weiteres mit zus&auml;tzlichen und eigenen Paketen erweitern.
+Categories=Mathematik
+DesktopPath=/usr/share/applnk/Applications/rkward.desktop

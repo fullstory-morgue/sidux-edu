@@ -42,5 +42,7 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * BROKEN: appinstaller isn't executable
   * appinstaller problem fixed
   * addtional package message changed
+  * ocatve and rkward added 
+  * typos in the apps descriptions fixed
 
- -- Fabian Wuertz <xadras@sidux.com>  Wed, 28 Nov 2007 14:05:11 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Wed, 28 Nov 2007 17:12:54 +0100

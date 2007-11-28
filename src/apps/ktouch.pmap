@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/kde/ktouch.desktop
 Package=ktouch
 Homepage=http://edu.kde.org/ktouch/
 Categories=Lernspiele
-Description=KTouch ist ein Übungsprogramm zum Maschinenschreiben für KDE. Zunächt stellen Sie das gewünschte Tastaturlayout (vermutlich de) ein. Unter "Lektion bearbeiten" Standardlektionen auswählen ud dort eine der ...german...xml-Dateien anklicken.
+Description=KTouch ist ein &Uuml;bungsprogramm zum Maschinenschreiben f&uuml;r KDE. Zun&auml;chst stellen Sie das gew&uuml;nschte Tastaturlayout (vermutlich de) ein. Unter "Lektion bearbeiten" Standardlektionen ausw&auml;hlen und dort eine der ...german...xml-Dateien anklicken.
