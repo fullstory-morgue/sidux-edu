@@ -44,5 +44,6 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * remove empty debian/links.
   * build with -Wl,--as-needed to shut up dpkg-shlibdeps.
   * simplify appinstaller and make it pure POSIX.
+  * fix copyright status.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 14:22:36 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 14:25:48 +0100
