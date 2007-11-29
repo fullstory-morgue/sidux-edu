@@ -48,5 +48,6 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   [ Horst Tritremmel ]
   * made appinstaller executable, installation part works now
   * appinstaller to svn
+  * remove appinstaller file
 
- -- Horst Tritremmel <hjt@sidux.com>  Thu, 29 Nov 2007 12:42:10 +0100
+ -- Horst Tritremmel <hjt@sidux.com>  Thu, 29 Nov 2007 13:06:12 +0100
