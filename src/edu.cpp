@@ -218,7 +218,8 @@ void edu::getAllApps()
 			// *.desktop file
 			KDesktopFile file3( desktopPath );
 			item->setText( 1, file3.readIcon() );
-			item->setText( 2, file3.readEntry("Exec") );
+			QString exec = QStringList::split( " ", file3.readEntry("Exec") )[0];
+			item->setText( 2, exec );
 			if( file3.readEntry("Exec") != "" )
 				item->setText( 7, "TRUE" );
 			else
