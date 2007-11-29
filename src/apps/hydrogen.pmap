@@ -2,5 +2,5 @@ Name=Hydrogen
 DesktopPath=/usr/share/applications/hydrogen.desktop
 Package=hydrogen
 Homepage=http://www.hydrogen-music.org/
-Categories=Musik
+Categories=Multimedia
 Description=Hydrogen ist ein virtueller Drumcomputer und -sequenzer. Hydrogen kombiniert eine einfache, an Pattern orientierte Programmierung mit professionellen Funktionen wie vollst&auml;ndige Ansteuerung &uuml;ber MIDI und frei definierbaren Samples. Unter Linux ist Hydrogen kompatibel zum Soundserver JACK.
