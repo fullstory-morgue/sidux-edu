@@ -1,6 +1,4 @@
-sidux-edu (0.1.0) UNRELEASED; urgency=low
-
-  * NOT RELEASED YET
+sidux-edu (0.1.0) unstable; urgency=low
 
   [ Fabian Wuertz ]
   * Initial release.
@@ -47,4 +45,4 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * fix copyright status.
   * fix FSF address.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 14:32:17 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 14:35:14 +0100
