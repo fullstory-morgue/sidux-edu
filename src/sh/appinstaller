@@ -1,32 +1,13 @@
-#!/bin/bash
+#!/bin/sh
 # siduxEduInstallApp
-# Fabian Wuertz
+# (C) 2007 Fabian Wuertz <xadras@sidux.com>
+# (C) 2007 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 # License: GPL
 
-SELF="/usr/share/sidux-edu/sh/appinstaller"
+[ "$(id -u)" -ne 0 ] && exec su-me "$0" "$@"
 
-###
-# source distro-defaults
-###
-FLL_DISTRO_MODE="installed"
-
-if [ -s /etc/default/distro ]; then
-	. /etc/default/distro
-fi
-
-if [ "${FLL_DISTRO_MODE}" = "live" ]; then
-	# live mode
-	sudo apt-get update
-	sudo apt-get install $1
-else
-	# installed
-	if ((UID)); then
-		exec su -c "$0 $@ --uid $UID $*"
-	fi
-
-	apt-get update
-	apt-get install $1
-fi
+apt-get update
+apt-get install $1
 
 echo ""
 echo "<Enter> druecken um fortzufahren..."

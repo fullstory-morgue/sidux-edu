@@ -30,7 +30,7 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * made appinstaller executable, installation part works now
   * appinstaller to svn
   * remove appinstaller file
-  * add appisntaller, hopefulle executable now
+  * add appinstaller, hopefully executable now
   * s/index.htmll/index.html
 
   [ Stefan Lippers-Hollmann ]
@@ -43,5 +43,6 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
     the packages are installed?
   * remove empty debian/links.
   * build with -Wl,--as-needed to shut up dpkg-shlibdeps.
+  * simplify appinstaller and make it pure POSIX.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 14:12:01 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 14:22:36 +0100
