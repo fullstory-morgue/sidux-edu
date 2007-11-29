@@ -1,17 +1,17 @@
-sidux-edu (0.1.2) UNRELEASED; urgency=low
+sidux-edu (0.1.2) unstable; urgency=low
 
   [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
   * add myself to Uploaders.
+  * keep dh_installdocs from installing zero byte files.
 
   [ Fabian Wuertz ]
   * Musik --> Multimedia 1/2
   * Musik --> Multimedia 2/2
   * kaffeine added
   * isSemanrix function fixed
-  * Musik --> Multimedia 3/2 
+  * Musik --> Multimedia 3/2
 
- -- Fabian Wuertz <xadras@sidux.com>  Thu, 29 Nov 2007 15:20:01 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 15:24:31 +0100
 
 sidux-edu (0.1.1) unstable; urgency=low
 
