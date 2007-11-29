@@ -42,5 +42,6 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
     what about shipping links and using readlink() at runtime to determine if
     the packages are installed?
   * remove empty debian/links.
+  * build with -Wl,--as-needed to shut up dpkg-shlibdeps.
 
- -- Horst Tritremmel <hjt@sidux.com>  Thu, 29 Nov 2007 13:07:44 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 14:12:01 +0100
