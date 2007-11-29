@@ -193,7 +193,7 @@ void edu::getAllApps()
 		if( seminarixApps.contains( package ) )
 			item->setText( 8, "TRUE" );
 		else
-			item->setText( 8, "TRUE" );
+			item->setText( 8, "FALSE" );
 
 
 	
