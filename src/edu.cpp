@@ -2,7 +2,6 @@
  * edu.cpp
  *
  * Copyright (c) 2007 Fabian Wuertz <xadras@sidux.com>
- * edu is based on knxcc_kmain from Andreas Loibl
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as

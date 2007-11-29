@@ -59,4 +59,7 @@ sidux-edu (0.1.0) unstable; urgency=low
   * fix copyright status.
   * fix FSF address.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 14:35:14 +0100
+  [ Fabian Wuertz ]
+  * copyright amended 
+
+ -- Fabian Wuertz <xadras@sidux.com>  Thu, 29 Nov 2007 14:44:47 +0100
