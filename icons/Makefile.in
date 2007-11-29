@@ -485,7 +485,7 @@ uninstall-am: uninstall-kde-icons  uninstall-info-am
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=hi32-app-seminarix_informatik.png hi48-app-seminarix.png Makefile.in hi32-app-seminarix_physik.png hi32-app-seminarix_allgemein.png hi32-app-seminarix_chemie.png hi32-app-seminarix_musik.png hi32-app-seminarix_mathematik.png hi32-app-seminarix.png hi32-app-seminarix_kunst.png hi32-app-seminarix_erdkunde.png hi16-app-seminarix.png hi22-app-seminarix.png hi32-app-seminarix_religion.png hi64-app-seminarix.png hi96-app-seminarix.png hi32-app-seminarix_technik.png Makefile.am hi32-app-seminarix_lernspiele.png hi32-app-seminarix_sprachen.png hi32-app-seminarix_start.png 
+KDE_DIST=hi32-app-seminarix_informatik.png hi48-app-seminarix.png Makefile.in hi32-app-seminarix_physik.png hi32-app-seminarix_allgemein.png hi32-app-seminarix_chemie.png hi32-app-seminarix_mathematik.png hi32-app-seminarix.png hi32-app-seminarix_kunst.png hi32-app-seminarix_erdkunde.png hi16-app-seminarix.png hi22-app-seminarix.png hi32-app-seminarix_religion.png hi64-app-seminarix.png hi96-app-seminarix.png hi32-app-seminarix_technik.png Makefile.am hi32-app-seminarix_lernspiele.png hi32-app-seminarix_multimedia.png hi32-app-seminarix_sprachen.png hi32-app-seminarix_start.png 
 
 #>+ 2
 docs-am:
@@ -512,9 +512,9 @@ install-kde-icons:
 	$(INSTALL_DATA) $(srcdir)/hi64-app-seminarix.png $(DESTDIR)$(kde_icondir)/hicolor/64x64/apps/seminarix.png
 	$(mkinstalldirs) $(DESTDIR)$(kde_icondir)/hicolor/48x48/apps
 	$(INSTALL_DATA) $(srcdir)/hi48-app-seminarix.png $(DESTDIR)$(kde_icondir)/hicolor/48x48/apps/seminarix.png
-	$(INSTALL_DATA) $(srcdir)/hi32-app-seminarix_musik.png $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_musik.png
 	$(INSTALL_DATA) $(srcdir)/hi32-app-seminarix_chemie.png $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_chemie.png
 	$(INSTALL_DATA) $(srcdir)/hi32-app-seminarix_start.png $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_start.png
+	$(INSTALL_DATA) $(srcdir)/hi32-app-seminarix_multimedia.png $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_multimedia.png
 
 uninstall-kde-icons:
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_allgemein.png
@@ -532,9 +532,9 @@ uninstall-kde-icons:
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_technik.png
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/64x64/apps/seminarix.png
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/48x48/apps/seminarix.png
-	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_musik.png
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_chemie.png
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_start.png
+	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_multimedia.png
 
 #>+ 15
 force-reedit:
