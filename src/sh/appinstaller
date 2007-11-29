@@ -1,0 +1,34 @@
+#!/bin/bash
+# siduxEduInstallApp
+# Fabian Wuertz
+# License: GPL
+
+SELF="/usr/share/sidux-edu/sh/appinstaller"
+
+###
+# source distro-defaults
+###
+FLL_DISTRO_MODE="installed"
+
+if [ -s /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
+if [ "${FLL_DISTRO_MODE}" = "live" ]; then
+	# live mode
+	sudo apt-get update
+	sudo apt-get install $1
+else
+	# installed
+	if ((UID)); then
+		exec su -c "$0 $@ --uid $UID $*"
+	fi
+
+	apt-get update
+	apt-get install $1
+fi
+
+echo ""
+echo "<Enter> druecken um fortzufahren..."
+read
+
