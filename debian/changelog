@@ -4,23 +4,6 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
 
   [ Fabian Wuertz ]
   * Initial release.
-
-  [ Horst Tritremmel ]
-  * changed to automake1.10
-  * changed name of desktop symbol from sidux-edu to sidux seminarix
-    appstarter
-
-  [ Stefan Lippers-Hollmann ]
-  * remove empty Recommends.
-  * fix short description.
-  * add long description.
-  * remove empty debian/install.
-  * please don't ship ./src/apps/*.desktop, that stuff is unmaintainable -
-    what about shipping links and using readlink() at runtime to determine if
-    the packages are installed?
-  * remove empty debian/links.
-
-  [ Fabian Wuertz ]
   * amarok, childsplay & tuxmath desktop files fixed
   * "All/Just installed programs" combobox inserted
   * Additional Packages marker added
@@ -31,11 +14,6 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * no *.desktop file problem fiex
   * x-www-browser problem fixed
   * handbook link fixed
-
-  [ Horst Tritremmel ]
-  * s/index.htmll/index.html
-
-  [ Fabian Wuertz ]
   * "Back to startpage" added
   * .desktop: "seminarix Programmstater" -> "Programmstarter"
   * mv siduxEduAppinstaller sh/appinstaller
@@ -46,9 +24,23 @@ sidux-edu (0.1.0) UNRELEASED; urgency=low
   * typos in the apps descriptions fixed
 
   [ Horst Tritremmel ]
+  * changed to automake1.10
+  * changed name of desktop symbol from sidux-edu to sidux seminarix
+    appstarter
   * made appinstaller executable, installation part works now
   * appinstaller to svn
   * remove appinstaller file
   * add appisntaller, hopefulle executable now
+  * s/index.htmll/index.html
+
+  [ Stefan Lippers-Hollmann ]
+  * remove empty Recommends.
+  * fix short description.
+  * add long description.
+  * remove empty debian/install.
+  * please don't ship ./src/apps/*.desktop, that stuff is unmaintainable -
+    what about shipping links and using readlink() at runtime to determine if
+    the packages are installed?
+  * remove empty debian/links.
 
  -- Horst Tritremmel <hjt@sidux.com>  Thu, 29 Nov 2007 13:07:44 +0100
