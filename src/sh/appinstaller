@@ -4,6 +4,8 @@
 # (C) 2007 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 # License: GPL
 
+[ -z "${1}" ] && exit 0
+
 [ "$(id -u)" -ne 0 ] && exec su-me "$0" "$@"
 
 apt-get update
@@ -11,5 +13,5 @@ apt-get install $1
 
 echo ""
 echo "<Enter> druecken um fortzufahren..."
-read
+read DUMMY
 

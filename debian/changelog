@@ -1,3 +1,10 @@
+sidux-edu (0.1.1) unstable; urgency=low
+
+  * fix bashisms.
+  * early exist if there is nothing to install.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 Nov 2007 14:41:45 +0100
+
 sidux-edu (0.1.0) unstable; urgency=low
 
   [ Fabian Wuertz ]
