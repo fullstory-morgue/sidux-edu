@@ -31,3 +31,4 @@ fi
 echo ""
 echo "<Enter> druecken um fortzufahren..."
 read
+
