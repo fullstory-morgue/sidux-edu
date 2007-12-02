@@ -421,7 +421,7 @@ void edu::disableButtons()
 
 void edu::additionalPackage()
 {
-	KMessageBox::information(this, "Das installieren von zusaetzlichen Paketen geschiet auf eigenes Risiko!" );
+	KMessageBox::information(this, "Das installieren von zusaetzlichen Paketen geschieht auf eigenes Risiko!" );
 }
 
 

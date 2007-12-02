@@ -6,7 +6,11 @@ sidux-edu (0.1.4) UNRELEASED; urgency=low
   [ Ferdinand Thommes ]
   * upload changed src dir
 
- -- Ferdinand Thommes <devil@sidux.com>  Sat, 01 Dec 2007 15:48:53 +0100
+  [ Fabian Wuertz ]
+  * typo fixed
+  * about corrected
+
+ -- Fabian Wuertz <xadras@sidux.com>  Sun, 02 Dec 2007 15:10:24 +0100
 
 sidux-edu (0.1.3) unstable; urgency=low
 

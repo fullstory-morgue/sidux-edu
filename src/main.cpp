@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 	about->setCopyrightStatement("(c) 2007 sidux-edu Team");
 
 	about->addAuthor("Fabian Würtz (xadras)", "Entwickler des Programmstarters", "xadras@sidux.com", "http://sidux.wuertz.org/");
-	about->addAuthor("BlueShadow", "Paketzusammenstellung und Dokumentation" );
+	about->addAuthor("Björn Jilg (BlueShadow)", "Paketzusammenstellung und Dokumentation" );
 	about->addAuthor("Thomas Kross (captagon)", "Paketzusammenstellung und Dokumentation" );
 	about->addAuthor("Dinko Sabo (cobra)", "Paketzusammenstellung und Artwork", "cobra@sidux.com");
 	about->addAuthor("hendrikL", "Paketzusammenstellung und Dokumentation" );
