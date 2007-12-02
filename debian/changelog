@@ -1,12 +1,5 @@
-sidux-edu (0.1.4) UNRELEASED; urgency=low
+sidux-edu (0.1.4) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Ferdinand Thommes ]
-  * upload changed src dir
-
-  [ Fabian Wuertz ]
   * typo fixed
   * about corrected
 
