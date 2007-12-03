@@ -1,0 +1,8 @@
+?package(sidux-edu): \
+	needs="X11" \
+	section="Applications/File Management" \
+	hints="sidux,Edu" \
+	title="Seminarix application starter" \
+	icon32x32="/usr/share/pixmaps/seminarix.xpm" \
+	icon16x16="/usr/share/pixmaps/seminarix-16.xpm" \
+	command="/usr/bin/sidux-edu"

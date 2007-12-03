@@ -21,3 +21,10 @@ include /usr/share/cdbs/1/class/kde.mk
 #clean::
 #	rm -f debian/stamp-autothings-update
 
+install/sidux-edu::
+	mkdir -p debian/sidux-edu/usr/share/pixmaps
+	convert icons/hi32-app-seminarix.png \
+		debian/sidux-edu/usr/share/pixmaps/seminarix.xpm
+	convert icons/hi16-app-seminarix.png \
+		debian/sidux-edu/usr/share/pixmaps/seminarix-16.xpm
+
