@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 	about->addAuthor("Björn Jilg (BlueShadow)", "Paketzusammenstellung und Dokumentation" );
 	about->addAuthor("Thomas Kross (captagon)", "Paketzusammenstellung und Dokumentation" );
 	about->addAuthor("Dinko Sabo (cobra)", "Paketzusammenstellung und Artwork", "cobra@sidux.com");
-	about->addAuthor("hendrikL", "Paketzusammenstellung und Dokumentation" );
+	about->addAuthor("Hendrik Lehmbruch (hendrikL)", "Paketzusammenstellung und Dokumentation" );
 	about->addAuthor("Roland Engert (RoEn)", "Paketzusammenstellung und Dokumentation" );
 
 	
@@ -59,8 +59,6 @@ int main(int argc, char **argv)
 
 	KCmdLineArgs::init(argc, argv, about);
 	KCmdLineArgs::addCmdLineOptions( options );
-
-
 
 
 	Unique app;
