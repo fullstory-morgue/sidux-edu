@@ -1,9 +1,5 @@
-sidux-edu (0.1.6) UNRELEASED; urgency=low
+sidux-edu (0.1.6) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * icon changed
   * about modified
 
