@@ -1,9 +1,5 @@
-sidux-edu (0.1.8) UNRELEASED; urgency=low
+sidux-edu (0.1.8) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * about modified 
 
  -- Fabian Wuertz <xadras@sidux.com>  Wed, 05 Dec 2007 01:11:23 +0100
