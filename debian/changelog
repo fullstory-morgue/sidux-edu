@@ -1,10 +1,24 @@
-sidux-edu (0.1.10) unstable; urgency=low
+sidux-edu (0.1.10) UNRELEASED; urgency=low
 
+  * NOT RELEASED YET
+  * FTBS
+
+  [ Fabian Wuertz ]
   * Multimedia -> Musik
   * Kino and Scribus: homepage added
   * ksnapshot: description added
 
- -- Fabian Wuertz <xadras@sidux.com>  Thu, 06 Dec 2007 00:15:44 +0100
+  [ Stefan Lippers-Hollmann ]
+  * /usr/bin/install -c -p -m 644
+    /tmp/buildd/sidux-edu-0.1.10/./icons/hi32-app-seminarix_multimedia.png
+    /tmp/buildd/sidux-edu-0.1.10/debian/sidux-edu//usr/share/icons/hicolor/32x32/apps/seminarix
+    _multimedia.png
+    /usr/bin/install: cannot stat
+    `/tmp/buildd/sidux-edu-0.1.10/./icons/hi32-app-seminarix_multimedia.png':
+    No such file or directory
+    make[3]: *** [install-kde-icons] Error 1
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 06 Dec 2007 00:40:24 +0100
 
 sidux-edu (0.1.9) unstable; urgency=low
 
