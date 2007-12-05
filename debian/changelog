@@ -1,9 +1,5 @@
-sidux-edu (0.1.9) UNRELEASED; urgency=low
+sidux-edu (0.1.9) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * new image for apps without image set
   * new description for additional packages
   * seminarix-app-list updatet
@@ -11,7 +7,7 @@ sidux-edu (0.1.9) UNRELEASED; urgency=low
   * "show not installed apps" added to combobox
   * vlc removed
   
-  -- Fabian Wuertz <xadras@sidux.com>  Wed, 05 Dec 2007 23:11:08 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Wed, 05 Dec 2007 23:11:08 +0100
 
 sidux-edu (0.1.8) unstable; urgency=low
 
