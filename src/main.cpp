@@ -47,15 +47,19 @@ int main(int argc, char **argv)
 	about->setBugAddress("xadras@sidux.com");
 	about->setCopyrightStatement("(c) 2007 sidux-edu Team");
 
-	about->addAuthor("Fabian Würtz (xadras)", "Entwickler des Programmstarters", "xadras@sidux.com", "http://sidux.wuertz.org/");
+
+	about->addAuthor("Roland Engert (RoEn)", "Paketzusammenstellung und Dokumentation" );
+	about->addAuthor("Bernard Gray (cleary)", "Artwork", "bernard.gray@gmail.com" );
 	about->addAuthor("Björn Jilg (BlueShadow)", "Paketzusammenstellung und Dokumentation" );
 	about->addAuthor("Thomas Kross (captagon)", "Paketzusammenstellung und Dokumentation" );
-	about->addAuthor("Dinko Sabo (cobra)", "Paketzusammenstellung und Artwork", "cobra@sidux.com");
 	about->addAuthor("Hendrik Lehmbruch (hendrikL)", "Paketzusammenstellung und Dokumentation" );
-	about->addAuthor("Roland Engert (RoEn)", "Paketzusammenstellung und Dokumentation" );
+	about->addAuthor("Dinko Sabo (cobra)", "Paketzusammenstellung, Dokumentation und Artwork", "cobra@sidux.com");
+	about->addAuthor("Fabian Würtz (xadras)", "Entwickler des Programmstarters", "xadras@sidux.com", "http://sidux.wuertz.org/");
+	about->addCredit("Stefan Lippers-Hollmann (slh)" );
+	about->addCredit("Ferdi Thommes (devil)");
+	about->addCredit("Horst Tritremmel (hjt)");
+	about->addCredit("Wolf-Dieter Zimmermann (emilel)", "Projektinitiator" );
 
-	
-	about->addCredit("Stefan Lippers-Hollmann (slh)", "Paketierung" );
 
 	KCmdLineArgs::init(argc, argv, about);
 	KCmdLineArgs::addCmdLineOptions( options );

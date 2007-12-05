@@ -1,8 +1,12 @@
 sidux-edu (0.1.8) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 04 Dec 2007 16:43:01 +0100
+  [ Fabian Wuertz ]
+  * about modified 
+
+ -- Fabian Wuertz <xadras@sidux.com>  Wed, 05 Dec 2007 01:11:23 +0100
 
 sidux-edu (0.1.7) unstable; urgency=low
 
