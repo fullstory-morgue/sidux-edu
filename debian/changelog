@@ -1,9 +1,5 @@
-sidux-edu (0.1.10) UNRELEASED; urgency=low
+sidux-edu (0.1.10) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * Multimedia -> Musik
   * Kino and Scribus: homepage added
   * ksnapshot: description added
