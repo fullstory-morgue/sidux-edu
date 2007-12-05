@@ -175,6 +175,11 @@
                                         <string>Alle Programm</string>
                                     </property>
                                 </item>
+                                <item>
+                                    <property name="text">
+                                        <string>Nicht installierte Programme</string>
+                                    </property>
+                                </item>
                                 <property name="name">
                                     <cstring>comboBox</cstring>
                                 </property>

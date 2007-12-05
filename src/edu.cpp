@@ -73,8 +73,8 @@ void edu::load()
 	execPushButton->hide();
 	homepagePushButton->hide();
 	additionalGroupBox->hide();
-	widgetStack->raiseWidget(3);
-	//widgetStack->raiseWidget(2);
+	//widgetStack->raiseWidget(3);
+	widgetStack->raiseWidget(2);
 
 	// setup leftmenu
 	categoriesListView->setAlternateBackground( QColor(237, 244, 249) );
@@ -265,6 +265,16 @@ void edu::getApps()
 		while ( it.current() )
 		{
 			if ( it.current()->text(6).contains(category) and it.current()->text(7) == "TRUE" )
+			{
+				names.append( it.current()->text(0) );
+				icons.append( it.current()->text(1) );
+			}
+			++it;
+		}
+	else if( comboBox->currentItem() == 2 )
+		while ( it.current() )
+		{
+			if ( it.current()->text(6).contains(category) and it.current()->text(7) == "FALSE" )
 			{
 				names.append( it.current()->text(0) );
 				icons.append( it.current()->text(1) );

@@ -8,8 +8,10 @@ sidux-edu (0.1.9) UNRELEASED; urgency=low
   * new description for additional packages
   * seminarix-app-list updatet
   * tuxtype, ktuberling and klatin fixed
-
- -- Fabian Wuertz <xadras@sidux.com>  Wed, 05 Dec 2007 22:58:46 +0100
+  * "show not installed apps" added to combobox
+  * vlc removed
+  
+  -- Fabian Wuertz <xadras@sidux.com>  Wed, 05 Dec 2007 23:11:08 +0100
 
 sidux-edu (0.1.8) unstable; urgency=low
 
