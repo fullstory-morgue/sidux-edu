@@ -1,8 +1,14 @@
 sidux-edu (0.1.10) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 05 Dec 2007 23:52:42 +0100
+  [ Fabian Wuertz ]
+  * Multimedia -> Musik
+  * Kino and Scribus: homepage added
+  * ksnapshot: description added
+
+ -- Fabian Wuertz <xadras@sidux.com>  Thu, 06 Dec 2007 00:15:44 +0100
 
 sidux-edu (0.1.9) unstable; urgency=low
 

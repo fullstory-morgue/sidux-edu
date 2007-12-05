@@ -1,5 +1,6 @@
 Name=Kino
 DesktopPath=/usr/share/applications/Kino.desktop
 Package=kino
+Homepage=http://www.kinodv.org
 Categories=Kunst
 Description=Mit Kino lassen sich Dateien von einer Videokamera &uuml;ber einen Firewire-Anschluss auf den Rechner laden, bearbeiten und schneiden.

@@ -2,6 +2,6 @@ Name=Kaffeine
 DesktopPath=/usr/share/applications/kde/kaffeine.desktop
 Package=kaffeine
 Homepage=http://kaffeine.kde.org/
-Categories=Multimedia
+Categories=Musik
 Description=Universelles Abspielprogramm für Videos, DVDs, CDs, und Musik.
 
