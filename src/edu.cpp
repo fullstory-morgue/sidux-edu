@@ -31,6 +31,7 @@
 #include <qlistbox.h>
 #include <qtextbrowser.h>
 #include <qcombobox.h>
+#include <qgroupbox.h>
 
 #include <klistview.h>
 #include <klistbox.h>
@@ -71,7 +72,7 @@ void edu::load()
 	konsoleFrame->installEventFilter( this );
 	execPushButton->hide();
 	homepagePushButton->hide();
-	addtionalPushButton->hide();
+	additionalGroupBox->hide();
 	widgetStack->raiseWidget(3);
 	//widgetStack->raiseWidget(2);
 
@@ -284,7 +285,9 @@ void edu::getApps()
 	QPixmap icon;
 	for(uint i = 0; i < names.count(); i++)
 	{
-		icon = loader->loadIcon( icons[i], KIcon::Desktop, 36);
+		icon = loader->loadIcon( icons[i], KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
+		if (icon.isNull() )
+			icon = loader->loadIcon( "seminarix_empty", KIcon::Desktop, 32);
 		appsListBox->insertItem( icon, names[i]);
 	}
 
@@ -406,24 +409,17 @@ void edu::enableButtons()
 
 	QString isSeminarix = listView->findItem(app, 0, Qt::ExactMatch )->text(8);
 	if( isSeminarix == "TRUE" )
-		addtionalPushButton->hide();
+		additionalGroupBox->hide();
 	else
-		addtionalPushButton->show();
+		additionalGroupBox->show();
 }
 
 void edu::disableButtons()
 {
 	execPushButton->hide();
 	homepagePushButton->hide();
-	addtionalPushButton->hide();
+	additionalGroupBox->hide();
 }
-
-
-void edu::additionalPackage()
-{
-	KMessageBox::information(this, "Das installieren von zusaetzlichen Paketen geschieht auf eigenes Risiko!" );
-}
-
 
 //------------------------------------------------------------------------------
 //--- load console -------------------------------------------------------------

@@ -1,8 +1,15 @@
 sidux-edu (0.1.9) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 05 Dec 2007 14:50:38 +0100
+  [ Fabian Wuertz ]
+  * new image for apps without image set
+  * new description for additional packages
+  * seminarix-app-list updatet
+  * tuxtype, ktuberling and klatin fixed
+
+ -- Fabian Wuertz <xadras@sidux.com>  Wed, 05 Dec 2007 22:58:46 +0100
 
 sidux-edu (0.1.8) unstable; urgency=low
 

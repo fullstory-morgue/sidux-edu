@@ -62,7 +62,6 @@ class edu : public EduDialog
 		virtual void seminarixManual();
 		virtual void homepage();
 		virtual void searchApp();
-		virtual void additionalPackage();
 
 
 	protected:

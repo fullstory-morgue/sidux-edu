@@ -1,5 +1,5 @@
 Name=Tuxtype
-DesktopPath=/usr/share/gnome/apps/Graphics/tuxpaint.desktop
+DesktopPath=/usr/share/gnome/apps/Graphics/tuxtype.desktop
 Package=tuxtype
 Homepage=http://tuxtype.sourceforge.net/
 Categories=Lernspiele
