@@ -73,8 +73,8 @@ void edu::load()
 	execPushButton->hide();
 	homepagePushButton->hide();
 	additionalGroupBox->hide();
-	//widgetStack->raiseWidget(3);
-	widgetStack->raiseWidget(2);
+	widgetStack->raiseWidget(3);
+	//widgetStack->raiseWidget(2);
 
 	// setup leftmenu
 	categoriesListView->setAlternateBackground( QColor(237, 244, 249) );
