@@ -18,7 +18,10 @@ sidux-edu (0.1.10) UNRELEASED; urgency=low
     No such file or directory
     make[3]: *** [install-kde-icons] Error 1
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 06 Dec 2007 00:40:24 +0100
+  [ Fabian Wuertz ]
+  * image problem fixed 
+
+ -- Fabian Wuertz <xadras@sidux.com>  Fri, 07 Dec 2007 01:56:53 +0100
 
 sidux-edu (0.1.9) unstable; urgency=low
 
