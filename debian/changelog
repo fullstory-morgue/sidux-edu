@@ -1,9 +1,5 @@
-sidux-edu (0.1.11) UNRELEASED; urgency=low
+sidux-edu (0.1.11) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Ferdinand Thommes ]
   * added homepage fo wxmaxima
   * added homepage to kstars.pmap
 
