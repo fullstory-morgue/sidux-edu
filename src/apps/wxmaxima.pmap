@@ -1,5 +1,6 @@
 Name=wxMaxima
 DesktopPath=/usr/share/applications/wxmaxima.desktop
 Package=wxmaxima
+Homepage=http://www.lehrer-online.de/maxima.php
 Categories=Mathematik
 Description=Graphische Oberfl&auml;che f&uuml;r das Computeralgebrasystem(cas) maxima<br><br>Maxima ist ein freies und leistungsf&auml;higes Computeralgebrasystem.<br>Einige Funktionen und F&auml;higkeiten:<ul><li>L&ouml;sen von Gleichungssystemen</li><li>Grenzwertermittlung</li><li>Trigonometrische Berechnungen</li><li>Polynommanipulationen</li><li>Differenzieren sowie L&ouml;sung von Differenzialgleichungen 1. und 2. Ordnung</li><li>Integrieren</li><li>Matrizen</li><li>diverse Anwendungen der Wahrscheinlichkeitsrechnung</li></ul><br>und vieles mehr. <br> (wx)Maxima kann Funktionen grafisch in 2- und 3-dimensionalen Funktionsgrafen darstellen und auch ausdrucken lassen.
