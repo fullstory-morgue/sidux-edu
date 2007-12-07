@@ -1,8 +1,12 @@
 sidux-edu (0.1.12) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 07 Dec 2007 14:47:19 +0100
+  [ Ferdinand Thommes ]
+  * added homepages for kwordquiz.pmap kvoctrain.pmap
+
+ -- Ferdinand Thommes <devil@sidux.com>  Fri, 07 Dec 2007 18:48:42 +0100
 
 sidux-edu (0.1.11) unstable; urgency=low
 
