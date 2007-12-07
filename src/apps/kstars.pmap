@@ -1,5 +1,6 @@
 Name=KStars
 DesktopPath=/usr/share/applications/kde/kstars.desktop
 Package=kstars
+Homepage=http://docs.kde.org/development/de/kdeedu/kstars/index.html
 Categories=Physik
 Description=Astronomieprogramm und Bestandteil des KDE-Projekts Planetarium.

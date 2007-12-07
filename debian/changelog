@@ -5,8 +5,9 @@ sidux-edu (0.1.11) UNRELEASED; urgency=low
 
   [ Ferdinand Thommes ]
   * added homepage fo wxmaxima
+  * added homepage to kstars.pmap
 
- -- Ferdinand Thommes <devil@sidux.com>  Fri, 07 Dec 2007 14:20:52 +0100
+ -- Ferdinand Thommes <devil@sidux.com>  Fri, 07 Dec 2007 14:24:33 +0100
 
 sidux-edu (0.1.10) unstable; urgency=low
 
