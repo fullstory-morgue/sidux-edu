@@ -260,6 +260,7 @@ void edu::getApps()
 
 	QStringList names;
 	QStringList icons;
+	QStringList packages;
 	QListViewItemIterator it( listView );
 	if( comboBox->currentItem() == 0 )
 		while ( it.current() )
@@ -268,6 +269,7 @@ void edu::getApps()
 			{
 				names.append( it.current()->text(0) );
 				icons.append( it.current()->text(1) );
+				packages.append( it.current()->text(3) );
 			}
 			++it;
 		}
@@ -278,6 +280,7 @@ void edu::getApps()
 			{
 				names.append( it.current()->text(0) );
 				icons.append( it.current()->text(1) );
+				packages.append( it.current()->text(3) );
 			}
 			++it;
 		}
@@ -288,6 +291,7 @@ void edu::getApps()
 			{
 				names.append( it.current()->text(0) );
 				icons.append( it.current()->text(1) );
+				packages.append( it.current()->text(3) );
 			}
 			++it;
 		}
@@ -297,7 +301,12 @@ void edu::getApps()
 	{
 		icon = loader->loadIcon( icons[i], KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
 		if (icon.isNull() )
-			icon = loader->loadIcon( "seminarix_empty", KIcon::Desktop, 32);
+		{
+			if( QFile::exists("/usr/share/pixmaps/"+packages[i]+".xpm") )
+				icon = QPixmap("/usr/share/pixmaps/"+packages[i]+".xpm");
+			else
+				icon = loader->loadIcon( "seminarix_empty", KIcon::Desktop, 32);
+		}
 		appsListBox->insertItem( icon, names[i]);
 	}
 
@@ -314,12 +323,14 @@ void edu::searchApp()
 
 	QStringList names;
 	QStringList icons;
+	QStringList packages;
 	QListViewItemIterator it( listView );
 	while ( it.current() ) {
 		if ( it.current()->text(0).contains( searchLineEdit->text(), FALSE ) or it.current()->text(4).contains( searchLineEdit->text(), FALSE ) )
 		{
 			names.append( it.current()->text(0) );
 			icons.append( it.current()->text(1) );
+			packages.append( it.current()->text(3) );
 		}
 		++it;
 	}
@@ -327,7 +338,14 @@ void edu::searchApp()
 	QPixmap icon;
 	for(uint i = 0; i < names.count(); i++)
 	{
-		icon = loader->loadIcon( icons[i], KIcon::Desktop, 36);
+		icon = loader->loadIcon( icons[i], KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
+		if (icon.isNull() )
+		{
+			if( QFile::exists("/usr/share/pixmaps/"+packages[i]+".xpm") )
+				icon = QPixmap("/usr/share/pixmaps/"+packages[i]+".xpm");
+			else
+				icon = loader->loadIcon( "seminarix_empty", KIcon::Desktop, 32);
+		}
 		appsListBox->insertItem( icon, names[i]);
 	}
 

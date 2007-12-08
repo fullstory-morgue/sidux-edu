@@ -7,7 +7,13 @@ sidux-edu (0.1.12) UNRELEASED; urgency=low
   * added homepages for kwordquiz.pmap kvoctrain.pmap
   * updated kstars.pmap kwordquiz.pmap kvoctrain.pmap
 
- -- Ferdinand Thommes <devil@sidux.com>  Fri, 07 Dec 2007 23:09:33 +0100
+  [ Fabian Wuertz ]
+  * hanzim homepage added
+  * tuxetype exec fixed
+  * pixmap icons (/usr/share/pixmaps) detection added (sunclock icon problem
+    fixed)
+
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 08 Dec 2007 02:47:31 +0100
 
 sidux-edu (0.1.11) unstable; urgency=low
 
