@@ -1,0 +1,6 @@
+Name=OpenOffice Writer
+Package=openoffice.org-writer
+Homepage=http://de.openoffice.org/
+Categories=Allgemein
+Description=Writer ist das Textverarbeitungsprogramm von OpenOffice.org: Nutzen Sie es f&uuml;r alles vom einfachen Brief bis zum komplexen Buch mit Hyperlinks, Inhaltsverzeichnis, eingebetteten Illustrationen, Literaturverzeichnissen und was bei Ihnen sonst noch an Aufgaben anf&auml;llt. Auto-Vervollst&auml;ndigen, Auto-Format und die Rechtschreibpr&uuml;fung w&auml;hrend der Eingabe erleichtern schwierige Aufgaben. Writer beherrscht auch verschiedene Desktop-Publishing-Aufgaben wie die Erstellung von Newslettern mit mehreren Spalten oder Brosch&uuml;ren. Die einzige Grenze ist Ihre Vorstellungskraft.
+DesktopPath=/usr/share/applications/ooo-writer.desktop
