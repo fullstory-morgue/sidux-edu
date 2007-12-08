@@ -5,8 +5,9 @@ sidux-edu (0.1.13) UNRELEASED; urgency=low
 
   [ Ferdinand Thommes ]
   * added extra oo.pmaps
+  * added openclipart.pmap hunspell-de-de.pmap
 
- -- Ferdinand Thommes <devil@sidux.com>  Sat, 08 Dec 2007 14:09:49 +0100
+ -- Ferdinand Thommes <devil@sidux.com>  Sat, 08 Dec 2007 14:11:53 +0100
 
 sidux-edu (0.1.12) unstable; urgency=low
 

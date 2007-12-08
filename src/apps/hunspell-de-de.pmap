@@ -1,0 +1,7 @@
+Name=Hunspell Rectschreibprüfung für OpenOffice
+DesktopPath=/usr/share/applications/openoffice.desktop
+Package=hunspell-de-de
+Homepage=http://hunspell.sourceforge.net/
+Categories=Allgemein
+Description=OpenOffice Rechtschreibprüfung
+Deutsche Rechtschreibprüfung für OpenOffice
