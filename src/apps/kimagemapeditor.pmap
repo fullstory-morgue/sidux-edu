@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/kde/kimagemapeditor.desktop
 Package=kimagemapeditor
 Homepage=http://www.nongnu.org/kimagemap
 Categories=Allgemein
-Description=Mit KImageMapEditor lassen sich Bilder so bearbeiten, dass festgelegte Teile des Bildes z.B. einen Link enthalten k&ouml;nnen. Hilfreich bei Webprojekten.
+Description=Mit KImageMapEditor lassen sich Bilder so bearbeiten, dass festgelegte Teile des Bildes z.B. einen Link enthalten k&ouml;nnen. Das kann bei Webprojekten gut eingesetzt werden, indem eine Mausbewegung &uuml;ber einem festgelegten Bildteil einen Link anbietet bzw. ausl&ouml;st.

@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/kde/kstars.desktop
 Package=kstars
 Homepage=http://docs.kde.org/development/de/kdeedu/kstars/index.html
 Categories=Physik
-Description=Astronomieprogramm und Bestandteil des KDE-Projekts Planetarium.
+Description=Das Projekt beschreibt sich selbst als &ldquo;Schreibtischplanetarium&rdquo;. Sterne, Planeten und alles in einer sch&ouml;nen Simulation. Mondaufgang und -untergang ist f&uuml;r jeden Tag ebenso abfragbar wie Sonnenauf- und -untergang. Ebenfalls enthalten ist ein Modell des Sonnensystems, auch die Trabanten des Saturn. KStars iste eine sogenanntes Astroprogramm und Teil des KDE-Edu-Projekts.

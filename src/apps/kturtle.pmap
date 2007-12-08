@@ -3,4 +3,5 @@ DesktopPath=/usr/share/applications/kde/kturtle.desktop
 Package=kturtle
 Homepage=http://edu.kde.org/kturtle/
 Categories=Informatik
-Description=Programmieren mit LOGO. Projekt aus dem KDE-EDU Bereich.
+Description=Logo ist eine kleine und schnelle erlernbare Programmiersprache. Kturtle basiert auf Logo und stammt ebenfalls aus dem  KDE-Edu-Bereich.
+

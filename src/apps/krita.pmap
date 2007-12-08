@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/kde/krita.desktop
 Package=krita
 Homepage=http://www.koffice.org/krita/
 Categories=Kunst
-Description=Bildbearbeitungsprogramm aus dem KOffice-Projekt mit Zeichen-, aber auch Spassfunktionen.
+Description=Mit Krita (ebenfalls aus dem KOffice-Projekt) k&ouml;nnen sowohl Fotos bearbeitet werden, es l&auml;sst sich aber auch als Malprogramm mit vielf&auml;ltigen Funktionen und Ebenen nutzen. Die Einbindung in das KOffice-Projekt erleichtert die Nutzunhg, weil Officeweit gleiche Icons f&uuml;r gleiche T&auml;tigkeiten verwendet werden.

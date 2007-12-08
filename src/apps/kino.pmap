@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/Kino.desktop
 Package=kino
 Homepage=http://www.kinodv.org
 Categories=Kunst
-Description=Mit Kino lassen sich Dateien von einer Videokamera &uuml;ber einen Firewire-Anschluss auf den Rechner laden, bearbeiten und schneiden.
+Description=Kino ist ein Open-Source Video Editor, der es erlaubt, ein von einer Videokamera &uuml;ber einen Firewire-Anschlu&szlig; eingespieltes Video zu bearbeiten, zu schneiden, zu k&uuml;rzen, Clips einzuf&uuml;gen und vieles mehr.

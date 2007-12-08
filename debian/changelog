@@ -6,8 +6,9 @@ sidux-edu (0.1.14) UNRELEASED; urgency=low
 
   [ Fabian Wuertz ]
   * category descriptions added
+  * descriptions in the apps-files updated
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 08 Dec 2007 15:40:46 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 08 Dec 2007 20:59:35 +0100
 
 sidux-edu (0.1.13) unstable; urgency=low
 

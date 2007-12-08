@@ -96,7 +96,10 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
-                    <widget class="QTextBrowser" row="3" column="0" rowspan="1" colspan="4">
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <widget class="QTextBrowser" row="3" column="0" rowspan="1" colspan="5">
                         <property name="name">
                             <cstring>descriptionTextBrowser</cstring>
                         </property>
@@ -107,12 +110,12 @@
                             <set>AutoAll</set>
                         </property>
                     </widget>
-                    <widget class="QListBox" row="1" column="0" rowspan="1" colspan="4">
+                    <widget class="QListBox" row="1" column="0" rowspan="1" colspan="5">
                         <property name="name">
                             <cstring>appsListBox</cstring>
                         </property>
                     </widget>
-                    <widget class="QFrame" row="0" column="0" rowspan="1" colspan="4">
+                    <widget class="QFrame" row="0" column="0" rowspan="1" colspan="5">
                         <property name="name">
                             <cstring>frame5</cstring>
                         </property>
@@ -254,23 +257,6 @@
                             <iconset>image2</iconset>
                         </property>
                     </widget>
-                    <spacer row="2" column="3">
-                        <property name="name">
-                            <cstring>spacer1</cstring>
-                        </property>
-                        <property name="orientation">
-                            <enum>Horizontal</enum>
-                        </property>
-                        <property name="sizeType">
-                            <enum>Expanding</enum>
-                        </property>
-                        <property name="sizeHint">
-                            <size>
-                                <width>100</width>
-                                <height>20</height>
-                            </size>
-                        </property>
-                    </spacer>
                     <widget class="QGroupBox" row="2" column="2">
                         <property name="name">
                             <cstring>additionalGroupBox</cstring>
@@ -325,6 +311,23 @@ der Grundausstattung von sidux-semanarix enthalten.</string>
                             </widget>
                         </grid>
                     </widget>
+                    <spacer row="2" column="3">
+                        <property name="name">
+                            <cstring>spacer1</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>120</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
                 </grid>
             </widget>
             <widget class="QWidget">

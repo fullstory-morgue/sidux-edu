@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/kde/kolourpaint.desktop
 Package=kolourpaint
 Homepage=http://kolourpaint.sourceforge.net/
 Categories=Kunst
-Description=Einfaches Mal- und Zeichenprogramm f&uuml;r den KDE.
+Description=Wenn es um einfach Korrekturen an Bildern geht, ist ein umfangreiches Programm oftmals zu gro&szlig;. Hier ist die St&auml;rke von Kolourpaint. Skalieren, Dehen, Spiegeln, Kippen, Invertieren, das ist alles m&ouml;glich. Auch Text in Bilder einf&uuml;gen kann damit erledigt werden.
