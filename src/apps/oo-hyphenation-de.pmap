@@ -1,0 +1,7 @@
+Name=OpenOffice Hyphenation
+DesktopPath=/usr/share/applications/openoffice.desktop
+Package=openoffice.org-hyphenation-de
+Homepage=http://de.openoffice.org/
+Categories=Allgemein
+Description=OpenOffice Hyphenation
+Deutsche Hyphenation für OpenOffice

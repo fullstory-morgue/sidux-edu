@@ -1,0 +1,7 @@
+Name=OpenOffice Thesaurus
+DesktopPath=/usr/share/applications/openoffice.desktop
+Package=openoffice.org-thesaurus-de
+Homepage=http://de.openoffice.org/
+Categories=Allgemein
+Description=OpenOffice Thesaurus
+Deutsche Thesaurusuntestüzung für OpenOffice

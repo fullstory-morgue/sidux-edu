@@ -1,8 +1,12 @@
 sidux-edu (0.1.13) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 08 Dec 2007 03:16:41 +0100
+  [ Ferdinand Thommes ]
+  * added extra oo.pmaps
+
+ -- Ferdinand Thommes <devil@sidux.com>  Sat, 08 Dec 2007 14:09:49 +0100
 
 sidux-edu (0.1.12) unstable; urgency=low
 
