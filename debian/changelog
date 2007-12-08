@@ -2,11 +2,12 @@ sidux-edu (0.1.14) UNRELEASED; urgency=low
 
   [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
+  * enforce cli-only.
 
   [ Fabian Wuertz ]
   * category descriptions added
 
- -- Fabian Wuertz <xadras@sidux.com>  Sat, 08 Dec 2007 15:16:18 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 08 Dec 2007 15:40:46 +0100
 
 sidux-edu (0.1.13) unstable; urgency=low
 
