@@ -247,7 +247,6 @@ void edu::getApps()
 	widgetStack->raiseWidget(0);
 
 	appsListBox->clear();
-	descriptionTextBrowser->clear();
 
 	QString category = categoriesListView->selectedItems().first()->text(0);
 
@@ -256,6 +255,9 @@ void edu::getApps()
 		widgetStack->raiseWidget(3);
 		return;
 	}
+
+	//descriptionTextBrowser->clear();
+	descriptionTextBrowser->setSource("/usr/share/sidux-edu/html/"+category+".html");
 
 
 	QStringList names;
@@ -448,6 +450,20 @@ void edu::disableButtons()
 	homepagePushButton->hide();
 	additionalGroupBox->hide();
 }
+
+void edu::openUrl(const QString& url)
+{
+	// E.g. /usr/share/sidu x-edu/html/http://www.kde.org
+	if( url.mid(26, 4) == "http" )
+	{
+		descriptionTextBrowser->setSource("/usr/share/sidux-edu/html/"+ categoriesListView->selectedItems().first()->text(0)+".html");
+		kapp->invokeBrowser( url.mid(26) );
+	}
+
+}
+
+
+
 
 //------------------------------------------------------------------------------
 //--- load console -------------------------------------------------------------
