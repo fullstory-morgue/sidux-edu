@@ -1,9 +1,5 @@
-sidux-edu (0.1.13) UNRELEASED; urgency=low
+sidux-edu (0.1.13) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Ferdinand Thommes ]
   * added extra oo.pmaps
   * added openclipart.pmap hunspell-de-de.pmap
 
