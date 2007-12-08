@@ -1,7 +1,4 @@
-sidux-edu (0.1.12) UNRELEASED; urgency=low
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
+sidux-edu (0.1.12) unstable; urgency=low
 
   [ Ferdinand Thommes ]
   * added homepages for kwordquiz.pmap kvoctrain.pmap
