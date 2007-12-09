@@ -1,4 +1,4 @@
-Name=Hunspell Rectschreibprüfung für OpenOffice
+Name=Hunspell Rechtschreibprüfung für OpenOffice
 DesktopPath=/usr/share/applications/openoffice.desktop
 Package=hunspell-de-de
 Homepage=http://hunspell.sourceforge.net/

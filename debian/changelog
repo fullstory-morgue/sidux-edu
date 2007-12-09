@@ -1,8 +1,9 @@
 sidux-edu (0.1.15) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * typo: hunspell.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 08 Dec 2007 23:54:58 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 09 Dec 2007 03:11:14 +0100
 
 sidux-edu (0.1.14) unstable; urgency=low
 
