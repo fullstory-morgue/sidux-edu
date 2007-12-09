@@ -1,6 +1,5 @@
-sidux-edu (0.1.15) UNRELEASED; urgency=low
+sidux-edu (0.1.15) unstable; urgency=low
 
-  * NOT RELEASED YET
   * typo: hunspell.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 09 Dec 2007 03:11:14 +0100
