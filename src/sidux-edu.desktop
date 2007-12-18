@@ -5,4 +5,5 @@ Exec=sidux-edu
 Icon=seminarix
 Name=appstarter
 Name[de]=Programmstarter
+Name[ru]=Запуск программ образования
 Categories=sidux
