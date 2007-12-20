@@ -1,8 +1,12 @@
 sidux-edu (0.1.17) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 19 Dec 2007 12:23:33 +0100
+  [ Fabian Wuertz ]
+  * typo in xsane.pmap fixed
+
+ -- Fabian Wuertz <xadras@sidux.com>  Fri, 21 Dec 2007 00:03:02 +0100
 
 sidux-edu (0.1.16) unstable; urgency=low
 
