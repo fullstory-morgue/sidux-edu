@@ -6,8 +6,9 @@ sidux-edu (0.1.18) UNRELEASED; urgency=low
   [ Fabian Wuertz ]
   * logo updated
   * kplato updated
+  * seminarix manual link fixed 
 
- -- Fabian Wuertz <xadras@sidux.com>  Sun, 23 Dec 2007 20:43:15 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Sun, 23 Dec 2007 21:05:54 +0100
 
 sidux-edu (0.1.17) unstable; urgency=low
 
