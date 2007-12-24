@@ -1,9 +1,5 @@
-sidux-edu (0.1.18) UNRELEASED; urgency=low
+sidux-edu (0.1.18) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * logo updated
   * kplato updated
   * seminarix manual link fixed 
