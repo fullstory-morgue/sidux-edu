@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 	about->addCredit("Stefan Lippers-Hollmann (slh)" );
 	about->addCredit("Ferdi Thommes (devil)");
 	about->addCredit("Horst Tritremmel (hjt)");
-	about->addCredit("Wolf-Dieter Zimmermann (emilel)", "Projektinitiator" );
+	about->addCredit("Wolf-Dieter Zimmermann (emile)", "Projektinitiator" );
 
 
 	KCmdLineArgs::init(argc, argv, about);

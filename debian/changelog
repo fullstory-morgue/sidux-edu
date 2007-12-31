@@ -1,8 +1,12 @@
 sidux-edu (0.1.19) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 24 Dec 2007 15:05:54 +0100
+  [ Ferdinand Thommes ]
+  * fixed links in sidux-edu
+
+ -- Ferdinand Thommes <devil@sidux.com>  Mon, 31 Dec 2007 13:49:23 +0100
 
 sidux-edu (0.1.18) unstable; urgency=low
 

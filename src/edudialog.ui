@@ -10,7 +10,7 @@
             <x>0</x>
             <y>0</y>
             <width>799</width>
-            <height>541</height>
+            <height>544</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -178,7 +178,7 @@
                                 </item>
                                 <item>
                                     <property name="text">
-                                        <string>Alle Programm</string>
+                                        <string>Alle Programme</string>
                                     </property>
                                 </item>
                                 <item>
@@ -763,8 +763,6 @@ der Grundausstattung von sidux-semanarix enthalten.</string>
 </menubar>
 <toolbars>
 </toolbars>
-<customwidgets>
-</customwidgets>
 <actions>
     <action>
         <property name="name">
