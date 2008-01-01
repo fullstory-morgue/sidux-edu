@@ -1,9 +1,5 @@
-sidux-edu (0.1.19) UNRELEASED; urgency=low
+sidux-edu (0.1.19) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Ferdinand Thommes ]
   * fixed links in sidux-edu
 
  -- Ferdinand Thommes <devil@sidux.com>  Mon, 31 Dec 2007 13:49:23 +0100
