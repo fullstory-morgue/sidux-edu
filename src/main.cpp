@@ -53,7 +53,7 @@ int main(int argc, char **argv)
 	about->addAuthor("Björn Jilg (BlueShadow)", "Paketzusammenstellung und Dokumentation" );
 	about->addAuthor("Thomas Kross (captagon)", "Paketzusammenstellung und Dokumentation" );
 	about->addAuthor("Hendrik Lehmbruch (hendrikL)", "Paketzusammenstellung und Dokumentation" );
-	about->addAuthor("Dinko Sabo (cobra)", "Paketzusammenstellung, Dokumentation und Artwork", "cobra@sidux.com");
+	about->addAuthor("Dinko Sabo (cobra)", "Programmstarter, Paketzusammenstellung, Dokumentation und Artwork", "cobra@sidux.com");
 	about->addAuthor("Fabian Würtz (xadras)", "Entwickler des Programmstarters", "xadras@sidux.com", "http://sidux.wuertz.org/");
 	about->addCredit("Stefan Lippers-Hollmann (slh)" );
 	about->addCredit("Ferdi Thommes (devil)");
