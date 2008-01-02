@@ -1,8 +1,12 @@
 sidux-edu (0.1.20) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 01 Jan 2008 13:57:18 +0100
+  [ Ferdinand Thommes ]
+  * added new pmaps for kiten kturtle lazarus
+
+ -- Ferdinand Thommes <devil@sidux.com>  Wed, 02 Jan 2008 11:20:13 +0100
 
 sidux-edu (0.1.19) unstable; urgency=low
 
