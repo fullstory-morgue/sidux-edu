@@ -1,9 +1,5 @@
-sidux-edu (0.1.20) UNRELEASED; urgency=low
+sidux-edu (0.1.20) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Ferdinand Thommes ]
   * added new pmaps for kiten kturtle lazarus
   * changed main.cpp
 
