@@ -1,8 +1,10 @@
-sidux-edu (0.1.22) UNRELEASED; urgency=low
+sidux-edu (0.2.0) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * switch from custom su-me to generic su-to-root, adapt dependencies and
+    menu files accordingly.
+  * move desktop file into standard XDG hierarchy.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 05 Jan 2008 01:51:38 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 08 Jan 2008 22:37:17 +0100
 
 sidux-edu (0.1.21) unstable; urgency=low
 
