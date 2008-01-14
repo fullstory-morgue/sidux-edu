@@ -1,0 +1,15 @@
+Name=Noteedit
+DesktopPath=/usr/share/applications/noteedit.desktop
+Package=noteedit
+Homepage=http://noteedit.berlios.de/
+Categories=Musik
+Description=NoteEdit ist ein freies Musik-Notensatzprogramm.<br>
+Folgende Funktionen bietet Noteedit:<br> 
+*Unterst&uuml;tzung u.a. polyphoner Stimmen in unbegrenzter Anzahl und L&auml;nge<br> 
+*MIDI-Wiedergabe von geschriebenen Noten, Akkorden, Texten
+*enth&auml;lt eine Anzahl von Export- und Import-Filtern zu vielen verschiedenen Formaten wie MIDI, MusicXML, ABC, MUP, PMX, MusiXTeX und LilyPond.
+*graphische Oberfl&auml;lche zur Eingabe von Noten und ein Druckfassung davon, die man dann noch mit den m&auml;chtigen Satzprogrammen LilyPond (das automatisch mitinstalliert wird) oder MusiXTeX optimieren kann<br>
+*Lesen und Wiedergabe von einem MIDI-Keyboard<br> 
+*automatisches Setzen der Taktstriche bei vorgegebenen Takt u.s.w.<br>
+
+
