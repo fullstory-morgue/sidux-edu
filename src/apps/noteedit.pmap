@@ -1,6 +1,6 @@
 Name=Noteedit
 DesktopPath=/usr/share/applications/noteedit.desktop
-Package=noteedit
+Package=noteedit timidity lilypond
 Homepage=http://noteedit.berlios.de/
 Categories=Musik
 Description=NoteEdit ist ein freies Musik-Notensatzprogramm.<br>

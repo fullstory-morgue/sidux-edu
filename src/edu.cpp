@@ -72,9 +72,8 @@ void edu::load()
 	konsoleFrame->installEventFilter( this );
 	execPushButton->hide();
 	homepagePushButton->hide();
-	additionalGroupBox->hide();
 	widgetStack->raiseWidget(3);
-	//widgetStack->raiseWidget(2);
+	widgetStack->raiseWidget(2);
 
 	// setup leftmenu
 	categoriesListView->setAlternateBackground( QColor(237, 244, 249) );
@@ -118,19 +117,6 @@ void edu::getAllApps()
 	QStringList apps = QDir( "/usr/share/sidux-edu/apps").entryList( QDir::Files );
 
 	QString line;
-
-
-	// get basic seminarix apps
-	QStringList seminarixApps;
-	QFile file1( "/usr/share/sidux-edu/list/seminarix.list" );
-	file1.open( IO_ReadOnly );
-	QTextStream stream1( &file1 );
-	while ( !stream1.atEnd() )
-	{
-		line = stream1.readLine(); // line of text excluding '\n'
-		seminarixApps += line;
-	}
-	file1.close();
 
 
 
@@ -190,11 +176,6 @@ void edu::getAllApps()
 			}
 		}
 		file2.close();
-
-		if( seminarixApps.contains( package ) )
-			item->setText( 8, "TRUE" );
-		else
-			item->setText( 8, "FALSE" );
 
 
 	
@@ -436,19 +417,12 @@ void edu::enableButtons()
 	else
 		homepagePushButton->hide();
 
-
-	QString isSeminarix = listView->findItem(app, 0, Qt::ExactMatch )->text(8);
-	if( isSeminarix == "TRUE" )
-		additionalGroupBox->hide();
-	else
-		additionalGroupBox->show();
 }
 
 void edu::disableButtons()
 {
 	execPushButton->hide();
 	homepagePushButton->hide();
-	additionalGroupBox->hide();
 }
 
 void edu::openUrl(const QString& url)
