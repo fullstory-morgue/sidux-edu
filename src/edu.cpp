@@ -282,11 +282,23 @@ void edu::getApps()
 	QPixmap icon;
 	for(uint i = 0; i < names.count(); i++)
 	{
+
 		icon = loader->loadIcon( icons[i], KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
 		if (icon.isNull() )
 		{
-			if( QFile::exists("/usr/share/pixmaps/"+packages[i]+".xpm") )
-				icon = QPixmap("/usr/share/pixmaps/"+packages[i]+".xpm");
+
+			QString package = QStringList::split( " ", packages[i] )[0];
+
+			if( QFile::exists("/usr/share/pixmaps/"+package+".xpm") )
+				icon = QPixmap("/usr/share/pixmaps/"+package+".xpm");
+			else if( QFile::exists("/usr/share/pixmaps/"+package+"-icon.xpm") )
+				icon = QPixmap("/usr/share/pixmaps/"+package+"-icon.xpm");
+			else if( QFile::exists("/usr/share/"+package+"/"+package+".xpm") )
+				icon = QPixmap("/usr/share/"+package+"/"+package+".xpm");
+			else if( QFile::exists("/usr/share/"+package+"/pixmaps/"+package+".xpm") )
+				icon = QPixmap("/usr/share/"+package+"/pixmaps/"+package+".xpm");
+			else if( package == "wxmaxima")
+				icon = QPixmap("/usr/share/wxMaxima/icons/maximaicon.xpm");
 			else
 				icon = loader->loadIcon( "seminarix_empty", KIcon::Desktop, 32);
 		}
