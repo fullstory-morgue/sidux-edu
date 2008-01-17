@@ -1,9 +1,5 @@
-sidux-edu (0.2.2) UNRELEASED; urgency=low
+sidux-edu (0.2.2) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * possibility for more then one package per app added
   * yet another little bug fixed
 
