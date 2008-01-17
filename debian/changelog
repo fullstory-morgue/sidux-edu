@@ -1,6 +1,4 @@
-sidux-edu (0.2.2) UNRELEASED; urgency=low
-
-  * FTBS (s.u.)
+sidux-edu (0.2.2) unstable; urgency=low
 
   [ Fabian Wuertz ]
   * possibility for more then one package per app added
@@ -8,95 +6,9 @@ sidux-edu (0.2.2) UNRELEASED; urgency=low
 
   [ Stefan Lippers-Hollmann ]
   * src/list/ doesn't exist anymore, don't try to install it.
+  * fix package build
 
-make[3]: Entering directory `/tmp/buildd/sidux-edu-0.2.2/obj-x86_64-linux-gnu/src'
-g++ -DHAVE_CONFIG_H -I. -I.. -I/tmp/buildd/sidux-edu-0.2.2/./src  -I/usr/include/kde -I/usr/share/qt3/include -I.  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -DNDEBUG -DNO_DEBUG -O2 -g -Wall -O2 -Wformat-security -Wmissing-format-attribute -Wno-non-virtual-dtor -fno-exceptions -fno-check-new -fno-common -c -o edu.o /tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp
-In file included from /tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:51:
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.h:23:23: error: edudialog.h: No such file or directory
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:508:19: error: edu.moc: No such file or directory
-In file included from /tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:51:
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.h:32: error: expected class-name before '{' token
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In constructor 'edu::edu(QWidget*, const char*, const QStringList&)':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:57: error: class 'edu' does not have any field named 'EduDialog'
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'void edu::load()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:66: error: 'statusBar' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:72: error: 'konsoleFrame' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:73: error: 'execPushButton' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:74: error: 'homepagePushButton' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:75: error: 'widgetStack' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:79: error: 'categoriesListView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'void edu::getCategories()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:101: error: 'categoriesListView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:106: error: 'categoriesListView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'void edu::getAllApps()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:116: error: 'listView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::getApps()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:225: error: 'categoriesListView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:228: error: 'widgetStack' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:230: error: 'appsListBox' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:232: error: 'categoriesListView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:241: error: 'descriptionTextBrowser' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:247: error: 'listView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:248: error: 'comboBox' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::searchApp()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:302: error: 'widgetStack' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:304: error: 'appsListBox' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:305: error: 'descriptionTextBrowser' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:310: error: 'listView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:312: error: 'searchLineEdit' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::getDescription()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:341: error: 'appsListBox' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:342: error: 'listView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:343: error: 'descriptionTextBrowser' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::execApp()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:350: error: 'appsListBox' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:351: error: 'listView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:366: error: 'categoriesListView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:367: error: 'searchLineEdit' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:368: error: 'widgetStack' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:375: error: 'connect' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::back()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:383: error: 'categoriesListView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:384: error: 'searchLineEdit' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:385: error: 'widgetStack' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:387: error: 'konsoleFrame' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::showHomepage()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:395: error: 'appsListBox' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:396: error: 'listView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::enableButtons()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:403: error: 'appsListBox' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:404: error: 'listView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:408: error: 'execPushButton' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:410: error: 'execPushButton' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:412: error: 'execPushButton' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:416: error: 'homepagePushButton' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:418: error: 'homepagePushButton' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:404: warning: unused variable 'package'
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::disableButtons()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:424: error: 'execPushButton' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:425: error: 'homepagePushButton' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::openUrl(const QString&)':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:433: error: 'descriptionTextBrowser' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:433: error: 'categoriesListView' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'void edu::loadKonsole()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:454: error: 'konsoleFrame' was not declared in this scope
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: At global scope:
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:460: warning: unused parameter 'o'
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::about()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:479: error: no matching function for call to 'KAboutApplication::KAboutApplication(edu* const)'
-/usr/include/kde/kaboutapplication.h:79: note: candidates are: KAboutApplication::KAboutApplication(const KAboutData*, QWidget*, const char*, bool)
-/usr/include/kde/kaboutapplication.h:60: note:                 KAboutApplication::KAboutApplication(QWidget*, const char*, bool)
-/usr/include/kde/kaboutapplication.h:45: note:                 KAboutApplication::KAboutApplication(const KAboutApplication&)
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp: In member function 'virtual void edu::aboutKDE()':
-/tmp/buildd/sidux-edu-0.2.2/./src/edu.cpp:485: error: no matching function for call to 'KAboutKDE::KAboutKDE(edu* const)'
-/usr/include/kde/kaboutkde.h:56: note: candidates are: KAboutKDE::KAboutKDE(QWidget*, const char*, bool)
-/usr/include/kde/kaboutkde.h:41: note:                 KAboutKDE::KAboutKDE(const KAboutKDE&)
-make[3]: *** [edu.o] Error 1
-make[3]: Leaving directory `/tmp/buildd/sidux-edu-0.2.2/obj-x86_64-linux-gnu/src'
-make[2]: *** [all-recursive] Error 1
-
-
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 17 Jan 2008 03:14:55 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 17 Jan 2008 03:29:39 +0100
 
 sidux-edu (0.2.1) unstable; urgency=low
 
