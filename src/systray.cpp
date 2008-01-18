@@ -44,7 +44,7 @@ SysTray::SysTray ( QWidget* parent, const char* name )
 	menu->insertSeparator();
 	menu->insertItem ( SmallIcon ( "info" ), i18n("&About sidux-seminarix"), this, SLOT ( showAbout() ) );
 
-	setPixmap ( loadIcon ( "seminarix" ) );
+	setPixmap ( loadIcon ( "sidux-seminarix-tray" ) );
 
 	dialog = new edu( );
 	dialog->show();

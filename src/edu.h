@@ -53,6 +53,7 @@ class edu : public EduDialog
 		virtual void getDescription();
 		virtual void execApp();
 		virtual void showHomepage();
+		virtual void moveExample();
 		virtual void back();
 		virtual void enableButtons();
 		virtual void disableButtons();

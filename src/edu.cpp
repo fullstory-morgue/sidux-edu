@@ -17,7 +17,6 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-
 #include <kgenericfactory.h>
 
 #include <klocale.h>
@@ -72,6 +71,7 @@ void edu::load()
 	konsoleFrame->installEventFilter( this );
 	execPushButton->hide();
 	homepagePushButton->hide();
+	examplePushButton->hide();
 	widgetStack->raiseWidget(3);
 	//widgetStack->raiseWidget(2);
 
@@ -208,6 +208,14 @@ void edu::getAllApps()
 				item->setText( 7, "FALSE" );
 		}
 
+		//hasExample
+		QString packageDir = "/usr/share/sidux-seminarix-common/"+QStringList::split( " ", package )[0];
+		if( QFile::exists(packageDir) )
+			item->setText( 8, "TRUE" );
+		else
+			item->setText( 8,  "FALSE" );
+
+		
 	}
 
 
@@ -336,8 +344,18 @@ void edu::searchApp()
 		icon = loader->loadIcon( icons[i], KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
 		if (icon.isNull() )
 		{
-			if( QFile::exists("/usr/share/pixmaps/"+packages[i]+".xpm") )
-				icon = QPixmap("/usr/share/pixmaps/"+packages[i]+".xpm");
+			QString package = QStringList::split( " ", packages[i] )[0];
+
+			if( QFile::exists("/usr/share/pixmaps/"+package+".xpm") )
+				icon = QPixmap("/usr/share/pixmaps/"+package+".xpm");
+			else if( QFile::exists("/usr/share/pixmaps/"+package+"-icon.xpm") )
+				icon = QPixmap("/usr/share/pixmaps/"+package+"-icon.xpm");
+			else if( QFile::exists("/usr/share/"+package+"/"+package+".xpm") )
+				icon = QPixmap("/usr/share/"+package+"/"+package+".xpm");
+			else if( QFile::exists("/usr/share/"+package+"/pixmaps/"+package+".xpm") )
+				icon = QPixmap("/usr/share/"+package+"/pixmaps/"+package+".xpm");
+			else if( package == "wxmaxima")
+				icon = QPixmap("/usr/share/wxMaxima/icons/maximaicon.xpm");
 			else
 				icon = loader->loadIcon( "seminarix_empty", KIcon::Desktop, 32);
 		}
@@ -409,17 +427,37 @@ void edu::showHomepage()
 	kapp->invokeBrowser( homepage );
 }
 
+void edu::copyExample()
+{
+
+	if(KMessageBox::Yes == KMessageBox::questionYesNo(this, "Das Programm "+appsListBox->currentText()+" ist nicht installiert! Moechten sie es aus dem Internet herunterladen und installieren?")  ) {
+		QString app = appsListBox->currentText();
+		QString package = listView->findItem(app, 0, Qt::ExactMatch )->text(3);
+		package = QStringList::split( " ", package )[0];
+		KProcess *proc = new KProcess;
+		*proc << "/usr/share/sidux-edu/sh/copyExample" << package;
+		proc->start();
+	}
+
+}
+
 
 void edu::enableButtons()
 {
 	QString app = appsListBox->currentText();
 	QString package = listView->findItem(app, 0, Qt::ExactMatch )->text(3);
 	QString isInstalled = listView->findItem(app, 0, Qt::ExactMatch )->text(7);
+	QString hasExample = listView->findItem(app, 0, Qt::ExactMatch )->text(8);
 
 	if( isInstalled == "FALSE" )
 		execPushButton->setText("Programm installieren");
 	else
 		execPushButton->setText("Programm starten");
+
+	if( hasExample == "TRUE" )
+		examplePushButton->show();
+	else
+		examplePushButton->hide();
 
 	execPushButton->show();
 
@@ -435,6 +473,7 @@ void edu::disableButtons()
 {
 	execPushButton->hide();
 	homepagePushButton->hide();
+	examplePushButton->hide();
 }
 
 void edu::openUrl(const QString& url)

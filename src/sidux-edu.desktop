@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Type=Application
 Exec=sidux-edu
-Icon=seminarix
+Icon=sidux-seminarix
 Name=appstarter
 Name[de]=Programmstarter
 Name[ru]=Запуск программ образования

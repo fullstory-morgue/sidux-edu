@@ -1,0 +1,6 @@
+#!/bin/sh
+# appinstaller
+# (C) 2008 Fabian Wuertz <xadras@sidux.com>
+# License: GPL
+
+cp /usr/share/sidux-seminarix-common/$1/* $HOME/Desktop/
