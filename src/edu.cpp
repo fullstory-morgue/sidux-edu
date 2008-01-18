@@ -430,7 +430,7 @@ void edu::showHomepage()
 void edu::copyExample()
 {
 
-	if(KMessageBox::Yes == KMessageBox::questionYesNo(this, "Das Programm "+appsListBox->currentText()+" ist nicht installiert! Moechten sie es aus dem Internet herunterladen und installieren?")  ) {
+	if(KMessageBox::Yes == KMessageBox::questionYesNo(this, "Sollen die Beispieldateien auf dem Desktop angezeigt werden?")  ) {
 		QString app = appsListBox->currentText();
 		QString package = listView->findItem(app, 0, Qt::ExactMatch )->text(3);
 		package = QStringList::split( " ", package )[0];
