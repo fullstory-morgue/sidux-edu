@@ -1,9 +1,5 @@
-sidux-edu (0.2.3) UNRELEASED; urgency=low
+sidux-edu (0.2.3) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * tuxtype-, qgis-, ksociograma- and octave-appfiles fixed
   * get-icon-function updated
 
