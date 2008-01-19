@@ -1,5 +1,18 @@
 sidux-edu (0.2.4) unstable; urgency=low
 
+  * NOT RELEASED YET
+  * FTBS:
+    /usr/bin/install -c -p -m 644 /tmp/buildd/sidux-edu-0.2.4/./icons/hi32-app-seminarix.png /tmp/buildd/sidux-edu-0.2.4/debian/sidux-edu//usr/share/icons/hicolor/32x32/apps/seminarix.png
+    /usr/bin/install: cannot stat `/tmp/buildd/sidux-edu-0.2.4/./icons/hi32-app-seminarix.png': No such file or directory
+    make[3]: *** [install-kde-icons] Error 1
+    make[3]: Leaving directory `/tmp/buildd/sidux-edu-0.2.4/obj-x86_64-linux-gnu/icons'
+    make[2]: *** [install-am] Error 2
+    make[2]: Leaving directory `/tmp/buildd/sidux-edu-0.2.4/obj-x86_64-linux-gnu/icons'
+    make[1]: *** [install-recursive] Error 1
+    make[1]: Leaving directory `/tmp/buildd/sidux-edu-0.2.4/obj-x86_64-linux-gnu'
+    make: *** [common-install-impl] Error 2
+    (it's also been used in debian/rules and debian/install for the desktop icon)
+
   [ Fabian Wuertz ]
   * copyExample function added
   * notedit updated
@@ -10,7 +23,7 @@ sidux-edu (0.2.4) unstable; urgency=low
   [ Stefan Lippers-Hollmann ]
   * update to debhelper compat 6.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Jan 2008 02:22:19 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Jan 2008 02:27:19 +0100
 
 sidux-edu (0.2.3) unstable; urgency=low
 
