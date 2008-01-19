@@ -209,7 +209,7 @@ void edu::getAllApps()
 		}
 
 		//hasExample
-		QString packageDir = "/usr/share/sidux-seminarix-common/"+QStringList::split( " ", package )[0];
+		QString packageDir = "/usr/share/sidux-seminarix-common/samples/"+QStringList::split( " ", package )[0];
 		if( QFile::exists(packageDir) )
 			item->setText( 8, "TRUE" );
 		else

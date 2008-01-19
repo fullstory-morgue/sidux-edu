@@ -23,7 +23,12 @@ sidux-edu (0.2.4) unstable; urgency=low
   [ Stefan Lippers-Hollmann ]
   * update to debhelper compat 6.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Jan 2008 02:27:19 +0100
+  [ Fabian Wuertz ]
+  * keducabuilder updated
+  * exmaples path updated
+  * icon problem solved
+
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 19 Jan 2008 14:40:38 +0100
 
 sidux-edu (0.2.3) unstable; urgency=low
 
