@@ -1,15 +1,13 @@
-sidux-edu (0.2.6) UNRELEASED; urgency=low
-
-  * NOT RELEASED YET
-
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 20 Jan 2008 00:29:07 +0100
-
 sidux-edu (0.2.5) unstable; urgency=low
 
+  [ Fabian Wuertz ]
   * icon added
-  * samples path updated 
+  * samples path updated
 
- -- Fabian Wuertz <xadras@sidux.com>  Sat, 19 Jan 2008 17:55:13 +0100
+  [ Stefan Lippers-Hollmann ]
+  * fix committed svn merge errors in debian/changelog.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 20 Jan 2008 00:37:45 +0100
 
 sidux-edu (0.2.4) unstable; urgency=low
 
@@ -25,15 +23,11 @@ sidux-edu (0.2.4) unstable; urgency=low
   * icon added
   * samples path updated 
 
-<<<<<<< .mine
- -- Fabian Wuertz <xadras@sidux.com>  Sat, 19 Jan 2008 17:21:23 +0100
-=======
   [ Stefan Lippers-Hollmann ]
   * update to debhelper compat 6.
   * the desktop icon has been removed from upstream sources, ship without it.
->>>>>>> .r14478
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Jan 2008 15:23:20 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 19 Jan 2008 17:21:23 +0100
 
 sidux-edu (0.2.3) unstable; urgency=low
 
