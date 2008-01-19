@@ -35,7 +35,7 @@
 SysTray::SysTray ( QWidget* parent, const char* name )
 		: KSystemTray ( parent, name )
 {
-	QToolTip::add ( this,i18n("seminarix"));
+	QToolTip::add ( this,i18n("sidux-seminarix Programmstarter"));
 
 	menu = contextMenu();
 	menu->insertItem ( SmallIcon ( "sidux_book" ), "sidux Handbuch", this, SLOT ( siduxManual() ) );
@@ -44,7 +44,7 @@ SysTray::SysTray ( QWidget* parent, const char* name )
 	menu->insertSeparator();
 	menu->insertItem ( SmallIcon ( "info" ), i18n("&About sidux-seminarix"), this, SLOT ( showAbout() ) );
 
-	setPixmap ( loadIcon ( "sidux-seminarix-tray" ) );
+	setPixmap ( loadIcon ( "siduxedu" ) );
 
 	dialog = new edu( );
 	dialog->show();

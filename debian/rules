@@ -21,3 +21,10 @@ include /usr/share/cdbs/1/class/kde.mk
 #clean::
 #	rm -f debian/stamp-autothings-update
 
+install/sidux-edu::
+	mkdir -p debian/sidux-edu/usr/share/pixmaps
+	convert icons/hi32-app-siduxedu.png \
+		debian/sidux-edu/usr/share/pixmaps/siduxedu.xpm
+	convert icons/hi16-app-siduxedu.png \
+		debian/sidux-edu/usr/share/pixmaps/siduxedu-16.xpm
+

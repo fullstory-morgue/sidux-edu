@@ -3,6 +3,6 @@
 	section="Applications/File Management" \
 	hints="sidux,Edu" \
 	title="Seminarix application starter" \
-	icon32x32="/usr/share/pixmaps/sidux-edu.xpm" \
-	icon16x16="/usr/share/pixmaps/sidux-edu-16.xpm" \
+	icon32x32="/usr/share/pixmaps/siduxedu.xpm" \
+	icon16x16="/usr/share/pixmaps/siduxedu-16.xpm" \
 	command="/usr/bin/sidux-edu"

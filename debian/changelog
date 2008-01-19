@@ -1,8 +1,13 @@
 sidux-edu (0.2.5) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Jan 2008 15:27:56 +0100
+  [ Fabian Wuertz ]
+  * icon added
+  * samples path updated 
+
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 19 Jan 2008 17:55:13 +0100
 
 sidux-edu (0.2.4) unstable; urgency=low
 
@@ -15,10 +20,16 @@ sidux-edu (0.2.4) unstable; urgency=low
   * keducabuilder updated
   * exmaples path updated
   * icon problem solved
+  * icon added
+  * samples path updated 
 
+<<<<<<< .mine
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 19 Jan 2008 17:21:23 +0100
+=======
   [ Stefan Lippers-Hollmann ]
   * update to debhelper compat 6.
   * the desktop icon has been removed from upstream sources, ship without it.
+>>>>>>> .r14478
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Jan 2008 15:23:20 +0100
 
