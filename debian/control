@@ -3,7 +3,7 @@ Section: admin
 Priority: extra
 Maintainer: Fabian Wuertz <xadras@sidux.com>
 Uploaders: Stefan Lippers-Hollmann <s.l-h@gmx.de>
-Build-Depends: cdbs, debhelper (>= 5), automake1.10, kdelibs4-dev, imagemagick
+Build-Depends: cdbs, debhelper (>= 6), automake1.10, kdelibs4-dev, imagemagick
 Standards-Version: 3.7.3
 
 Package: sidux-edu
