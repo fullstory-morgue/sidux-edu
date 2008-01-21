@@ -38,7 +38,7 @@ static KCmdLineOptions options[] =
 int main(int argc, char **argv)
 {
 	// specify data for About dialog
-	KAboutData* about = new KAboutData("seminarix", "sidux-seminarix", "");
+	KAboutData* about = new KAboutData("siduxedu", "sidux-seminarix", "");
 
 	about->setProgramLogo( QImage("/usr/share/icons/hicolor/32x32/apps/seminarix.png") );
 	about->setShortDescription( "sidux-seminarix" );

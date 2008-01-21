@@ -20,6 +20,7 @@
 #include "systray.h"
 
 #include <kaboutapplication.h>
+#include <kaboutdata.h>
 #include <kiconloader.h>
 #include <kkeydialog.h>
 #include <qclipboard.h>
@@ -39,10 +40,10 @@ SysTray::SysTray ( QWidget* parent, const char* name )
 
 	menu = contextMenu();
 	menu->insertItem ( SmallIcon ( "sidux_book" ), "sidux Handbuch", this, SLOT ( siduxManual() ) );
-	menu->insertItem ( SmallIcon ( "help" ), "Seminarix Handbch", this, SLOT ( seminarixManual() ) );
-	menu->insertItem ( SmallIcon ( "kcmsystem" ), "Programmstarter", this, SLOT ( appStarter() ) );
+	menu->insertItem ( SmallIcon ( "siduxedu" ), "Seminarix Handbch", this, SLOT ( seminarixManual() ) );
+	menu->insertItem ( SmallIcon ( "siduxedu" ), "Programmstarter", this, SLOT ( appStarter() ) );
 	menu->insertSeparator();
-	menu->insertItem ( SmallIcon ( "info" ), i18n("&About sidux-seminarix"), this, SLOT ( showAbout() ) );
+	menu->insertItem ( SmallIcon ( "info" ), i18n("&Über sidux-seminarix"), this, SLOT ( showAbout() ) );
 
 	setPixmap ( loadIcon ( "siduxedu" ) );
 
