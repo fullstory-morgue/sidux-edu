@@ -1,3 +1,9 @@
+sidux-edu (0.2.7) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 22 Jan 2008 14:30:47 +0100
+
 sidux-edu (0.2.6) unstable; urgency=low
 
   * icon paths fixed in main.cpp and systray.cpp
