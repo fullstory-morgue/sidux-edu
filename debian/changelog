@@ -1,9 +1,5 @@
-sidux-edu (0.2.6) UNRELEASED; urgency=low
+sidux-edu (0.2.6) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * icon paths fixed in main.cpp and systray.cpp
   * icon in EduDialog updated 
 
