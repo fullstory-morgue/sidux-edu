@@ -13,7 +13,10 @@ sidux-edu (0.2.7) UNRELEASED; urgency=low
   * changed icon for siduxedu
   * added icon and changed seminarix-samples to depend
 
- -- Ferdinand Thommes <devil@sidux.com>  Fri, 25 Jan 2008 09:45:48 +0100
+  [ Fabian Wuertz ]
+  * ding pmap added 
+
+ -- Fabian Wuertz <xadras@sidux.com>  Fri, 25 Jan 2008 12:40:05 +0100
 
 sidux-edu (0.2.6) unstable; urgency=low
 

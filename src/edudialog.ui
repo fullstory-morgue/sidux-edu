@@ -724,6 +724,8 @@
 </menubar>
 <toolbars>
 </toolbars>
+<customwidgets>
+</customwidgets>
 <actions>
     <action>
         <property name="name">
