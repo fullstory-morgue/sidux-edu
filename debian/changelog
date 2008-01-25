@@ -1,8 +1,12 @@
 sidux-edu (0.2.7) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 22 Jan 2008 14:30:47 +0100
+  [ Ferdinand Thommes ]
+  * set seminarix-samples to depends from recommends
+
+ -- Ferdinand Thommes <devil@sidux.com>  Fri, 25 Jan 2008 09:12:24 +0100
 
 sidux-edu (0.2.6) unstable; urgency=low
 
