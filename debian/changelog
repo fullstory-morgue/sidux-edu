@@ -10,8 +10,9 @@ sidux-edu (0.2.7) UNRELEASED; urgency=low
   * changed icon for siduxedu to match new sidux icons
   * changed icon
   * changed icon
+  * changed icon for siduxedu
 
- -- Ferdinand Thommes <devil@sidux.com>  Fri, 25 Jan 2008 09:34:33 +0100
+ -- Ferdinand Thommes <devil@sidux.com>  Fri, 25 Jan 2008 09:43:52 +0100
 
 sidux-edu (0.2.6) unstable; urgency=low
 
