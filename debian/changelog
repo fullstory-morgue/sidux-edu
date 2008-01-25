@@ -1,15 +1,9 @@
-sidux-edu (0.2.7) UNRELEASED; urgency=low
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
+sidux-edu (0.2.7) unstable; urgency=low
 
   [ Ferdinand Thommes ]
   * set seminarix-samples to depends from recommends
-  * set seminarix-samples to depends from recommends again
   * added new icon for siduxedu
   * changed icon for siduxedu to match new sidux icons
-  * changed icon
-  * changed icon
   * changed icon for siduxedu
   * added icon and changed seminarix-samples to depend
 
