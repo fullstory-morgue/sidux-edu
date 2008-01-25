@@ -7,8 +7,9 @@ sidux-edu (0.2.7) UNRELEASED; urgency=low
   * set seminarix-samples to depends from recommends
   * set seminarix-samples to depends from recommends again
   * added new icon for siduxedu
+  * changed icon for siduxedu to match new sidux icons
 
- -- Ferdinand Thommes <devil@sidux.com>  Fri, 25 Jan 2008 09:22:24 +0100
+ -- Ferdinand Thommes <devil@sidux.com>  Fri, 25 Jan 2008 09:28:22 +0100
 
 sidux-edu (0.2.6) unstable; urgency=low
 
