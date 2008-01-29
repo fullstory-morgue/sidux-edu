@@ -5,8 +5,9 @@ sidux-edu (0.2.8) UNRELEASED; urgency=low
 
   [ Ferdinand Thommes ]
   * updated to final icon
+  * added final icons
 
- -- Ferdinand Thommes <devil@sidux.com>  Tue, 29 Jan 2008 20:44:34 +0100
+ -- Ferdinand Thommes <devil@sidux.com>  Tue, 29 Jan 2008 21:14:37 +0100
 
 sidux-edu (0.2.7) unstable; urgency=low
 
