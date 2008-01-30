@@ -1,9 +1,5 @@
-sidux-edu (0.2.9) UNRELEASED; urgency=low
+sidux-edu (0.2.9) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Ferdinand Thommes ]
   * added kcalc.pmap
 
  -- Ferdinand Thommes <devil@sidux.com>  Wed, 30 Jan 2008 22:48:57 +0100
