@@ -1,9 +1,5 @@
-sidux-edu (0.2.10) UNRELEASED; urgency=low
+sidux-edu (0.2.10) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * rkward pmap file updated
 
  -- Fabian Wuertz <xadras@sidux.com>  Thu, 31 Jan 2008 21:05:19 +0100
