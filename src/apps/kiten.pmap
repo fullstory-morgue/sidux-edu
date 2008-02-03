@@ -3,7 +3,4 @@ DesktopPath=/usr/share/applications/kde/kiten.desktop
 Package=kiten
 Homepage=http://edu.kde.org/kiten/
 Categories=Sprachen
-Description=Kiten beinhaltet drei wesentliche Funktionen:<br>
-* Englisch <--> Japanisch W&ouml;rterbuch<br>
-* Kanji W&ouml;rterbuch- mit verschiedenen Wegen, spezielle Zeichen anzusehen<br>
-* Tools zum Kanji erlernen
+Description=Kiten beinhaltet drei wesentliche Funktionen:<br><ul>Englisch <--> Japanisch W&ouml;rterbuch</ul><ul>Kanji W&ouml;rterbuch- mit verschiedenen Wegen, spezielle Zeichen anzusehen</ul><ul>Tools zum Kanji erlernen</ul>

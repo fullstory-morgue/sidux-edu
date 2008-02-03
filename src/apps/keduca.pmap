@@ -3,4 +3,4 @@ DesktopPath=/usr/share/applications/kde/keduca.desktop
 Package=keduca
 Homepage=http://edu.kde.org/keduca/
 Categories=Allgemein
-Description=Mit Hilfe dieses Programms lassen sich Tests und Abfragen zu beliebigen Inhalten als auch Multiple-Choice-Abfragen entwickeln und am Rechner durchf&uuml;hren. Das Programm KEduca-Builder erlaubt das Erstellen der Urform.
+Description=Mit Hilfe dieses Programms lassen sich Tests und Abfragen zu beliebigen Inhalten als auch Multiple-Choice-Abfragen entwickeln und am Rechner durchf&uuml;hren. Das zu Keduca zugehörige Programm KEducabuilder ermöglicht das Erstellen und das Bearbeiten der Multiple-Choice-Tests.

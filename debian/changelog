@@ -1,8 +1,12 @@
 sidux-edu (0.2.11) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 01 Feb 2008 00:29:41 +0100
+  [ Fabian Wuertz ]
+  * pmaps updated
+
+ -- Fabian Wuertz <xadras@sidux.com>  Sun, 03 Feb 2008 22:41:25 +0100
 
 sidux-edu (0.2.10) unstable; urgency=low
 
