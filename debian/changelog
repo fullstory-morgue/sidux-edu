@@ -9,8 +9,9 @@ sidux-edu (0.2.11) UNRELEASED; urgency=low
 
   [ Ferdinand Thommes ]
   * removed mask from sidux s in siduxedu icon
+  * removed mask from sidux s in siduxedu icon
 
- -- Ferdinand Thommes <devil@sidux.com>  Mon, 04 Feb 2008 22:58:40 +0100
+ -- Ferdinand Thommes <devil@sidux.com>  Mon, 04 Feb 2008 23:04:04 +0100
 
 sidux-edu (0.2.10) unstable; urgency=low
 
