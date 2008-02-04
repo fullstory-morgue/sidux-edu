@@ -7,7 +7,10 @@ sidux-edu (0.2.11) UNRELEASED; urgency=low
   * pmaps updated
   * gcompris updadet
 
- -- Fabian Wuertz <xadras@sidux.com>  Sun, 03 Feb 2008 22:43:03 +0100
+  [ Ferdinand Thommes ]
+  * removed mask from sidux s in siduxedu icon
+
+ -- Ferdinand Thommes <devil@sidux.com>  Mon, 04 Feb 2008 22:58:40 +0100
 
 sidux-edu (0.2.10) unstable; urgency=low
 
