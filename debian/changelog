@@ -3,6 +3,7 @@ sidux-edu (0.2.11) UNRELEASED; urgency=low
   [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
   * FTBS, even though it almost looks like a toolchain issues, will investigate tomorrow.
+    sidux-edu 0.2.10 compiles fine though.
 
   [ Fabian Wuertz ]
   * pmaps updated
