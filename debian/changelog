@@ -15,8 +15,9 @@ sidux-edu (0.2.11) UNRELEASED; urgency=low
 
   [ Fabian Wuertz ]
   * ui-file and gcomparis recovered
+  * ui-file recovered
 
- -- Fabian Wuertz <xadras@sidux.com>  Tue, 05 Feb 2008 22:14:02 +0100
+ -- Fabian Wuertz <xadras@sidux.com>  Tue, 05 Feb 2008 22:24:33 +0100
 
 sidux-edu (0.2.10) unstable; urgency=low
 
