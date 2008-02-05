@@ -4,13 +4,13 @@ sidux-edu (0.2.11) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * FTBS, even though it almost looks like a toolchain issues, will investigate tomorrow.
     sidux-edu 0.2.10 compiles fine though.
+    same issue on i386.
 
   [ Fabian Wuertz ]
   * pmaps updated
   * gcompris updadet
 
   [ Ferdinand Thommes ]
-  * removed mask from sidux s in siduxedu icon
   * removed mask from sidux s in siduxedu icon
 
 cd /tmp/buildd/sidux-edu-0.2.11/. && perl admin/am_edit src/Makefile.in
