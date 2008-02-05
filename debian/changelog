@@ -1,7 +1,4 @@
-sidux-edu (0.2.11) UNRELEASED; urgency=low
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
+sidux-edu (0.2.11) unstable; urgency=low
 
   [ Fabian Wuertz ]
   * pmaps updated
