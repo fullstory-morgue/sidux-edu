@@ -1,10 +1,4 @@
-sidux-edu (0.2.11) UNRELEASED; urgency=low
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-  * FTBS, even though it almost looks like a toolchain issues, will investigate tomorrow.
-    sidux-edu 0.2.10 compiles fine though.
-    same issue on i386.
+sidux-edu (0.2.11) unstable; urgency=low
 
   [ Fabian Wuertz ]
   * pmaps updated
@@ -17,7 +11,10 @@ sidux-edu (0.2.11) UNRELEASED; urgency=low
   * ui-file and gcomparis recovered
   * ui-file recovered
 
- -- Fabian Wuertz <xadras@sidux.com>  Tue, 05 Feb 2008 22:24:33 +0100
+  [ Stefan Lippers-Hollmann ]
+  * refresh autofoo.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 05 Feb 2008 22:57:21 +0100
 
 sidux-edu (0.2.10) unstable; urgency=low
 
