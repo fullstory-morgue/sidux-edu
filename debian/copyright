@@ -6,14 +6,14 @@ It was downloaded from http://www.wuertz.org/downloads
 Upstream Author: Fabian Wuertz <xadras@sidux.com>
 
 Copyright:
-	(C) 2007 Fabian Wuertz <xadras@sidux.com>
+	© 2007 Fabian Wuertz <xadras@sidux.com>
 
 	The following icon is form kgeography
-	(c) Albert Astals Cid <tsdgeos@terra.es>
+	© Albert Astals Cid <tsdgeos@terra.es>
 	kgeography.png               icons/hi32-app-seminarix_erdkunde.png
 
 	The following icons are from kde-icons-nuovext
-	(C) 2005 Alexandre Moore <alexandre.moore@gmail.com>
+	© 2005 Alexandre Moore <alexandre.moore@gmail.com>
 	home.png                     in src/edudialog.ui
 	play.png                     in src/edudialog.ui
 	cancel.png                   in src/edudialog.ui
@@ -21,13 +21,13 @@ Copyright:
 	kfm_home-alt.png             icons/hi32-app-seminarix_start.png
 
 	The following icons are from kdelibs-data
-	(c) 2002 Kalle Dalheimer <kalle@kde.org> and many others
+	© 2002 Kalle Dalheimer <kalle@kde.org> and many others
 	music_eightnote.png          icons/hi32-app-seminarix_musik.png
 	launch.png                   icons/hi32-app-seminarix_physik.png
 	about_kde.png                in src/edudialog.ui
 
 	The following icons are from kdebase-data
-	(c) Stephan Kulow <coolo@kde.org> and many others.
+	© Stephan Kulow <coolo@kde.org> and many others.
 	edu_mathematics.png          icons/hi32-app-seminarix_mathematik.png
 	edu_miscellaneous.png        icons/hi32-app-seminarix_allgemein.png
 	edu_science.png              icons/hi32-app-seminarix_chemie.png
@@ -38,7 +38,7 @@ Copyright:
 	locale.png                   icons/hi32-app-seminarix_sprachen.png
 
 	The following icon are from sidux-icons
-	(c) 2007 cathbard <cathbard@gmail.com>
+	© 2007 cathbard <cathbard@gmail.com>
 	sidux-book2s.png             icons/edudialog.ui
 
 License:
@@ -60,6 +60,6 @@ License:
 On Debian systems, the complete text of the GNU General
 Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-The Debian packaging is (C) 2007, Fabian Wuertz <xadras@sidux.com>  and
+The Debian packaging is © 2007, Fabian Wuertz <xadras@sidux.com>  and
 is licensed under the GPL, see above.
 
