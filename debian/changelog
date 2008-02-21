@@ -1,3 +1,9 @@
+sidux-edu (0.2.13) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 21 Feb 2008 00:59:19 +0100
+
 sidux-edu (0.2.12) unstable; urgency=low
 
   * appease lintian and write (C) as © in debian/copyright.
