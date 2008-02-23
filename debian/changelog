@@ -1,8 +1,12 @@
 sidux-edu (0.2.13) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 21 Feb 2008 00:59:19 +0100
+  [ Ferdinand Thommes ]
+  * updated to new logo
+
+ -- Ferdinand Thommes <devil@sidux.com>  Sat, 23 Feb 2008 18:16:58 +0100
 
 sidux-edu (0.2.12) unstable; urgency=low
 
