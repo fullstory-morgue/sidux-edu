@@ -1,16 +1,33 @@
 sidux-edu (0.2.14) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 23 Feb 2008 23:48:57 +0100
+  [ Ferdinand Thommes ]
+  * added final sidux-seminarix-logo typo fixes description fixes
+
+ -- Ferdinand Thommes <devil@sidux.com>  Sat, 15 Mar 2008 09:45:12 +0100
 
 sidux-edu (0.2.13) unstable; urgency=low
 
   * last commit again with the new files
   * updated to new logo
   * removed mask from sidux s in siduxedu icon
+  * acinclude.m4 aclocal.m4 admin AUTHORS ChangeLog config.h.in
+    configure configure.files configure.in configure.in.in COPYING
+    debian Doxyfile icons INSTALL Makefile.am Makefile.cvs Makefile.in
+    NEWS README sidux_edu.kdevelop src stamp-h.in subdirs added final
+    sidux-seminarix-logo acinclude.m4 aclocal.m4 admin AUTHORS ChangeLog
+    config.h.in configure configure.files configure.in configure.in.in
+    COPYING debian Doxyfile icons INSTALL Makefile.am Makefile.cvs
+    Makefile.in NEWS README sidux_edu.kdevelop src stamp-h.in subdirs
+    typo fixes acinclude.m4 aclocal.m4 admin AUTHORS ChangeLog
+    config.h.in configure configure.files configure.in configure.in.in
+    COPYING debian Doxyfile icons INSTALL Makefile.am Makefile.cvs
+    Makefile.in NEWS README sidux_edu.kdevelop src stamp-h.in subdirs
+    description fixes
 
- -- Ferdinand Thommes <devil@sidux.com>  Sat, 23 Feb 2008 21:38:14 +0100
+ -- Ferdinand Thommes <devil@sidux.com>  Sat, 15 Mar 2008 09:41:24 +0100
 
 sidux-edu (0.2.12) unstable; urgency=low
 

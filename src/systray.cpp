@@ -40,7 +40,7 @@ SysTray::SysTray ( QWidget* parent, const char* name )
 
 	menu = contextMenu();
 	menu->insertItem ( SmallIcon ( "sidux_book" ), "sidux Handbuch", this, SLOT ( siduxManual() ) );
-	menu->insertItem ( SmallIcon ( "siduxedu" ), "Seminarix Handbch", this, SLOT ( seminarixManual() ) );
+	menu->insertItem ( SmallIcon ( "siduxedu" ), "sidux-seminarix Handbuch", this, SLOT ( seminarixManual() ) );
 	menu->insertItem ( SmallIcon ( "siduxedu" ), "Programmstarter", this, SLOT ( appStarter() ) );
 	menu->insertSeparator();
 	menu->insertItem ( SmallIcon ( "info" ), i18n("&Über sidux-seminarix"), this, SLOT ( showAbout() ) );
