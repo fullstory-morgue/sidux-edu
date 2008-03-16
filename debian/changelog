@@ -1,9 +1,5 @@
-sidux-edu (0.2.14) UNRELEASED; urgency=low
+sidux-edu (0.2.14) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Ferdinand Thommes ]
   * added final sidux-seminarix-logo typo fixes description fixes
 
  -- Ferdinand Thommes <devil@sidux.com>  Sat, 15 Mar 2008 09:45:12 +0100
