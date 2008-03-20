@@ -1,5 +1,5 @@
 Name=TuxPaint
-DesktopPath=/usr/share/applnk/Graphics/tuxpaint.desktop
+DesktopPath=/usr/share/applications/tuxpaint.desktop
 Package=tuxpaint
 Homepage=http://www.tuxpaint.org/
 Categories=Kunst
