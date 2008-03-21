@@ -1,9 +1,5 @@
-sidux-edu (0.2.15) UNRELEASED; urgency=low
+sidux-edu (0.2.15) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Ferdinand Thommes ]
   * fixed hanzim description fixed tuxpaint.desktop path
 
  -- Ferdinand Thommes <devil@sidux.com>  Thu, 20 Mar 2008 16:08:09 +0100
