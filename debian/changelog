@@ -1,9 +1,5 @@
-sidux-edu (0.2.16) UNRELEASED; urgency=low
+sidux-edu (0.2.16) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * KSociograma pmap updated
   * Sprachen description updated
 
