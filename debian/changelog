@@ -1,8 +1,12 @@
 sidux-edu (0.2.17) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 21 Mar 2008 14:59:00 +0100
+  [ Fabian Wuertz ]
+  * debian: konsole dependency added (solves the problems with the icewm)
+
+ -- Fabian Wuertz <xadras@sidux.com>  Sat, 22 Mar 2008 22:47:33 +0100
 
 sidux-edu (0.2.16) unstable; urgency=low
 
