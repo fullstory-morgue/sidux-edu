@@ -1,5 +1,5 @@
 Name=KSimus
-DesktopPath=/usr/share/applnk/Applications/ksimus.desktop
+DesktopPath=/usr/share/applications/ksimus.desktop
 Package=ksimus
 Homepage=http://ksimus.berlios.de/
 Categories=Technik

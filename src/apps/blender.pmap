@@ -11,13 +11,13 @@
 
   <head>
     <title>
-      /sidux-edu/trunk/src/sidux-edu.desktop –
+      /sidux-edu/trunk/src/apps/blender.pmap –
       sidux edu stuff – Trac
     </title>
         <link rel="search" href="/projects/edu/search" />
         <link rel="help" href="/projects/edu/wiki/TracGuide" />
-        <link rel="alternate" href="/projects/edu/export/674/sidux-edu/trunk/src/sidux-edu.desktop" type="text/plain" title="Original Format" />
-        <link rel="up" href="/projects/edu/browser/sidux-edu/trunk/src?rev=674" title="Parent directory" />
+        <link rel="alternate" href="/projects/edu/export/673/sidux-edu/trunk/src/apps/blender.pmap" type="text/plain" title="Original Format" />
+        <link rel="up" href="/projects/edu/browser/sidux-edu/trunk/src/apps?rev=673" title="Parent directory" />
         <link rel="start" href="/projects/edu/wiki" />
         <link rel="stylesheet" href="/projects/edu/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/projects/edu/chrome/common/css/code.css" type="text/css" /><link rel="stylesheet" href="/projects/edu/chrome/common/css/browser.css" type="text/css" />
         <link rel="shortcut icon" href="/projects/edu/chrome/common/trac.ico" type="image/x-icon" />
@@ -63,50 +63,52 @@
       <div id="ctxtnav" class="nav">
         <h2>Context Navigation</h2>
           <ul>
-            <li class="first "><a href="/projects/edu/changeset/674/sidux-edu/trunk/src/sidux-edu.desktop">Last Change</a></li><li><a href="/projects/edu/browser/sidux-edu/trunk/src/sidux-edu.desktop?annotate=blame&amp;rev=674" title="Annotate each line with the last changed revision (this can be time consuming...)">Annotate</a></li><li class="last"><a href="/projects/edu/log/sidux-edu/trunk/src/sidux-edu.desktop?rev=674">Revision Log</a></li>
+            <li class="first "><a href="/projects/edu/changeset/673/sidux-edu/trunk/src/apps/blender.pmap">Last Change</a></li><li><a href="/projects/edu/browser/sidux-edu/trunk/src/apps/blender.pmap?annotate=blame&amp;rev=673" title="Annotate each line with the last changed revision (this can be time consuming...)">Annotate</a></li><li class="last"><a href="/projects/edu/log/sidux-edu/trunk/src/apps/blender.pmap?rev=673">Revision Log</a></li>
           </ul>
         <hr />
       </div>
     <div id="content" class="browser">
       <h1>
-        <a class="first" title="Go to root directory" href="/projects/edu/browser?rev=674">root</a>
+        <a class="first" title="Go to root directory" href="/projects/edu/browser?rev=673">root</a>
         <span class="sep">/</span>
-        <a title="View sidux-edu" href="/projects/edu/browser/sidux-edu?rev=674">sidux-edu</a>
+        <a title="View sidux-edu" href="/projects/edu/browser/sidux-edu?rev=673">sidux-edu</a>
         <span class="sep">/</span>
-        <a title="View trunk" href="/projects/edu/browser/sidux-edu/trunk?rev=674">trunk</a>
+        <a title="View trunk" href="/projects/edu/browser/sidux-edu/trunk?rev=673">trunk</a>
         <span class="sep">/</span>
-        <a title="View src" href="/projects/edu/browser/sidux-edu/trunk/src?rev=674">src</a>
+        <a title="View src" href="/projects/edu/browser/sidux-edu/trunk/src?rev=673">src</a>
         <span class="sep">/</span>
-        <a title="View sidux-edu.desktop" href="/projects/edu/browser/sidux-edu/trunk/src/sidux-edu.desktop?rev=674">sidux-edu.desktop</a>
+        <a title="View apps" href="/projects/edu/browser/sidux-edu/trunk/src/apps?rev=673">apps</a>
+        <span class="sep">/</span>
+        <a title="View blender.pmap" href="/projects/edu/browser/sidux-edu/trunk/src/apps/blender.pmap?rev=673">blender.pmap</a>
     <span class="sep">@</span>
-      <a href="/projects/edu/changeset/674" title="View changeset 674">674</a>
+      <a href="/projects/edu/changeset/673" title="View changeset 673">673</a>
   </h1>
       <div id="jumprev">
         <form action="" method="get">
           <div>
             <label for="rev" title="Hint: clear the field to view latest revision">
               View revision:</label>
-            <input type="text" id="rev" name="rev" value="674" size="6" />
+            <input type="text" id="rev" name="rev" value="673" size="6" />
           </div>
         </form>
       </div>
       <table id="info" summary="Revision info">
         <tr>
           <th scope="col">
-            Revision <a href="/projects/edu/changeset/674">674</a>, <span title="224 bytes">224 bytes</span>
-            (checked in by cobra, <a class="timeline" href="/projects/edu/timeline?from=2008-05-04T09%3A08%3A00Z%2B0000&amp;precision=second" title="2008-05-04T09:08:00Z+0000 in Timeline">2 days</a> ago)
+            Revision <a href="/projects/edu/changeset/673">673</a>, <span title="1089 bytes">1.1 kB</span>
+            (checked in by cobra, <a class="timeline" href="/projects/edu/timeline?from=2008-05-04T09%3A01%3A14Z%2B0000&amp;precision=second" title="2008-05-04T09:01:14Z+0000 in Timeline">2 days</a> ago)
           </th>
         </tr>
         <tr>
           <td class="message searchable">
               <p>
-added generic name descriptions <br />
+added blender.pmap <br />
 </p>
           </td>
         </tr>
       </table>
       <div id="preview" class="searchable">
-    <table class="code"><thead><tr><th class="lineno" title="Line numbers">Line</th><th class="content"> </th></tr></thead><tbody><tr><th id="L1"><a href="#L1">1</a></th><td>[Desktop Entry]</td></tr><tr><th id="L2"><a href="#L2">2</a></th><td>Encoding=UTF-8</td></tr><tr><th id="L3"><a href="#L3">3</a></th><td>Type=Application</td></tr><tr><th id="L4"><a href="#L4">4</a></th><td>Exec=sidux-edu</td></tr><tr><th id="L5"><a href="#L5">5</a></th><td>Icon=siduxedu</td></tr><tr><th id="L6"><a href="#L6">6</a></th><td>Name=appstarter</td></tr><tr><th id="L7"><a href="#L7">7</a></th><td>Name[de]=Programmstarter</td></tr><tr><th id="L8"><a href="#L8">8</a></th><td>Name[en]=Programstarter</td></tr><tr><th id="L9"><a href="#L9">9</a></th><td>Name[ru]=Запуск программ образования</td></tr><tr><th id="L10"><a href="#L10">10</a></th><td>Categories=Utility;</td></tr></tbody></table>
+    <table class="code"><thead><tr><th class="lineno" title="Line numbers">Line</th><th class="content"> </th></tr></thead><tbody><tr><th id="L1"><a href="#L1">1</a></th><td>Name=blender</td></tr><tr><th id="L2"><a href="#L2">2</a></th><td>DesktopPath=/usr/share/applications/kde/blender.desktop</td></tr><tr><th id="L3"><a href="#L3">3</a></th><td>Package=blender</td></tr><tr><th id="L4"><a href="#L4">4</a></th><td>Homepage=http://www.blender.org/</td></tr><tr><th id="L5"><a href="#L5">5</a></th><td>Categories=informatik</td></tr><tr><th id="L6"><a href="#L6">6</a></th><td>Description= Blender ist ein freies 3D-Graphik Programm. Mit Blender können dreidimensionale Körper modelliert werden, man kann sie texturieren (mit bestimmten Materialflächen versehen), animieren und rendern. Blender verfügt über einen eingebauten Videoschnitteditor und eine Spiel-Engine. Der Funktionsumfang hat sich in den letzten Jahren dynamisch weiterentwickelt, z. B. ist die Simulation von Flüssigkeiten und Compositing mit eingeflossen. </td></tr><tr><th id="L7"><a href="#L7">7</a></th><td>Im Internet findet man gute Benutzeranleitungen und auch viele Beispiele an 3D-Graphik-Bildern und -Animationen, die mit Blender erstellt wurden. Im Buchhandel sind auch sehr hilfreiche Blender-Bücher in deutscher Sprache erhältlich &lt;br&gt;</td></tr><tr><th id="L8"><a href="#L8">8</a></th><td>z.B. Das Blender-Buch: 3D-Grafik und Animation mit freier Software, &lt;br&gt;</td></tr><tr><th id="L9"><a href="#L9">9</a></th><td>von Carsten Wartmann (Autor), Verlag: Dpunkt Verlag; Auflage: 3., überarbeitete und erweiterte Auflage. (August 2007), Sprache: Deutsch, ISBN-10: 3898644669, ISBN-13: 978-3898644662</td></tr></tbody></table>
       </div>
       <div id="help">
         <strong>Note:</strong> See <a href="/projects/edu/wiki/TracBrowser">TracBrowser</a>
@@ -115,10 +117,10 @@ added generic name descriptions <br />
       <div id="anydiff">
         <form action="/projects/edu/diff" method="get">
           <div class="buttons">
-            <input type="hidden" name="new_path" value="/sidux-edu/trunk/src/sidux-edu.desktop" />
-            <input type="hidden" name="old_path" value="/sidux-edu/trunk/src/sidux-edu.desktop" />
-            <input type="hidden" name="new_rev" value="674" />
-            <input type="hidden" name="old_rev" value="674" />
+            <input type="hidden" name="new_path" value="/sidux-edu/trunk/src/apps/blender.pmap" />
+            <input type="hidden" name="old_path" value="/sidux-edu/trunk/src/apps/blender.pmap" />
+            <input type="hidden" name="new_rev" value="673" />
+            <input type="hidden" name="old_rev" value="673" />
             <input type="submit" value="View changes..." title="Select paths and revs for Diff" />
           </div>
         </form>
@@ -128,7 +130,7 @@ added generic name descriptions <br />
       <h3>Download in other formats:</h3>
       <ul>
         <li class="last first">
-          <a rel="nofollow" href="/projects/edu/export/674/sidux-edu/trunk/src/sidux-edu.desktop">Original Format</a>
+          <a rel="nofollow" href="/projects/edu/export/673/sidux-edu/trunk/src/apps/blender.pmap">Original Format</a>
         </li>
       </ul>
     </div>
