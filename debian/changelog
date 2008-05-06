@@ -4,8 +4,9 @@ sidux-edu (0.2.18+nmu1) UNRELEASED; urgency=low
   * added blender.pm
   * fixed sidux-edu.desktop
   * fixed ksimus.pm
+  * *added generic name to sidux-edu.desktop
 
- -- Ferdinand Thommes <devil@sidux.com>  Tue, 06 May 2008 22:05:02 +0200
+ -- Ferdinand Thommes <devil@sidux.com>  Tue, 06 May 2008 22:23:46 +0200
 
 sidux-edu (0.2.18) UNRELEASED; urgency=low
 
