@@ -5,8 +5,9 @@ sidux-edu (0.2.18+nmu1) UNRELEASED; urgency=low
   * fixed sidux-edu.desktop
   * fixed ksimus.pm
   * *added generic name to sidux-edu.desktop
+  * last commit of blender.pmap was .html, now corrected to .txt
 
- -- Ferdinand Thommes <devil@sidux.com>  Tue, 06 May 2008 22:23:46 +0200
+ -- Ferdinand Thommes <devil@sidux.com>  Tue, 06 May 2008 22:55:24 +0200
 
 sidux-edu (0.2.18) UNRELEASED; urgency=low
 
