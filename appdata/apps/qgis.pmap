@@ -1,7 +1,0 @@
-Name=QGis
-Package=qgis
-Description=Wie auch GRASS ein geografisches Informationssystem mit freiem Geodatenviewer. Er bietet Support f&uuml;r Vektor- und Rasterdaten.
-Homepage=http://www.grass-gis.de
-Categories=Erdkunde
-DesktopPath=none
-Exec=/usr/bin/qgis

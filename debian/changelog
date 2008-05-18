@@ -10,8 +10,9 @@ sidux-edu (0.2.19) UNRELEASED; urgency=low
   * icons added
   * german translation added
   * start widget fixed
+  * qgis pmap removed
 
- -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 16:25:26 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 16:34:25 +0200
 
 sidux-edu (0.2.18) unstable; urgency=low
 
