@@ -14,8 +14,10 @@ sidux-edu (0.2.19) UNRELEASED; urgency=low
   * icon files removed
   * icon files removed
   * possibility to use app-install-data
+  * another brick in the wall
+  * enter problem in applyChanges solved
 
- -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 22:10:01 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 22:53:53 +0200
 
 sidux-edu (0.2.18) unstable; urgency=low
 

@@ -34,7 +34,7 @@ ac::ac(const QString &changes, QWidget *parent, const char *name, const QStringL
 	borderFrame->setGeometry( 0, 0, 500, 400);
 	konsoleFrame->setGeometry( 0, 0, 500, 400);
 
-	appdir   = "/usr/share/kappinstaller/";
+	appdir   = "/usr/share/sidux-edu/";
 
 	loadKonsole();
 	konsoleFrame->installEventFilter( this );

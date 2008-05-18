@@ -558,11 +558,7 @@ void edu::applyChanges1()
 		if( status == "install" )
 		{
 			QString name = it.current()->text(1);
-			QPixmap ico;
-			if( QFile::exists( iconpath+"32x32/apps/"+icon+".png" ) )
-				ico = QPixmap(  iconpath+"32x32/apps/"+icon+".png" );
-			else
-				ico = QPixmap( appdir+"icons/"+id+".png" );
+			QPixmap ico = getIcon(icon);
 			installListBox->insertItem( ico, name);
 
 		}
@@ -655,16 +651,11 @@ void edu::back()
 
 	for(uint i = 0; i < names.count(); i++)
 	{
-		QPixmap ico;
 		QString id     = listView->findItem(names[i], 1, Qt::ExactMatch )->text(0);
 		QString status = listView->findItem(names[i], 1, Qt::ExactMatch )->text(4);
 		QString icon   = listView->findItem(names[i], 1, Qt::ExactMatch )->text(9);
+		QPixmap ico = getIcon(icon);
 
-
-		if( QFile::exists( iconpath+"32x32/apps/"+icon+".png" ) )
-			ico = QPixmap(  iconpath+"32x32/apps/"+icon+".png" );
-		else
-			ico = QPixmap( appdir+"icons/"+id+".png" );
 
 		FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
 		item->setPixmap( 1, ico );
