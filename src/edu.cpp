@@ -69,7 +69,7 @@ edu::edu(QWidget *parent, const char *name, const QStringList &)
 	homepagePushButton->hide();
 	examplePushButton->hide();
 	widgetStack->raiseWidget(3);
-	widgetStack->raiseWidget(2);
+	//widgetStack->raiseWidget(2);
 
 	// setup leftmenu
 	categoriesListView->setAlternateBackground( QColor(237, 244, 249) );

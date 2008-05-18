@@ -9,8 +9,9 @@ sidux-edu (0.2.19) UNRELEASED; urgency=low
   * apps moved to app folder
   * icons added
   * german translation added
+  * start widget fixed
 
- -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 16:06:21 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 16:25:26 +0200
 
 sidux-edu (0.2.18) unstable; urgency=low
 
