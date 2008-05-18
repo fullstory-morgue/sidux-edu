@@ -39,11 +39,11 @@ SysTray::SysTray ( QWidget* parent, const char* name )
 	QToolTip::add ( this,i18n("sidux-seminarix Programmstarter"));
 
 	menu = contextMenu();
-	menu->insertItem ( SmallIcon ( "sidux_book" ), "sidux Handbuch", this, SLOT ( siduxManual() ) );
-	menu->insertItem ( SmallIcon ( "siduxedu" ), "sidux-seminarix Handbuch", this, SLOT ( seminarixManual() ) );
+	menu->insertItem ( SmallIcon ( "sidux_book" ), "sidux Handbook", this, SLOT ( siduxManual() ) );
+	menu->insertItem ( SmallIcon ( "siduxedu" ), "sidux-seminarix Handbook", this, SLOT ( seminarixManual() ) );
 	menu->insertItem ( SmallIcon ( "siduxedu" ), "Programmstarter", this, SLOT ( appStarter() ) );
 	menu->insertSeparator();
-	menu->insertItem ( SmallIcon ( "info" ), i18n("&Über sidux-seminarix"), this, SLOT ( showAbout() ) );
+	menu->insertItem ( SmallIcon ( "info" ), i18n("About sidux-seminarix"), this, SLOT ( showAbout() ) );
 
 	setPixmap ( loadIcon ( "siduxedu" ) );
 

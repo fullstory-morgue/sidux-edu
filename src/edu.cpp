@@ -23,6 +23,15 @@
 #include <kiconloader.h>
 #include <kapplication.h>
 #include <kprocess.h>
+#include <kaboutapplication.h>
+#include <kaboutkde.h>
+#include <klistview.h>
+#include <klistbox.h>
+#include <kmessagebox.h>
+#include <kdesktopfile.h>
+#include <kdirlister.h>
+#include <qdir.h>
+#include <kconfigbase.h>
 
 #include <qpushbutton.h>
 #include <qlineedit.h>
@@ -31,23 +40,14 @@
 #include <qtextbrowser.h>
 #include <qcombobox.h>
 #include <qgroupbox.h>
-
-#include <klistview.h>
-#include <klistbox.h>
-#include <kmessagebox.h>
-
+#include <qregexp.h>
 #include <qheader.h>
 #include <qstatusbar.h>
-#include <kaboutapplication.h>
-#include <kaboutkde.h>
 
 
-#include <kdesktopfile.h>
-#include <kdirlister.h>
-#include <qdir.h>
-#include <kconfigbase.h>
 
-#include "edu.h"
+#include <fancylistviewitem.h>
+#include <edu.h>
 
 
 #include "kconfigbackend.h"
@@ -56,29 +56,26 @@ edu::edu(QWidget *parent, const char *name, const QStringList &)
 :EduDialog(parent, name)
 {
 	loader = KGlobal::iconLoader();
-	load();
-}
+	iconpath = loader->theme()->dir();
+	appdir   = "/usr/share/sidux-edu/";
 
 
-void edu::load()
-{
 	statusBar()->hide();
 
 	getCategories();
-	getAllApps();
+	importApps();
 
-	loadKonsole();
-	konsoleFrame->installEventFilter( this );
 	execPushButton->hide();
 	homepagePushButton->hide();
 	examplePushButton->hide();
 	widgetStack->raiseWidget(3);
-	//widgetStack->raiseWidget(2);
+	widgetStack->raiseWidget(2);
 
 	// setup leftmenu
 	categoriesListView->setAlternateBackground( QColor(237, 244, 249) );
 	categoriesListView->header()->hide();
 
+	appsListView->header()->hide();
 
 }
 
@@ -90,12 +87,12 @@ void edu::load()
 
 void edu::getCategories()
 {
-	QStringList categories = QDir( "/usr/share/sidux-edu/categories").entryList( QDir::Files );
+	QStringList categories = QDir( appdir+"categories").entryList( QDir::Files );
 
 	QPixmap icon;
 	for(uint i =  categories.count(); i > 0; i--)
 	{
-		KDesktopFile file( "/usr/share/sidux-edu/categories/"+categories[i-1] );
+		KDesktopFile file( appdir+"categories/"+categories[i-1] );
 		icon = loader->loadIcon( file.readIcon(), KIcon::Desktop, 36);
 
 		KListViewItem * item = new KListViewItem( categoriesListView, 0 );
@@ -111,27 +108,32 @@ void edu::getCategories()
 
 }
 
-void edu::getAllApps()
+void edu::importApps()
 {
 	listView->clear();
-	QStringList apps = QDir( "/usr/share/sidux-edu/apps").entryList( QDir::Files );
+	QStringList apps = QDir( appdir+"apps").entryList( QDir::Files );
 
 	QString line;
 
 
 
-	for( QStringList::Iterator it = apps.begin(); it != apps.end(); ++it )
+	for( uint i = 0; i < apps.count(); i++ )
 	{
 
 		// create listitem
 		QListViewItem * item = new QListViewItem( listView, 0 );
+
+		//id
+		QString id = QString(apps[i]).replace(".pmap", "");
+		item->setText( 0, id);
+
 
 		// mpam file
 		int found = 0;
 		QString desktopPath;
 		QString package;
 		QString exec;
-		QFile file2( "/usr/share/sidux-edu/apps/"+*it );
+		QFile file2( appdir+"apps/"+apps[i] );
 		file2.open( IO_ReadOnly );
 		QTextStream stream2( &file2 );
 		while ( !stream2.atEnd() and found < 6 )
@@ -139,7 +141,12 @@ void edu::getAllApps()
 			line = stream2.readLine(); // line of text excluding '\n'
 			if( line.contains("Name=") )
 			{
-				item->setText( 0, line.mid(5) );
+				item->setText( 1, line.mid(5) );
+				found++;
+			}
+			else if ( line.contains("Categories=") )
+			{
+				item->setText( 2, line.mid(11) );
 				found++;
 			}
 			else if( line.contains("Package=") )
@@ -148,71 +155,66 @@ void edu::getAllApps()
 				item->setText( 3, package );
 				found++;
 			}
+			else if ( line.contains("Exec=") )
+			{
+				exec = line.mid(5);
+				found++;
+			}
 			else if ( line.contains("DesktopPath=") )
 			{
 				desktopPath = line.mid(12);
 				if( desktopPath != "console" and desktopPath != "none")
 					found++;
 			}
-			else if ( line.contains("Categories=") )
+			else if ( line.contains("Description=") )
 			{
-				item->setText( 6, line.mid(11) );
+				item->setText( 6, line.mid(12) );
 				found++;
 			}
 			else if ( line.contains("Homepage=") )
 			{
-				item->setText( 5, line.mid(9) );
+				item->setText( 7, line.mid(9) );
 				found++;
 			}
-			else if ( line.contains("Description=") )
-			{
-				item->setText( 4, line.mid(12) );
-				found++;
-			}
-			else if ( line.contains("Exec=") )
-			{
-				exec = line.mid(5);
-				found++;
-			}
+
+
 		}
 		file2.close();
 
 	
 		if( desktopPath == "console" )
 		{
-			item->setText( 2, "x-terminal-emulator --noclose -e "+exec );
-			if( QFile::exists(exec) )
-				item->setText( 7, "TRUE" );
-			else
-				item->setText( 7, "FALSE" );
+			item->setText( 8, "T" ); // terminal
+			item->setText( 9, id );  // icon
 		}
 		else if( desktopPath == "none" )
 		{
-			item->setText( 2, exec );
-			if( QFile::exists(exec) )
-				item->setText( 7, "TRUE" );
-			else
-				item->setText( 7, "FALSE" );
+			item->setText( 8, "F" ); // terminal
+			item->setText( 9, id );  // icon
 		}
 		else
 		{
 			// *.desktop file
 			KDesktopFile file3( desktopPath );
-			item->setText( 1, file3.readIcon() );
 			QString exec = QStringList::split( " ", file3.readEntry("Exec") )[0];
-			item->setText( 2, exec );
-			if( file3.readEntry("Exec") != "" )
-				item->setText( 7, "TRUE" );
-			else
-				item->setText( 7, "FALSE" );
+			item->setText( 5, exec );
+			// terminal
+			item->setText( 8, "F" ); // terminal
+			item->setText( 9, file3.readIcon() ); // icon
 		}
+
+		//status
+		if( QFile::exists( "/usr/share/doc/"+id+"/copyright" ) )
+			item->setText( 4, "installed");
+		else
+			item->setText( 4, "notinstalled");
 
 		//hasExample
 		QString packageDir = "/usr/share/seminarix-samples/"+QStringList::split( " ", package )[0];
 		if( QFile::exists(packageDir) )
-			item->setText( 8, "TRUE" );
+			item->setText( 10, "TRUE" );
 		else
-			item->setText( 8,  "FALSE" );
+			item->setText( 10,  "FALSE" );
 	}
 
 
@@ -224,7 +226,7 @@ void edu::getAllApps()
 //-- main widget ---------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-void edu::getApps()
+void edu::showCategoryApps()
 {
 
 	if( categoriesListView->selectedItems().count() < 1)
@@ -232,7 +234,7 @@ void edu::getApps()
 
 	widgetStack->raiseWidget(0);
 
-	appsListBox->clear();
+	appsListView->clear();
 
 	QString category = categoriesListView->selectedItems().first()->text(0);
 
@@ -243,72 +245,83 @@ void edu::getApps()
 	}
 
 	//descriptionTextBrowser->clear();
-	descriptionTextBrowser->setSource("/usr/share/sidux-edu/html/"+category+".html");
+	descriptionTextBrowser->setSource(appdir+"html/"+category+".html");
 
 
+	QStringList id;
 	QStringList names;
 	QStringList icons;
-	QStringList packages;
+	QStringList status;
+
+
 	QListViewItemIterator it( listView );
-	if( comboBox->currentItem() == 0 )
+	if( comboBox->currentItem() == 1 ) // just installed programms
 		while ( it.current() )
 		{
-			if ( it.current()->text(6).contains(category) and it.current()->text(7) == "TRUE" )
-			{
-				names.append( it.current()->text(0) );
-				icons.append( it.current()->text(1) );
-				packages.append( it.current()->text(3) );
-			}
+			QString status0 = it.current()->text(4);
+			if( status0 == "installed" or  status0 == "remove" )
+				if( it.current()->text(2).contains(category) )
+				{
+					id.append(     it.current()->text(0) );
+					names.append(  it.current()->text(1) );
+					icons.append(  it.current()->text(9) );
+					status.append( status0 );
+				}
 			++it;
 		}
 	else if( comboBox->currentItem() == 2 )
 		while ( it.current() )
 		{
-			if ( it.current()->text(6).contains(category) and it.current()->text(7) == "FALSE" )
-			{
-				names.append( it.current()->text(0) );
-				icons.append( it.current()->text(1) );
-				packages.append( it.current()->text(3) );
-			}
+			QString status0 = it.current()->text(4);
+			if( status0 == "notinstalled" or status0 == "install" )
+				if( it.current()->text(2).contains(category) )
+				{
+					id.append(     it.current()->text(0) );
+					names.append(  it.current()->text(1) );
+					icons.append(  it.current()->text(9) );
+					status.append( status0 );
+				}
 			++it;
 		}
 	else
 		while ( it.current() )
 		{
-			if ( it.current()->text(6).contains(category) )
+			if ( it.current()->text(2).contains(category) )
 			{
-				names.append( it.current()->text(0) );
-				icons.append( it.current()->text(1) );
-				packages.append( it.current()->text(3) );
+				id.append(     it.current()->text(0) );
+				names.append(  it.current()->text(1) );
+				status.append( it.current()->text(4) );
+				icons.append(  it.current()->text(9) );
 			}
 			++it;
 		}
 
-	QPixmap icon;
+	QPixmap ico;
 	for(uint i = 0; i < names.count(); i++)
 	{
+		if( QFile::exists( iconpath+"32x32/apps/"+icons[i]+".png" ) )
+			ico = QPixmap(  iconpath+"32x32/apps/"+icons[i]+".png" );
+		else
+			ico = QPixmap( appdir+"icons/"+id[i]+".png" );
 
-		icon = loader->loadIcon( icons[i], KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
-		if (icon.isNull() )
+		FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBoxController );
+		item->setPixmap( 1, ico );
+		item->setText(   2, names[i] );
+		item->setTristate(FALSE);
+		if( status[i] == "installed" )
+			item->setOn(TRUE);
+		else if( status[i] == "install")
 		{
-
-			QString package = QStringList::split( " ", packages[i] )[0];
-
-			if( QFile::exists("/usr/share/pixmaps/"+package+".xpm") )
-				icon = QPixmap("/usr/share/pixmaps/"+package+".xpm");
-			else if( QFile::exists("/usr/share/pixmaps/"+package+"-icon.xpm") )
-				icon = QPixmap("/usr/share/pixmaps/"+package+"-icon.xpm");
-			else if( QFile::exists("/usr/share/"+package+"/"+package+".xpm") )
-				icon = QPixmap("/usr/share/"+package+"/"+package+".xpm");
-			else if( QFile::exists("/usr/share/"+package+"/pixmaps/"+package+".xpm") )
-				icon = QPixmap("/usr/share/"+package+"/pixmaps/"+package+".xpm");
-			else if( package == "wxmaxima")
-				icon = QPixmap("/usr/share/wxMaxima/icons/maximaicon.xpm");
-			else
-				icon = loader->loadIcon( "seminarix_empty", KIcon::Desktop, 32);
+			item->setOn(TRUE);
+			for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(green) );
 		}
-		appsListBox->insertItem( icon, names[i]);
+		else if( status[i] == "remove")
+			for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(red) );
+		appsListView->setColumnAlignment( i, Qt::AlignVCenter );
 	}
+	appsListView->sort();
 
 	disableButtons();
 }
@@ -316,153 +329,198 @@ void edu::getApps()
 void edu::searchApp()
 {
 
-	widgetStack->raiseWidget(0);
-
-	appsListBox->clear();
+	appsListView->clear();
 	descriptionTextBrowser->clear();
 
 	QStringList names;
+	QStringList id;
+	QStringList status;
 	QStringList icons;
-	QStringList packages;
 	QListViewItemIterator it( listView );
 	while ( it.current() ) {
-		if ( it.current()->text(0).contains( searchLineEdit->text(), FALSE ) or it.current()->text(4).contains( searchLineEdit->text(), FALSE ) )
+		if ( it.current()->text(1).contains( searchLineEdit->text(), FALSE ) or it.current()->text(6).contains( searchLineEdit->text(), FALSE ) )
 		{
-			names.append( it.current()->text(0) );
-			icons.append( it.current()->text(1) );
-			packages.append( it.current()->text(3) );
+			id.append(     it.current()->text(0) );
+			names.append(  it.current()->text(1) );
+			status.append( it.current()->text(4) );
+			icons.append(  it.current()->text(9) );
 		}
 		++it;
 	}
 
-	QPixmap icon;
+	QPixmap ico;
+	appsListView->clear();
 	for(uint i = 0; i < names.count(); i++)
 	{
-		icon = loader->loadIcon( icons[i], KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
-		if (icon.isNull() )
-		{
-			QString package = QStringList::split( " ", packages[i] )[0];
+		if( QFile::exists( iconpath+"32x32/apps/"+icons[i]+".png" ) )
+			ico = QPixmap(  iconpath+"32x32/apps/"+icons[i]+".png" );
+		else
+			ico = QPixmap( appdir+"icons/"+id[i]+".png" );
 
-			if( QFile::exists("/usr/share/pixmaps/"+package+".xpm") )
-				icon = QPixmap("/usr/share/pixmaps/"+package+".xpm");
-			else if( QFile::exists("/usr/share/pixmaps/"+package+"-icon.xpm") )
-				icon = QPixmap("/usr/share/pixmaps/"+package+"-icon.xpm");
-			else if( QFile::exists("/usr/share/"+package+"/"+package+".xpm") )
-				icon = QPixmap("/usr/share/"+package+"/"+package+".xpm");
-			else if( QFile::exists("/usr/share/"+package+"/pixmaps/"+package+".xpm") )
-				icon = QPixmap("/usr/share/"+package+"/pixmaps/"+package+".xpm");
-			else if( package == "wxmaxima")
-				icon = QPixmap("/usr/share/wxMaxima/icons/maximaicon.xpm");
-			else
-				icon = loader->loadIcon( "seminarix_empty", KIcon::Desktop, 32);
+		FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
+		item->setPixmap( 1, ico );
+		item->setText(   2, names[i] );
+		item->setTristate(FALSE);
+
+		if( status[i] == "installed" )
+			item->setOn(TRUE);
+		else if( status[i] == "install")
+		{
+			item->setOn(TRUE);
+			for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(green) );
 		}
-		appsListBox->insertItem( icon, names[i]);
+		else if( status[i] == "remove")
+			for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(red) );
+		appsListView->setColumnAlignment( i, Qt::AlignVCenter );
 	}
 
 	disableButtons();
 }
 
 
-void edu::getDescription()
+
+void edu::showApp()
 {
-	QString app = appsListBox->currentText();
-	QString description = listView->findItem(app, 0, Qt::ExactMatch )->text(4);
+
+	if (!appsListView->selectedItem()) return;
+	QString app = appsListView->selectedItem()->text(2);
+
+	// Show description
+	QString description =  listView->findItem(app, 1, Qt::ExactMatch )->text(6);
 	descriptionTextBrowser->setText( "<b>"+app+"</b><br><br>"+description );
 
-	enableButtons();
+	// Show homepage buttons
+	QString homepage = listView->findItem(app, 1, Qt::ExactMatch )->text(7);
+	if( homepage != "")
+		homepagePushButton->show();
+	else
+		homepagePushButton->hide();
+
+	// Show exec button
+	QString status = listView->findItem(app, 1, Qt::ExactMatch )->text(4);
+	if( status == "installed" or status == "remove" )
+		execPushButton->show();
+	else
+		execPushButton->hide();
+
 }
 
-void edu::execApp()
+void edu::changed()
 {
-	QString app = appsListBox->currentText();
-	QString exec = listView->findItem(app, 0, Qt::ExactMatch )->text(2);
-	QString package = listView->findItem(app, 0, Qt::ExactMatch )->text(3);
-	QString isInstalled = listView->findItem(app, 0, Qt::ExactMatch )->text(7);
+	QListViewItemIterator it( appsListView );
+	QString tmp;
 
+	for ( ; it.current(); ++it )
+	{
 
-	if( isInstalled == "TRUE")
-	{
-		KProcess *proc = new KProcess;
-		*proc << QStringList::split( " ", exec );
-		proc->start();	
-	}
-	else
-	{
-		if(KMessageBox::Yes == KMessageBox::questionYesNo(this, "Das Programm "+appsListBox->currentText()+" ist nicht installiert! Moechten sie es aus dem Internet herunterladen und installieren?")  )
+		QString name = it.current()->text(2);
+		QString status = listView->findItem(name, 1, Qt::ExactMatch )->text(4);
+		QString id = listView->findItem(name, 1, Qt::ExactMatch )->text(0);
+		QString icon = listView->findItem(name, 1, Qt::ExactMatch )->text(9);
+		QPixmap ico;
+		if( QFile::exists( iconpath+"32x32/apps/"+icon+".png" ) )
+			ico = QPixmap(  iconpath+"32x32/apps/"+icon+".png" );
+		else
+			ico = QPixmap( appdir+"icons/"+id+".png" );
+
+		if ( ( (QCheckListItem*)it.current() )->isOn() )
 		{
-			categoriesListView->hide();
-			searchLineEdit->hide();
-			widgetStack->raiseWidget(1);
-			QStrList run;
-			run.append( "/usr/share/sidux-edu/sh/appinstaller" );
-			run.append( package );
-	
-			// run command
-			terminal()->startProgram( "/usr/share/sidux-edu/sh/appinstaller", run );
-			connect( konsole, SIGNAL(destroyed()), SLOT( back() ) );
+			if( status == "notinstalled")
+			{
+				appsListView->removeItem( it.current() );
+				FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
+				item->setPixmap( 1, ico );
+				item->setText(   2, name );
+				item->setTristate(FALSE);
+				listView->findItem(id, 0, Qt::ExactMatch )->setText(4, "install");
+				item->setOn(TRUE);
+				for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(green) );
+			}
+			else if(  status == "remove" )
+			{
+				appsListView->removeItem( it.current() );
+				FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
+				item->setPixmap( 1, ico );
+				item->setText(   2, name );
+				item->setTristate(FALSE);
+				listView->findItem(id, 0, Qt::ExactMatch )->setText(4, "installed");
+				item->setOn(TRUE);
+				for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(white) );
+			}
+		}
+		else
+		{
+			if( status == "installed" )
+			{
+				appsListView->removeItem( it.current() );
+				FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
+				item->setPixmap( 1, ico );
+				item->setText(   2, name );
+				item->setTristate(FALSE);
+				listView->findItem(id, 0, Qt::ExactMatch )->setText(4, "remove");
+				item->setOn(FALSE);
+				for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(red) );
+			}
+			else if(  status == "install" )
+			{
+				appsListView->removeItem( it.current() );
+				FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
+				item->setPixmap( 1, ico );
+				item->setText(   2, name );
+				item->setTristate(FALSE);
+				listView->findItem(id, 0, Qt::ExactMatch )->setText(4, "notinstalled");
+				item->setOn(FALSE);
+				for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(white) );
+			}
 		}
 	}
 
+	if( listView->findItem("install", 4, Qt::ExactMatch ) or listView->findItem("remove", 4, Qt::ExactMatch ) )
+		apply1PushButton->setEnabled(TRUE);
+	else
+		apply1PushButton->setEnabled(FALSE);
+
 }
 
-void edu::back()
+
+void edu::execApp()
 {
-	categoriesListView->show();
-	searchLineEdit->show();
-	widgetStack->raiseWidget(0);
-	loadKonsole();
-	konsoleFrame->installEventFilter( this );
-	getAllApps();
-	getApps();
+	QString app = appsListView->selectedItem()->text(2);
+	QString exec = listView->findItem(app, 1, Qt::ExactMatch )->text(5);
+	QString terminal = listView->findItem(app, 1, Qt::ExactMatch )->text(8);
+	if( terminal == "T" )
+		exec = "x-terminal-emulator --noclose -e "+exec;
+
+	KProcess *proc = new KProcess;
+	*proc << QStringList::split( " ", exec );
+	proc->start();
 }
 
 
 void edu::showHomepage()
 {
-	QString app = appsListBox->currentText();
-	QString homepage = listView->findItem(app, 0, Qt::ExactMatch )->text(5);
-	kapp->invokeBrowser( homepage );
+	QString app = appsListView->selectedItem()->text(2);
+	kapp->invokeBrowser( listView->findItem(app, 1, Qt::ExactMatch )->text(7) );
 }
 
 void edu::copyExample()
 {
 
-	if(KMessageBox::Yes == KMessageBox::questionYesNo(this, "Sollen die Beispieldateien auf dem Desktop angezeigt werden?")  ) {
-		QString app = appsListBox->currentText();
+	if(KMessageBox::Yes == KMessageBox::questionYesNo(this, "Sollen die Beispieldateien auf dem Desktop angezeigt werden?")  )
+	{
+		QString app = appsListView->selectedItem()->text(2);
 		QString package = listView->findItem(app, 0, Qt::ExactMatch )->text(3);
 		package = QStringList::split( " ", package )[0];
 		KProcess *proc = new KProcess;
-		*proc << "/usr/share/sidux-edu/sh/copyExample" << package;
+		*proc << appdir+"sh/copyExample" << package;
 		proc->start();
 	}
-
-}
-
-
-void edu::enableButtons()
-{
-	QString app = appsListBox->currentText();
-	QString package = listView->findItem(app, 0, Qt::ExactMatch )->text(3);
-	QString isInstalled = listView->findItem(app, 0, Qt::ExactMatch )->text(7);
-	QString hasExample = listView->findItem(app, 0, Qt::ExactMatch )->text(8);
-
-	if( isInstalled == "FALSE" )
-		execPushButton->setText("Programm installieren");
-	else
-		execPushButton->setText("Programm starten");
-
-	if( hasExample == "TRUE" )
-		examplePushButton->show();
-	else
-		examplePushButton->hide();
-
-	execPushButton->show();
-
-	QString homepage = listView->findItem(app, 0, Qt::ExactMatch )->text(5);
-	if( homepage != "")
-		homepagePushButton->show();
-	else
-		homepagePushButton->hide();
 
 }
 
@@ -478,7 +536,7 @@ void edu::openUrl(const QString& url)
 	// E.g. /usr/share/sidu x-edu/html/http://www.kde.org
 	if( url.mid(26, 4) == "http" )
 	{
-		descriptionTextBrowser->setSource("/usr/share/sidux-edu/html/"+ categoriesListView->selectedItems().first()->text(0)+".html");
+		descriptionTextBrowser->setSource( appdir+"html/"+ categoriesListView->selectedItems().first()->text(0)+".html");
 		kapp->invokeBrowser( url.mid(26) );
 	}
 
@@ -486,36 +544,160 @@ void edu::openUrl(const QString& url)
 
 
 
-
 //------------------------------------------------------------------------------
-//--- load console -------------------------------------------------------------
+//-- aplly Changes -------------------------------------------------------------
 //------------------------------------------------------------------------------
 
 
 
-
-void edu::loadKonsole()
+void edu::applyChanges1()
 {
-	KLibFactory* factory = KLibLoader::self()->factory( "libsanekonsolepart" );
-	if (!factory)
-		factory = KLibLoader::self()->factory( "libkonsolepart" );
-	konsole = static_cast<KParts::Part*>( factory->create( konsoleFrame, "konsolepart", "QObject", "KParts::ReadOnlyPart" ) );
-	terminal()->setAutoDestroy( true );
-	terminal()->setAutoStartShell( false );
-	konsole->widget()->setGeometry(0, 0, konsoleFrame->width(), konsoleFrame->height());	
+	
+	categoriesListView->hide();
+	widgetStack->raiseWidget(1);
+	installListBox->clear();
+	removeListBox->clear();
+
+
+	QListViewItemIterator it( listView );
+	while ( it.current() )
+	{
+		QString id = it.current()->text(0);
+		QString status = it.current()->text(4);
+		QString icon = it.current()->text(9);
+		if( status == "install" )
+		{
+			QString name = it.current()->text(1);
+			QPixmap ico;
+			if( QFile::exists( iconpath+"32x32/apps/"+icon+".png" ) )
+				ico = QPixmap(  iconpath+"32x32/apps/"+icon+".png" );
+			else
+				ico = QPixmap( appdir+"icons/"+id+".png" );
+			installListBox->insertItem( ico, name);
+
+		}
+		if( status == "remove" )
+		{
+			QString name = it.current()->text(1);
+			QPixmap ico;
+			if( QFile::exists( iconpath+"32x32/apps/"+icon+".png" ) )
+				ico = QPixmap(  iconpath+"32x32/apps/"+icon+".png" );
+			else
+				ico = QPixmap( appdir+"icons/"+id+".png" );
+			removeListBox->insertItem( ico, name);
+		}
+		++it;
+	}
+
+
 }
 
-bool edu::eventFilter( QObject *o, QEvent *e )
+
+void edu::applyChanges2()
 {
-	// This function makes the console emulator expanding
-	if ( e->type() == QEvent::Resize )
+	changedPackages = "";
+
+	for(uint i = 0; i < installListBox->count(); i++)
 	{
-		QResizeEvent *re = dynamic_cast< QResizeEvent * >( e );
-		if ( !re ) return false;
-		konsole->widget()->setGeometry( 0, 0, re->size().width(), re->size().height() );
+		QString name = installListBox->text(i); 
+		QString package = listView->findItem(name, 1, Qt::ExactMatch )->text(3);
+		changedPackages += "+"+package+" ";
 	}
-	return false;
-};
+	for(uint i = 0; i < removeListBox->count(); i++)
+	{
+		QString name = removeListBox->text(i); 
+		QString package = listView->findItem(name, 1, Qt::ExactMatch )->text(3);
+		changedPackages += "@"+package+" ";
+	}
+
+	changedPackages = changedPackages.replace( QRegExp(" $") , "" );
+	
+
+	KProcess *proc = new KProcess;
+	*proc << "kdesu" << "sidux-edu-applyChanges" << changedPackages;
+	proc->start();
+	setEnabled(FALSE);
+	connect(proc, SIGNAL(processExited(KProcess *)), this, SLOT( back() ));
+
+
+}
+
+
+void edu::cancel()
+{
+	categoriesListView->show();
+	widgetStack->raiseWidget(0);
+}
+
+void edu::back()
+{
+	setEnabled(TRUE);
+	categoriesListView->show();
+	widgetStack->raiseWidget(0);
+
+	//update status
+	QStringList tmpList = QStringList::split( " ", changedPackages );
+	for( QStringList::Iterator it = tmpList.begin(); it != tmpList.end(); ++it )
+	{
+		QString package = QString(*it).mid(1);
+		if( QFile::exists( "/usr/share/doc/"+package+"/copyright" ) )
+		{
+			listView->findItem(package, 3, Qt::ExactMatch )->setText(4, "installed");
+			execPushButton->show();
+		}
+		else
+		{
+			listView->findItem(package, 3, Qt::ExactMatch )->setText(4, "notinstalled");
+			execPushButton->hide();
+		}
+	}
+
+	
+	// update appsListView
+	QStringList names;
+	QListViewItemIterator it( appsListView );
+	while ( it.current() )
+	{
+		names.append( it.current()->text(2) );
+		++it;
+	}
+	appsListView->clear();
+
+	for(uint i = 0; i < names.count(); i++)
+	{
+		QPixmap ico;
+		QString id     = listView->findItem(names[i], 1, Qt::ExactMatch )->text(0);
+		QString status = listView->findItem(names[i], 1, Qt::ExactMatch )->text(4);
+		QString icon   = listView->findItem(names[i], 1, Qt::ExactMatch )->text(9);
+
+
+		if( QFile::exists( iconpath+"32x32/apps/"+icon+".png" ) )
+			ico = QPixmap(  iconpath+"32x32/apps/"+icon+".png" );
+		else
+			ico = QPixmap( appdir+"icons/"+id+".png" );
+
+		FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
+		item->setPixmap( 1, ico );
+		item->setText(   2, names[i] );
+		item->setTristate(FALSE);
+
+		if( status == "installed" )
+			item->setOn(TRUE);
+		else if( status == "install")
+		{
+			item->setOn(TRUE);
+			for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(green) );
+		}
+		else if( status == "remove")
+			for(uint i = 0; i < 3; i++)
+					item->setBackground(i, QColor(red) );
+		appsListView->setColumnAlignment( i, Qt::AlignVCenter );
+	}
+	descriptionTextBrowser->clear();
+	apply1PushButton->setEnabled(FALSE);
+
+}
 
 
 //------------------------------------------------------------------------------

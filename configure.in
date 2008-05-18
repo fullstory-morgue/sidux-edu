@@ -71,7 +71,11 @@ AC_CHECK_KDEMAXPATHLEN
 
 KDE_CREATE_SUBDIRSLIST
 AC_CONFIG_FILES([ Makefile ])
+AC_CONFIG_FILES([ appdata/Makefile ])
+AC_CONFIG_FILES([ applyChanges/Makefile ])
 AC_CONFIG_FILES([ icons/Makefile ])
+AC_CONFIG_FILES([ po/Makefile ])
+AC_CONFIG_FILES([ po/de/Makefile ])
 AC_CONFIG_FILES([ src/Makefile ])
 AC_OUTPUT
 # Check if KDE_SET_PREFIX was called, and --prefix was passed to configure

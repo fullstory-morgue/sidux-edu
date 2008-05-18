@@ -34,28 +34,23 @@ class edu : public EduDialog
 
 	public:
 		edu(QWidget *parent = 0L, const char *name = 0L, const QStringList &foo = QStringList());
-		void load();
 		void getCategories();
-		void getAllApps();
+		void importApps();
+
+		QString appdir;
+		QString iconpath;
+		QString changedPackages;
 
 		KIconLoader *loader;
 
-		// console
-		ExtTerminalInterface *terminal()
-		{
-			return static_cast<ExtTerminalInterface*>(konsole->qt_cast( "ExtTerminalInterface" ) );
-		}
-		virtual bool eventFilter( QObject *o, QEvent *e );
-
 
 	public slots:
-		virtual void getApps();
-		virtual void getDescription();
+		virtual void showCategoryApps();
+		virtual void showApp();
 		virtual void execApp();
+		virtual void changed();
 		virtual void showHomepage();
 		virtual void copyExample();
-		virtual void back();
-		virtual void enableButtons();
 		virtual void disableButtons();
 		virtual void about();
 		virtual void aboutKDE();
@@ -63,11 +58,12 @@ class edu : public EduDialog
 		virtual void seminarixManual();
 		virtual void homepage();
 		virtual void searchApp();
+		virtual void applyChanges1();
+		virtual void applyChanges2();
+		virtual void cancel();
+		virtual void back();
 		virtual void openUrl(const QString&);
 
-	protected:
-		void loadKonsole();
-		KParts::Part *konsole;
 
 };
 

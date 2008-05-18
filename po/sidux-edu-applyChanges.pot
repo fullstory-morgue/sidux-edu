@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-05-18 15:47+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr ""
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr ""
+
+#. i18n: file ./acdialog.ui line 79
+#: ac.cpp:66 acdialog.cpp:152 rc.cpp:6
+#, no-c-format
+msgid "Show details"
+msgstr ""
+
+#: ac.cpp:72
+msgid "Hide details"
+msgstr ""
+
+#: ac.cpp:92
+msgid "[Y/n]"
+msgstr ""
+
+#: ac.cpp:97
+msgid "Get"
+msgstr ""
+
+#: ac.cpp:104
+msgid "Removing"
+msgstr ""
+
+#: ac.cpp:106
+msgid "Setting up"
+msgstr ""
+
+#. i18n: file ./acdialog.ui line 16
+#: acdialog.cpp:151 rc.cpp:3
+#, no-c-format
+msgid "Apply changes"
+msgstr ""
+
+#. i18n: file ./acdialog.ui line 93
+#: acdialog.cpp:154 rc.cpp:10
+#, no-c-format
+msgid "cl&ose"
+msgstr ""
+
+#. i18n: file ./acdialog.ui line 96
+#: acdialog.cpp:155 rc.cpp:13
+#, no-c-format
+msgid "Alt+O"
+msgstr ""
+
+#: main.cpp:32
+msgid "Document to open"
+msgstr ""

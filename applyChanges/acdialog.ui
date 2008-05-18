@@ -1,0 +1,124 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>AcDialog</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>Widget</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>542</width>
+            <height>467</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Apply changes</string>
+    </property>
+    <property name="icon">
+        <pixmap>image0</pixmap>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QFrame" row="1" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>borderFrame</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>GroupBoxPanel</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Plain</enum>
+            </property>
+            <property name="lineWidth">
+                <number>2</number>
+            </property>
+            <property name="margin">
+                <number>0</number>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QFrame" row="0" column="0">
+                    <property name="name">
+                        <cstring>konsoleFrame</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="frameShape">
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Raised</enum>
+                    </property>
+                    <property name="lineWidth">
+                        <number>7</number>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget class="QProgressBar" row="0" column="0">
+            <property name="name">
+                <cstring>progressBar1</cstring>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="0" column="1">
+            <property name="name">
+                <cstring>detailsPushButton</cstring>
+            </property>
+            <property name="text">
+                <string>Show details</string>
+            </property>
+            <property name="accel">
+                <string></string>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="0" column="2">
+            <property name="name">
+                <cstring>closePushButton</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="text">
+                <string>cl&amp;ose</string>
+            </property>
+            <property name="accel">
+                <string>Alt+O</string>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<images>
+    <image name="image0">
+        <data format="PNG" length="682">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff610000027149444154388d95914b48d4511487bf19c7d7cca4ff940a15f111a881336911082ed2826c1122494520a5d16313a99b692329e426375290da031432ec612942b491d48a298d9cbf66944a36be66341ff3686a9c71f4b619adcc407f9b7b0ef77ce7dcdfb9b0498d408535618b6d2e375d58e2b46253f0076899b99023bc6f1f0adfe797c2929b2e541b85df407da4a1304f7bf4088225c48293f941ebc6e076a81f2b2f16ce2ffd626a7c42b88c8fc47445817801d58ab5c54f200d9056f20038adbb75a7303cff182e979be5e961949d0ff874a546161eb2ffb2700f0ad53b42ea6333f5a08d2074ab1a8dfd1d1a6164a9d5c4fc9e62dc4623e6ab8d72a087ece3600f58816b202d225add94734e1712959ec0f6d478c2bf7511e875e06c1a2034d68dc91683d570515e747bb20bc00ea000a882b49858a923ffac5e0a56b8212804dc0e7c63830cb47988d069084ed0d2f4d82d07b89cd997fcb0df22ec87cb76e702c6ce51735787253e54b5c4b6b065da9bed44262b494c0d6236e924ef9fbdbe6680ce3f6dab00caa0d47f664911a159fa8c781aeb7a49d64ba4e80351ea0e8323080fc86b97beba44d3194ad471a9e57d0371dcbcd1417a66342989c178356a42bc3fc0e65af78b95003da72891f61dac4e32344833436624dd5e963d0aea6e0f619d7482cdc294fccff0dfea2fc1266cb5427c6f1396eefb62aefbaea84da0a50caa47ceef16bd7971a20cead77d41d709d2c276c54b2c4e806f92a8242553cfabd065500a384cf21c4f5b471b2aa168bd062a9f8fbcf09d1a70be62615ec5706b1fb3437345079a319701a69e89ffc200aa451fc55fdb3fca8e71ecde9fc80ab87ea805b3ffbea192d5785dfd0223f0feb4207635d20000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>detailsPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>Widget</receiver>
+        <slot>details()</slot>
+    </connection>
+    <connection>
+        <sender>closePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>Widget</receiver>
+        <slot>close()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>details()</slot>
+</slots>
+<layoutdefaults spacing="8" margin="8"/>
+</UI>

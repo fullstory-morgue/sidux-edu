@@ -96,9 +96,21 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
-                    <widget class="QTextBrowser" row="3" column="0" rowspan="1" colspan="4">
+                    <widget class="QTextBrowser" row="4" column="0" rowspan="1" colspan="5">
                         <property name="name">
                             <cstring>descriptionTextBrowser</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>0</width>
+                                <height>180</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>32767</width>
+                                <height>180</height>
+                            </size>
                         </property>
                         <property name="text">
                             <string></string>
@@ -107,12 +119,7 @@
                             <set>AutoAll</set>
                         </property>
                     </widget>
-                    <widget class="QListBox" row="1" column="0" rowspan="1" colspan="4">
-                        <property name="name">
-                            <cstring>appsListBox</cstring>
-                        </property>
-                    </widget>
-                    <widget class="QFrame" row="0" column="0" rowspan="1" colspan="4">
+                    <widget class="QFrame" row="0" column="0" rowspan="1" colspan="5">
                         <property name="name">
                             <cstring>frame5</cstring>
                         </property>
@@ -139,7 +146,7 @@
                                     </sizepolicy>
                                 </property>
                                 <property name="text">
-                                    <string>Suchen:</string>
+                                    <string>Search:</string>
                                 </property>
                             </widget>
                             <widget class="QLineEdit" row="0" column="1">
@@ -170,17 +177,17 @@
                             <widget class="QComboBox" row="0" column="3">
                                 <item>
                                     <property name="text">
-                                        <string>Nur installierte Programme</string>
+                                        <string>All Applications</string>
                                     </property>
                                 </item>
                                 <item>
                                     <property name="text">
-                                        <string>Alle Programme</string>
+                                        <string>Installed applications only</string>
                                     </property>
                                 </item>
                                 <item>
                                     <property name="text">
-                                        <string>Nicht installierte Programme</string>
+                                        <string>Not installed applications only</string>
                                     </property>
                                 </item>
                                 <property name="name">
@@ -220,7 +227,7 @@
                             </spacer>
                         </grid>
                     </widget>
-                    <widget class="QPushButton" row="2" column="0">
+                    <widget class="QPushButton" row="3" column="0">
                         <property name="name">
                             <cstring>execPushButton</cstring>
                         </property>
@@ -228,16 +235,16 @@
                             <bool>true</bool>
                         </property>
                         <property name="text">
-                            <string>Programm starte&amp;n</string>
+                            <string>St&amp;art</string>
                         </property>
                         <property name="accel">
-                            <string>Alt+N</string>
+                            <string>Alt+A</string>
                         </property>
                         <property name="iconSet">
                             <iconset>image1</iconset>
                         </property>
                     </widget>
-                    <widget class="QPushButton" row="2" column="1">
+                    <widget class="QPushButton" row="3" column="1">
                         <property name="name">
                             <cstring>homepagePushButton</cstring>
                         </property>
@@ -254,7 +261,7 @@
                             <iconset>image2</iconset>
                         </property>
                     </widget>
-                    <widget class="QPushButton" row="2" column="2">
+                    <widget class="QPushButton" row="3" column="2">
                         <property name="name">
                             <cstring>examplePushButton</cstring>
                         </property>
@@ -262,16 +269,60 @@
                             <bool>true</bool>
                         </property>
                         <property name="text">
-                            <string>&amp;Beispieldatei(en)</string>
+                            <string>E&amp;xample file(s)</string>
                         </property>
                         <property name="accel">
-                            <string>Alt+B</string>
+                            <string>Alt+X</string>
                         </property>
                         <property name="iconSet">
                             <iconset>image3</iconset>
                         </property>
                     </widget>
-                    <spacer row="2" column="3">
+                    <widget class="QListView" row="1" column="0" rowspan="1" colspan="5">
+                        <column>
+                            <property name="text">
+                                <string>*</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>*</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>*</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <property name="name">
+                            <cstring>appsListView</cstring>
+                        </property>
+                        <property name="allColumnsShowFocus">
+                            <bool>true</bool>
+                        </property>
+                        <property name="resizeMode">
+                            <enum>LastColumn</enum>
+                        </property>
+                    </widget>
+                    <spacer row="3" column="3">
                         <property name="name">
                             <cstring>spacer1</cstring>
                         </property>
@@ -283,11 +334,25 @@
                         </property>
                         <property name="sizeHint">
                             <size>
-                                <width>160</width>
+                                <width>70</width>
                                 <height>20</height>
                             </size>
                         </property>
                     </spacer>
+                    <widget class="QPushButton" row="3" column="4">
+                        <property name="name">
+                            <cstring>apply1PushButton</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>false</bool>
+                        </property>
+                        <property name="text">
+                            <string>Apply Cha&amp;nges</string>
+                        </property>
+                        <property name="accel">
+                            <string>Alt+N</string>
+                        </property>
+                    </widget>
                 </grid>
             </widget>
             <widget class="QWidget">
@@ -301,50 +366,204 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
-                    <widget class="QFrame" row="0" column="0">
+                    <widget class="QFrame" row="1" column="1" rowspan="1" colspan="2">
                         <property name="name">
-                            <cstring>borderFrame</cstring>
+                            <cstring>frame12</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>0</hsizetype>
+                                <vsizetype>0</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>530</width>
+                                <height>250</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>530</width>
+                                <height>350</height>
+                            </size>
                         </property>
                         <property name="frameShape">
-                            <enum>GroupBoxPanel</enum>
+                            <enum>StyledPanel</enum>
                         </property>
                         <property name="frameShadow">
-                            <enum>Plain</enum>
-                        </property>
-                        <property name="lineWidth">
-                            <number>2</number>
-                        </property>
-                        <property name="margin">
-                            <number>0</number>
+                            <enum>Raised</enum>
                         </property>
                         <grid>
                             <property name="name">
-                                <cstring>unnamed</cstring>
+                                <cstring>unnamed_2</cstring>
                             </property>
-                            <widget class="QFrame" row="0" column="0">
+                            <property name="margin">
+                                <number>8</number>
+                            </property>
+                            <property name="spacing">
+                                <number>8</number>
+                            </property>
+                            <widget class="QLabel" row="0" column="1">
                                 <property name="name">
-                                    <cstring>konsoleFrame</cstring>
+                                    <cstring>textLabel2_2</cstring>
                                 </property>
-                                <property name="sizePolicy">
-                                    <sizepolicy>
-                                        <hsizetype>5</hsizetype>
-                                        <vsizetype>7</vsizetype>
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                    </sizepolicy>
+                                <property name="text">
+                                    <string>To be removed:</string>
                                 </property>
-                                <property name="frameShape">
-                                    <enum>NoFrame</enum>
+                            </widget>
+                            <widget class="QListBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>removeListBox</cstring>
                                 </property>
-                                <property name="frameShadow">
-                                    <enum>Raised</enum>
+                            </widget>
+                            <widget class="QListBox" row="1" column="0">
+                                <property name="name">
+                                    <cstring>installListBox</cstring>
                                 </property>
-                                <property name="lineWidth">
-                                    <number>7</number>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel1_3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>To be installed:</string>
                                 </property>
                             </widget>
                         </grid>
                     </widget>
+                    <widget class="QFrame" row="2" column="1" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>frame13</cstring>
+                        </property>
+                        <property name="frameShape">
+                            <enum>StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>Raised</enum>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed_2</cstring>
+                            </property>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel3_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>&lt;b&gt;Apply changes?&lt;/b&gt;</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="0" column="1">
+                                <property name="name">
+                                    <cstring>cancelPushButton</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>ca&amp;ncel</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+N</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="0" column="2">
+                                <property name="name">
+                                    <cstring>apply2PushButton</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;ok</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+O</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer row="0" column="1">
+                        <property name="name">
+                            <cstring>spacer7_2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>41</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <spacer row="1" column="0">
+                        <property name="name">
+                            <cstring>spacer8_2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>21</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <spacer row="3" column="2">
+                        <property name="name">
+                            <cstring>spacer9</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>31</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <spacer row="1" column="3">
+                        <property name="name">
+                            <cstring>spacer10</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>31</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
                 </grid>
             </widget>
             <widget class="QWidget">
@@ -361,6 +580,17 @@
                     <widget class="QListView" row="0" column="0">
                         <column>
                             <property name="text">
+                                <string>ID</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
                                 <string>Name</string>
                             </property>
                             <property name="clickable">
@@ -372,18 +602,7 @@
                         </column>
                         <column>
                             <property name="text">
-                                <string>Icon</string>
-                            </property>
-                            <property name="clickable">
-                                <bool>true</bool>
-                            </property>
-                            <property name="resizable">
-                                <bool>true</bool>
-                            </property>
-                        </column>
-                        <column>
-                            <property name="text">
-                                <string>Exec</string>
+                                <string>Categories</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -395,6 +614,28 @@
                         <column>
                             <property name="text">
                                 <string>Package</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Status</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Exec</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -427,7 +668,7 @@
                         </column>
                         <column>
                             <property name="text">
-                                <string>Categories</string>
+                                <string>Terminal</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -438,7 +679,7 @@
                         </column>
                         <column>
                             <property name="text">
-                                <string>isInstalled</string>
+                                <string>Icon</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -578,25 +819,6 @@
                         </property>
                         <widget class="QLabel">
                             <property name="name">
-                                <cstring>textLabel3</cstring>
-                            </property>
-                            <property name="geometry">
-                                <rect>
-                                    <x>32</x>
-                                    <y>150</y>
-                                    <width>380</width>
-                                    <height>70</height>
-                                </rect>
-                            </property>
-                            <property name="text">
-                                <string>&lt;p align="center"&gt;Willkommen bei sidux-Seminarix. Um einen Überblick über die mitgelieferten Programme zu gewinnen, klicken Sie einfach auf eine der Kategorien im linken Menu.&lt;/p&gt;</string>
-                            </property>
-                            <property name="alignment">
-                                <set>WordBreak|AlignVCenter</set>
-                            </property>
-                        </widget>
-                        <widget class="QLabel">
-                            <property name="name">
                                 <cstring>textLabel1</cstring>
                             </property>
                             <property name="geometry">
@@ -697,6 +919,25 @@
                                 <bool>true</bool>
                             </property>
                         </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel3</cstring>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>32</x>
+                                    <y>150</y>
+                                    <width>380</width>
+                                    <height>70</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>&lt;p align="center"&gt;Willkommen bei sidux-Seminarix. Um einen Ueberblick ueber die mitgelieferten Programme zu gewinnen, klicken Sie einfach auf eine der Kategorien im linken Menu.&lt;/p&gt;</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignVCenter</set>
+                            </property>
+                        </widget>
                     </widget>
                 </grid>
             </widget>
@@ -707,10 +948,10 @@
     <property name="name">
         <cstring>MenuBar</cstring>
     </property>
-    <item text="Datei" name="Datei">
+    <item text="File" name="File">
         <action name="fileExitAction"/>
     </item>
-    <item text="Handbücher" name="Handbcher">
+    <item text="Handbooks" name="Handbooks">
         <action name="manualSiduxAction"/>
         <action name="manualSeminarixAction"/>
     </item>
@@ -724,6 +965,8 @@
 </menubar>
 <toolbars>
 </toolbars>
+<customwidgets>
+</customwidgets>
 <actions>
     <action>
         <property name="name">
@@ -733,10 +976,10 @@
             <iconset>image7</iconset>
         </property>
         <property name="text">
-            <string>sidux Handbuch</string>
+            <string>sidux handbook</string>
         </property>
         <property name="menuText">
-            <string>sidux Handbuch</string>
+            <string>sidux handbook</string>
         </property>
         <property name="accel">
             <string></string>
@@ -767,13 +1010,13 @@
             <iconset>image9</iconset>
         </property>
         <property name="text">
-            <string>Über sidux-seminarix</string>
+            <string>About sidux-seminarix</string>
         </property>
         <property name="menuText">
-            <string>Über sidux-seminarix</string>
+            <string>About sidux-seminarix</string>
         </property>
         <property name="toolTip">
-            <string>Über sidux-seminarix</string>
+            <string>About sidux-seminarix</string>
         </property>
         <property name="accel">
             <string></string>
@@ -787,10 +1030,10 @@
             <iconset>image10</iconset>
         </property>
         <property name="text">
-            <string>Beenden</string>
+            <string>Close</string>
         </property>
         <property name="menuText">
-            <string>Beenden</string>
+            <string>Close</string>
         </property>
     </action>
     <action>
@@ -801,10 +1044,10 @@
             <iconset>image11</iconset>
         </property>
         <property name="text">
-            <string>Über KDE</string>
+            <string>About KDE</string>
         </property>
         <property name="menuText">
-            <string>Über KDE</string>
+            <string>About KDE</string>
         </property>
     </action>
     <action>
@@ -815,10 +1058,10 @@
             <iconset>image9</iconset>
         </property>
         <property name="text">
-            <string>sidux-seminarix Handbuch</string>
+            <string>sidux-seminarix handbook</string>
         </property>
         <property name="menuText">
-            <string>sidux-seminarix Handbuch</string>
+            <string>sidux-seminarix handbook</string>
         </property>
     </action>
     <action>
@@ -878,34 +1121,52 @@
 </images>
 <connections>
     <connection>
-        <sender>appsListBox</sender>
-        <signal>currentChanged(QListBoxItem*)</signal>
+        <sender>appsListView</sender>
+        <signal>selectionChanged()</signal>
         <receiver>EduDialog</receiver>
-        <slot>getDescription()</slot>
+        <slot>showApp()</slot>
     </connection>
     <connection>
-        <sender>appsListBox</sender>
-        <signal>doubleClicked(QListBoxItem*)</signal>
+        <sender>appsListView</sender>
+        <signal>doubleClicked(QListViewItem*)</signal>
         <receiver>EduDialog</receiver>
         <slot>execApp()</slot>
+    </connection>
+    <connection>
+        <sender>appsListView</sender>
+        <signal>pressed(QListViewItem*)</signal>
+        <receiver>EduDialog</receiver>
+        <slot>changed()</slot>
+    </connection>
+    <connection>
+        <sender>categoriesListView</sender>
+        <signal>selectionChanged()</signal>
+        <receiver>EduDialog</receiver>
+        <slot>showCategoryApps()</slot>
+    </connection>
+    <connection>
+        <sender>comboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>EduDialog</receiver>
+        <slot>showCategoryApps()</slot>
+    </connection>
+    <connection>
+        <sender>descriptionTextBrowser</sender>
+        <signal>sourceChanged(const QString&amp;)</signal>
+        <receiver>EduDialog</receiver>
+        <slot>openUrl(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>examplePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>EduDialog</receiver>
+        <slot>copyExample()</slot>
     </connection>
     <connection>
         <sender>execPushButton</sender>
         <signal>clicked()</signal>
         <receiver>EduDialog</receiver>
         <slot>execApp()</slot>
-    </connection>
-    <connection>
-        <sender>homepagePushButton</sender>
-        <signal>clicked()</signal>
-        <receiver>EduDialog</receiver>
-        <slot>showHomepage()</slot>
-    </connection>
-    <connection>
-        <sender>categoriesListView</sender>
-        <signal>selectionChanged()</signal>
-        <receiver>EduDialog</receiver>
-        <slot>getApps()</slot>
     </connection>
     <connection>
         <sender>fileExitAction</sender>
@@ -932,22 +1193,16 @@
         <slot>homepage()</slot>
     </connection>
     <connection>
-        <sender>execPushButton</sender>
+        <sender>homepagePushButton</sender>
         <signal>clicked()</signal>
         <receiver>EduDialog</receiver>
-        <slot>switchApplicationLanguage()</slot>
+        <slot>showHomepage()</slot>
     </connection>
     <connection>
-        <sender>searchLineEdit</sender>
-        <signal>textChanged(const QString&amp;)</signal>
+        <sender>manualSeminarixAction</sender>
+        <signal>activated()</signal>
         <receiver>EduDialog</receiver>
-        <slot>searchApp()</slot>
-    </connection>
-    <connection>
-        <sender>comboBox</sender>
-        <signal>activated(int)</signal>
-        <receiver>EduDialog</receiver>
-        <slot>getApps()</slot>
+        <slot>seminarixManual()</slot>
     </connection>
     <connection>
         <sender>manualSiduxAction</sender>
@@ -956,8 +1211,14 @@
         <slot>siduxManual()</slot>
     </connection>
     <connection>
-        <sender>manualSeminarixAction</sender>
-        <signal>activated()</signal>
+        <sender>searchLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>EduDialog</receiver>
+        <slot>searchApp()</slot>
+    </connection>
+    <connection>
+        <sender>seminarixManualPushButton</sender>
+        <signal>clicked()</signal>
         <receiver>EduDialog</receiver>
         <slot>seminarixManual()</slot>
     </connection>
@@ -968,38 +1229,42 @@
         <slot>siduxManual()</slot>
     </connection>
     <connection>
-        <sender>seminarixManualPushButton</sender>
+        <sender>apply1PushButton</sender>
         <signal>clicked()</signal>
         <receiver>EduDialog</receiver>
-        <slot>seminarixManual()</slot>
+        <slot>applyChanges1()</slot>
     </connection>
     <connection>
-        <sender>descriptionTextBrowser</sender>
-        <signal>sourceChanged(const QString&amp;)</signal>
-        <receiver>EduDialog</receiver>
-        <slot>openUrl(const QString&amp;)</slot>
-    </connection>
-    <connection>
-        <sender>examplePushButton</sender>
+        <sender>apply2PushButton</sender>
         <signal>clicked()</signal>
         <receiver>EduDialog</receiver>
-        <slot>copyExample()</slot>
+        <slot>applyChanges2()</slot>
+    </connection>
+    <connection>
+        <sender>cancelPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>EduDialog</receiver>
+        <slot>cancel()</slot>
     </connection>
 </connections>
 <slots>
     <slot>getDescription()</slot>
-    <slot>getApps()</slot>
+    <slot>showCategoryApps()</slot>
     <slot>execApp()</slot>
     <slot>showHomepage()</slot>
     <slot>siduxManual()</slot>
     <slot>homepage()</slot>
     <slot>about()</slot>
     <slot>aboutKDE()</slot>
-    <slot>switchApplicationLanguage()</slot>
     <slot>searchApp()</slot>
     <slot>seminarixManual()</slot>
     <slot>openUrl(const QString&amp;)</slot>
     <slot>copyExample()</slot>
+    <slot>showApp()</slot>
+    <slot>changed()</slot>
+    <slot>applyChanges1()</slot>
+    <slot>applyChanges2()</slot>
+    <slot>cancel()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="6"/>
 <includehints>

@@ -1,0 +1,47 @@
+#!/bin/sh
+# apllyChanges
+# (C) 2008 Fabian Wuertz <xadras@sidux.com>
+# License: GPL
+
+language=$(echo $LANG | cut -f1 -d_)
+if [ $language = "en" ]; then
+	language=""
+elif [ -f /usr/share/locale/$language/LC_MESSAGES/kappinstaller-applyChanges.mo ]; then 
+	language=""
+else
+	language="LANG=C"
+fi
+
+for i in $@; do
+	tmp=$(echo `expr substr $i 1 1`)
+	if [ $tmp = "+" ]; then
+		install="$install$(echo `expr substr $i 2 100`) "
+	else
+		remove="$remove$(echo `expr substr $i 2 100`) "
+	fi
+done
+
+
+
+if [ $(echo $install | wc -c) != "1" ]; then
+	$language apt-get update
+	echo "Update done"
+	$language apt-get remove $remove
+	downloads=$(apt-get -u --print-uris install $install | grep .deb | cut -f2 -d" ")
+	if [ $(echo $downloads | wc -c) != "1" ]; then
+		for i in $downloads; do
+			downloads2=$(echo $downloads2 $i)
+		done
+		echo "Packages to download: $downloads2"
+	fi
+	$language apt-get install $install
+else
+	echo "No update"
+	$language apt-get remove $remove
+fi
+
+
+echo ""
+echo "Press <Enter> to continue..."
+read DUMMY
+

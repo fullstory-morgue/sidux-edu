@@ -56,12 +56,12 @@ am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
 am_sidux_edu_OBJECTS = edu.$(OBJEXT) main.$(OBJEXT) unique.$(OBJEXT) \
-	systray.$(OBJEXT)
+	systray.$(OBJEXT) fancylistviewitem.$(OBJEXT)
 #>- sidux_edu_OBJECTS = $(am_sidux_edu_OBJECTS)
 #>+ 6
 sidux_edu_final_OBJECTS = sidux_edu.all_cpp.o 
 sidux_edu_nofinal_OBJECTS = edu.$(OBJEXT) main.$(OBJEXT) unique.$(OBJEXT) \
-	systray.$(OBJEXT) edudialog.$(OBJEXT)\
+	systray.$(OBJEXT) fancylistviewitem.$(OBJEXT) edudialog.$(OBJEXT)\
 unique.moc.o systray.moc.o 
 @KDE_USE_FINAL_FALSE@sidux_edu_OBJECTS = $(sidux_edu_nofinal_OBJECTS)
 @KDE_USE_FINAL_TRUE@sidux_edu_OBJECTS = $(sidux_edu_final_OBJECTS)
@@ -353,16 +353,16 @@ xdg_menudir = @xdg_menudir@
 AM_CPPFLAGS = $(all_includes)
 
 # these are the headers for your project
-noinst_HEADERS = edu.h unique.h systray.h
+noinst_HEADERS = edu.h unique.h systray.h fancylistviewitem.h
 
 # let automoc handle all of the meta source files (moc)
 #>- METASOURCES = AUTO
 KDE_ICON = AUTO
 
 # the application source, library search path, and link libraries
-#>- sidux_edu_SOURCES = edu.cpp edudialog.ui main.cpp  unique.cpp systray.cpp
+#>- sidux_edu_SOURCES = edu.cpp edudialog.ui main.cpp  unique.cpp systray.cpp fancylistviewitem.cpp
 #>+ 1
-sidux_edu_SOURCES=edu.cpp  main.cpp  unique.cpp systray.cpp edudialog.cpp
+sidux_edu_SOURCES=edu.cpp  main.cpp  unique.cpp systray.cpp fancylistviewitem.cpp edudialog.cpp
 sidux_edu_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
 sidux_edu_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
 
@@ -457,6 +457,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/edu.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fancylistviewitem.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/systray.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/unique.Po@am__quote@
@@ -685,15 +686,12 @@ uninstall-am: uninstall-binPROGRAMS uninstall-info-am \
 
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
-	cp -aR $(srcdir)/apps $(DESTDIR)$(sharedir)/
-	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/
-	cp -aR $(srcdir)/html $(DESTDIR)$(sharedir)/
 
 # translation
-#messages: rc.cpp
-#	$(EXTRACTRC) `find . -name \*.ui -o -name \*.rc` > rc.cpp
-#	$(XGETTEXT) *.cpp -o $(podir)/edu.pot
+messages: rc.cpp
+	$(EXTRACTRC) `find . -name \*.ui -o -name \*.rc` > rc.cpp
+	$(XGETTEXT) *.cpp -o $(podir)/sidux-edu.pot
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
@@ -773,11 +771,11 @@ bcheck-am:
 
 
 #>+ 11
-sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/edu.cpp $(srcdir)/main.cpp $(srcdir)/unique.cpp $(srcdir)/systray.cpp $(srcdir)/edudialog.cpp $(srcdir)/unique.moc.cpp $(srcdir)/systray.moc.cpp  edu.moc edudialog.moc
+sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/edu.cpp $(srcdir)/main.cpp $(srcdir)/unique.cpp $(srcdir)/systray.cpp $(srcdir)/fancylistviewitem.cpp $(srcdir)/edudialog.cpp $(srcdir)/unique.moc.cpp $(srcdir)/systray.moc.cpp  edu.moc edudialog.moc
 	@echo 'creating sidux_edu.all_cpp.cpp ...'; \
 	rm -f sidux_edu.all_cpp.files sidux_edu.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> sidux_edu.all_cpp.final; \
-	for file in edu.cpp main.cpp unique.cpp systray.cpp edudialog.cpp unique.moc.cpp systray.moc.cpp ; do \
+	for file in edu.cpp main.cpp unique.cpp systray.cpp fancylistviewitem.cpp edudialog.cpp unique.moc.cpp systray.moc.cpp ; do \
 	  echo "#include \"$$file\"" >> sidux_edu.all_cpp.files; \
 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> sidux_edu.all_cpp.final; \
 	done; \
@@ -808,9 +806,10 @@ no-final-install:
 kde-rpo-clean:
 	-rm -f *.rpo
 
-#>+ 9
+#>+ 10
 nmcheck: 
 edu.lo: edu.moc 
+$(srcdir)/fancylistviewitem.cpp: edudialog.h 
 edu.o: edu.moc 
 nmcheck-am: nmcheck
 $(srcdir)/edu.cpp: edudialog.h 

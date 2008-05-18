@@ -1,8 +1,16 @@
 sidux-edu (0.2.19) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 07 May 2008 02:17:45 +0200
+  [ Fabian Wuertz ]
+  * colors for packages that will installed or removed
+  * graphical installer
+  * apps moved to app folder
+  * icons added
+  * german translation added
+
+ -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 16:06:21 +0200
 
 sidux-edu (0.2.18) unstable; urgency=low
 
