@@ -301,8 +301,8 @@ xdg_menudir = @xdg_menudir@
 KDE_LANG = de
 #>- POFILES = AUTO
 #>+ 2
-POFILES = sidux-edu-applyChanges.po sidux-edu.po
-GMOFILES = sidux-edu-applyChanges.gmo sidux-edu.gmo
+POFILES = sidux-edu-applyChanges.po siduxedu.po
+GMOFILES = sidux-edu-applyChanges.gmo siduxedu.gmo
 #>- all: all-am
 #>+ 1
 all: all-nls docs-am  all-am
@@ -496,24 +496,24 @@ clean: kde-rpo-clean
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=sidux-edu-applyChanges.gmo Makefile.in sidux-edu-applyChanges.po sidux-edu.po Makefile.am 
+KDE_DIST=Makefile.in siduxedu.po sidux-edu-applyChanges.po Makefile.am 
 
 #>+ 7
 sidux-edu-applyChanges.gmo: sidux-edu-applyChanges.po
 	rm -f sidux-edu-applyChanges.gmo; $(GMSGFMT) -o sidux-edu-applyChanges.gmo $(srcdir)/sidux-edu-applyChanges.po
 	test ! -f sidux-edu-applyChanges.gmo || touch sidux-edu-applyChanges.gmo
-sidux-edu.gmo: sidux-edu.po
-	rm -f sidux-edu.gmo; $(GMSGFMT) -o sidux-edu.gmo $(srcdir)/sidux-edu.po
-	test ! -f sidux-edu.gmo || touch sidux-edu.gmo
+siduxedu.gmo: siduxedu.po
+	rm -f siduxedu.gmo; $(GMSGFMT) -o siduxedu.gmo $(srcdir)/siduxedu.po
+	test ! -f siduxedu.gmo || touch siduxedu.gmo
 
 #>+ 3
 clean-nls:
-	-rm -f  sidux-edu-applyChanges.gmo sidux-edu.gmo
+	-rm -f  sidux-edu-applyChanges.gmo siduxedu.gmo
 
 #>+ 10
 install-nls:
 	$(mkinstalldirs) $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES
-	@for base in sidux-edu-applyChanges sidux-edu ; do \
+	@for base in sidux-edu-applyChanges siduxedu ; do \
 	  echo $(INSTALL_DATA) $$base.gmo $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/$$base.mo ;\
 	  if test -f $$base.gmo; then $(INSTALL_DATA) $$base.gmo $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/$$base.mo ;\
 	  elif test -f $(srcdir)/$$base.gmo; then $(INSTALL_DATA) $(srcdir)/$$base.gmo $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/$$base.mo ;\
@@ -524,7 +524,7 @@ install-nls:
 #>+ 4
 uninstall-nls:
 	rm -f $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/sidux-edu-applyChanges.mo
-	rm -f $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/sidux-edu.mo
+	rm -f $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/siduxedu.mo
 
 #>+ 2
 all-nls: $(GMOFILES)

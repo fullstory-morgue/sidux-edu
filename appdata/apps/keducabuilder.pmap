@@ -1,6 +1,6 @@
 Name=KEducaBuilder
 DesktopPath=/usr/share/applications/kde/keducabuilder.desktop
-Package=keducabuilder
+Package=keduca
 Homepage=http://edu.kde.org/keduca/
 Categories=Allgemein
 Description=Keducabuilder dient dazu, interaktive formularbasierte Tests und Prüfungen (Multiple-Choice-Tests) zu erstellen oder zu bearbeiten, die dann später mit Keduca abgefragt werden können. Es können die Fragen und die zur Auswahl stehenden Antworten (richtige und falsche) festgelegt werden. Darüber hinaus sind auch die Beantwortungszeiten und die Punktevergaben definierbar. Graphiken und Bilder können in die Fragestellungen eingebunden werden. 

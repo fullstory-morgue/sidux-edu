@@ -40,7 +40,6 @@ ac::ac(const QString &changes, QWidget *parent, const char *name, const QStringL
 	konsoleFrame->installEventFilter( this );
 
 	changes2 = changes;
-	printf(changes);
 
 	QStrList run;
 	run.append( appdir+"sh/applyChanges" );

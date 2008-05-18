@@ -204,7 +204,7 @@ void edu::importApps()
 		}
 
 		//status
-		if( QFile::exists( "/usr/share/doc/"+id+"/copyright" ) )
+		if( QFile::exists( "/usr/share/doc/"+package+"/copyright" ) )
 			item->setText( 4, "installed");
 		else
 			item->setText( 4, "notinstalled");
@@ -296,13 +296,12 @@ void edu::showCategoryApps()
 			++it;
 		}
 
-	QPixmap ico;
+
+
+
 	for(uint i = 0; i < names.count(); i++)
 	{
-		if( QFile::exists( iconpath+"32x32/apps/"+icons[i]+".png" ) )
-			ico = QPixmap(  iconpath+"32x32/apps/"+icons[i]+".png" );
-		else
-			ico = QPixmap( appdir+"icons/"+id[i]+".png" );
+		QPixmap ico = getIcon(icons[i]);
 
 		FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBoxController );
 		item->setPixmap( 1, ico );
@@ -348,14 +347,10 @@ void edu::searchApp()
 		++it;
 	}
 
-	QPixmap ico;
 	appsListView->clear();
 	for(uint i = 0; i < names.count(); i++)
 	{
-		if( QFile::exists( iconpath+"32x32/apps/"+icons[i]+".png" ) )
-			ico = QPixmap(  iconpath+"32x32/apps/"+icons[i]+".png" );
-		else
-			ico = QPixmap( appdir+"icons/"+id[i]+".png" );
+		QPixmap ico = getIcon(icons[i]);
 
 		FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
 		item->setPixmap( 1, ico );
@@ -419,11 +414,7 @@ void edu::changed()
 		QString status = listView->findItem(name, 1, Qt::ExactMatch )->text(4);
 		QString id = listView->findItem(name, 1, Qt::ExactMatch )->text(0);
 		QString icon = listView->findItem(name, 1, Qt::ExactMatch )->text(9);
-		QPixmap ico;
-		if( QFile::exists( iconpath+"32x32/apps/"+icon+".png" ) )
-			ico = QPixmap(  iconpath+"32x32/apps/"+icon+".png" );
-		else
-			ico = QPixmap( appdir+"icons/"+id+".png" );
+		QPixmap ico = getIcon(icon);
 
 		if ( ( (QCheckListItem*)it.current() )->isOn() )
 		{
@@ -511,7 +502,6 @@ void edu::showHomepage()
 
 void edu::copyExample()
 {
-
 	if(KMessageBox::Yes == KMessageBox::questionYesNo(this, "Sollen die Beispieldateien auf dem Desktop angezeigt werden?")  )
 	{
 		QString app = appsListView->selectedItem()->text(2);
@@ -733,6 +723,33 @@ void edu::seminarixManual()
 void edu::homepage()
 {
 	kapp->invokeBrowser( "http://www.sidux.com/" );
+}
+
+
+QPixmap edu::getIcon(QString icon)
+{
+	QPixmap ico = loader->loadIcon( icon, KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
+	if (icon.isNull() )
+	{
+		if( QFile::exists("/usr/share/pixmaps/"+icon+".xpm") )
+			ico = QPixmap("/usr/share/pixmaps/"+icon+".xpm");
+		else if( QFile::exists("/usr/share/pixmaps/"+icon+"-icon.xpm") )
+			ico = QPixmap("/usr/share/pixmaps/"+icon+"-icon.xpm");
+		else if( QFile::exists("/usr/share/"+icon+"/"+icon+".xpm") )
+			ico = QPixmap("/usr/share/"+icon+"/"+icon+".xpm");
+		else if( QFile::exists("/usr/share/"+icon+"/pixmaps/"+icon+".xpm") )
+			ico = QPixmap("/usr/share/"+icon+"/pixmaps/"+icon+".xpm");
+		else if( icon == "wxmaxima")
+			ico = QPixmap("/usr/share/wxMaxima/icons/maximaicon.xpm");
+		else
+			ico = QPixmap( appdir+"images/empty.png" );
+	}
+
+	if( ico.height() != 32 and ico.width() != 32 )
+	{
+		ico = QPixmap( appdir+"images/empty.png" );
+	}
+	return ico;
 }
 
 #include "edu.moc"

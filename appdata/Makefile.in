@@ -482,12 +482,13 @@ install-data-local:
 	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/html $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/icons $(DESTDIR)$(sharedir)/
+	cp -aR $(srcdir)/images $(DESTDIR)$(sharedir)/
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=Makefile.in Makefile.am 
+KDE_DIST=Makefile.am Makefile.in 
 
 #>+ 2
 docs-am:

@@ -657,7 +657,7 @@ merge:
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=Makefile.in sidux-edu.pot sidux-edu-applyChanges.pot Makefile.am 
+KDE_DIST=Makefile.in sidux-edu-applyChanges.pot siduxedu.pot Makefile.am 
 
 #>+ 2
 docs-am:

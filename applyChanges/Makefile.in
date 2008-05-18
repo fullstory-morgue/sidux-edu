@@ -671,7 +671,7 @@ clean-metasources:
 	-rm -f  ac.moc
 
 #>+ 2
-KDE_DIST=Makefile.in acdialog.ui acdialog.h kappinstaller-applyChanges sidux-edu-applyChanges Makefile.am 
+KDE_DIST=Makefile.in acdialog.ui Makefile.am 
 
 #>+ 4
 clean-ui:
@@ -720,7 +720,7 @@ bcheck-am:
 
 
 #>+ 11
-sidux_edu_applyChanges.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/ac.cpp $(srcdir)/main.cpp $(srcdir)/acdialog.cpp  ac.moc acdialog.moc
+sidux_edu_applyChanges.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/ac.cpp $(srcdir)/main.cpp acdialog.cpp  ac.moc acdialog.moc
 	@echo 'creating sidux_edu_applyChanges.all_cpp.cpp ...'; \
 	rm -f sidux_edu_applyChanges.all_cpp.files sidux_edu_applyChanges.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> sidux_edu_applyChanges.all_cpp.final; \
