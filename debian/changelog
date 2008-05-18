@@ -13,8 +13,9 @@ sidux-edu (0.2.19) UNRELEASED; urgency=low
   * qgis pmap removed
   * icon files removed
   * icon files removed
+  * possibility to use app-install-data
 
- -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 22:04:52 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 22:10:01 +0200
 
 sidux-edu (0.2.18) unstable; urgency=low
 

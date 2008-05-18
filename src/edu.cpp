@@ -731,7 +731,11 @@ QPixmap edu::getIcon(QString icon)
 	QPixmap ico = loader->loadIcon( icon, KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
 	if (icon.isNull() )
 	{
-		if( QFile::exists("/usr/share/pixmaps/"+icon+".xpm") )
+		if( QFile::exists ("/usr/share/app-install/icons/"+icon+".png") )
+			ico = QPixmap("/usr/share/app-install/icons/"+icon+".png");
+		else if( QFile::exists("/usr/share/app-install/icons/"+icon+".xpm") )
+			ico = QPixmap("/usr/share/app-install/icons/"+icon+".xpm");
+		else if( QFile::exists("/usr/share/pixmaps/"+icon+".xpm") )
 			ico = QPixmap("/usr/share/pixmaps/"+icon+".xpm");
 		else if( QFile::exists("/usr/share/pixmaps/"+icon+"-icon.xpm") )
 			ico = QPixmap("/usr/share/pixmaps/"+icon+"-icon.xpm");
