@@ -88,7 +88,7 @@ void ac::shellExited(const QString& txt)
 		int downloads = QStringList::split( " ", txt ).count()-3;
 		step = 80/(QStringList::split( " ", changes2 ).count()*2+downloads*8 );
 	}
-	else if( txt.contains("[Y/n]") or txt.contains( i18n("[J/n]") ) )
+	else if( txt.contains("[Y/n]") or txt.contains( i18n("[Y/n]") ) )
 	{
 		if( !borderFrame->isShown() )
 			details();

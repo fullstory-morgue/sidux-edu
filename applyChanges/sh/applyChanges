@@ -27,7 +27,7 @@ if [ $(echo $install | wc -c) != "1" ]; then
 	$language apt-get update
 	echo "Update done"
 	$language apt-get remove $remove
-	downloads=$(apt-get --assume-yes -u --print-uris install $install)
+	downloads=$(apt-get --assume-yes -u --print-uris install $install  | grep .deb | cut -f2 -d" ")
 	if [ $(echo $downloads | wc -c) != "1" ]; then
 		for i in $downloads; do
 			downloads2=$(echo $downloads2 $i)
