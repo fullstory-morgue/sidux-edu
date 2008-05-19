@@ -16,8 +16,9 @@ sidux-edu (0.2.19) UNRELEASED; urgency=low
   * possibility to use app-install-data
   * another brick in the wall
   * enter problem in applyChanges solved
+  * [J/n] test added
 
- -- Fabian Wuertz <xadras@sidux.com>  Sun, 18 May 2008 22:53:53 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Mon, 19 May 2008 12:44:52 +0200
 
 sidux-edu (0.2.18) unstable; urgency=low
 
