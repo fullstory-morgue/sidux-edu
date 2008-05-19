@@ -1,7 +1,4 @@
-sidux-edu (0.2.19) UNRELEASED; urgency=low
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
+sidux-edu (0.3.0) unstable; urgency=low
 
   [ Fabian Wuertz ]
   * colors for packages that will installed or removed
@@ -18,7 +15,10 @@ sidux-edu (0.2.19) UNRELEASED; urgency=low
   * enter problem in applyChanges solved
   * [J/n] test added
 
- -- Fabian Wuertz <xadras@sidux.com>  Mon, 19 May 2008 12:44:52 +0200
+  [ Stefan Lippers-Hollmann ]
+  * fix "pyhsik" typo.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 19 May 2008 14:47:39 +0200
 
 sidux-edu (0.2.18) unstable; urgency=low
 
