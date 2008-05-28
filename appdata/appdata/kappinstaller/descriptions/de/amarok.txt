@@ -1,0 +1,5 @@
+Amarok
+.
+Amarok ist ein freier Abspieler für Audiodateien und Internetaudioströme. Er wird für KDE entwickelt, funktioniert aber auch unter anderen Arbeitsumgebungen wie GNOME. Er zeichnet sich durch einen reichhaltigen Funktionsumfang aus und durch die Eigenschaft, Medieninformationen in einer Datenbank zu speichern. Amarok spielt die Musik nicht direkt selber ab, sondern verwendet dafür verschiedene andere Programme und Bibliotheken wie GStreamer und xine, welche über Module von Amarok angesprochen werden. Von ihnen hängt auch die Unterstützung der Audioformate ab.
+.
+Das Aussehen von Amarok lässt sich umfangreich anpassen. So können das Spielerfenster und die Wiedergabelist getrennt oder in einem Fenster angezeigt werden. Die Farben lassen sich unabhängig von KDE verändern. Die Anzeige der Kontextinformationen lässt sich über CSS-Dateien gestalten.

@@ -1,0 +1,5 @@
+VirtualBox
+.
+VirtualBox ist eine von der Firma innoTek entwickelte virtuelle Maschine für 32-Bit-x86-Systeme. Als Gastsysteme werden Linux (Kernel 2.2 bis 2.6), Windows (NT bis Vista), OS/2, DOS-basierte Betriebssysteme, L4, NetWare sowie diverse BSD-Derivate unterstützt. Es werden zwei Versionen angeboten: VirtualBox mit allen Features unter proprietärer Lizenz, die für private Zwecke kostenfrei genutzt werden darf und VirtualBox Open Source Edition (OSE) mit weniger Features, welche unter der GNU General Public License steht.
+.
+Festplatten werden in Containern, sog. Virtual Disk Images (VDI) emuliert, welche allerdings inkompatibel mit denen von anderen virtuellen Maschinen sind. Daneben erlaubt VirtualBox iSCSI-Objekte ebenfalls als virtuelle Festplatten zu nutzen (nicht in der GPL-Version möglich). 

@@ -1,0 +1,3 @@
+KGeography
+.
+KGeography ist ein Lern- und Übungsprogramm, das die Topographie auf der Ebene politischer Verwaltungsgebiete (Staaten, Bundesländer) trainiert. Dabei stehen ausgewählte Karten zur Verfügung (USA, Deutschland, Europa, Welt u.a.).

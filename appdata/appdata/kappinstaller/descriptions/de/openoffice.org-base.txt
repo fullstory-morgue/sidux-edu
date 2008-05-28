@@ -1,0 +1,3 @@
+OpenOffice Base
+.
+Base ist das ganz neue Datenbankmodul. Mit BASE integrieren Sie Ihre Datenbank nahtlos in OpenOffice.org. Erstellen und modifizieren Sie Tabellen, Formulare, Abfragen und Berichte, benutzen Sie Ihre eigene Datenbank (MySQL, PostgreSQL oder Microsoft Access) oder die in BASE integrierte HSQL-Datenbank.

@@ -1,0 +1,7 @@
+KOrganizer
+.
+KOrganizer, der KDE-Terminplaner, ist ein einfach zu bedienender, persönlicher Informationsverwalter (PIM) und im Paket kdepim enthalten. Sie können Verabredungen, Termine und Aufgaben eingeben. KOrganizer wird Sie an ausstehende Aufgaben erinnern und Ihnen dabei helfen, Ihren Zeitplan einzuhalten.
+.
+Mit KOrganizer ist es möglich, mehrere Kalender gleichzeitig zu öffnen. Termine werden einfach per Drag-and-Drop erstellt bzw. verschoben. Durch die Zuordnung von Terminen zu Kategorien, die selbst angelegt werden können und sich farblich unterscheiden, ist maximale Übersicht garantiert. Auch mehrtägige Termine bzw. wiederholte Termine, zum Beispiel monatlich am 2. Montag, stellen kein Problem dar.
+.
+KOrganizer kann sowohl separat als eigenständiges Programm benutzt werden, als auch als Modul innerhalb von Kontact.

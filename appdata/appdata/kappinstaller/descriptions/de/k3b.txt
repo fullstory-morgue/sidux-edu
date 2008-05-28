@@ -1,0 +1,4 @@
+K3b
+.
+K3b ist ein Programm zum Brennen von CDs und DVDs, es basiert auf KDE, lässt sich aber auch unter GNOME benutzen. Eigentlich ist K3b kein selbständiges Brennprogramm sondern vielmehr eine grafische Oberfläche für eine Vielzahl von Programmen. Gerade Anfängern wird so durch sinnvolle Voreinstellungen schnell zu einer selbst gebrannten CD/DVD verholfen, während fortgeschrittene Nutzer viele Parameter selbst festlegen, oder die ausführenden Programme in der Konsole benutzen können.
+Ab Version 1.0 stehen statt der vorhandenen Geräte die eingelegten Medien im Vordergrund. Der Benutzer wählt ein Medium aus, anstatt eines Geräts, in welches ein Medium eingelegt ist.

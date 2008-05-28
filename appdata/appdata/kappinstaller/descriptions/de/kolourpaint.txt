@@ -1,0 +1,7 @@
+KolourPaint
+.
+KolourPaint ist ein freies und einfach zu benutzendes Mal- und Zeichenprogramm für KDE. Es ist gut geeignet für alltägliche Aufgaben wie:
+.
+* Zeichnen von Diagrammen und „Freihandzeichnen“
+* Bildbearbeitung für Bildschirmphotos und Photos mit der Anwendung von Effekten
+* Bearbeitung von Symbolen - Zeichnen von Cliparts und Logos mit Transparenz  
