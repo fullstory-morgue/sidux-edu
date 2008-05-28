@@ -30,9 +30,10 @@
 #include <kmessagebox.h>
 #include <kdesktopfile.h>
 #include <kdirlister.h>
-#include <qdir.h>
 #include <kconfigbase.h>
 
+
+#include <qdir.h>
 #include <qpushbutton.h>
 #include <qlineedit.h>
 #include <qwidgetstack.h>
@@ -47,7 +48,9 @@
 
 
 #include <fancylistviewitem.h>
-#include <edu.h>
+
+#include "edu.h"
+
 
 
 #include "kconfigbackend.h"
@@ -55,10 +58,10 @@
 edu::edu(QWidget *parent, const char *name, const QStringList &)
 :EduDialog(parent, name)
 {
-	loader = KGlobal::iconLoader();
-	iconpath = loader->theme()->dir();
-	appdir   = "/usr/share/sidux-edu/";
-
+	myFunctions = new Functions();
+	loader      = KGlobal::iconLoader();
+	iconpath    = loader->theme()->dir();
+	appdir      = "/usr/share/appinstaller/edu/";
 
 	statusBar()->hide();
 
@@ -111,7 +114,7 @@ void edu::getCategories()
 void edu::importApps()
 {
 	listView->clear();
-	QStringList apps = QDir( appdir+"apps").entryList( QDir::Files );
+	QStringList apps = QDir( appdir+"pmap").entryList( QDir::Files );
 
 
 
@@ -139,7 +142,7 @@ void edu::importApps()
 
 
 		// pmam file
-		QFile file( appdir+"apps/"+apps[i] );
+		QFile file( appdir+"pmap/"+apps[i] );
 		file.open( IO_ReadOnly );
 		QTextStream stream( &file );
 		while ( !stream.atEnd() )
@@ -147,11 +150,8 @@ void edu::importApps()
 			QString line = stream.readLine(); // line of text excluding '\n'
 			if( line.contains("Name=") )
 				item->setText( 1, line.mid(5) );
-			else if ( line.contains("Categories=") )
-			{
-				category = line.mid(11);
-				item->setText( 2, line.mid(11) );
-			}
+			else if ( line.contains("Seminarix=") )
+				item->setText( 2, line.mid(10) );
 			else if( line.contains("Package=") )
 				package = line.mid(8);
 			else if ( line.contains("Exec=") )
@@ -198,7 +198,6 @@ void edu::importApps()
 				icon = file.readIcon();
 		}
 
-
 		// package
 		if( package == "" )
 			package = id;
@@ -230,12 +229,7 @@ void edu::importApps()
 		else
 			item->setText( 10,  "FALSE" );
 
-
 	}
-
-
-
-
 }
 
 
@@ -316,10 +310,9 @@ void edu::showCategoryApps()
 
 
 
-
 	for(uint i = 0; i < names.count(); i++)
 	{
-		QPixmap ico = getIcon(icons[i]);
+		QPixmap ico = myFunctions->getIcon(icons[i]);
 
 		FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBoxController );
 		item->setPixmap( 1, ico );
@@ -368,7 +361,7 @@ void edu::searchApp()
 	appsListView->clear();
 	for(uint i = 0; i < names.count(); i++)
 	{
-		QPixmap ico = getIcon(icons[i]);
+		QPixmap ico = myFunctions->getIcon(icons[i]);
 
 		FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
 		item->setPixmap( 1, ico );
@@ -432,7 +425,7 @@ void edu::changed()
 		QString status = listView->findItem(name, 1, Qt::ExactMatch )->text(4);
 		QString id = listView->findItem(name, 1, Qt::ExactMatch )->text(0);
 		QString icon = listView->findItem(name, 1, Qt::ExactMatch )->text(9);
-		QPixmap ico = getIcon(icon);
+		QPixmap ico = myFunctions->getIcon(icon);
 
 		if ( ( (QCheckListItem*)it.current() )->isOn() )
 		{
@@ -573,21 +566,16 @@ void edu::applyChanges1()
 		QString id = it.current()->text(0);
 		QString status = it.current()->text(4);
 		QString icon = it.current()->text(9);
+		QPixmap ico = myFunctions->getIcon(icon);
 		if( status == "install" )
 		{
 			QString name = it.current()->text(1);
-			QPixmap ico = getIcon(icon);
 			installListBox->insertItem( ico, name);
 
 		}
 		if( status == "remove" )
 		{
 			QString name = it.current()->text(1);
-			QPixmap ico;
-			if( QFile::exists( iconpath+"32x32/apps/"+icon+".png" ) )
-				ico = QPixmap(  iconpath+"32x32/apps/"+icon+".png" );
-			else
-				ico = QPixmap( appdir+"icons/"+id+".png" );
 			removeListBox->insertItem( ico, name);
 		}
 		++it;
@@ -618,7 +606,7 @@ void edu::applyChanges2()
 	
 
 	KProcess *proc = new KProcess;
-	*proc << "kdesu" << "sidux-edu-applyChanges" << changedPackages;
+	*proc << "kdesu" << "apt-get-konsole" << changedPackages;
 	proc->start();
 	setEnabled(FALSE);
 	connect(proc, SIGNAL(processExited(KProcess *)), this, SLOT( back() ));
@@ -672,7 +660,7 @@ void edu::back()
 		QString id     = listView->findItem(names[i], 1, Qt::ExactMatch )->text(0);
 		QString status = listView->findItem(names[i], 1, Qt::ExactMatch )->text(4);
 		QString icon   = listView->findItem(names[i], 1, Qt::ExactMatch )->text(9);
-		QPixmap ico = getIcon(icon);
+		QPixmap ico    = myFunctions->getIcon(icon);
 
 
 		FancyListViewItem * item = new FancyListViewItem( appsListView, "", QCheckListItem::CheckBox );
@@ -735,42 +723,12 @@ void edu::homepage()
 }
 
 
-QPixmap edu::getIcon(QString icon)
-{
-	QPixmap ico = loader->loadIcon( icon, KIcon::Desktop, 32, KIcon::DefaultState, 0L, TRUE);
-	if (icon.isNull() )
-	{
-		if( QFile::exists ("/usr/share/app-install/icons/"+icon+".png") )
-			ico = QPixmap("/usr/share/app-install/icons/"+icon+".png");
-		else if( QFile::exists("/usr/share/app-install/icons/"+icon+".xpm") )
-			ico = QPixmap("/usr/share/app-install/icons/"+icon+".xpm");
-		else if( QFile::exists("/usr/share/pixmaps/"+icon+".xpm") )
-			ico = QPixmap("/usr/share/pixmaps/"+icon+".xpm");
-		else if( QFile::exists("/usr/share/pixmaps/"+icon+"-icon.xpm") )
-			ico = QPixmap("/usr/share/pixmaps/"+icon+"-icon.xpm");
-		else if( QFile::exists("/usr/share/"+icon+"/"+icon+".xpm") )
-			ico = QPixmap("/usr/share/"+icon+"/"+icon+".xpm");
-		else if( QFile::exists("/usr/share/"+icon+"/pixmaps/"+icon+".xpm") )
-			ico = QPixmap("/usr/share/"+icon+"/pixmaps/"+icon+".xpm");
-		else if( icon == "wxmaxima")
-			ico = QPixmap("/usr/share/wxMaxima/icons/maximaicon.xpm");
-		else
-			ico = QPixmap( appdir+"images/empty.png" );
-	}
-
-	if( ico.height() != 32 and ico.width() != 32 )
-	{
-		ico = QPixmap( appdir+"images/empty.png" );
-	}
-	return ico;
-}
-
 QString edu::getDescription(QString app)
 {
 		QString description;
-		if( QFile::exists ("/usr/share/sidux-edu/descriptions/de/"+app+".txt") )
+		if( QFile::exists ( appdir+"descriptions/de/"+app+".txt") )
 		{
-			QFile file( "/usr/share/sidux-edu/descriptions/de/"+app+".txt" );
+			QFile file( appdir+"descriptions/de/"+app+".txt" );
 			file.open( IO_ReadOnly );
 			QTextStream stream( &file );
 			while ( !stream.atEnd() )
