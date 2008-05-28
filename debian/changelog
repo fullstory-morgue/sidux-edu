@@ -1,9 +1,5 @@
-sidux-edu (0.3.2) UNRELEASED; urgency=low
+sidux-edu (0.3.2) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * pmap format changed
   * kappinstaller added 1/5
   * kappinstaller added 2/5
