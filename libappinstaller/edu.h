@@ -20,12 +20,15 @@
 #ifndef EDU_H_
 #define EDU_H_
 
-#include <edudialog.h>
 
 
 #include <kde_terminal_interface.h>
 #include <kparts/part.h>
 #include <kiconloader.h>
+
+#include "functions.h"
+#include "edudialog.h"
+
 
 
 class edu : public EduDialog
@@ -40,10 +43,9 @@ class edu : public EduDialog
 		QString appdir;
 		QString iconpath;
 		QString changedPackages;
-
 		QString getDescription(QString);
-		QPixmap getIcon(QString);
 
+		Functions *myFunctions;
 		KIconLoader *loader;
 
 
