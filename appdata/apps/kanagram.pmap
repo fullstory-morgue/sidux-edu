@@ -1,6 +1,2 @@
-Name=KAnagram
-DesktopPath=/usr/share/applications/kde/kanagram.desktop
-Package=kanagram
-Homepage=http://edu.kde.org/kanagram/
 Categories=Lernspiele
-Description=KAnagram ist ein Buchstabenr&auml;tselspiel: Aufgabe ist, die durcheinandergew&uuml;rfelten Buchstaben eines Wortes wieder in die richtige Reihenfolge zu bringen und damit das Wort zu finden. Es gibt keine Zeitbegrenzung und man hat beliebig viele Versuche zur L&ouml;sung des R&auml;tsels. Zusammen mit Kanagram erhalten die Sch&uuml;ler einige Vokabeldateien zum Spielen, weitere k&ouml;nnen aus dem Internet geladen werden. Kanagram bringt &uuml;ber den Hilfe-Button (Buchsymbol) ein Handbuch in deutscher Sprache mit
+Homepage=http://edu.kde.org/kanagram/

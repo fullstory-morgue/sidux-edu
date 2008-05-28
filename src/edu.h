@@ -41,6 +41,7 @@ class edu : public EduDialog
 		QString iconpath;
 		QString changedPackages;
 
+		QString getDescription(QString);
 		QPixmap getIcon(QString);
 
 		KIconLoader *loader;

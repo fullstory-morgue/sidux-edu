@@ -1,6 +1,2 @@
-Name=KTurtle
-DesktopPath=/usr/share/applications/kde/kturtle.desktop
-Package=kturtle
-Homepage=http://edu.kde.org/kturtle/
 Categories=Informatik
-Description=Kturtle dient dazu, Grundlagen im Programmieren und algorithmische Verfahren kennenzulernen. Kturtle basiert auf Logo. Die standardm&auml;&szlig;ig mitgelieferten Programmierbefehle sind in deutscher Sprache und k&ouml;nnen durch eigene Befehle erweitert werden. Eine Schildkr&ouml;te kann auf einer Zeichenfl&auml;che durch entsprechende Programmierbefehle auf einer Zeichenfl&auml;che gesteuert werden und dabei diverse Aufgaben, z.B. Zeichen- oder Rechenaufgaben ausf&uuml;hren. Auch das Programmieren und Ausf&uuml;hren interaktiver Dialoge ist m&ouml;glich. 
+Homepage=http://edu.kde.org/kturtle/

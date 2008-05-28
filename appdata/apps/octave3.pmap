@@ -1,6 +1,0 @@
-Name=Octave3.0
-Package=octave3.0
-Description=Ocatve ist eine Skriptsprache mit sich mathematische Probleme numerisch l&ouml;sen lassen. Das Programm kann zum Beispiel beim L&ouml;sen von Differenzialgleichungssystem oder der Matrizenrechnungen verwendet werden. Ocatave ist fast vollst&auml;ndig mit dem kommerziellen Programm MATLAB kompatibel.
-Categories=Mathematik
-DesktopPath=conolse
-Exec=/usr/bin/octave3.0

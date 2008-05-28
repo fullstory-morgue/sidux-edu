@@ -1,0 +1,1 @@
+hebcal enthält einen immerwährenden jüdischen Kalender. Hebcal ist ein Programm, das die Tage im Jüdischen Kalender für ein gegebenes gregorianisches Jahr ausdruckt. Hebcal kann flexibel die Ereignisse im Jüdischen Kalender anzeigen.

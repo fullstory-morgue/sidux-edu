@@ -1,8 +1,2 @@
-Name=KIG
-DesktopPath=/usr/share/applications/kde/kig.desktop
-Package=kig
-Homepage=http://edu.kde.org/kig/
 Categories=Mathematik
-Description=Kig ist ein interaktives Geometrie-Programm. Kig erlaubt dynamische geometrische Konstruktionen, mit denen die Schüler die Möglichkeit haben, schnell Veränderungen an den geometrischen Figuren vornehmen zu können. Sie können durch 'gezieltes Probieren' und Vergleichen den Kern geometrischer Gesetze phänomenologisch entdecken. Das Programm eignet sich auch, um die Koordinaten von Punkten sowie die Funktionsgleichung oder den Anstieg von Geraden darzustellen.<br>Die mit Kig erstellten Zeichnungen und Figuren lassen sich auch gut in andere Dokumente einbinden.<br>Kig ist für den Einsatz im Geometrieunterricht vorgesehen, eignet sich aber auch für Teilbereiche der Analysis (z.B. Ableitungen). Zielgruppe sind nicht nur Schüler der Klassen 6-10. Auf Grund vorhandener Elemente der analytischen Geometrie (Vektorrechnung) kann kig auch durch Oberstufenschüler und Studierende eingesetzt werden.
-
-
+Homepage=http://edu.kde.org/kig/

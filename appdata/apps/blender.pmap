@@ -1,9 +1,0 @@
-Name=blender
-DesktopPath=/usr/share/applications/kde/blender.desktop
-Package=blender
-Homepage=http://www.blender.org/
-Categories=informatik
-Description= Blender ist ein freies 3D-Graphik Programm. Mit Blender können dreidimensionale Körper modelliert werden, man kann sie texturieren (mit bestimmten Materialflächen versehen), animieren und rendern. Blender verfügt über einen eingebauten Videoschnitteditor und eine Spiel-Engine. Der Funktionsumfang hat sich in den letzten Jahren dynamisch weiterentwickelt, z. B. ist die Simulation von Flüssigkeiten und Compositing mit eingeflossen. 
-Im Internet findet man gute Benutzeranleitungen und auch viele Beispiele an 3D-Graphik-Bildern und -Animationen, die mit Blender erstellt wurden. Im Buchhandel sind auch sehr hilfreiche Blender-Bücher in deutscher Sprache erhältlich <br>
-z.B. Das Blender-Buch: 3D-Grafik und Animation mit freier Software, <br>
-von Carsten Wartmann (Autor), Verlag: Dpunkt Verlag; Auflage: 3., überarbeitete und erweiterte Auflage. (August 2007), Sprache: Deutsch, ISBN-10: 3898644669, ISBN-13: 978-3898644662

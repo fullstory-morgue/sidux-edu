@@ -1,6 +1,2 @@
-Name=TuxPaint
-DesktopPath=/usr/share/applications/tuxpaint.desktop
-Package=tuxpaint
-Homepage=http://www.tuxpaint.org/
 Categories=Kunst
-Description=TuxPaint ist ein freies Zeichenprogramm f&uuml;r Kinder ab 3. Es verf&uuml;gt &uuml;ber sehr einfach handzuhabende Werkzeuge und auch lustige Soundeffekte. Ein Cartoonm&auml;nnchen f&uuml;hrt in das Zeichnen ein. Eine Reihe von Werkzeugen hilft beim kreativen Malen.
+Homepage=http://www.tuxpaint.org/

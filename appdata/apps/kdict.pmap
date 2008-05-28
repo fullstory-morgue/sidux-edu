@@ -1,6 +1,2 @@
-Name=KDict
-DesktopPath=/usr/share/applications/kde/kdict.desktop
-Package=kdict
-Homepage=http://www.dict.org/
 Categories=Sprachen
-Description=Kdict ist ein umfangreiches W&ouml;rterbuch, das inzwischen f&uuml;r mehr als 15 Sprachen zur Verf&uuml;gung steht.
+Homepage=http://www.dict.org/

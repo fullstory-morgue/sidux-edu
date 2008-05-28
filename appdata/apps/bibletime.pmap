@@ -1,6 +1,2 @@
-Name=BibleTime
-DesktopPath=/usr/share/applications/bibletime.desktop
-Package=bibletime
-Homepage=http://www.bibletime.info/de/index.html
 Categories=Religion
-Description=Zur&uuml;ck zu den Wurzeln: Die Bibel in verschiedenen Sprachen, nachinstallierbare Losungen und W&ouml;rterb&uuml;cher erleichtern die Arbeit im Religionsunterricht. Auch Kirchenv&auml;ter sind mit ihren Erkenntnissen installierbar.
+Homepage=http://www.bibletime.info/de/index.html

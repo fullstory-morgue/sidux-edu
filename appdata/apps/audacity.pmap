@@ -1,6 +1,0 @@
-Name=Audacity
-DesktopPath=/usr/share/applications/audacity.desktop
-Package=audacity
-Homepage=http://audacity.sourceforge.net/
-Categories=Musik
-Description=Audacity ist ein Audio-Editor-Programm, das den Vergleich mit propriet&auml;ren Programmen nicht zu scheuen braucht. Es ist eine echte Alternative f&uuml;r schulisches Recording und Editing zum Nulltarif. MIDI-Import, virtuelle Mehrspurtechnik, Undo-Funktion sowie das Arbeiten in verschiedensten Formaten und Samplingraten lassen professionelle Ergebnisse zu.

@@ -113,8 +113,6 @@ void edu::importApps()
 	listView->clear();
 	QStringList apps = QDir( appdir+"apps").entryList( QDir::Files );
 
-	QString line;
-
 
 
 	for( uint i = 0; i < apps.count(); i++ )
@@ -123,99 +121,119 @@ void edu::importApps()
 		// create listitem
 		QListViewItem * item = new QListViewItem( listView, 0 );
 
+		// var
+		QString id;          //0
+		QString name;        //1
+		QString category;    //2
+		QString package;     //3
+		QString exec;        //5
+		QString desktopPath; //6
+		QString terminal;    //8
+		QString icon;        //9
+
 		//id
-		QString id = QString(apps[i]).replace(".pmap", "");
+		name = QString(apps[i]).replace(".pmap", "");
+		item->setText( 1, name);
+		id = name.lower();
 		item->setText( 0, id);
 
 
-		// mpam file
-		int found = 0;
-		QString desktopPath;
-		QString package;
-		QString exec;
-		QFile file2( appdir+"apps/"+apps[i] );
-		file2.open( IO_ReadOnly );
-		QTextStream stream2( &file2 );
-		while ( !stream2.atEnd() and found < 6 )
+		// pmam file
+		QFile file( appdir+"apps/"+apps[i] );
+		file.open( IO_ReadOnly );
+		QTextStream stream( &file );
+		while ( !stream.atEnd() )
 		{
-			line = stream2.readLine(); // line of text excluding '\n'
+			QString line = stream.readLine(); // line of text excluding '\n'
 			if( line.contains("Name=") )
-			{
 				item->setText( 1, line.mid(5) );
-				found++;
-			}
 			else if ( line.contains("Categories=") )
 			{
+				category = line.mid(11);
 				item->setText( 2, line.mid(11) );
-				found++;
 			}
 			else if( line.contains("Package=") )
-			{
 				package = line.mid(8);
-				item->setText( 3, package );
-				found++;
-			}
 			else if ( line.contains("Exec=") )
-			{
 				exec = line.mid(5);
-				found++;
-			}
 			else if ( line.contains("DesktopPath=") )
-			{
 				desktopPath = line.mid(12);
-				if( desktopPath != "console" and desktopPath != "none")
-					found++;
-			}
-			else if ( line.contains("Description=") )
-			{
-				item->setText( 6, line.mid(12) );
-				found++;
-			}
 			else if ( line.contains("Homepage=") )
-			{
 				item->setText( 7, line.mid(9) );
-				found++;
-			}
-
+			else if ( line.contains("Terminal=") )
+				item->setText( 8, line.mid(9) );
 
 		}
-		file2.close();
+		file.close();
 
+
+		// search for desktop file
+		if( desktopPath == "" )
+		{
+			if( QFile::exists( "/usr/share/applications/"+id+".desktop" ) )
+				desktopPath = "/usr/share/applications/"+id+".desktop";
+			else if( QFile::exists( "/usr/share/applications/kde/"+id+".desktop" ) )
+				desktopPath = "/usr/share/applications/kde/"+id+".desktop";
+			else if( QFile::exists( "/usr/share/applications/"+name+".desktop" ) )
+				desktopPath = "/usr/share/applications/"+name+".desktop";
+			else if( QFile::exists( "/usr/share/applications/kde/"+name+".desktop" ) )
+				desktopPath = "/usr/share/applications/kde/"+name+".desktop";
+		}
+		// read data from desktop file
+		if( desktopPath != "" )
+		{
+			KDesktopFile file( desktopPath );
 	
-		if( desktopPath == "console" )
-		{
-			item->setText( 8, "T" ); // terminal
-			item->setText( 9, id );  // icon
-		}
-		else if( desktopPath == "none" )
-		{
-			item->setText( 8, "F" ); // terminal
-			item->setText( 9, id );  // icon
-		}
-		else
-		{
-			// *.desktop file
-			KDesktopFile file3( desktopPath );
-			QString exec = QStringList::split( " ", file3.readEntry("Exec") )[0];
-			item->setText( 5, exec );
-			// terminal
-			item->setText( 8, "F" ); // terminal
-			item->setText( 9, file3.readIcon() ); // icon
+			//exec
+			if( exec == "" )
+				exec = file.readEntry("Exec").replace("-caption", "").replace("\"%c\"", "").replace("%i", "").replace("%m", "").replace("%U", "").replace("%u", "").replace("%F", "").replace("%f", "");
+
+			// run in terminal
+			if( terminal == "" )
+				if( file.readEntry("Terminal").contains("yes") )
+					terminal = "yes";
+
+			//icon
+			if( icon == "" )
+				icon = file.readIcon();
 		}
 
-		//status
+
+		// package
+		if( package == "" )
+			package = id;
+		item->setText( 3, package );
+
+		// status
 		if( QFile::exists( "/usr/share/doc/"+package+"/copyright" ) )
 			item->setText( 4, "installed");
 		else
 			item->setText( 4, "notinstalled");
 
-		//hasExample
+
+		// exec
+		if( exec == "")
+			exec = id;
+		item->setText(5, exec );
+
+		// description
+		item->setText( 6, getDescription(name) );
+
+
+		// icon
+		item->setText( 9, icon );
+
+		// hasExample
 		QString packageDir = "/usr/share/seminarix-samples/"+QStringList::split( " ", package )[0];
 		if( QFile::exists(packageDir) )
 			item->setText( 10, "TRUE" );
 		else
 			item->setText( 10,  "FALSE" );
+
+
 	}
+
+
 
 
 }
@@ -485,8 +503,8 @@ void edu::execApp()
 	QString app = appsListView->selectedItem()->text(2);
 	QString exec = listView->findItem(app, 1, Qt::ExactMatch )->text(5);
 	QString terminal = listView->findItem(app, 1, Qt::ExactMatch )->text(8);
-	if( terminal == "T" )
-		exec = "x-terminal-emulator --noclose -e "+exec;
+	if( terminal == "yes" )
+		exec = "konsole --noclose -e "+exec;
 
 	KProcess *proc = new KProcess;
 	*proc << QStringList::split( " ", exec );
@@ -745,6 +763,22 @@ QPixmap edu::getIcon(QString icon)
 		ico = QPixmap( appdir+"images/empty.png" );
 	}
 	return ico;
+}
+
+QString edu::getDescription(QString app)
+{
+		QString description;
+		if( QFile::exists ("/usr/share/sidux-edu/descriptions/de/"+app+".txt") )
+		{
+			QFile file( "/usr/share/sidux-edu/descriptions/de/"+app+".txt" );
+			file.open( IO_ReadOnly );
+			QTextStream stream( &file );
+			while ( !stream.atEnd() )
+				description += stream.readLine(); // line of text excluding '\n'prin
+			file.close();
+		}
+		
+		return description;
 }
 
 #include "edu.moc"

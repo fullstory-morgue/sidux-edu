@@ -1,6 +1,2 @@
-Name=GPeriodic
-DesktopPath=/usr/share/applications/gperiodic.desktop
-Package=gperiodic
-Homepage=http://gperiodic.seul.org/
 Categories=Chemie
-Description=GPeriodic ist ein kleines Programm &uuml;ber das Periodensystem, das tabellarisch detaillierte Informationen &uuml;ber jedes der im Periodensystem aufgef&uuml;hrten Elemente enth&auml;lt. Java-Applet.
+Homepage=http://gperiodic.seul.org/

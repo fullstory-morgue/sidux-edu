@@ -1,6 +1,2 @@
-Name=Kartoffelknülch
-DesktopPath=/usr/share/applications/kde/ktuberling.desktop
-Package=ktuberling
-Homepage=http://games.kde.org/kde_kids.php
 Categories=Lernspiele
-Description=Kartoffelkn&uuml;lch ist ein Stempelprogramm, das 3 fertige Sets aus Hintergrundbildern und passenden Stickern enth&auml;lt. Enthaltene Sets: Aquarium, Kartoffelkn&uuml;lch, Tux. Das Programm ist Teil von KDE und im KDE-Games Paket enthalten.
+Homepage=http://games.kde.org/kde_kids.php

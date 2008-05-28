@@ -1,6 +1,2 @@
-Name=Scribus
-DesktopPath=/usr/share/applications/scribus.desktop
-Package=scribus
-Homepage=http://www.scribus.net
 Categories=Allgemein
-Description=Rahmenorientiertes und professionell einsetzbares Desktop-Publishing-Programm, mit dessen Hilfe auch Spezialaufgaben im Bereich von Seitengestaltung gel&ouml;st werden k&ouml;nnen. Das ist dann besonders interessant, wenn Gestaltgesetze aus der Wahrnehmungspsychologie bei der Erarbeitung von Arbeitsbl&auml;ttern ernst genommen werden.
+Homepage=http://www.scribus.net

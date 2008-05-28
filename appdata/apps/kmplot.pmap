@@ -1,7 +1,2 @@
-Name=KmPlot
-DesktopPath=/usr/share/applications/kde/kmplot.desktop
-Package=kmplot
-Homepage=http://edu.kde.org/kmplot/
 Categories=Mathematik
-Description=Mit kmplot lassen sich sehr einfach und schnell mathematische Funktionen- nach Eingabe der Funktionsgleichung- grafisch im Koordinatensystem darstellen. Dabei ist die Darstellung mehrerer Funktionen (farblich abgesetzt) in einem Koordinatensystem möglich. Ein Variieren von Parametergrößen der Funktionen lässt ein schnelles Vergleichen der Veränderungen im Funktionsgrafen zu. Diese Eigenschaften unterstützen das Lernen von Beziehungen zwischen mathematischen Funktionen und deren graphischer Darstellung in Koordinatensystemen.<br>Kmplot kann auch leicht für die selbständige Schülertätigkeit eingesetzt werden, da der Einarbeitungsaufwand in das Programm sehr gering ist.<br>Selbstverständlich ist das Programm auch hervorragend für den Einsatz mit dem Beamer geeignet. Die Funktionsplots können dabei variiert werden (Achseneinteilung, Skalierung) und als Grafik im .svg-, .png- und .bmp-Format exportiert werden. Somit können die erstellten Funktionsgrafen auch in anderen (Text-)Dokumenten eingebunden werden.<br>KmPlot unterstützt nicht nur Funktionen mit Parametern sondern auch Funktionen in polaren Koordinaten. Verschiedene Arten von Gittern sind möglich. Ausgaben können mit großer Genauigkeit ausgedruckt werden.<br>KmPlot bietet zusätzlich numerische und visuelle Eigenschaften wie: <ul>Füllung und Berechnung der Fläche zwischen dem Graphen und der ersten Achse</ul><ul>Berechnung von maximalen und minimalen Werten</ul><ul>Dynamische Änderung von Funktionsparametern</ul><ul>Zeichnung von Ableitungen und Integralfunktionen</ul>
-
+Homepage=http://edu.kde.org/kmplot/

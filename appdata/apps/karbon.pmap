@@ -1,6 +1,2 @@
-Name=Karbon
-DesktopPath=/usr/share/applications/kde/karbon.desktop
-Package=karbon
-Homepage=http://www.koffice.org/karbon/
 Categories=Kunst
-Description=Karbon geh&ouml;rt zum KOffice-Projekt. Mit Karbon lassen sich skalierbare Grafiken herstellen und auch &auml;ndern. Skalierbare Grafiken haben den gro&szlig;en Vorteil, dass sie bei Vergr&ouml;&szlig;erungen nicht den von Bitmaps bekannten Treppeneffekt zeigen, sondern auch in gro&szlig;en Dimensionen noch gut aussehen. Karbon arbeitet mit Vektorgrafiken.
+Homepage=http://www.koffice.org/karbon/

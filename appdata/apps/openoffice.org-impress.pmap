@@ -1,6 +1,3 @@
-Name=OpenOffice Impress
-Package=openoffice.org-impress
-Homepage=http://de.openoffice.org/
 Categories=Allgemein
-Description=Impress ist der schnellste und einfachste Weg, um effektive Multimedia-Pr&auml;sentationen zu erstellen. Eindrucksvolle Animationen und Aufsehen erregende Spezialeffekte unterstützen Sie dabei, Ihre Zuh&ouml;rer zu &uuml;berzeugen.
 DesktopPath=/usr/share/applications/ooo-impress.desktop
+Homepage=http://de.openoffice.org/

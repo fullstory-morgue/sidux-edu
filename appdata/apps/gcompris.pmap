@@ -1,6 +1,2 @@
-Name=gcompris
-DesktopPath=/usr/share/applications/gcompris.desktop
-Package=gcompris
-Homepage=http://gcompris.net/-de-
 Categories=Lernspiele
-Description=Gcompris ist eine große Sammlung von Lernspielen für Kinder im Vorschul- und Grundschulalter.  Gegenwärtig kann man mit gcompris:<ul>den Umgang mit Maus und Tastatur erlernen</ul><ul>Grundrechenarten lernen</ul><ul>lernen von einer analogen Uhr abzulesen</ul><ul>lernen, Buchstaben an ihrem Namen erkennen</ul><ul>üben zu lesen</ul><ul>kleine Spiele (Memory, Puzzle-Spiele, etc.) spielen</ul><ul>kleine Animationen erstellen</ul><ul>...und Einiges mehr</ul>
+Homepage=http://gcompris.net/-de-

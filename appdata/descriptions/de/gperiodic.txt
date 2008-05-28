@@ -1,0 +1,1 @@
+GPeriodic ist ein kleines Programm über das Periodensystem, das tabellarisch detaillierte Informationen über jedes der im Periodensystem aufgeführten Elemente enthält. Java-Applet.

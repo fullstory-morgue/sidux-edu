@@ -1,0 +1,1 @@
+Ocatve ist eine Skriptsprache mit sich mathematische Probleme numerisch lösen lassen. Das Programm kann zum Beispiel beim Lösen von Differenzialgleichungssystem oder der Matrizenrechnungen verwendet werden. Ocatave ist fast vollständig mit dem kommerziellen Programm MATLAB kompatibel.

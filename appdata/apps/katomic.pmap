@@ -1,6 +1,2 @@
-Name=KAtomic
-DesktopPath=/usr/share/applications/kde/katomic.desktop
-Package=katomic
-Homepage=http://www.linuxia.de/packages/Debian/stable/Detail/katomic?id=SzsH7oqK&mv_pc=57
 Categories=Chemie
-Description=Aus den KDE-Spielen stammendes und ein wenig an Sokoban erinnerndes Spiel, bei dem mit den verschiedenen Atomen Molek&uuml;le zusammen zu bauen sind.
+Homepage=http://www.linuxia.de/packages/Debian/stable/Detail/katomic?id=SzsH7oqK&mv_pc=57

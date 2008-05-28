@@ -1,0 +1,1 @@
+Kino ist ein Open-Source Video Editor, der es erlaubt, ein von einer Videokamera über einen Firewire-Anschlu&szlig; eingespieltes Video zu bearbeiten, zu schneiden, zu kürzen, Clips einzufügen und vieles mehr.

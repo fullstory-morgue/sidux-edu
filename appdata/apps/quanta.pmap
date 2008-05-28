@@ -1,6 +1,2 @@
-Name=Quanta Plus
-DesktopPath=/usr/share/applications/kde/quanta.desktop
-Package=quanta
-Homepage=http://quanta.kdewebdev.org/
 Categories=Allgemein;Informatik 
-Description=Quanta Plus ist eine Entwicklungsumgebung zum Erstellen von Webseiten. Es bietet eine Projektverwaltung und unterst&uuml;tzt beliebige Auszeichnungssprachen, der Schwerpunkt liegt aber auf webbasierten Sprachen und Techniken wie HTML, XHTML, CSS, JavaScript, Java, oder PHP.<br>Quanta Plus unterst&uuml;tzt eine Vielzahl externer Komponenten und Werkzeuge, welche die Entwicklung unterst&uuml;tzen.<br>Damit stellt Quanta eine umfangreiche und dennoch einfach zu bedienende Umgebung dar, um schnell und effizient eigene Webseiten zu erstellen und zu verwalten.
+Homepage=http://quanta.kdewebdev.org/

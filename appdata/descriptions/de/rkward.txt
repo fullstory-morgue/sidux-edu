@@ -1,0 +1,1 @@
+RKWard ist eine graphische Benutzeroberfläche für die Skriptsprache R. R bietet ein breites Feld an Funktionen zum lösen statistischer Probleme. Daneben lässt sich R ohne Weiteres mit zusätzlichen und eigenen Paketen erweitern.

@@ -1,7 +1,2 @@
-Name=KGeography
-Description=KGeography ist ein Erdkunde-Lernprogramm. Derzeit gibt es 6 verschiedenen &Uuml;bungen:<ul><li>Landkarte erkunden, indem die Sch&uuml;ler in der Karte auf ein Land klicken und dessen Name, Hauptstadt und Flagge angezeigt wird</li><li>Der Name eines Landes wird gefragt und die Sch&uuml;ler m&uuml;ssen es auf der Karte finden und anklicken</li><li>Ein Land anhand des Namens der Hauptstadt raten</li><li>Die Hauptstadt eines Landes raten</li><li>Ein Land anhand der Flagge erraten</li><li>Die Flagge eines Landes erraten</li></ul>
-DesktopPath=/usr/share/applications/kde/kgeography.desktop
-Package=kgeography
-Homepage=http://kgeography.berlios.de/
 Categories=Erdkunde
-Description=KGeography ist ein Erdkunde-Lernprogramm. Derzeit gibt es 6 verschiedenen &Uuml;bungen:<ul><li>Landkarte erkunden, indem die Sch&uuml;ler in der Karte auf ein Land klicken und dessen Name, Hauptstadt und Flagge angezeigt wird</li><li>Der Name eines Landes wird gefragt und die Sch&uuml;ler m&uuml;ssen es auf der Karte finden und anklicken</li><li>Ein Land anhand des Namens der Hauptstadt raten</li><li>Die Hauptstadt eines Landes raten</li><li>Ein Land anhand der Flagge erraten</li><li>Die Flagge eines Landes erraten</li></ul>
+Homepage=http://kgeography.berlios.de/

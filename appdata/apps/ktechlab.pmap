@@ -1,6 +1,3 @@
-Name=KTechLab
-DesktopPath=/usr/share/applnk/Development/ktechlab.desktop
-Package=ktechlab
-Homepage=http://ktechlab.org/
 Categories=Technik
-Description=KTechlab ist ein Entwicklungswerkzeug f&uuml;r elektronische Schaltkreise und Mikrocontroller. Das Programm kann viele Arten von Komponenten simulieren (logisch, linear, integrierend, nichtlinear und r&uuml;ckwirkend). Die Simulation und Fehlerbereinigung von PIC (Programmable Intelligent Computer) Mikrocontrollern erfolgt via gpsim (ein Software-Simulator f&uuml;r PIC-Mikrocontroller von Microchip mit vielen Funktionen).<br><br>Ktechlab ist an die h&ouml;heren Programmiersysteme Flowcode (f&uuml;r die Erstellung von Programmflussbildern) und Microbe (eine Basic-artige Programmiersprache) angelehnt. Damit erstellte Programme k&ouml;nnen auf ein bestimmtes Schaltkreis-Design (ein 'virtueller PIC') angewendet werden um komplexere Mikrocontroller-basierte Schaltungen zu entwerfen 
+DesktopPath=/usr/share/applnk/Development/ktechlab.desktop
+Homepage=http://ktechlab.org/

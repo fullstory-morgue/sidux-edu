@@ -1,6 +1,3 @@
-Name=OpenOffice Draw
-Package=openoffice.org-draw
-Homepage=http://de.openoffice.org/
 Categories=Kunst
-Description=Draw erstellt alle Zeichnungen, vom einfachen Diagramm bis zu dynamischen 3-D-Illustrationen mit Spezialeffekten.
 DesktopPath=/usr/share/applications/ooo-draw.desktop
+Homepage=http://de.openoffice.org/

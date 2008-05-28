@@ -1,0 +1,1 @@
+ Ding ist ein Programm zur Suche in einem Deutsch-Englisch W?rterbuch mit ca. 216.000 Eintr?gen. Man kann bei Ding die Sucheinstellungen, die Sprache (Deutsch oder Englisch) und Farben einstellen. Es verf?gt ?ber History- und Hilfsfunktionen. Sinnvolle Tastatur- und Maus-Belegungen dienen zur schnellen und einfachen Suche.

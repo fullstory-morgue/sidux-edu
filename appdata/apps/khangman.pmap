@@ -1,6 +1,2 @@
-Name=KHangman
-DesktopPath=/usr/share/applications/kde/khangman.desktop
-Package=khangman
-Homepage=http://edu.kde.org/khangman/
 Categories=Lernspiele
-Description= KHangMan basiert auf dem bekannten Galgenm&auml;nnchenspiel. Es ist f&uuml;r Kinder ab 6 Jahren geeignet und hat vier Schwierigkeitsstufen: Tiere (Tiernamen), Einfach, Mittel und Schwer.<br>Ein Wort wird zuf&auml;llig ausgew&auml;hlt, die Buchstaben verdeckt und der Sch&uuml;ler muss das Wort raten, indem er einen vermuteten Buchstaben nach dem anderen eingibt. Jedes mal, wenn Du einen falschen Buchstaben eingibst, wird das Galgenm&auml;nnchen weiter gezeichnet. Sch&uuml;ler m&uuml;ssen das gesuchte Wort erraten, ehe das Galgenm&auml;nnchen fertig gezeichnet ist! Daf&uuml;r gibt es 10 Versuche. Ein deutschsprachiges Handbuch kann &uuml;ber den Hilfe-Button aufgerufen werden
+Homepage=http://edu.kde.org/khangman/

@@ -1,7 +1,3 @@
-Name=Midnight Commander
-Package=mc
-Description=Der Midnight Commander arbeitet auf der Kommandozeilenebene mit der aus alten Zeiten bekannten Zweifenstertechnik.
-Homepage=http://www.ibiblio.org/mc/
 Categories=Allgemein
-DesktopPath=console
-Exec=/usr/bin/mc
+Terminal=yes
+Homepage=http://www.ibiblio.org/mc/

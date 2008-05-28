@@ -1,0 +1,1 @@
+Audacity ist ein Audio-Editor-Programm, das den Vergleich mit proprietären Programmen nicht zu scheuen braucht. Es ist eine echte Alternative für schulisches Recording und Editing zum Nulltarif. MIDI-Import, virtuelle Mehrspurtechnik, Undo-Funktion sowie das Arbeiten in verschiedensten Formaten und Samplingraten lassen professionelle Ergebnisse zu.

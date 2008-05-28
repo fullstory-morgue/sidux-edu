@@ -1,6 +1,2 @@
-Name=Einstein Puzzle
-DesktopPath=/usr/share/applications/einstein.desktop
-Package=einstein
-Homepage=http://games.flowix.com/en/index.html
 Categories=Lernspiele
-Description=Einstein Puzzle ist ein Programm, das eher f&uuml;r im logischen Denken h&ouml;her begabte Menschen gedacht ist. Es geht darum, ein Raster mit 6x6 Feldern nach bestimmten, sich ver&auml;ndernden Regeln mit Symbolen zu f&uuml;llen. Das Programm verf&uuml;gt &uuml;ber eine englischsprachige Hilfe.
+Homepage=http://games.flowix.com/en/index.html

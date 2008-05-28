@@ -1,6 +1,2 @@
-Name=Krusader
-DesktopPath=/usr/share/applications/kde/krusader.desktop
-Package=krusader
-Homepage=http://krusader.sourceforge.net/
 Categories=Allgemein
-Description=Ein grafisch ausgelegter Festplattenmanager, der neben der Hilfe beim Kopieren, Verschieben und sonstigen Arbeiten im System auch den Aufbau des System deutlich werden l&auml;&szlig;t.<br><br>Handbuch unter Info (in Englisch).
+Homepage=http://krusader.sourceforge.net/

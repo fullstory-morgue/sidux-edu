@@ -1,6 +1,2 @@
-Name=vym
-DesktopPath=/usr/share/applications/vym.desktop
-Package=vym
-Homepage=http://www.insilmaril.de/vym/
 Categories=Allgemein
-Description=vym ist ein Mindmapping-Programm, um die Ideen und Gedanken bei einem Probleml&ouml;sungsprozess in einer Gruppe zu strukturieren.  Durch Probieren mit Klicken der Linken und rechten Maustaste sowie verschieben der verschiedenen Objekte lassen sich die meisten Funktionen schnell intuitiv erschlie&szlig;en.
+Homepage=http://www.insilmaril.de/vym/

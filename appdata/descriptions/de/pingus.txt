@@ -1,0 +1,1 @@
+Pingus ist ein freier Clone des schönen alten Spiels "Lemminge": Retten Sie die Pinguine!

@@ -1,6 +1,2 @@
-Name=KSnapshot
-DesktopPath=/usr/share/applications/kde/ksnapshot.desktop
-Package=ksnapshot
-Homepage=http://www.kde.de/software/screenshots/graphik.php
 Categories=Kunst
-Description=Das Programm stellt auf einfache Weise Screenshots (mit Maus, ohne Maus, Vollbild, Ausz&uuml;ge) her, die f&uuml;r Demonstrationen bestimmter Bildschirmeinstellungen oder Arbeitsfortschritten hilfreich und n&uuml;tzlich sind.
+Homepage=http://www.kde.de/software/screenshots/graphik.php

@@ -1,0 +1,1 @@
+Ebenfalls aus dem KOffice-Projekt stammt die Anwendung Kivio, mit deren Hilfe sehr komfortabel Flussdiagramme hergestellt und Statistiken bearbeitet werden können.

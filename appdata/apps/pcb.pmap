@@ -1,6 +1,2 @@
-Name=PCB
-DesktopPath=/usr/share/applications/pcb.desktop
-Package=pcb
-Homepage=http://pcb.sourceforge.net/
 Categories=Technik
-Description=Wer auf fertig hergestellte Platinen (auch gedruckte Schaltungen oder Leiterplatten genannt) verzichten m&ouml;chte und statt dessen selbst eine erstellen will, kann dies mittels dieses Programms verwirklichen. Vorhandene elektronische Bauteile m&uuml;ssen durch den Nutzer verkn&uuml;pft und positioniert werden (virtueller Test des Stromkreislaufes ist integraler Bestandteil). Neben der automatischen Leiterbahnberechnung k&ouml;nnen diese auch manuell ver&auml;ndert werden.
+Homepage=http://pcb.sourceforge.net/

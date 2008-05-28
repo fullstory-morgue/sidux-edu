@@ -1,7 +1,3 @@
-Name=Tipptrainer
-Package=tipptrainer
-Description=Tipptrainer dient dem Erlernen und Festigen des 10-Finger-Tippsystems. Daf&uuml;r stehen dem Sch&uuml;ler zahlreiche Lektionen f&uuml;r das Tippen bestimmter Buchstabenkombinationen und Texte zur Verf&uuml;gung. Es gibt dabei Kurse f&uuml;r Anf&auml;nger und Fortgeschrittene.
-Homepage=http://tipptrainer.pingos.org/index.shtml
 Categories=Lernspiele
-DesktopPath=none
 Exec=/usr/bin/tipptrainer
+Homepage=http://tipptrainer.pingos.org/index.shtml

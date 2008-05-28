@@ -1,6 +1,2 @@
-Name=Lazarus
-DesktopPath=/usr/share/applications/lazarus.desktop
-Package=lazarus
-Homepage=http://www.lazarus.freepascal.org/
 Categories=Informatik
-Description=Lazarus ist eine auf dem Pascal-Dialekt freepascal und der graphischen Bibliothek LCL aufbauende Programmierumgebung mit vielen visuellen Werkzeugen wie Objektinspektor und Formulardesigner.<br>Mit Lazarus ist es m&ouml;glich, schnell und effizient plattform&uuml;bergreifend Programme zu entwickeln (ein und derselbe Code kann f&uuml;r verschiedene Plattformen kompiliert werden).<br>Lazarus kann als freie Alternative zu Delphi angesehen werden, vorhandene Delphi-Programme k&ouml;nnen oft mit geringem Aufwand portiert werden.
+Homepage=http://www.lazarus.freepascal.org/

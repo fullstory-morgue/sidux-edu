@@ -1,6 +1,3 @@
-Name=KSociograma
-DesktopPath=/usr/share/applnk/Edutainment/Micellaneous/ksociograma.desktop
-Package=ksociograma
-Homepage=http://www.kde-apps.org/content/show.php?content=12666
 Categories=Allgemein
-Description=Soziometrische Analyse f&uuml;r Beziehungen, auch solche in Schule und Seminar: Wer mit wem und mit diesem, aber ohne jenen. (Der admin startet mit dem Passwort ksocio).
+DesktopPath=/usr/share/applnk/Edutainment/Micellaneous/ksociograma.desktop
+Homepage=http://www.kde-apps.org/content/show.php?content=12666

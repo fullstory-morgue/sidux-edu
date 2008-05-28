@@ -1,6 +1,2 @@
-Name=ChemTool
-DesktopPath=/usr/share/applications/chemtool.desktop
-Package=chemtool
-Homepage=http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html
 Categories=Chemie
-Description=Chemtool ist ein 2D-Molek&uuml;leditor, mit dem organische Molek&uuml;le zusammengesetzt oder Molek&uuml;le im mol- und pdb-Format eingef&uuml;gt werden k&ouml;nnen, (wobei die importierten Molek&uuml;le z.T. noch bearbeitet werden k&ouml;nnen. 3D-Molek&uuml;le k&ouml;nnen ebenfalls importiert und in 2D-Versionen &uuml;bersetzt werden.) Die erzeugten Molek&uuml;le k&ouml;nnen in verschiedenen Formaten exportiert werden. (Das Programm besitzt ein Hilfsprogramm, mit dem man Summenformeln bestimmen und Molmassen berechnen lassen kann.)
+Homepage=http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html

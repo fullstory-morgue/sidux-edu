@@ -1,6 +1,2 @@
-Name=Childsplay
-DesktopPath=/usr/share/applications/childsplay.desktop
-Package=childsplay
-Homepage=http://childsplay.sourceforge.net/
 Categories=Lernspiele
-Description=Childsplay ist eine Sammlung von Lernspielen f&uuml;r Kinder, &auml;hnlich GCompris. Childsplay enth&auml;lt u.a. Mathe-, Schreibspiele und kann um andere Spiele erweitert werden.
+Homepage=http://childsplay.sourceforge.net/

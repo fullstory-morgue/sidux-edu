@@ -1,6 +1,2 @@
-Name=KLettres
-DesktopPath=/usr/share/applications/kde/klettres.desktop
-Package=klettres
-Homepage=http://edu.kde.org/klettres/
 Categories=Lernspiele;Sprachen
-Description=KLettres soll zun&auml;chst das Erlernen des Alphabets in einer neuen Sprache und im Weiteren das Lesen von einfachen Silben erleichtern. Geeignet ist das Programm f&uuml;r Kinder ab 2 Jahren aber auch f&uuml;r Erwachsene, die die Basis einer fremden Sprache erlernen m&ouml;chten.<br><br>Zur Zeit sind 11 Sprachen verf&uuml;gbar: Tschechisch, D&auml;nisch, Holl&auml;ndisch, Englisch, Franz&ouml;sisch, Italienisch, Luganda, Hindi (in lateinischer Umschrift), Spanisch, Slowakisch und Deutsch. Englisch, Franz&ouml;sisch und die eigene Sprache Deutsch wird als Voreinstellung installiert.<br><br>
+Homepage=http://edu.kde.org/klettres/

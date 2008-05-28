@@ -1,7 +1,0 @@
-Name=OpenOffice Deutsches Sprachpaket
-DesktopPath=/usr/share/applications/ooimpress.desktop
-Package=openoffice.org-l10n-de
-Homepage=http://de.openoffice.org/
-Categories=Allgemein
-Description=OpenOffice Deutsches Sprachpaket
-Deutsche Sprachunterstützung für OpenOffice

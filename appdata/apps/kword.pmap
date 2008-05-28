@@ -1,6 +1,2 @@
-Name=KWord
-DesktopPath=/usr/share/applications/kde/kword.desktop
-Package=kword
-Homepage=http://www.koffice.org/kword/
 Categories=Allgemein
-Description=Kword ist das Textverarbeitungsprogramm der KDE-orientierten KOffice-Suite. Kword ist im Unterschied zu &uuml;blichen Textverarbeitungsprogrammen st&auml;rker auf Desktop-Publishing (DTP) ausgelegt. Das hei&szlig;t, Objektfenster f&uuml;r Texte, Bilder, Diagramme, Formeln, Tabellen u.s.w. k&ouml;nnen pr&auml;zise platziert werden. Kword erm&ouml;glicht in gewissem Grade das Editieren von PDF-Dateien (das Abspeichern erfolgt unter Drucken in PDF-Datei). Hervorzuheben ist der recht gut bedienbare Formeleditor. Beachten sollte man, dass MS-Word Dateien nicht immer korrekt im- oder exportiert werden. Standardm&auml;&szlig;ig speichert Kword im iso-standardisierten Open-Dokument-Format (odt) ab. Wie bei allen KDE-Programmen kann man eine Kword-Datei problemlos direkt auf FTP-, Samba-, NFS- oder SSH-Server abspeichern (ftp://Adresse, smb://Adresse, nfs://Adresse, fish://user@servername/IP) 
+Homepage=http://www.koffice.org/kword/

@@ -5,3 +5,4 @@ install-data-local:
 	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/html $(DESTDIR)$(sharedir)/
 	cp -aR $(srcdir)/images $(DESTDIR)$(sharedir)/
+	cp -aR $(srcdir)/descriptions/ $(DESTDIR)$(sharedir)/

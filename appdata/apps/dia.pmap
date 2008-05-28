@@ -1,6 +1,3 @@
-Name=Dia
-DesktopPath=/usr/share/applications/dia-common.desktop
-Package=dia
-Homepage=http://www.gnome.org/projects/dia/
 Categories=Kunst
-Description=Dia hat Ähnlichkeiten mit dem proprietären Programm 'Visio'. Mit Dia k&ouml;nnen die verschiedenen Arten von Diagrammen, Flussdiagrammen und Strukturzeichnungen angefertigt werden. Auch Logikschaltungen und Netzwerke sind darstellbar. Die Produkte k&ouml;nnen in verschiedene Formate wie EPS, SVG, XFIG, WMF und PNG exportiert werden.
+DesktopPath=/usr/share/applications/dia-common.desktop
+Homepage=http://www.gnome.org/projects/dia/

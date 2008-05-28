@@ -1,0 +1,1 @@
+Das Programm stellt auf einfache Weise Screenshots (mit Maus, ohne Maus, Vollbild, Auszüge) her, die für Demonstrationen bestimmter Bildschirmeinstellungen oder Arbeitsfortschritten hilfreich und nützlich sind.

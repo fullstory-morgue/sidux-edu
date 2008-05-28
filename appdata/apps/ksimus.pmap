@@ -1,6 +1,2 @@
-Name=KSimus
-DesktopPath=/usr/share/applications/ksimus.desktop
-Package=ksimus
-Homepage=http://ksimus.berlios.de/
 Categories=Technik
-Description=KSimus ist eine Simulation logischer Schaltungen (man k&ouml;nnte auch Digitalschaltungen sagen). Es verf&uuml;gt &uuml;ber keine eingebaute Elemente. Stattdessen besitzt es eine Plugin-Schnittstelle, &uuml;ber die dynamische Bibliotheken geladen werden k&ouml;nnen, die die digitalen Elemente implementieren. Zwei Bibliotheken lieferte der Autor mit. Boolean implementiert ein RS-Flipflop, AND, OR, XOR und deren Negationen, einen Taktgenerator, einen Ein- und einen Ausgang. Data Recorder ist f&uuml;r die Aufzeichnung von Signalen vorgesehen.
+Homepage=http://ksimus.berlios.de/

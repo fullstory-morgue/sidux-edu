@@ -1,6 +1,2 @@
-Name=qcad
-DesktopPath=/usr/share/applications/qcad.desktop
-Package=qcad
-Homepage=http://www.ribbonsoft.de/qcad.html
 Categories=Technik
-Description=Qcad ist ein Programm f&uuml;r zweidimensionales CAD-Zeichnen und damit besonders f&uuml;r den Technikunterricht in Schule und Ausbildung geeignet. Mit qcad lassen sich technische Zeichnungen und Pl&auml;ne f&uuml;r Geb&auml;ude, Einrichtungen, elektrische Schaltungen und Prozessschemen bzw. Diagramme und mechanische Teile anfertigen. Unter dem Hilfeknopf l&auml;sst sich das Handbuch aufrufen. Dieses ist derzeit aber nur in englischer Sprache verf&uuml;gbar. Qcad ist aber hinreichend intuitiv bedienbar.
+Homepage=http://www.ribbonsoft.de/qcad.html

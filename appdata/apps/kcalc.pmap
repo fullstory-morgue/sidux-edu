@@ -1,6 +1,2 @@
-Name=KCalc
-DesktopPath=/usr/share/applications/kde/kcalc.desktop
-Package=kcalc
-Homepage=http://docs.kde.org/stable/de/kdeutils/kcalc/index.html
 Categories=Mathematik
-Description= KCalc ist eine Software für einen wisssenschaflichen Taschenrechner auf dem Computer-Desktop. KCalc verfügt über allgemein übliche Taschenrechnerfunktionen (auch Statistikfunktionen). Das Programm ermöglicht, Dezimal-, Hexadezimal-, Oktal- und Binärzahlen einfach ineinander umzuwandeln. KCalc bringt zahlreiche mathematische und Naturkonstanten mit und bietet das Selbstdefinieren von weiteren Konstanten an. Berechnungen können in andere Applikationen kopiert werden.
+Homepage=http://docs.kde.org/stable/de/kdeutils/kcalc/index.html

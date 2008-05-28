@@ -1,7 +1,3 @@
-Name=Lmemory
-Package=lmemory
-Description=lmemory ist das bekannte Memoryspiel mit verdeckten Bildkarten. Es gibt bei lmemory verschiedene Schwierigkeitsgrade. Als Option gibt es dar&uuml;berhinaus z.B., dass 3 gleiche Karten gefunden werden m&uuml;ssen.
-Homepage=http://lgames.sourceforge.net/index.php?project=LMemory
 Categories=Lernspiele
-DesktopPath=none
 Exec=/usr/games/lmemory
+Homepage=http://lgames.sourceforge.net/index.php?project=LMemory

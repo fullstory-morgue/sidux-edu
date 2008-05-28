@@ -1,0 +1,1 @@
+Gambas ist eine sehr leistungsfähige Entwicklungsumgebung mit einem Basic-Dialekt, die ein wenig an VisualBasic erinnert

@@ -1,7 +1,3 @@
-Name=Sonnenuhr
-Package=sunclock
-Description=SunClock stellt eine Karte von der Erde dar und zeigt an, welche Teile jeweils von der Sonne beschienen werden. Bei der Darstellung kann zwischen einem Zeitfenster und einem Kartenfenster gewechselt werden. Das Zeitfenster zeigt einen kleinen Ausschnitt (und ben&ouml;tigt weniger Arbeitsspeicher). Das Kartenfenster zeigt eine gro&szlig;e Karte und bietet eine Reihe erweiterter Funktionen an: Lokalzeit, Sonnenstand, Position des Mondes etc.
-Homepage=http://frmas.free.fr/li_1.htm
 Categories=Erdkunde
-DesktopPath=none
 Exec=/usr/bin/sunclock
+Homepage=http://frmas.free.fr/li_1.htm

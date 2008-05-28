@@ -1,6 +1,3 @@
-Name=Kino
-DesktopPath=/usr/share/applications/Kino.desktop
-Package=kino
-Homepage=http://www.kinodv.org
 Categories=Kunst
-Description=Kino ist ein Open-Source Video Editor, der es erlaubt, ein von einer Videokamera &uuml;ber einen Firewire-Anschlu&szlig; eingespieltes Video zu bearbeiten, zu schneiden, zu k&uuml;rzen, Clips einzuf&uuml;gen und vieles mehr.
+DesktopPath=/usr/share/applications/Kino.desktop
+Homepage=http://www.kinodv.org
