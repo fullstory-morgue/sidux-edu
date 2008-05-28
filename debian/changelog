@@ -6,8 +6,9 @@ sidux-edu (0.3.2) UNRELEASED; urgency=low
   [ Fabian Wuertz ]
   * pmap format changed
   * kappinstaller added 1/5
+  * kappinstaller added 2/5
 
- -- Fabian Wuertz <xadras@sidux.com>  Wed, 28 May 2008 22:19:44 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Wed, 28 May 2008 22:23:40 +0200
 
 sidux-edu (0.3.1) unstable; urgency=low
 
