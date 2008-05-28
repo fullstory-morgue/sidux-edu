@@ -14,13 +14,15 @@
 # PARTICULAR PURPOSE.
 
 @SET_MAKE@
+
+
 srcdir = @srcdir@
 top_srcdir = @top_srcdir@
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkglibdir = $(libdir)/@PACKAGE@
 pkgincludedir = $(includedir)/@PACKAGE@
-top_builddir = ../..
+top_builddir = ..
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 INSTALL = @INSTALL@
 install_sh_DATA = $(install_sh) -c -m 644
@@ -37,7 +39,8 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 target_triplet = @target@
-subdir = po/de
+bin_PROGRAMS = kappinstaller$(EXEEXT)
+subdir = kappinstaller
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/acinclude.m4 \
@@ -47,13 +50,52 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
-SOURCES =
-DIST_SOURCES =
+am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"
+binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+PROGRAMS = $(bin_PROGRAMS)
+am_kappinstaller_OBJECTS = main.$(OBJEXT)
+#>- kappinstaller_OBJECTS = $(am_kappinstaller_OBJECTS)
+#>+ 1
+kappinstaller_OBJECTS = main.$(OBJEXT)
+am__DEPENDENCIES_1 =
+kappinstaller_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	../libappinstaller/libappinstaller.la
+DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+am__depfiles_maybe = depfiles
+#>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+#>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+#>+ 2
+CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS)
+#>- LTCXXCOMPILE = $(LIBTOOL) --tag=CXX --mode=compile $(CXX) $(DEFS) \
+#>- 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+#>- 	$(AM_CXXFLAGS) $(CXXFLAGS)
+#>+ 3
+LTCXXCOMPILE = $(LIBTOOL) --tag=CXX --mode=compile $(CXX) $(DEFS) \
+	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+	$(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS)
+CXXLD = $(CXX)
+#>- CXXLINK = $(LIBTOOL) --tag=CXX --mode=link $(CXXLD) $(AM_CXXFLAGS) \
+#>- 	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+#>+ 2
+CXXLINK = $(LIBTOOL) --tag=CXX --mode=link $(CXXLD) $(AM_CXXFLAGS) \
+	$(CXXFLAGS) $(KDE_CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+SOURCES = $(kappinstaller_SOURCES)
+DIST_SOURCES = $(kappinstaller_SOURCES)
+am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+am__vpath_adj = case $$p in \
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
+  esac;
+am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+xdg_appsDATA_INSTALL = $(INSTALL_DATA)
+DATA = $(xdg_apps_DATA)
+ETAGS = etags
+CTAGS = ctags
 #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 #>+ 1
-#>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
-#>+ 1
-DISTFILES = $(GMOFILES) $(POFILES) $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
 ACLOCAL = @ACLOCAL@
 AMDEP_FALSE = @AMDEP_FALSE@
 AMDEP_TRUE = @AMDEP_TRUE@
@@ -298,16 +340,31 @@ x_libraries = @x_libraries@
 xdg_appsdir = @xdg_appsdir@
 xdg_directorydir = @xdg_directorydir@
 xdg_menudir = @xdg_menudir@
-KDE_LANG = de
-#>- POFILES = AUTO
-#>+ 2
-POFILES = sidux-edu-applyChanges.po appinstaller.po
-GMOFILES = sidux-edu-applyChanges.gmo appinstaller.gmo
+
+# set the include path for X, qt and KDE
+AM_CPPFLAGS = $(all_includes)
+
+# these are the headers for your project
+#noinst_HEADERS = 
+
+# let automoc handle all of the meta source files (moc)
+#>- METASOURCES = AUTO
+KDE_ICON = AUTO
+
+# the application source, library search path, and link libraries
+kappinstaller_SOURCES = main.cpp
+kappinstaller_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
+kappinstaller_LDADD = $(LIB_KDEUI) ../libappinstaller/libappinstaller.la
+
+# application
+xdg_apps_DATA = kappinstaller.desktop
+sharedir = $(pkgdatadir)
 #>- all: all-am
 #>+ 1
-all: all-nls docs-am  all-am
+all: docs-am  all-am
 
 .SUFFIXES:
+.SUFFIXES: .cpp .lo .o .obj
 $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 #>- 	@for dep in $?; do \
 #>- 	  case '$(am__configure_deps)' in \
@@ -317,9 +374,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 #>- 	      exit 1;; \
 #>- 	  esac; \
 #>- 	done; \
-#>- 	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  po/de/Makefile'; \
+#>- 	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  kappinstaller/Makefile'; \
 #>- 	cd $(top_srcdir) && \
-#>- 	  $(AUTOMAKE) --gnu  po/de/Makefile
+#>- 	  $(AUTOMAKE) --gnu  kappinstaller/Makefile
 #>+ 12
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
@@ -329,10 +386,10 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  po/de/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  kappinstaller/Makefile'; \
 	cd $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu  po/de/Makefile
-	cd $(top_srcdir) && perl admin/am_edit po/de/Makefile.in
+	  $(AUTOMAKE) --gnu  kappinstaller/Makefile
+	cd $(top_srcdir) && perl admin/am_edit kappinstaller/Makefile.in
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
@@ -350,6 +407,66 @@ $(top_srcdir)/configure:  $(am__configure_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+install-binPROGRAMS: $(bin_PROGRAMS)
+	@$(NORMAL_INSTALL)
+	test -z "$(bindir)" || $(mkdir_p) "$(DESTDIR)$(bindir)"
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
+	  if test -f $$p \
+	     || test -f $$p1 \
+	  ; then \
+	    f=`echo "$$p1" | sed 's,^.*/,,;$(transform);s/$$/$(EXEEXT)/'`; \
+	   echo " $(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(binPROGRAMS_INSTALL) '$$p' '$(DESTDIR)$(bindir)/$$f'"; \
+	   $(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(binPROGRAMS_INSTALL) "$$p" "$(DESTDIR)$(bindir)/$$f" || exit 1; \
+	  else :; fi; \
+	done
+
+uninstall-binPROGRAMS:
+	@$(NORMAL_UNINSTALL)
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  f=`echo "$$p" | sed 's,^.*/,,;s/$(EXEEXT)$$//;$(transform);s/$$/$(EXEEXT)/'`; \
+	  echo " rm -f '$(DESTDIR)$(bindir)/$$f'"; \
+	  rm -f "$(DESTDIR)$(bindir)/$$f"; \
+	done
+
+clean-binPROGRAMS:
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  f=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
+	  echo " rm -f $$p $$f"; \
+	  rm -f $$p $$f ; \
+	done
+kappinstaller$(EXEEXT): $(kappinstaller_OBJECTS) $(kappinstaller_DEPENDENCIES) 
+	@rm -f kappinstaller$(EXEEXT)
+	$(CXXLINK) $(kappinstaller_LDFLAGS) $(kappinstaller_OBJECTS) $(kappinstaller_LDADD) $(LIBS)
+
+mostlyclean-compile:
+	-rm -f *.$(OBJEXT)
+
+distclean-compile:
+	-rm -f *.tab.c
+
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
+
+.cpp.o:
+@am__fastdepCXX_TRUE@	if $(CXXCOMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ $<; \
+@am__fastdepCXX_TRUE@	then mv -f "$(DEPDIR)/$*.Tpo" "$(DEPDIR)/$*.Po"; else rm -f "$(DEPDIR)/$*.Tpo"; exit 1; fi
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(CXXCOMPILE) -c -o $@ $<
+
+.cpp.obj:
+@am__fastdepCXX_TRUE@	if $(CXXCOMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ `$(CYGPATH_W) '$<'`; \
+@am__fastdepCXX_TRUE@	then mv -f "$(DEPDIR)/$*.Tpo" "$(DEPDIR)/$*.Po"; else rm -f "$(DEPDIR)/$*.Tpo"; exit 1; fi
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+
+.cpp.lo:
+@am__fastdepCXX_TRUE@	if $(LTCXXCOMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ $<; \
+@am__fastdepCXX_TRUE@	then mv -f "$(DEPDIR)/$*.Tpo" "$(DEPDIR)/$*.Plo"; else rm -f "$(DEPDIR)/$*.Tpo"; exit 1; fi
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(LTCXXCOMPILE) -c -o $@ $<
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -360,16 +477,73 @@ clean-libtool:
 distclean-libtool:
 	-rm -f libtool
 uninstall-info-am:
+install-xdg_appsDATA: $(xdg_apps_DATA)
+	@$(NORMAL_INSTALL)
+	test -z "$(xdg_appsdir)" || $(mkdir_p) "$(DESTDIR)$(xdg_appsdir)"
+	@list='$(xdg_apps_DATA)'; for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  f=$(am__strip_dir) \
+	  echo " $(xdg_appsDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(xdg_appsdir)/$$f'"; \
+	  $(xdg_appsDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(xdg_appsdir)/$$f"; \
+	done
+
+uninstall-xdg_appsDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(xdg_apps_DATA)'; for p in $$list; do \
+	  f=$(am__strip_dir) \
+	  echo " rm -f '$(DESTDIR)$(xdg_appsdir)/$$f'"; \
+	  rm -f "$(DESTDIR)$(xdg_appsdir)/$$f"; \
+	done
+
+ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
+	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	mkid -fID $$unique
 tags: TAGS
-TAGS:
 
+TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
+		$(TAGS_FILES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	list='$(SOURCES) $(HEADERS)  $(LISP) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	if test -z "$(ETAGS_ARGS)$$tags$$unique"; then :; else \
+	  test -n "$$unique" || unique=$$empty_fix; \
+	  $(ETAGS) $(ETAGSFLAGS) $(AM_ETAGSFLAGS) $(ETAGS_ARGS) \
+	    $$tags $$unique; \
+	fi
 ctags: CTAGS
-CTAGS:
+CTAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
+		$(TAGS_FILES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	list='$(SOURCES) $(HEADERS)  $(LISP) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	  done | \
+	  $(AWK) '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	test -z "$(CTAGS_ARGS)$$tags$$unique" \
+	  || $(CTAGS) $(CTAGSFLAGS) $(AM_CTAGSFLAGS) $(CTAGS_ARGS) \
+	     $$tags $$unique
 
+GTAGS:
+	here=`$(am__cd) $(top_builddir) && pwd` \
+	  && cd $(top_srcdir) \
+	  && gtags -i $(GTAGS_ARGS) $$here
 
-#>- distdir: $(DISTFILES)
-#>+ 1
-distdir: distdir-nls  $(DISTFILES)
+distclean-tags:
+	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+
+distdir: $(DISTFILES)
 	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
 	topsrcdirstrip=`echo "$(top_srcdir)" | sed 's|.|.|g'`; \
 	list='$(DISTFILES)'; for file in $$list; do \
@@ -398,14 +572,15 @@ distdir: distdir-nls  $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile
+all-am: Makefile $(PROGRAMS) $(DATA)
 installdirs:
+	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"; do \
+	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+	done
 install: install-am
 install-exec: install-exec-am
 install-data: install-data-am
-#>- uninstall: uninstall-am
-#>+ 1
-uninstall: uninstall-nls  uninstall-am
+uninstall: uninstall-am
 
 install-am: all-am
 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
@@ -426,13 +601,19 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
-#>- clean-am: clean-generic clean-libtool mostlyclean-am
+#>- clean: clean-am
 #>+ 1
-clean-am: clean-bcheck  clean-generic clean-libtool mostlyclean-am
+clean: kde-rpo-clean  clean-am
+
+#>- clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
+#>+ 1
+clean-am: clean-bcheck  clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 
 distclean: distclean-am
+	-rm -rf ./$(DEPDIR)
 	-rm -f Makefile
-distclean-am: clean-am distclean-generic distclean-libtool
+distclean-am: clean-am distclean-compile distclean-generic \
+	distclean-libtool distclean-tags
 
 dvi: dvi-am
 
@@ -444,11 +625,9 @@ info: info-am
 
 info-am:
 
-#>- install-data-am:
-#>+ 1
-install-data-am: install-nls 
+install-data-am: install-data-local install-xdg_appsDATA
 
-install-exec-am:
+install-exec-am: install-binPROGRAMS
 
 install-info: install-info-am
 
@@ -456,15 +635,15 @@ install-man:
 
 installcheck-am:
 
-#>- maintainer-clean: maintainer-clean-am
-#>+ 1
-maintainer-clean: clean-nls  maintainer-clean-am
+maintainer-clean: maintainer-clean-am
+	-rm -rf ./$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
 mostlyclean: mostlyclean-am
 
-mostlyclean-am: mostlyclean-generic mostlyclean-libtool
+mostlyclean-am: mostlyclean-compile mostlyclean-generic \
+	mostlyclean-libtool
 
 pdf: pdf-am
 
@@ -474,69 +653,32 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-info-am
+uninstall-am: uninstall-binPROGRAMS uninstall-info-am \
+	uninstall-xdg_appsDATA
 
-.PHONY: all all-am check check-am clean clean-generic clean-libtool \
-	distclean distclean-generic distclean-libtool distdir dvi \
+.PHONY: CTAGS GTAGS all all-am check check-am clean clean-binPROGRAMS \
+	clean-generic clean-libtool ctags distclean distclean-compile \
+	distclean-generic distclean-libtool distclean-tags distdir dvi \
 	dvi-am html html-am info info-am install install-am \
-	install-data install-data-am install-exec install-exec-am \
-	install-info install-info-am install-man install-strip \
+	install-binPROGRAMS install-data install-data-am \
+	install-data-local install-exec install-exec-am install-info \
+	install-info-am install-man install-strip install-xdg_appsDATA \
 	installcheck installcheck-am installdirs maintainer-clean \
-	maintainer-clean-generic mostlyclean mostlyclean-generic \
-	mostlyclean-libtool pdf pdf-am ps ps-am uninstall uninstall-am \
-	uninstall-info-am
+	maintainer-clean-generic mostlyclean mostlyclean-compile \
+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+	tags uninstall uninstall-am uninstall-binPROGRAMS \
+	uninstall-info-am uninstall-xdg_appsDATA
 
-
-#>- clean:
-#>+ 1
-clean: kde-rpo-clean 
-	rm -f *.gmo
+install-data-local:
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller
+	cp -aR $(srcdir)/lists $(DESTDIR)$(sharedir)/kappinstaller/
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=sidux-edu-applyChanges.gmo Makefile.in appinstaller.po sidux-edu-applyChanges.po Makefile.am 
-
-#>+ 7
-sidux-edu-applyChanges.gmo: sidux-edu-applyChanges.po
-	rm -f sidux-edu-applyChanges.gmo; $(GMSGFMT) -o sidux-edu-applyChanges.gmo $(srcdir)/sidux-edu-applyChanges.po
-	test ! -f sidux-edu-applyChanges.gmo || touch sidux-edu-applyChanges.gmo
-appinstaller.gmo: appinstaller.po
-	rm -f appinstaller.gmo; $(GMSGFMT) -o appinstaller.gmo $(srcdir)/appinstaller.po
-	test ! -f appinstaller.gmo || touch appinstaller.gmo
-
-#>+ 3
-clean-nls:
-	-rm -f  sidux-edu-applyChanges.gmo appinstaller.gmo
-
-#>+ 10
-install-nls:
-	$(mkinstalldirs) $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES
-	@for base in sidux-edu-applyChanges appinstaller ; do \
-	  echo $(INSTALL_DATA) $$base.gmo $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/$$base.mo ;\
-	  if test -f $$base.gmo; then $(INSTALL_DATA) $$base.gmo $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/$$base.mo ;\
-	  elif test -f $(srcdir)/$$base.gmo; then $(INSTALL_DATA) $(srcdir)/$$base.gmo $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/$$base.mo ;\
-	  fi ;\
-	done
-
-
-#>+ 4
-uninstall-nls:
-	rm -f $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/sidux-edu-applyChanges.mo
-	rm -f $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/appinstaller.mo
-
-#>+ 2
-all-nls: $(GMOFILES)
-
-#>+ 8
-distdir-nls:$(GMOFILES)
-	for file in $(POFILES); do \
-	  cp $(srcdir)/$$file $(distdir); \
-	done
-	for file in $(GMOFILES); do \
-	  cp $(srcdir)/$$file $(distdir); \
-	done
+KDE_DIST=kappinstaller Makefile.am Makefile.in kappinstaller.desktop 
 
 #>+ 2
 docs-am:
@@ -551,10 +693,10 @@ force-reedit:
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  po/de/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  kappinstaller/Makefile'; \
 	cd $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu  po/de/Makefile
-	cd $(top_srcdir) && perl admin/am_edit po/de/Makefile.in
+	  $(AUTOMAKE) --gnu  kappinstaller/Makefile
+	cd $(top_srcdir) && perl admin/am_edit kappinstaller/Makefile.in
 
 
 #>+ 21
@@ -569,7 +711,7 @@ bcheck-am:
 	        echo "int main() {return 0;}" > $$i.bchecktest.cc ; \
 	        echo "#include \"$$i\"" >> $$i.bchecktest.cc ; \
 	        echo "$$i"; \
-	        if ! $(CXX) $(DEFS) -I. -I$(srcdir) -I$(top_builddir) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS)  --dump-class-hierarchy -c $$i.bchecktest.cc; then \
+	        if ! $(CXXCOMPILE)  --dump-class-hierarchy -c $$i.bchecktest.cc; then \
 	            rm -f $$i.bchecktest.cc; exit 1; \
 	        fi ; \
 	        echo "" >> $$i.bchecktest.cc.class; \

@@ -39,10 +39,9 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 target_triplet = @target@
-bin_PROGRAMS = sidux-edu-applyChanges$(EXEEXT)
-subdir = applyChanges
-DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
-	$(srcdir)/Makefile.in
+bin_PROGRAMS = sidux-edu$(EXEEXT)
+subdir = edu
+DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/acinclude.m4 \
 	$(top_srcdir)/configure.in
@@ -51,18 +50,16 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
-am__installdirs = "$(DESTDIR)$(bindir)"
+am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
-am_sidux_edu_applyChanges_OBJECTS = ac.$(OBJEXT) main.$(OBJEXT)
-#>- sidux_edu_applyChanges_OBJECTS = $(am_sidux_edu_applyChanges_OBJECTS)
-#>+ 4
-sidux_edu_applyChanges_final_OBJECTS = sidux_edu_applyChanges.all_cpp.o 
-sidux_edu_applyChanges_nofinal_OBJECTS = ac.$(OBJEXT) main.$(OBJEXT) acdialog.$(OBJEXT)
-@KDE_USE_FINAL_FALSE@sidux_edu_applyChanges_OBJECTS = $(sidux_edu_applyChanges_nofinal_OBJECTS)
-@KDE_USE_FINAL_TRUE@sidux_edu_applyChanges_OBJECTS = $(sidux_edu_applyChanges_final_OBJECTS)
+am_sidux_edu_OBJECTS = main.$(OBJEXT)
+#>- sidux_edu_OBJECTS = $(am_sidux_edu_OBJECTS)
+#>+ 1
+sidux_edu_OBJECTS = main.$(OBJEXT)
 am__DEPENDENCIES_1 =
-sidux_edu_applyChanges_DEPENDENCIES = $(am__DEPENDENCIES_1)
+sidux_edu_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	../libappinstaller/libappinstaller.la
 DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
 am__depfiles_maybe = depfiles
@@ -84,9 +81,16 @@ CXXLD = $(CXX)
 #>+ 2
 CXXLINK = $(LIBTOOL) --tag=CXX --mode=link $(CXXLD) $(AM_CXXFLAGS) \
 	$(CXXFLAGS) $(KDE_CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-SOURCES = $(sidux_edu_applyChanges_SOURCES)
-DIST_SOURCES = $(sidux_edu_applyChanges_SOURCES)
-HEADERS = $(noinst_HEADERS)
+SOURCES = $(sidux_edu_SOURCES)
+DIST_SOURCES = $(sidux_edu_SOURCES)
+am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+am__vpath_adj = case $$p in \
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
+  esac;
+am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+xdg_appsDATA_INSTALL = $(INSTALL_DATA)
+DATA = $(xdg_apps_DATA)
 ETAGS = etags
 CTAGS = ctags
 #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -341,18 +345,20 @@ xdg_menudir = @xdg_menudir@
 AM_CPPFLAGS = $(all_includes)
 
 # these are the headers for your project
-noinst_HEADERS = ac.h
+#noinst_HEADERS = edu.h unique.h systray.h
 
 # let automoc handle all of the meta source files (moc)
 #>- METASOURCES = AUTO
 KDE_ICON = AUTO
 
 # the application source, library search path, and link libraries
-#>- sidux_edu_applyChanges_SOURCES = ac.cpp acdialog.ui main.cpp
-#>+ 1
-sidux_edu_applyChanges_SOURCES=ac.cpp  main.cpp acdialog.cpp
-sidux_edu_applyChanges_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
-sidux_edu_applyChanges_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
+sidux_edu_SOURCES = main.cpp
+sidux_edu_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
+sidux_edu_LDADD = $(LIB_KDEUI) ../libappinstaller/libappinstaller.la
+
+# application
+xdg_apps_DATA = sidux-edu.desktop
+#bin_SCRIPTS = siduxEduInstallApp
 sharedir = $(pkgdatadir)
 #>- all: all-am
 #>+ 1
@@ -369,9 +375,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 #>- 	      exit 1;; \
 #>- 	  esac; \
 #>- 	done; \
-#>- 	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  applyChanges/Makefile'; \
+#>- 	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  edu/Makefile'; \
 #>- 	cd $(top_srcdir) && \
-#>- 	  $(AUTOMAKE) --gnu  applyChanges/Makefile
+#>- 	  $(AUTOMAKE) --gnu  edu/Makefile
 #>+ 12
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
@@ -381,10 +387,10 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  applyChanges/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  edu/Makefile'; \
 	cd $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu  applyChanges/Makefile
-	cd $(top_srcdir) && perl admin/am_edit applyChanges/Makefile.in
+	  $(AUTOMAKE) --gnu  edu/Makefile
+	cd $(top_srcdir) && perl admin/am_edit edu/Makefile.in
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
@@ -430,9 +436,9 @@ clean-binPROGRAMS:
 	  echo " rm -f $$p $$f"; \
 	  rm -f $$p $$f ; \
 	done
-sidux-edu-applyChanges$(EXEEXT): $(sidux_edu_applyChanges_OBJECTS) $(sidux_edu_applyChanges_DEPENDENCIES) 
-	@rm -f sidux-edu-applyChanges$(EXEEXT)
-	$(CXXLINK) $(sidux_edu_applyChanges_LDFLAGS) $(sidux_edu_applyChanges_OBJECTS) $(sidux_edu_applyChanges_LDADD) $(LIBS)
+sidux-edu$(EXEEXT): $(sidux_edu_OBJECTS) $(sidux_edu_DEPENDENCIES) 
+	@rm -f sidux-edu$(EXEEXT)
+	$(CXXLINK) $(sidux_edu_LDFLAGS) $(sidux_edu_OBJECTS) $(sidux_edu_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -440,7 +446,6 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ac.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
 
 .cpp.o:
@@ -473,6 +478,23 @@ clean-libtool:
 distclean-libtool:
 	-rm -f libtool
 uninstall-info-am:
+install-xdg_appsDATA: $(xdg_apps_DATA)
+	@$(NORMAL_INSTALL)
+	test -z "$(xdg_appsdir)" || $(mkdir_p) "$(DESTDIR)$(xdg_appsdir)"
+	@list='$(xdg_apps_DATA)'; for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  f=$(am__strip_dir) \
+	  echo " $(xdg_appsDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(xdg_appsdir)/$$f'"; \
+	  $(xdg_appsDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(xdg_appsdir)/$$f"; \
+	done
+
+uninstall-xdg_appsDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(xdg_apps_DATA)'; for p in $$list; do \
+	  f=$(am__strip_dir) \
+	  echo " rm -f '$(DESTDIR)$(xdg_appsdir)/$$f'"; \
+	  rm -f "$(DESTDIR)$(xdg_appsdir)/$$f"; \
+	done
 
 ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
@@ -551,9 +573,9 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile $(PROGRAMS) $(HEADERS)
+all-am: Makefile $(PROGRAMS) $(DATA)
 installdirs:
-	for dir in "$(DESTDIR)$(bindir)"; do \
+	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"; do \
 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
 	done
 install: install-am
@@ -586,7 +608,7 @@ clean: kde-rpo-clean  clean-am
 
 #>- clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 #>+ 1
-clean-am: clean-metasources clean-ui clean-bcheck clean-final  clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
+clean-am: clean-bcheck  clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 
 distclean: distclean-am
 	-rm -rf ./$(DEPDIR)
@@ -604,7 +626,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-data-local
+install-data-am: install-data-local install-xdg_appsDATA
 
 install-exec-am: install-binPROGRAMS
 
@@ -632,7 +654,8 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-binPROGRAMS uninstall-info-am
+uninstall-am: uninstall-binPROGRAMS uninstall-info-am \
+	uninstall-xdg_appsDATA
 
 .PHONY: CTAGS GTAGS all all-am check check-am clean clean-binPROGRAMS \
 	clean-generic clean-libtool ctags distclean distclean-compile \
@@ -640,43 +663,23 @@ uninstall-am: uninstall-binPROGRAMS uninstall-info-am
 	dvi-am html html-am info info-am install install-am \
 	install-binPROGRAMS install-data install-data-am \
 	install-data-local install-exec install-exec-am install-info \
-	install-info-am install-man install-strip installcheck \
-	installcheck-am installdirs maintainer-clean \
+	install-info-am install-man install-strip install-xdg_appsDATA \
+	installcheck installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags uninstall uninstall-am uninstall-binPROGRAMS \
-	uninstall-info-am
+	uninstall-info-am uninstall-xdg_appsDATA
 
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
-	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/
-
-# translation
-messages: rc.cpp
-	$(EXTRACTRC) `find . -name \*.ui -o -name \*.rc` > rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/sidux-edu-applyChanges.pot
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/edu
+	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/edu/
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
-#>+ 3
-ac.moc: $(srcdir)/ac.h
-	$(MOC) $(srcdir)/ac.h -o ac.moc
-
 #>+ 2
-mocs: ac.moc
-
-#>+ 3
-clean-metasources:
-	-rm -f  ac.moc
-
-#>+ 2
-KDE_DIST=Makefile.in acdialog.ui Makefile.am 
-
-#>+ 4
-clean-ui:
-	-rm -f \
-	acdialog.cpp acdialog.h acdialog.moc 
+KDE_DIST=sidux-edu.desktop Makefile.am sidux-edu Makefile.in 
 
 #>+ 2
 docs-am:
@@ -691,10 +694,10 @@ force-reedit:
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  applyChanges/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  edu/Makefile'; \
 	cd $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu  applyChanges/Makefile
-	cd $(top_srcdir) && perl admin/am_edit applyChanges/Makefile.in
+	  $(AUTOMAKE) --gnu  edu/Makefile
+	cd $(top_srcdir) && perl admin/am_edit edu/Makefile.in
 
 
 #>+ 21
@@ -719,62 +722,26 @@ bcheck-am:
 	done
 
 
-#>+ 11
-sidux_edu_applyChanges.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/ac.cpp $(srcdir)/main.cpp acdialog.cpp  ac.moc acdialog.moc
-	@echo 'creating sidux_edu_applyChanges.all_cpp.cpp ...'; \
-	rm -f sidux_edu_applyChanges.all_cpp.files sidux_edu_applyChanges.all_cpp.final; \
-	echo "#define KDE_USE_FINAL 1" >> sidux_edu_applyChanges.all_cpp.final; \
-	for file in ac.cpp main.cpp acdialog.cpp ; do \
-	  echo "#include \"$$file\"" >> sidux_edu_applyChanges.all_cpp.files; \
-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> sidux_edu_applyChanges.all_cpp.final; \
-	done; \
-	cat sidux_edu_applyChanges.all_cpp.final sidux_edu_applyChanges.all_cpp.files > sidux_edu_applyChanges.all_cpp.cpp; \
-	rm -f sidux_edu_applyChanges.all_cpp.final sidux_edu_applyChanges.all_cpp.files
-
-#>+ 3
-clean-final:
-	-rm -f sidux_edu_applyChanges.all_cpp.cpp
-
 #>+ 3
 final:
-	$(MAKE) sidux_edu_applyChanges_OBJECTS="$(sidux_edu_applyChanges_final_OBJECTS)" all-am
+	$(MAKE) all-am
 
 #>+ 3
 final-install:
-	$(MAKE) sidux_edu_applyChanges_OBJECTS="$(sidux_edu_applyChanges_final_OBJECTS)" install-am
+	$(MAKE) install-am
 
 #>+ 3
 no-final:
-	$(MAKE) sidux_edu_applyChanges_OBJECTS="$(sidux_edu_applyChanges_nofinal_OBJECTS)" all-am
+	$(MAKE) all-am
 
 #>+ 3
 no-final-install:
-	$(MAKE) sidux_edu_applyChanges_OBJECTS="$(sidux_edu_applyChanges_nofinal_OBJECTS)" install-am
+	$(MAKE) install-am
 
 #>+ 3
 kde-rpo-clean:
 	-rm -f *.rpo
 
-#>+ 7
+#>+ 3
 nmcheck: 
 nmcheck-am: nmcheck
-$(srcdir)/main.cpp: acdialog.h 
-ac.lo: ac.moc 
-ac.o: ac.moc 
-$(srcdir)/ac.cpp: acdialog.h 
-
-#>+ 15
-acdialog.cpp: $(srcdir)/acdialog.ui acdialog.h acdialog.moc
-	rm -f acdialog.cpp
-	echo '#include <kdialog.h>' > acdialog.cpp
-	echo '#include <klocale.h>' >> acdialog.cpp
-	$(UIC) -tr ${UIC_TR} -i acdialog.h $(srcdir)/acdialog.ui > acdialog.cpp.temp ; ret=$$?; \
-	$(PERL) -pe "s,${UIC_TR}( \"\" ),QString::null,g" acdialog.cpp.temp | $(PERL) -pe "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | $(PERL) -pe "s,image([0-9][0-9]*)_data,img\$$1_acdialog,g" | $(PERL) -pe "s,: QWizard\(,: KWizard(,g" >> acdialog.cpp ;\
-	rm -f acdialog.cpp.temp ;\
-	if test "$$ret" = 0; then echo '#include "acdialog.moc"' >> acdialog.cpp; else rm -f acdialog.cpp ; exit $$ret ; fi
-
-acdialog.h: $(srcdir)/acdialog.ui
-	rm -rf acdialog.h;
-	$(UIC) $(srcdir)/acdialog.ui | $(PERL) -pi -e "s,public QWizard,public KWizard,g; s,#include <qwizard.h>,#include <kwizard.h>,g" >> acdialog.h ;
-acdialog.moc: acdialog.h
-	$(MOC) acdialog.h -o acdialog.moc

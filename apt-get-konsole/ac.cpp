@@ -21,6 +21,7 @@
 #include <qpushbutton.h>
 #include <qprogressbar.h>
 #include <qsound.h>
+#include <qapplication.h>
 
 #include <ac.h>
 
@@ -52,7 +53,7 @@ ac::ac(const QString &changes, QWidget *parent, const char *name, const QStringL
 	j=0;
 	firstdownload = TRUE;
 
-	connect( konsole, SIGNAL( receivedData( const QString& ) ), SLOT( shellExited( const QString&) ) );
+	connect( konsole, SIGNAL( receivedData( const QString& ) ), SLOT( shellOutput( const QString&) ) );
 	connect( konsole, SIGNAL( destroyed() ), SLOT( close() ) );
 }
 
@@ -74,7 +75,7 @@ void ac::details()
 }
 
 
-void ac::shellExited(const QString& txt)
+void ac::shellOutput(const QString& txt)
 {
 	if( ! step )
 		step = 80/(QStringList::split( " ", changes2 ).count()*2);
@@ -91,7 +92,10 @@ void ac::shellExited(const QString& txt)
 	else if( txt.contains("[Y/n]") or txt.contains( i18n("[Y/n]") ) )
 	{
 		if( !borderFrame->isShown() )
+		{
 			details();
+			QApplication::beep();
+		}
 	}
 	else if( txt.contains("Get") or txt.contains("Fetched") or txt.contains(i18n("Get") ) or txt.contains("Fetched") )
 	{
@@ -108,6 +112,7 @@ void ac::shellExited(const QString& txt)
 	{
 	 	j = 100;
 		closePushButton->setEnabled(TRUE);
+		QApplication::beep();
 	}
 
 	progressBar1->setProgress(j);

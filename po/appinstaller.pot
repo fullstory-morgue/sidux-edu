@@ -1,0 +1,427 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-05-28 18:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. i18n: file ./edudialog.ui line 37
+#. i18n: file ./kappinstallerdialog.ui line 37
+#: edudialog.cpp:3395 edudialog.cpp:3695 kappinstallerdialog.cpp:422
+#: kappinstallerdialog.cpp:663 rc.cpp:6 rc.cpp:172
+#, no-c-format
+msgid "Category"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 284
+#. i18n: file ./edudialog.ui line 295
+#. i18n: file ./edudialog.ui line 306
+#. i18n: file ./kappinstallerdialog.ui line 339
+#. i18n: file ./kappinstallerdialog.ui line 350
+#. i18n: file ./kappinstallerdialog.ui line 361
+#: edudialog.cpp:3463 edudialog.cpp:3464 edudialog.cpp:3465 edudialog.cpp:3708
+#: edudialog.cpp:3709 edudialog.cpp:3710 kappinstallerdialog.cpp:498
+#: kappinstallerdialog.cpp:499 kappinstallerdialog.cpp:500
+#: kappinstallerdialog.cpp:682 kappinstallerdialog.cpp:683
+#: kappinstallerdialog.cpp:684 rc.cpp:40 rc.cpp:43 rc.cpp:46 rc.cpp:217
+#: rc.cpp:220 rc.cpp:223
+#, no-c-format
+msgid "*"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 583
+#. i18n: file ./kappinstallerdialog.ui line 447
+#: edudialog.cpp:3542 edudialog.cpp:3720 kappinstallerdialog.cpp:521
+#: kappinstallerdialog.cpp:687 rc.cpp:76 rc.cpp:232
+#, no-c-format
+msgid "ID"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 594
+#. i18n: file ./kappinstallerdialog.ui line 458
+#: edudialog.cpp:3543 edudialog.cpp:3721 kappinstallerdialog.cpp:522
+#: kappinstallerdialog.cpp:688 rc.cpp:79 rc.cpp:235
+#, no-c-format
+msgid "Name"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 605
+#. i18n: file ./kappinstallerdialog.ui line 469
+#: edudialog.cpp:3544 edudialog.cpp:3722 kappinstallerdialog.cpp:523
+#: kappinstallerdialog.cpp:689 rc.cpp:82 rc.cpp:238
+#, no-c-format
+msgid "Categories"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 616
+#. i18n: file ./kappinstallerdialog.ui line 480
+#: edudialog.cpp:3545 edudialog.cpp:3723 kappinstallerdialog.cpp:524
+#: kappinstallerdialog.cpp:690 rc.cpp:85 rc.cpp:241
+#, no-c-format
+msgid "Package"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 627
+#. i18n: file ./kappinstallerdialog.ui line 491
+#: edudialog.cpp:3546 edudialog.cpp:3724 kappinstallerdialog.cpp:525
+#: kappinstallerdialog.cpp:691 rc.cpp:88 rc.cpp:244
+#, no-c-format
+msgid "Status"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 638
+#. i18n: file ./kappinstallerdialog.ui line 502
+#: edudialog.cpp:3547 edudialog.cpp:3725 kappinstallerdialog.cpp:526
+#: kappinstallerdialog.cpp:692 rc.cpp:91 rc.cpp:247
+#, no-c-format
+msgid "Exec"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 649
+#. i18n: file ./kappinstallerdialog.ui line 513
+#: edudialog.cpp:3548 edudialog.cpp:3726 kappinstallerdialog.cpp:527
+#: kappinstallerdialog.cpp:693 rc.cpp:94 rc.cpp:250
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 660
+#. i18n: file ./kappinstallerdialog.ui line 524
+#: edudialog.cpp:3549 edudialog.cpp:3727 kappinstallerdialog.cpp:528
+#: kappinstallerdialog.cpp:694 rc.cpp:97 rc.cpp:253
+#, no-c-format
+msgid "Homepage"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 671
+#. i18n: file ./kappinstallerdialog.ui line 535
+#: edudialog.cpp:3550 edudialog.cpp:3728 kappinstallerdialog.cpp:529
+#: kappinstallerdialog.cpp:695 rc.cpp:100 rc.cpp:256
+#, no-c-format
+msgid "Terminal"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 682
+#. i18n: file ./kappinstallerdialog.ui line 546
+#: edudialog.cpp:3551 edudialog.cpp:3729 kappinstallerdialog.cpp:530
+#: kappinstallerdialog.cpp:696 rc.cpp:103 rc.cpp:259
+#, no-c-format
+msgid "Icon"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 693
+#: edudialog.cpp:3552 edudialog.cpp:3730 rc.cpp:106
+#, no-c-format
+msgid "hasExample"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 25
+#: edudialog.cpp:3694 rc.cpp:3
+#, no-c-format
+msgid "sidux-seminarix-Programmstarter"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 149
+#. i18n: file ./kappinstallerdialog.ui line 129
+#: edudialog.cpp:3697 kappinstallerdialog.cpp:665 rc.cpp:10 rc.cpp:176
+#, no-c-format
+msgid "Search:"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 180
+#. i18n: file ./kappinstallerdialog.ui line 203
+#: edudialog.cpp:3699 kappinstallerdialog.cpp:669 rc.cpp:13 rc.cpp:183
+#, no-c-format
+msgid "All Applications"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 185
+#: edudialog.cpp:3700 rc.cpp:16
+#, no-c-format
+msgid "Installed applications only"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 190
+#: edudialog.cpp:3701 rc.cpp:19
+#, no-c-format
+msgid "Not installed applications only"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 238
+#. i18n: file ./kappinstallerdialog.ui line 278
+#: edudialog.cpp:3702 kappinstallerdialog.cpp:676 rc.cpp:22 rc.cpp:201
+#, no-c-format
+msgid "St&art"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 241
+#. i18n: file ./kappinstallerdialog.ui line 281
+#: edudialog.cpp:3703 kappinstallerdialog.cpp:677 rc.cpp:25 rc.cpp:204
+#, no-c-format
+msgid "Alt+A"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 255
+#. i18n: file ./kappinstallerdialog.ui line 295
+#: edudialog.cpp:3704 kappinstallerdialog.cpp:678 rc.cpp:28 rc.cpp:207
+#, no-c-format
+msgid "H&omepage"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 258
+#. i18n: file ./edudialog.ui line 494
+#. i18n: file ./kappinstallerdialog.ui line 298
+#. i18n: file ./kappinstallerdialog.ui line 748
+#: edudialog.cpp:3705 edudialog.cpp:3719 kappinstallerdialog.cpp:679
+#: kappinstallerdialog.cpp:704 rc.cpp:31 rc.cpp:73 rc.cpp:210 rc.cpp:283
+#, no-c-format
+msgid "Alt+O"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 272
+#: edudialog.cpp:3706 rc.cpp:34
+#, no-c-format
+msgid "E&xample file(s)"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 275
+#: edudialog.cpp:3707 rc.cpp:37
+#, no-c-format
+msgid "Alt+X"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 350
+#: edudialog.cpp:3711 rc.cpp:49
+#, no-c-format
+msgid "Apply Cha&nges"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 353
+#. i18n: file ./edudialog.ui line 475
+#: edudialog.cpp:3712 edudialog.cpp:3717 rc.cpp:52 rc.cpp:67
+#, no-c-format
+msgid "Alt+N"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 414
+#. i18n: file ./kappinstallerdialog.ui line 668
+#: edudialog.cpp:3713 kappinstallerdialog.cpp:698 rc.cpp:55 rc.cpp:265
+#, no-c-format
+msgid "To be removed:"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 432
+#. i18n: file ./kappinstallerdialog.ui line 686
+#: edudialog.cpp:3714 kappinstallerdialog.cpp:699 rc.cpp:58 rc.cpp:268
+#, no-c-format
+msgid "To be installed:"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 456
+#. i18n: file ./kappinstallerdialog.ui line 710
+#: edudialog.cpp:3715 kappinstallerdialog.cpp:700 rc.cpp:61 rc.cpp:271
+#, no-c-format
+msgid "<b>Apply changes?</b>"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 472
+#: edudialog.cpp:3716 rc.cpp:64
+#, no-c-format
+msgid "ca&ncel"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 491
+#. i18n: file ./kappinstallerdialog.ui line 745
+#: edudialog.cpp:3718 kappinstallerdialog.cpp:703 rc.cpp:70 rc.cpp:280
+#, no-c-format
+msgid "&ok"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 838
+#: edudialog.cpp:3731 rc.cpp:109
+#, no-c-format
+msgid "<p align=\"center\">sidux Handbuch</p>"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 878
+#: edudialog.cpp:3733 rc.cpp:113
+#, no-c-format
+msgid "<p align=\"center\">seminarix Handbuch</p>"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 935
+#: edudialog.cpp:3736 rc.cpp:118
+#, no-c-format
+msgid ""
+"<p align=\"center\">Willkommen bei sidux-Seminarix. Um einen Ueberblick "
+"ueber die mitgelieferten Programme zu gewinnen, klicken Sie einfach auf eine "
+"der Kategorien im linken Menu.</p>"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 979
+#. i18n: file ./edudialog.ui line 982
+#: edudialog.cpp:3737 edudialog.cpp:3738 rc.cpp:121 rc.cpp:124
+#, no-c-format
+msgid "sidux handbook"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 996
+#. i18n: file ./edudialog.ui line 999
+#: edudialog.cpp:3740 edudialog.cpp:3741 rc.cpp:128 rc.cpp:131
+#, no-c-format
+msgid "sidux Homepage"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 1013
+#. i18n: file ./edudialog.ui line 1016
+#. i18n: file ./edudialog.ui line 1019
+#: edudialog.cpp:3743 edudialog.cpp:3744 edudialog.cpp:3745 rc.cpp:135
+#: rc.cpp:138 rc.cpp:141 systray.cpp:46
+#, no-c-format
+msgid "About sidux-seminarix"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 1047
+#. i18n: file ./edudialog.ui line 1050
+#. i18n: file ./kappinstallerdialog.ui line 851
+#. i18n: file ./kappinstallerdialog.ui line 854
+#: edudialog.cpp:3749 edudialog.cpp:3750 kappinstallerdialog.cpp:711
+#: kappinstallerdialog.cpp:712 rc.cpp:151 rc.cpp:154 rc.cpp:302 rc.cpp:305
+#, no-c-format
+msgid "About KDE"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 1061
+#. i18n: file ./edudialog.ui line 1064
+#: edudialog.cpp:3751 edudialog.cpp:3752 rc.cpp:157 rc.cpp:160
+#, no-c-format
+msgid "sidux-seminarix handbook"
+msgstr ""
+
+#. i18n: file ./edudialog.ui line 1072
+#. i18n: file ./edudialog.ui line 1080
+#: edudialog.cpp:3753 edudialog.cpp:3754 rc.cpp:163 rc.cpp:166
+#, no-c-format
+msgid "Unnamed"
+msgstr ""
+
+#: edudialog.cpp:3758
+msgid "Handbooks"
+msgstr ""
+
+#: edudialog.cpp:3760
+msgid "Hilfe"
+msgstr ""
+
+#: kappinstaller.cpp:65
+msgid "Please use this program just if your system is up-to-date!"
+msgstr ""
+
+#: kappinstaller.cpp:892 kappinstaller.cpp:894
+msgid "en"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 557
+#: kappinstallerdialog.cpp:531 kappinstallerdialog.cpp:697 rc.cpp:262
+#, no-c-format
+msgid "DE"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 25
+#: kappinstallerdialog.cpp:662 rc.cpp:169
+#, no-c-format
+msgid "Add/Remove Applications"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 180
+#: kappinstallerdialog.cpp:667 rc.cpp:180
+#, no-c-format
+msgid "Minimize"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 208
+#: kappinstallerdialog.cpp:670 rc.cpp:186
+#, no-c-format
+msgid "Installed only"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 213
+#: kappinstallerdialog.cpp:671 rc.cpp:189
+#, no-c-format
+msgid "Not installed only"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 237
+#: kappinstallerdialog.cpp:673 rc.cpp:192
+#, no-c-format
+msgid "KDE"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 242
+#: kappinstallerdialog.cpp:674 rc.cpp:195
+#, no-c-format
+msgid "GTK"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 247
+#: kappinstallerdialog.cpp:675 rc.cpp:198
+#, no-c-format
+msgid "ALL"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 330
+#: kappinstallerdialog.cpp:680 rc.cpp:213
+#, no-c-format
+msgid ""
+"<b>Quick Introduction</b><br><br>\n"
+"Click to a category or type an keyword into the search field to browse the "
+"applications. If you want to install an application just check the box and "
+"click on the \"Apply Changes\" button."
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 425
+#: kappinstallerdialog.cpp:685 rc.cpp:226
+#, no-c-format
+msgid "Appl&y Changes"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 428
+#: kappinstallerdialog.cpp:686 rc.cpp:229
+#, no-c-format
+msgid "Alt+Y"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 726
+#: kappinstallerdialog.cpp:701 rc.cpp:274
+#, no-c-format
+msgid "&cancel"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 729
+#: kappinstallerdialog.cpp:702 rc.cpp:277
+#, no-c-format
+msgid "Alt+C"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 817
+#. i18n: file ./kappinstallerdialog.ui line 820
+#. i18n: file ./kappinstallerdialog.ui line 823
+#: kappinstallerdialog.cpp:705 kappinstallerdialog.cpp:706
+#: kappinstallerdialog.cpp:707 rc.cpp:286 rc.cpp:289 rc.cpp:292
+#, no-c-format
+msgid "About Kappinstaller"
+msgstr ""
+
+#: systray.cpp:39
+msgid "sidux-seminarix Programmstarter"
+msgstr ""

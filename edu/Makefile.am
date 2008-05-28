@@ -2,7 +2,7 @@
 AM_CPPFLAGS = $(all_includes)
 
 # these are the headers for your project
-noinst_HEADERS = edu.h unique.h systray.h fancylistviewitem.h
+#noinst_HEADERS = edu.h unique.h systray.h
 
 # let automoc handle all of the meta source files (moc)
 METASOURCES = AUTO
@@ -10,9 +10,9 @@ METASOURCES = AUTO
 KDE_ICON = AUTO
 
 # the application source, library search path, and link libraries
-sidux_edu_SOURCES = edu.cpp edudialog.ui main.cpp  unique.cpp systray.cpp fancylistviewitem.cpp
+sidux_edu_SOURCES = main.cpp
 sidux_edu_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
-sidux_edu_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
+sidux_edu_LDADD = $(LIB_KDEUI) ../libappinstaller/libappinstaller.la
 
 
 
@@ -24,10 +24,5 @@ bin_PROGRAMS = sidux-edu
 sharedir = $(pkgdatadir)
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
-	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/
-
-
-# translation
-messages: rc.cpp
-	$(EXTRACTRC) `find . -name \*.ui -o -name \*.rc` > rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/siduxedu.pot
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/edu
+	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/edu/

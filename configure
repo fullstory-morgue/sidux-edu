@@ -2572,7 +2572,7 @@ fi
 
 
 # Define the identity of the package.
- PACKAGE=sidux-edu
+ PACKAGE=appinstaller
  VERSION=0.1
 
 
@@ -33246,15 +33246,19 @@ ac_config_files="$ac_config_files Makefile"
 
 ac_config_files="$ac_config_files appdata/Makefile"
 
-ac_config_files="$ac_config_files applyChanges/Makefile"
+ac_config_files="$ac_config_files apt-get-konsole/Makefile"
+
+ac_config_files="$ac_config_files edu/Makefile"
 
 ac_config_files="$ac_config_files icons/Makefile"
+
+ac_config_files="$ac_config_files kappinstaller/Makefile"
+
+ac_config_files="$ac_config_files libappinstaller/Makefile"
 
 ac_config_files="$ac_config_files po/Makefile"
 
 ac_config_files="$ac_config_files po/de/Makefile"
-
-ac_config_files="$ac_config_files src/Makefile"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -33864,11 +33868,13 @@ do
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "appdata/Makefile") CONFIG_FILES="$CONFIG_FILES appdata/Makefile" ;;
-    "applyChanges/Makefile") CONFIG_FILES="$CONFIG_FILES applyChanges/Makefile" ;;
+    "apt-get-konsole/Makefile") CONFIG_FILES="$CONFIG_FILES apt-get-konsole/Makefile" ;;
+    "edu/Makefile") CONFIG_FILES="$CONFIG_FILES edu/Makefile" ;;
     "icons/Makefile") CONFIG_FILES="$CONFIG_FILES icons/Makefile" ;;
+    "kappinstaller/Makefile") CONFIG_FILES="$CONFIG_FILES kappinstaller/Makefile" ;;
+    "libappinstaller/Makefile") CONFIG_FILES="$CONFIG_FILES libappinstaller/Makefile" ;;
     "po/Makefile") CONFIG_FILES="$CONFIG_FILES po/Makefile" ;;
     "po/de/Makefile") CONFIG_FILES="$CONFIG_FILES po/de/Makefile" ;;
-    "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
 
   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
 echo "$as_me: error: invalid argument: $ac_config_target" >&2;}

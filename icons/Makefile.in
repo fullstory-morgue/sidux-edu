@@ -297,6 +297,7 @@ xdg_appsdir = @xdg_appsdir@
 xdg_directorydir = @xdg_directorydir@
 xdg_menudir = @xdg_menudir@
 KDE_ICON = AUTO
+sharedir = $(pkgdatadir)
 #>- all: all-am
 #>+ 1
 all: docs-am  all-am
@@ -438,9 +439,9 @@ info: info-am
 
 info-am:
 
-#>- install-data-am:
+#>- install-data-am: install-data-local
 #>+ 1
-install-data-am: install-kde-icons 
+install-data-am: install-kde-icons  install-data-local
 
 install-exec-am:
 
@@ -473,24 +474,28 @@ uninstall-am: uninstall-kde-icons  uninstall-info-am
 .PHONY: all all-am check check-am clean clean-generic clean-libtool \
 	distclean distclean-generic distclean-libtool distdir dvi \
 	dvi-am html html-am info info-am install install-am \
-	install-data install-data-am install-exec install-exec-am \
-	install-info install-info-am install-man install-strip \
-	installcheck installcheck-am installdirs maintainer-clean \
-	maintainer-clean-generic mostlyclean mostlyclean-generic \
-	mostlyclean-libtool pdf pdf-am ps ps-am uninstall uninstall-am \
-	uninstall-info-am
+	install-data install-data-am install-data-local install-exec \
+	install-exec-am install-info install-info-am install-man \
+	install-strip installcheck installcheck-am installdirs \
+	maintainer-clean maintainer-clean-generic mostlyclean \
+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+	uninstall uninstall-am uninstall-info-am
 
+install-data-local:
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/common
+	cp -aR $(srcdir)/icons $(DESTDIR)$(sharedir)/common/
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=hi32-app-seminarix_informatik.png hi48-app-siduxedu.png hi32-app-siduxedu.png hi64-app-siduxedu.png Makefile.in hi32-app-seminarix_physik.png hi32-app-seminarix_allgemein.png hi22-app-siduxedu.png hi32-app-seminarix_chemie.png hi32-app-seminarix_musik.png hi32-app-seminarix_mathematik.png hi32-app-seminarix_kunst.png hi32-app-seminarix_erdkunde.png hi32-app-seminarix_religion.png hi16-app-siduxedu.png hi32-app-seminarix_technik.png Makefile.am hi32-app-seminarix_lernspiele.png hi96-app-siduxedu.png hi32-app-seminarix_sprachen.png hi32-app-seminarix_start.png 
+KDE_DIST=hi32-app-seminarix_informatik.png hi48-app-siduxedu.png hi32-app-siduxedu.png hi64-app-siduxedu.png Makefile.in hi22-app-kappinstaller.png hi32-app-seminarix_physik.png hi32-app-seminarix_allgemein.png hi22-app-siduxedu.png hi32-app-seminarix_chemie.png hi32-app-seminarix_musik.png hi32-app-seminarix_mathematik.png hi32-app-seminarix_kunst.png hi32-app-seminarix_erdkunde.png hi32-app-kappinstaller.png hi16-app-kappinstaller.png hi32-app-seminarix_religion.png hi48-app-kappinstaller.pngu.png hi16-app-siduxedu.png hi32-app-seminarix_technik.png hi32-app-seminarix_lernspiele.png Makefile.am hi96-app-siduxedu.png hi32-app-seminarix_sprachen.png hi32-app-seminarix_start.png 
 
 #>+ 2
 docs-am:
 
-#>+ 45
+#>+ 53
 install-kde-icons:
 	$(mkinstalldirs) $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps
 	$(INSTALL_DATA) $(srcdir)/hi32-app-seminarix_allgemein.png $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_allgemein.png
@@ -515,6 +520,10 @@ install-kde-icons:
 	$(INSTALL_DATA) $(srcdir)/hi64-app-siduxedu.png $(DESTDIR)$(kde_icondir)/hicolor/64x64/apps/siduxedu.png
 	$(INSTALL_DATA) $(srcdir)/hi32-app-seminarix_chemie.png $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_chemie.png
 	$(INSTALL_DATA) $(srcdir)/hi32-app-seminarix_musik.png $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_musik.png
+	$(INSTALL_DATA) $(srcdir)/hi16-app-kappinstaller.png $(DESTDIR)$(kde_icondir)/hicolor/16x16/apps/kappinstaller.png
+	$(INSTALL_DATA) $(srcdir)/hi22-app-kappinstaller.png $(DESTDIR)$(kde_icondir)/hicolor/22x22/apps/kappinstaller.png
+	$(INSTALL_DATA) $(srcdir)/hi32-app-kappinstaller.png $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/kappinstaller.png
+	$(INSTALL_DATA) $(srcdir)/hi48-app-kappinstaller.pngu.png $(DESTDIR)$(kde_icondir)/hicolor/48x48/apps/kappinstaller.pngu.png
 
 uninstall-kde-icons:
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_allgemein.png
@@ -535,6 +544,10 @@ uninstall-kde-icons:
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/64x64/apps/siduxedu.png
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_chemie.png
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_musik.png
+	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/16x16/apps/kappinstaller.png
+	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/22x22/apps/kappinstaller.png
+	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/kappinstaller.png
+	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/48x48/apps/kappinstaller.pngu.png
 
 #>+ 15
 force-reedit:

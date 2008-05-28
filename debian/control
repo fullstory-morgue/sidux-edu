@@ -8,7 +8,20 @@ Standards-Version: 3.7.3
 
 Package: sidux-edu
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, menu, seminarix-samples, konsole
+Depends: ${shlibs:Depends}, ${misc:Depends}, menu, seminarix-samples, appinstaller-common
+Description: program starter and menu system for educational applications
+ generic menu system to act dynamically on installed packages and describe 
+ their uses for educational purposes
+
+Package: kappinstaller
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, appinstaller-common
+Suggestions: app-install-data
+Description: KDE program to install and start applications
+
+Package: appinstaller-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, konsole
 Description: program starter and menu system for educational applications
  generic menu system to act dynamically on installed packages and describe 
  their uses for educational purposes

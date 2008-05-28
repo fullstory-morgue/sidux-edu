@@ -17,9 +17,9 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <systray.h>
-#include <unique.h>
-#include <edu.h>
+#include <../libappinstaller/systray.h>
+#include <../libappinstaller/unique.h>
+#include <../libappinstaller/edu.h>
 
 #include <kapplication.h>
 #include <kaboutdata.h>

@@ -1,5 +1,5 @@
 /*
- * ac.h
+ * edu.h
  *
  * Copyright (c) 2007 Fabian Wuertz <xadras@sidux.com>
  *
@@ -17,47 +17,30 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef AC_H_
-#define AC_H_
+#ifndef FUNCTIONS_H_
+#define FUNCTIONS_H_
 
+#include <qstring.h>
+#include <qpixmap.h>
 
-#include <kde_terminal_interface.h>
-#include <kparts/part.h>
+#include <kiconloader.h>
 
-#include <acdialog.h>
+class Functions;
 
-
-class ac : public AcDialog
+ 
+class Functions
 {
-	Q_OBJECT
 
 	public:
-		ac(const QString &changes = QString(), QWidget *parent = 0L, const char *name = 0L, const QStringList &foo = QStringList());
+		Functions();
+		QPixmap getIcon(QString);
+
 		QString appdir;
-		QString changes2;
-
-		int j;
-		int step;
-		bool firstdownload;
+		QString iconpath;
+		KIconLoader *loader;
 
 
-		// console
-		ExtTerminalInterface *terminal()
-		{
-			return static_cast<ExtTerminalInterface*>(konsole->qt_cast( "ExtTerminalInterface" ) );
-		}
-		virtual bool eventFilter( QObject *o, QEvent *e );
-
-
-	public slots:
-		virtual void details();
-		virtual void shellExited(const QString&);
-
-	protected:
-		void loadKonsole();
-		KParts::Part *konsole;
 
 };
-
 
 #endif

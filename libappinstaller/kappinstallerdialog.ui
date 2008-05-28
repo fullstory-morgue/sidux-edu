@@ -1,0 +1,1010 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>KappinstallerDialog</class>
+<author>Fabian Wuertz</author>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>KappinstallerDialog</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>799</width>
+            <height>544</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>5</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>Add/Remove Applications</string>
+    </property>
+    <property name="icon">
+        <pixmap>image0</pixmap>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="KListView" row="0" column="0">
+            <column>
+                <property name="text">
+                    <string>Category</string>
+                </property>
+                <property name="clickable">
+                    <bool>true</bool>
+                </property>
+                <property name="resizable">
+                    <bool>true</bool>
+                </property>
+            </column>
+            <property name="name">
+                <cstring>categoriesListView</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>170</width>
+                    <height>482</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>170</width>
+                    <height>32767</height>
+                </size>
+            </property>
+            <property name="rootIsDecorated">
+                <bool>false</bool>
+            </property>
+            <property name="resizeMode">
+                <enum>AllColumns</enum>
+            </property>
+        </widget>
+        <widget class="QWidgetStack" row="0" column="1">
+            <property name="name">
+                <cstring>widgetStack</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string></string>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>WStackPage</cstring>
+                </property>
+                <attribute name="id">
+                    <number>0</number>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QFrame" row="0" column="0" rowspan="1" colspan="5">
+                        <property name="name">
+                            <cstring>frame5</cstring>
+                        </property>
+                        <property name="frameShape">
+                            <enum>StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>Raised</enum>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>searchTextLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>Search:</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="0" column="1">
+                                <property name="name">
+                                    <cstring>searchLineEdit</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>140</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>140</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="0" column="5">
+                                <property name="name">
+                                    <cstring>trayPushButton</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>22</width>
+                                        <height>22</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>22</width>
+                                        <height>22</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string></string>
+                                </property>
+                                <property name="pixmap">
+                                    <pixmap>image1</pixmap>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Minimize</string>
+                                </property>
+                            </widget>
+                            <spacer row="0" column="2">
+                                <property name="name">
+                                    <cstring>spacer2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>60</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QComboBox" row="0" column="4">
+                                <item>
+                                    <property name="text">
+                                        <string>All Applications</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>Installed only</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>Not installed only</string>
+                                    </property>
+                                </item>
+                                <property name="name">
+                                    <cstring>comboBox</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>1</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>150</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="0" column="3">
+                                <item>
+                                    <property name="text">
+                                        <string>KDE</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>GTK</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>ALL</string>
+                                    </property>
+                                </item>
+                                <property name="name">
+                                    <cstring>deComboBox</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>1</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QPushButton" row="2" column="0">
+                        <property name="name">
+                            <cstring>execPushButton</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>true</bool>
+                        </property>
+                        <property name="text">
+                            <string>St&amp;art</string>
+                        </property>
+                        <property name="accel">
+                            <string>Alt+A</string>
+                        </property>
+                        <property name="iconSet">
+                            <iconset>image2</iconset>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" row="2" column="1">
+                        <property name="name">
+                            <cstring>homepagePushButton</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>true</bool>
+                        </property>
+                        <property name="text">
+                            <string>H&amp;omepage</string>
+                        </property>
+                        <property name="accel">
+                            <string>Alt+O</string>
+                        </property>
+                        <property name="iconSet">
+                            <iconset>image3</iconset>
+                        </property>
+                    </widget>
+                    <widget class="QTextBrowser" row="3" column="0" rowspan="1" colspan="5">
+                        <property name="name">
+                            <cstring>descriptionTextBrowser</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>7</hsizetype>
+                                <vsizetype>7</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>0</width>
+                                <height>180</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>32767</width>
+                                <height>180</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>&lt;b&gt;Quick Introduction&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+Click to a category or type an keyword into the search field to browse the applications. If you want to install an application just check the box and click on the "Apply Changes" button.</string>
+                        </property>
+                        <property name="autoFormatting">
+                            <set>AutoAll</set>
+                        </property>
+                    </widget>
+                    <widget class="QListView" row="1" column="0" rowspan="1" colspan="5">
+                        <column>
+                            <property name="text">
+                                <string>*</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>*</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>*</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <property name="name">
+                            <cstring>appsListView</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>7</hsizetype>
+                                <vsizetype>7</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>0</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>32767</width>
+                                <height>32767</height>
+                            </size>
+                        </property>
+                        <property name="allColumnsShowFocus">
+                            <bool>true</bool>
+                        </property>
+                        <property name="resizeMode">
+                            <enum>LastColumn</enum>
+                        </property>
+                    </widget>
+                    <spacer row="2" column="2">
+                        <property name="name">
+                            <cstring>spacer1</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>190</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QPushButton" row="2" column="3">
+                        <property name="name">
+                            <cstring>apply1PushButton</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>false</bool>
+                        </property>
+                        <property name="text">
+                            <string>Appl&amp;y Changes</string>
+                        </property>
+                        <property name="accel">
+                            <string>Alt+Y</string>
+                        </property>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>WStackPage</cstring>
+                </property>
+                <attribute name="id">
+                    <number>1</number>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QListView" row="0" column="0">
+                        <column>
+                            <property name="text">
+                                <string>ID</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Name</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Categories</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Package</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Status</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Exec</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Description</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Homepage</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Terminal</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Icon</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>DE</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <property name="name">
+                            <cstring>listView</cstring>
+                        </property>
+                        <property name="allColumnsShowFocus">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>WStackPage</cstring>
+                </property>
+                <attribute name="id">
+                    <number>2</number>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="spacing">
+                        <number>10</number>
+                    </property>
+                    <spacer row="2" column="0">
+                        <property name="name">
+                            <cstring>spacer5</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <spacer row="1" column="2">
+                        <property name="name">
+                            <cstring>spacer7</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>21</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QFrame" row="1" column="1" rowspan="2" colspan="1">
+                        <property name="name">
+                            <cstring>frame12</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>0</hsizetype>
+                                <vsizetype>0</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>530</width>
+                                <height>250</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>530</width>
+                                <height>350</height>
+                            </size>
+                        </property>
+                        <property name="frameShape">
+                            <enum>StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>Raised</enum>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>8</number>
+                            </property>
+                            <property name="spacing">
+                                <number>8</number>
+                            </property>
+                            <widget class="QLabel" row="0" column="1">
+                                <property name="name">
+                                    <cstring>textLabel2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>To be removed:</string>
+                                </property>
+                            </widget>
+                            <widget class="QListBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>removeListBox</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QListBox" row="1" column="0">
+                                <property name="name">
+                                    <cstring>installListBox</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel1</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>To be installed:</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QFrame" row="3" column="1">
+                        <property name="name">
+                            <cstring>frame13</cstring>
+                        </property>
+                        <property name="frameShape">
+                            <enum>StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>Raised</enum>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>&lt;b&gt;Apply changes?&lt;/b&gt;</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="0" column="1">
+                                <property name="name">
+                                    <cstring>cancelPushButton</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;cancel</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+C</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="0" column="2">
+                                <property name="name">
+                                    <cstring>apply2PushButton</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;ok</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+O</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer row="4" column="1">
+                        <property name="name">
+                            <cstring>spacer6</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <spacer row="0" column="1">
+                        <property name="name">
+                            <cstring>spacer9</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>21</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </grid>
+            </widget>
+        </widget>
+    </grid>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>MenuBar</cstring>
+    </property>
+    <item text="File" name="File">
+        <action name="fileExitAction"/>
+    </item>
+    <item text="Help" name="Help">
+        <action name="helpAboutAction"/>
+        <action name="helpAboutKDEAction"/>
+    </item>
+</menubar>
+<toolbars>
+</toolbars>
+<customwidgets>
+</customwidgets>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>helpAboutAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image0</iconset>
+        </property>
+        <property name="text">
+            <string>About Kappinstaller</string>
+        </property>
+        <property name="menuText">
+            <string>About Kappinstaller</string>
+        </property>
+        <property name="toolTip">
+            <string>About Kappinstaller</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileExitAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image4</iconset>
+        </property>
+        <property name="text">
+            <string>Close</string>
+        </property>
+        <property name="menuText">
+            <string>Close</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpAboutKDEAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image5</iconset>
+        </property>
+        <property name="text">
+            <string>About KDE</string>
+        </property>
+        <property name="menuText">
+            <string>About KDE</string>
+        </property>
+    </action>
+</actions>
+<images>
+    <image name="image0">
+        <data format="PNG" length="682">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff610000027149444154388d95914b48d4511487bf19c7d7cca4ff940a15f111a881336911082ed2826c1122494520a5d16313a99b692329e426375290da031432ec612942b491d48a298d9cbf66944a36be66341ff3686a9c71f4b619adcc407f9b7b0ef77ce7dcdfb9b0498d408535618b6d2e375d58e2b46253f0076899b99023bc6f1f0adfe797c2929b2e541b85df407da4a1304f7bf4088225c48293f941ebc6e076a81f2b2f16ce2ffd626a7c42b88c8fc47445817801d58ab5c54f200d9056f20038adbb75a7303cff182e979be5e961949d0ff874a546161eb2ffb2700f0ad53b42ea6333f5a08d2074ab1a8dfd1d1a6164a9d5c4fc9e62dc4623e6ab8d72a087ece3600f58816b202d225add94734e1712959ec0f6d478c2bf7511e875e06c1a2034d68dc91683d570515e747bb20bc00ea000a882b49858a923ffac5e0a56b8212804dc0e7c63830cb47988d069084ed0d2f4d82d07b89cd997fcb0df22ec87cb76e702c6ce51735787253e54b5c4b6b065da9bed44262b494c0d6236e924ef9fbdbe6680ce3f6dab00caa0d47f664911a159fa8c781aeb7a49d64ba4e80351ea0e8323080fc86b97beba44d3194ad471a9e57d0371dcbcd1417a66342989c178356a42bc3fc0e65af78b95003da72891f61dac4e32344833436624dd5e963d0aea6e0f619d7482cdc294fccff0dfea2fc1266cb5427c6f1396eefb62aefbaea84da0a50caa47ceef16bd7971a20cead77d41d709d2c276c54b2c4e806f92a8242553cfabd065500a384cf21c4f5b471b2aa168bd062a9f8fbcf09d1a70be62615ec5706b1fb3437345079a319701a69e89ffc200aa451fc55fdb3fca8e71ecde9fc80ab87ea805b3ffbea192d5785dfd0223f0feb4207635d20000000049454e44ae426082</data>
+    </image>
+    <image name="image1">
+        <data format="PNG" length="343">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b0000011e49444154388d63601805a36014d01f306213ccb8cd53fdefcfff90dfdf18187e7ffbcff0e7db7f0618fbf7370604fffb7f86bf3f19d69ee8fcd5826e060b0e0b37f0308b14176a6e111461538088fc6760f80fa5191818189ebcbbcb50b8c0f3ddbb9f6fd791e495942bdcceb5d74c7f7cfefdf63f3a78fff5d5ffb8597adf6c1bd8ec49321406124e7325765cf6fefbebef0fb8a1df7f7df95fb0caf1b763177b043ebd4cf824ffff65987ff9ddfe9639d77319feffffc7f0f7ff1f869e03c9ffafbd3c56c9c8c4b0029f5eac91870ca2f67131fdfdc5b02048a12af6c3a7b70c1b2f4f9ff8f7d7ffc29d993fff53643003030343d8164ef6bfbf18b6fff9f1ffeddf5f0c115b127efc25461f5120700d276bc04a4e66aa19380a280600b0f69977dc98f18f0000000049454e44ae426082</data>
+    </image>
+    <image name="image2">
+        <data format="PNG" length="771">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff61000002ca49444154388da5d24b6853411406e07fe6de243749939ba651fb4cad4541947661258216c5e7a62ebad185151504410a8a0feacec7ba8a1b05dd28480deab2501f88282a548b82b520a556aba969897de5e631f795392e8a855a5d799603e79b7fce1c4644f89f52ff767867f2387b93bfb741925c0f009cf1a144d9fe77072baf2fb98dfd99e0d85064af18f35faea396d53ac5c11987c153f886b7235a7df1f48df573bdff040ebf0e9f0a4eaeedde113fc4344f70116cda053cfd768b8ad5c3676e6f36ae2c018ef4eb5b9554cdb33d8d47b93722e10912346f0000205dc029107233161e7ebe29119fdc7e6b53f60500f0df527e425e6a89efe2a17a1b6e28830de5ed284907360c484f0e4a240fbdde4662e56e9e9f90977ef7710038d0178d55786bb6d43686414a11ae14a850ebb1337a0275ca4608db40090548a588ba461d15be9a2d07faa2b105c0164e43f5b22ace3d02c48a9024e6dfc718d685776247f959687615669c51909247edf22a6e0ba76101704d588ac706b800b80091b96880659e7224221d90051fe6e81354af0bd784b5b0071ae9c3996ccab0511956980f2ecd2d0286a69ee083730dde680e00f0333b6e68a40f2f2448768c5b635f67efe6cc29306e80c10408982ea4d1377e0e9f7d57a1eb2504d5004a0ee1cbe8f4dd64c7b8b5e817cc697ee1f1ab8fe98265c2cf7d78977e807ef324022b4611d18228f3f8613a361ebdfc982e4eb10b7f5da46d17834de56b586f734b657c55b41a115f088c018655c0d7d909bc1ff8f17d6698f63e3f5f185c020c0e0e22994cb297f99b114f9538a5af64fb7c61b61a002c8346b26374df4efbaf24bc87b2edededb2b5b5751ee8eaea623d3d3dbe6c36eb771c2720a5f4139146449aea4700005c0101c0e29c0bceb95055558442a1625b5b9bc98808a9540adddddd7c6060806732192e84505cd7e5a552890180a228a4aaaad4344dc662b1527373b3ececec944d4d4df805b6cb489e4fd5bef50000000049454e44ae426082</data>
+    </image>
+    <image name="image3">
+        <data format="PNG" length="618">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff610000023149444154388da5d25f4853511c07f0efefdceb65c536c9ad3977effeb4396cc6a641cdcad0b981e970f650112b5823a21ea222021f82b05e2a9fc2a72294c8207b107a11047314164511bdf89292489063147b100add68f7f4b079ddb2f650e7e9c0f79ccff99ddf39c439c7ff0c562d743bad671b2c75896a6bc4bf050ed972211a6e1b5e5dcba9b2d5242d67b2230feede091313d4e4b98b2faa020ed932100db70d1d0cee815a509920b07b0ed9228d8ddef7334666001a40bff7c061db7e3dd6dd3eb8d3d308883a100014727c6efea3aab877a54f2512ef1c9ee6a39b7ab0b8b000bbcd3c74241619ec8bc6f0e1e918f2820105518fb9a909eaef3bccb29925e5e6addbfaf20319005cb97c8942a1f6e193c76203f11349581517ba5b157041071224740514d8ec3b281e4fd2368378c8e7b55fabb882dc60de9738deffeaf499f38224490080976fde63e9f33254ced1e471617fb0150090cbe7f0f8d1487e7c62b2637ef1cb5bad07af539353cdfe961ea2a2ccc1019056eac60c48a7330f7d2d7b9315af200a42416f3480b1e2d258288495af6910111a03bb313afea40873a0e65b56c334808854c6440df0cbb5f8b1ba0800a8376d05636209e000886d0240a4821850ba4330d0849fea277c5745587ceeb23dbce2f5ca2a400928664eaf17f98c1100b0c5e50448d000fe4700c40141c38df50a789d1e4400335951ccd62bd0b48d9f18e93c7095731e590f7a7b7b6abb3a3b74048ee9d4f3b56733332bdaa962cdec746af64605f0afe317b525aaebe99197150000000049454e44ae426082</data>
+    </image>
+    <image name="image4">
+        <data format="PNG" length="752">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff61000002b749444154388da592cd4b546114c69ff7dc199db91fe9bd2329def1fa45ab89460ac145216db536228ab87227e2aa5acc3ada69b9cc4d5121f807f4074408228841a3086590cd4c313adef952e7833bf73d6d52296bd5591d1e38bff370ce239819ff5381bf893bb3b322bbba7a0b525e070010ed744c4d6d5d5f5ebeb44dfce9e09d61dc3775fda93538784defe90188709a4ec3ddd8d82b94cb0fef1e1fbffd27604dd71fd8b1d862dbcc8c109af61b982b151cbd7ac5dfb7b71fdd39397976a6d359f3de3086af3ace82393d2d9819b25804b5b6825a5b218b45b09430a7a6c455c759786f18c397002af0d81c1d2585084d7d7dd0c6c6e0efedc1fff205dad8189afafba110c1bc778f54211eff065837cd36351abd1deee800b259046331046c1beae424d48909046c1bc1580c329b45b8bd1daae3dc5e37cdb60b078d46af66db4485021400a74b4bf03219046c1b01db8697c9a09c4840c966217239689d9d8446a3f7fc8d0a50a7d353885c0e00208900212e0ec80c797000b82ed830409e0705a89f039a2ceb53fdebd73214e54acd34a12f2f2368dba8673200339abbba60bc7881f2f838b4c343d45db7dc64599fcee9cc8c2d5d7f5e8846f9b8bb9b0b6fde702d95e2a3a1213e1a1ae26a2ac5f9d7aff9d871b8108df296ae3f3f9b3bcfc147cb6a979ef7a13b14ea0c11a11689e08aeb0200ca9685503e8f9a94f856abfd10c1e0cd817cfee05290922d2d37aabeff362c84131102ea2fbd02c065469539155694fb374aa5e4a51c249349accecd6d17356da00a3cd9f7fdcfbbbecfbbbecffbbeffb90a3c71356de0e5cccccedadada4594138984585959692e954a61cff3542965989943ccdc6c022a005100aa00ea445423a24a2010a8eaba5e191919a90966463a9dc6e2e2226d6e6e522e97a34aa5a2341a0df27d5f00001171301894a150484622113f1e8fcbf9f979198fc7f11306f33f74f0ffac1c0000000049454e44ae426082</data>
+    </image>
+    <image name="image5">
+        <data format="PNG" length="841">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff610000031049444154388d5593cb6b5c6500c57fdfe3cebd73c799496626d609d8a631586aa5526c4274a1355871e14e4a37a25d147555c4857f8182280a0a2ab8122c52d465f1419385c522b6b4b4b68568623b3669673293645e993b33f7f17d2e66615d1c3867f383c3e188cca3efbe37373bf3b6e3280f01ff49fccfdbfbb24560ac19defe6bf553b1f0ca99e4e56373b234ee91180380b096c4588689c50a81d6128b6090580c02474beaed905f96ae58ed675c297c17b7e093c4066b2dd682272dcf4de7e80e122e57ba200487766771b5e4562ba4d16fe1a553426b2da9ed2434ef0684d108104586c99ce2e8fe029d20e6eadf2d8e3c5ea4e429ba61c2e5d5361bcd218e1248ed485a43586d8494730ec70f97c8fa9a20b24801bd414c29eb30bb378f10f0cd852a376eb7e904315a4bb4d6925e2ca8760d83181e7bc863dfae49ce5cac13258672dee5f87c19470b4e2faef1db1f0d94ab712ce4b4442a2d09517442c97757bbdcd91af2f1e206e76e74f01dc9442ec5ae319724b15c5969116cf568ae6ed26feca01d89d45ae269c913138ad7e7c7a86c859cfebd8d3002ad0437ffe9f0e3a51a455f71eaa5bd88ee10d30e484b505a229182420ade5928f0ea5345ee6e473856a390006829f9e2ec3a95469fd9993c278fed2334e0588b9002898042c6e1db4b6d7ebed6a49c558c67145e4a01904d4bea3bf0e1f7152c70e2c5299e9d9f241c26580bda5a18f735f742c3d2729f379fc9f3f4548ad5da802fcf55b9b6d62793f5383833c6d74bebacd77a546a7db4a3b036415a209756147dc9e1871d1e2ca579eb8522cf1f78800b9510ab1d3e7a6d0f6f1c2db37f2acf0f1737a96d8548ad3042a02d90f52449acc83986f55a8f5f57fa4c4fa4f8eae46e6aed884f7eaa53dd0e79723a4371dc63a31f6210a30a4249c67c85ab1c1a6d585cee530f24779a01470e6439bfdce5ecf580f337dba489e877239412c486d14f5add010689eb6832be204263744c7347f0f9d2362b9b098f9433108598414826a588034da990a61356117b16deffe0d0dcc153d96cda058b150023fa20b6282950a341eebb330ce3385cfbf3fa67ff02fd625329e03e11300000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>apply1PushButton</sender>
+        <signal>pressed()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>applyChanges1()</slot>
+    </connection>
+    <connection>
+        <sender>apply2PushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>applyChanges2()</slot>
+    </connection>
+    <connection>
+        <sender>appsListView</sender>
+        <signal>selectionChanged()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>showApp()</slot>
+    </connection>
+    <connection>
+        <sender>appsListView</sender>
+        <signal>doubleClicked(QListViewItem*)</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>execApp()</slot>
+    </connection>
+    <connection>
+        <sender>appsListView</sender>
+        <signal>pressed(QListViewItem*)</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>changed()</slot>
+    </connection>
+    <connection>
+        <sender>cancelPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>cancel()</slot>
+    </connection>
+    <connection>
+        <sender>categoriesListView</sender>
+        <signal>selectionChanged()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>showCategoryApps()</slot>
+    </connection>
+    <connection>
+        <sender>comboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>showCategoryApps()</slot>
+    </connection>
+    <connection>
+        <sender>descriptionTextBrowser</sender>
+        <signal>sourceChanged(const QString&amp;)</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>openUrl(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>execPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>execApp()</slot>
+    </connection>
+    <connection>
+        <sender>execPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>execApp()</slot>
+    </connection>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>close()</slot>
+    </connection>
+    <connection>
+        <sender>helpAboutAction</sender>
+        <signal>activated()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>about()</slot>
+    </connection>
+    <connection>
+        <sender>helpAboutKDEAction</sender>
+        <signal>activated()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>aboutKDE()</slot>
+    </connection>
+    <connection>
+        <sender>homepagePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>showHomepage()</slot>
+    </connection>
+    <connection>
+        <sender>searchLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>searchApp()</slot>
+    </connection>
+    <connection>
+        <sender>trayPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>minimize()</slot>
+    </connection>
+    <connection>
+        <sender>deComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>KappinstallerDialog</receiver>
+        <slot>showCategoryApps()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>showCategoryApps()</slot>
+    <slot>execApp()</slot>
+    <slot>showHomepage()</slot>
+    <slot>homepage()</slot>
+    <slot>about()</slot>
+    <slot>aboutKDE()</slot>
+    <slot>searchApp()</slot>
+    <slot>openUrl(const QString&amp;)</slot>
+    <slot>copyExample()</slot>
+    <slot>applyChanges1()</slot>
+    <slot>showApp()</slot>
+    <slot>changed()</slot>
+    <slot>minimize()</slot>
+    <slot>appdata()</slot>
+    <slot>applyChanges2()</slot>
+    <slot>cancel()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="6"/>
+<includehints>
+    <includehint>klistview.h</includehint>
+</includehints>
+</UI>

@@ -10,19 +10,20 @@ METASOURCES = AUTO
 KDE_ICON = AUTO
 
 # the application source, library search path, and link libraries
-sidux_edu_applyChanges_SOURCES = ac.cpp acdialog.ui main.cpp
-sidux_edu_applyChanges_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
-sidux_edu_applyChanges_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
+apt_get_konsole_SOURCES = ac.cpp acdialog.ui main.cpp
+apt_get_konsole_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
+apt_get_konsole_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
 
 
 
 # application
-bin_PROGRAMS = sidux-edu-applyChanges
+bin_PROGRAMS = apt-get-konsole
 
 sharedir = $(pkgdatadir)
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
-	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/apt-get-konsole
+	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/apt-get-konsole/
 
 
 # translation

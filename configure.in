@@ -40,7 +40,7 @@ dnl Perform program name transformation
 AC_ARG_PROGRAM
 
 dnl Automake doc recommends to do this only here. (Janos)
-AM_INIT_AUTOMAKE(sidux-edu, 0.1) dnl searches for some needed programs
+AM_INIT_AUTOMAKE(appinstaller, 0.1) dnl searches for some needed programs
 
 KDE_SET_PREFIX
 
@@ -72,11 +72,13 @@ AC_CHECK_KDEMAXPATHLEN
 KDE_CREATE_SUBDIRSLIST
 AC_CONFIG_FILES([ Makefile ])
 AC_CONFIG_FILES([ appdata/Makefile ])
-AC_CONFIG_FILES([ applyChanges/Makefile ])
+AC_CONFIG_FILES([ apt-get-konsole/Makefile ])
+AC_CONFIG_FILES([ edu/Makefile ])
 AC_CONFIG_FILES([ icons/Makefile ])
+AC_CONFIG_FILES([ kappinstaller/Makefile ])
+AC_CONFIG_FILES([ libappinstaller/Makefile ])
 AC_CONFIG_FILES([ po/Makefile ])
 AC_CONFIG_FILES([ po/de/Makefile ])
-AC_CONFIG_FILES([ src/Makefile ])
 AC_OUTPUT
 # Check if KDE_SET_PREFIX was called, and --prefix was passed to configure
 if test -n "$kde_libs_prefix" -a -n "$given_prefix"; then
