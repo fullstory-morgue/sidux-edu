@@ -1,1 +1,3 @@
+KFormula
+.
 KFormula stammt aus dem KOffice-Projekt und ist dafür ausgelegt, Formeln zu zeichnen bzw. zu gestalten, die in einen Text eingebunden, werden können.

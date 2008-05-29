@@ -1,1 +1,3 @@
-Anders als die meisten Software-Planetarien ist Celestia nicht erdgebunden. Es simuliert einen freien Flug durch die Galaxis mit atemberaubenden Ansichten des Sonnensystems oder zu über 100,000 anderen Sternen. Für die Nutzung von Celestia ist eine Grafikkarte mit eingerichteter 3D-Beschleunigung erforderlich. 
+Celestia
+.
+Anders als die meisten Software-Planetarien ist Celestia nicht erdgebunden. Es simuliert einen freien Flug durch die Galaxis mit atemberaubenden Ansichten des Sonnensystems oder zu über 100,000 anderen Sternen. Für die Nutzung von Celestia ist eine Grafikkarte mit eingerichteter 3D-Beschleunigung erforderlich.

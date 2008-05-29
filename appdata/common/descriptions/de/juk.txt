@@ -1,1 +1,3 @@
+JuK
+.
 JuK ist eine Audio-Jukebox für KDE, mit der Dateien im MP3-, Ogg-Vorbis- und FLAC-Format verwaltet, umbenannt und abgespielt werden können.

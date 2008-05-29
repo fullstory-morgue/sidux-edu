@@ -1,1 +1,3 @@
+Gnuplot
+.
 Gnuplot ist ein mächtiges kommandozeilenorientiertes interaktives Plotprogramm und wird auch von graphisch basierten Programmen wie wxmaxima genutzt. Das Programm dient dem Erstellen von 2D- und 3D-Graphen von Datenfeldern und Funktionen. Es unterstützt zahlreiche Ausgabeformate einschlie&szlig;lich Treiber für zahlreiche Drucker, (La)TeX, (x)fig, Postscript, u.s.w.. ..Die Datenfelder und selbsterstellten Funktionen können durch eine interne C-artige Programmiersprache gesteuert werden. Gnuplot kann auch mit komplexen Zahlen arbeiten.

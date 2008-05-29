@@ -1,1 +1,3 @@
+PCB
+.
 Wer auf fertig hergestellte Platinen (auch gedruckte Schaltungen oder Leiterplatten genannt) verzichten möchte und statt dessen selbst eine erstellen will, kann dies mittels dieses Programms verwirklichen. Vorhandene elektronische Bauteile müssen durch den Nutzer verknüpft und positioniert werden (virtueller Test des Stromkreislaufes ist integraler Bestandteil). Neben der automatischen Leiterbahnberechnung können diese auch manuell verändert werden.

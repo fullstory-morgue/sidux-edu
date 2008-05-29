@@ -1,1 +1,3 @@
-Programm aus dem KDE-Projekt, mit dessen Hilfe man Mindmaps erstellen kann. Zur Darstellung grö&szlig;erer - auch gedanklicher - Zusammenhänge und Projekte sehr nützlich. Mit Hilfe eines Clicks der rechten Maustaste fügen Sie Objekte in die Mindmap ein und bearbeiten Sie die "Gedankenkarte".
+KDissert
+.
+Programm aus dem KDE-Projekt, mit dessen Hilfe man Mindmaps erstellen kann. Zur Darstellung grösserer - auch gedanklicher - Zusammenhänge und Projekte sehr nützlich. Mit Hilfe eines Clicks der rechten Maustaste fügen Sie Objekte in die Mindmap ein und bearbeiten Sie die "Gedankenkarte".

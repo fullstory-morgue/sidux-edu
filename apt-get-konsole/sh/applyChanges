@@ -6,10 +6,10 @@
 language=$(echo $LANG | cut -f1 -d_)
 if [ $language = "en" ]; then
 	language=""
-elif [ -f /usr/share/locale/$language/LC_MESSAGES/kappinstaller-applyChanges.mo ]; then 
+elif [ -f /usr/share/locale/$language/LC_MESSAGES/aptgetkonsole.mo ]; then 
 	language=""
 else
-	language="LANG=C"
+	language="c"
 fi
 
 for i in $@; do
@@ -24,9 +24,17 @@ done
 
 
 if [ $(echo $install | wc -c) != "1" ]; then
-	$language apt-get update
+	if [ "$language" = "c" ]; then
+		LANG=C apt-get update
+	else
+		apt-get update
+	fi
 	echo "Update done"
-	$language apt-get remove $remove
+	if [ "$language" = "c" ]; then
+		LANG=C apt-get remove $remove
+	else
+		 apt-get remove $remove
+	fi
 	downloads=$(apt-get --assume-yes -u --print-uris install $install  | grep .deb | cut -f2 -d" ")
 	if [ $(echo $downloads | wc -c) != "1" ]; then
 		for i in $downloads; do
@@ -34,10 +42,18 @@ if [ $(echo $install | wc -c) != "1" ]; then
 		done
 		echo "Packages to download: $downloads2"
 	fi
-	$language apt-get install $install
+	if [ "$language" = "c" ]; then
+		LANG=C apt-get install $install
+	else
+		 apt-get install $install
+	fi
 else
 	echo "No update"
-	$language apt-get remove $remove
+	if [ "$language" = "c" ]; then
+		LANG=C apt-get remove $remove
+	else
+		 apt-get remove $remove
+	fi
 fi
 
 

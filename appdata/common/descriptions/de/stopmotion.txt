@@ -1,1 +1,3 @@
+StopMotion
+.
 Video- und Animationsprogramm, mit dem StopMotionszenen hergestellt werden können.

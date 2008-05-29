@@ -1,1 +1,3 @@
+Tuxmath
+.
 Tuxmath ist ein Mathematiktrainer für Kinder. Das Spielprinzip ähnelt Missile Command, sprich es fallen Matheaufgaben vom Himmel und Tux muss die richtige Lösung in seinen Abwehrlaser eingeben. Sonst werden die Städte zerstört.

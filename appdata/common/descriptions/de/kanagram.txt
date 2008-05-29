@@ -1,1 +1,3 @@
+KAnagram
+.
 KAnagram ist ein Buchstabenrätselspiel: Aufgabe ist, die durcheinandergewürfelten Buchstaben eines Wortes wieder in die richtige Reihenfolge zu bringen und damit das Wort zu finden. Es gibt keine Zeitbegrenzung und man hat beliebig viele Versuche zur Lösung des Rätsels. Zusammen mit Kanagram erhalten die Schüler einige Vokabeldateien zum Spielen, weitere können aus dem Internet geladen werden. Kanagram bringt über den Hilfe-Button (Buchsymbol) ein Handbuch in deutscher Sprache mit

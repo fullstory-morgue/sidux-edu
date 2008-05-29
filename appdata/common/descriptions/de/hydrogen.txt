@@ -1,1 +1,3 @@
+Hydrogen
+.
 Hydrogen ist ein virtueller Drumcomputer und -sequenzer. Hydrogen kombiniert eine einfache, an Pattern orientierte Programmierung mit professionellen Funktionen wie vollständige Ansteuerung über MIDI und frei definierbaren Samples. Unter Linux ist Hydrogen kompatibel zum Soundserver JACK.

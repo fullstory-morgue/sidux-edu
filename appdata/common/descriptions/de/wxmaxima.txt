@@ -1,1 +1,3 @@
+wxMaxima
+.
 Graphische Oberfläche für das Computeralgebrasystem(cas) maxima..Maxima ist ein freies und leistungsfähiges Computeralgebrasystem..Einige Funktionen und Fähigkeiten:<ul><li>Lösen von Gleichungssystemen</li><li>Grenzwertermittlung</li><li>Trigonometrische Berechnungen</li><li>Polynommanipulationen</li><li>Differenzieren sowie Lösung von Differenzialgleichungen 1. und 2. Ordnung</li><li>Integrieren</li><li>Matrizen</li><li>diverse Anwendungen der Wahrscheinlichkeitsrechnung</li></ul>.und vieles mehr. . (wx)Maxima kann Funktionen grafisch in 2- und 3-dimensionalen Funktionsgrafen darstellen und auch ausdrucken lassen.

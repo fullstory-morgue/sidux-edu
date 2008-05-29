@@ -1,1 +1,3 @@
+Midnight Commander
+.
 Der Midnight Commander arbeitet auf der Kommandozeilenebene mit der aus alten Zeiten bekannten Zweifenstertechnik.

@@ -1,1 +1,3 @@
+KSociograma
+.
 Soziometrische Analyse für Beziehungen, auch solche in Schule und Seminar: Wer mit wem und mit diesem, aber ohne jenen. (Der admin startet mit dem Passwort ksocio).

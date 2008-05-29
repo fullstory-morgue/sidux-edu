@@ -1,1 +1,3 @@
+KPlato
+.
 KPlato ist ein Programm zur Projektplanung und -verwaltung und ist Bestandteil der KOffice-Suite. KPlato bietet eine Ressourcenverwaltung, einen hierarchischen Kalender, Aufgaben mit Abhängigkeiten und Unteraufgaben, Diagrammdarstellung, Projektterminplanung (pessimistisch, erwartend, optimistisch), einen Projekt-Struktur-Plan (PSP), einen 'kritischen Pfad mit Resourcen' sowie eine  Einbettung in andere KOffice-Anwendungen.

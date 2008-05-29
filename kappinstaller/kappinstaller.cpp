@@ -211,7 +211,7 @@ void kappinstaller::importApps()
 			item->setText( 4, "notinstalled");
 
 		//description
-		item->setText( 6, getDescription(package) );
+		item->setText( 6, getDescription(name) );
 
 	}
 
@@ -314,7 +314,7 @@ void kappinstaller::importApps2()
 			exec.append( file.readEntry("Exec") );
 	
 			//description
-			item->setText( 6, getDescription(package) );
+			item->setText( 6, getDescription(file.readName()) );
 	
 			//hompage
 			//item->setText( 7, readFile( appdir+"homepages/"+package+".txt" )[0] );
@@ -546,13 +546,14 @@ void kappinstaller::showApp()
 
 	if (!appsListView->selectedItem()) return;
 	QString app = appsListView->selectedItem()->text(2);
+	QString name = listView->findItem(app, 1, Qt::ExactMatch )->text(1);
 	QString package = listView->findItem(app, 1, Qt::ExactMatch )->text(3);
 
 	// Show description
 	QString description = listView->findItem(app, 1, Qt::ExactMatch )->text(6);
 	if( description == "" )
 	{
-		QStringList aptChache = getDescriptionHomepage( package );
+		QStringList aptChache = getDescriptionHomepage( name );
 		description = aptChache[0];
 		listView->findItem(app, 1, Qt::ExactMatch )->setText(6, description);
 		listView->findItem(app, 1, Qt::ExactMatch )->setText(7, aptChache[1]);
@@ -749,16 +750,23 @@ void kappinstaller::back()
 	categoriesListView->show();
 	widgetStack->raiseWidget(0);
 
-	//update status
-	QListViewItemIterator jt( listView );
-	while ( jt.current() )
+	if( datadir.contains("app-install") )
 	{
-		QString package = jt.current()->text(3);
-		if( QFile::exists( "/usr/share/doc/"+package+"/copyright" ) )
-			jt.current()->setText( 4, "installed");
-		else	
-			jt.current()->setText( 4, "notinstalled");
-		++jt;
+		//update status
+		QListViewItemIterator jt( listView );
+		while ( jt.current() )
+		{
+			QString package = jt.current()->text(3);
+			if( QFile::exists( "/usr/share/doc/"+package+"/copyright" ) )
+				jt.current()->setText( 4, "installed");
+			else	
+				jt.current()->setText( 4, "notinstalled");
+			++jt;
+		}
+	}
+	else
+	{
+		importApps();
 	}
 
 	

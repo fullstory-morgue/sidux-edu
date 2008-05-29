@@ -1,1 +1,3 @@
+KView
+.
 KView, vormals KuickShow ist Bestandteil des KDE-Projekts. Der Bildbetrachter beherrscht viele Formate (GIF, JPEG, PNG, BMP, XBM, XPM, TIFF, PBM (P1), PGM (P2), PPM (P3), PBMRAW (P4), PGMRAW (P5) und PPMRAW (P6). Eine Unterstützung von Slideshows ist ebenfalls vorgesehen.

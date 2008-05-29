@@ -1,1 +1,3 @@
+Krusader
+.
 Ein grafisch ausgelegter Festplattenmanager, der neben der Hilfe beim Kopieren, Verschieben und sonstigen Arbeiten im System auch den Aufbau des System deutlich werden lä&szlig;t...Handbuch unter Info (in Englisch).

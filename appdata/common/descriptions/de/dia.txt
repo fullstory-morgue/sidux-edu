@@ -1,1 +1,3 @@
+Dia
+.
 Dia hat Ähnlichkeiten mit dem proprietären Programm 'Visio'. Mit Dia können die verschiedenen Arten von Diagrammen, Flussdiagrammen und Strukturzeichnungen angefertigt werden. Auch Logikschaltungen und Netzwerke sind darstellbar. Die Produkte können in verschiedene Formate wie EPS, SVG, XFIG, WMF und PNG exportiert werden.

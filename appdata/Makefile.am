@@ -14,7 +14,9 @@ install-data-local:
 	done; \
 	for apps2 in $(srcdir)/kappinstaller/pmap/*.pmap; do \
 		subname2=$$(basename $$apps2 .pmap); \
-		cp -aR  $(srcdir)/common/descriptions/de/$$subname2.txt $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de/; \
+		if [ -f $(srcdir)/common/descriptions/de/$$subname2.txt ]; then \
+			cp -aR  $(srcdir)/common/descriptions/de/$$subname2.txt $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de/; \
+		fi; \
 	done;
 
 

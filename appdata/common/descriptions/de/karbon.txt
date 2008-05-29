@@ -1,1 +1,3 @@
+Karbon
+.
 Karbon gehört zum KOffice-Projekt. Mit Karbon lassen sich skalierbare Grafiken herstellen und auch ändern. Skalierbare Grafiken haben den gro&szlig;en Vorteil, dass sie bei Vergrö&szlig;erungen nicht den von Bitmaps bekannten Treppeneffekt zeigen, sondern auch in gro&szlig;en Dimensionen noch gut aussehen. Karbon arbeitet mit Vektorgrafiken.

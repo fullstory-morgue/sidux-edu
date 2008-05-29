@@ -1,1 +1,3 @@
+KTouch
+.
 KTouch ist ein Übungsprogramm zum Maschinenschreiben für KDE. Zunächst stellen Sie das gewünschte Tastaturlayout (vermutlich de) ein. Unter "Lektion bearbeiten" Standardlektionen auswählen und dort eine der ...german...xml-Dateien anklicken.

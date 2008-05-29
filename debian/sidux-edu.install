@@ -2,4 +2,5 @@ debian/tmp/usr/bin/sidux-edu                              usr/bin/
 debian/tmp/usr/share/applications/kde/sidux-edu.desktop   usr/share/applications/kde/
 debian/tmp/usr/share/sidux-edu                            usr/share/
 debian/tmp/usr/share/icons/hicolor/*/apps/siduxedu*
+debian/tmp/usr/share/icons/hicolor/*/apps/seminarix*
 debian/tmp/usr/share/locale/*/LC_MESSAGES/siduxedu.mo

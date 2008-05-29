@@ -1,1 +1,3 @@
+NoteEdit
+.
 NoteEdit ist ein freies Musik-Notensatzprogramm. Es bietet folgende Funktionen:. <ul><li>Unterstützung u.a. polyphoner Stimmen in unbegrenzter Anzahl und Länge</li><li>MIDI-Wiedergabe von geschriebenen Noten, Akkorden, Texten</li><li>Menthält eine Anzahl von Export- und Import-Filtern zu vielen verschiedenen Formaten wie MIDI, MusicXML, ABC, MUP, PMX, MusiXTeX und LilyPond.</li><li>graphische Oberflälche zur Eingabe von Noten und ein Druckfassung davon, die man dann noch mit den mächtigen Satzprogrammen LilyPond (das automatisch mitinstalliert wird) oder MusiXTeX optimieren kann</li><li>Lesen und Wiedergabe von einem MIDI-Keyboard</li><li>automatisches Setzen der Taktstriche bei vorgegebenen Takt u.s.w.</li><ul>

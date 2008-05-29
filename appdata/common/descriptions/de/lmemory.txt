@@ -1,1 +1,3 @@
+lmemory
+.
 lmemory ist das bekannte Memoryspiel mit verdeckten Bildkarten. Es gibt bei lmemory verschiedene Schwierigkeitsgrade. Als Option gibt es darüberhinaus z.B., dass 3 gleiche Karten gefunden werden müssen.

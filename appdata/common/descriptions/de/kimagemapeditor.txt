@@ -1,1 +1,3 @@
+KImageMapEditor
+.
 Mit KImageMapEditor lassen sich Bilder so bearbeiten, dass festgelegte Teile des Bildes z.B. einen Link enthalten können. Das kann bei Webprojekten gut eingesetzt werden, indem eine Mausbewegung über einem festgelegten Bildteil einen Link anbietet bzw. auslöst.

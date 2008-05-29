@@ -1,1 +1,3 @@
+Vym
+.
 vym ist ein Mindmapping-Programm, um die Ideen und Gedanken bei einem Problemlösungsprozess in einer Gruppe zu strukturieren.  Durch Probieren mit Klicken der Linken und rechten Maustaste sowie verschieben der verschiedenen Objekte lassen sich die meisten Funktionen schnell intuitiv erschlie&szlig;en.

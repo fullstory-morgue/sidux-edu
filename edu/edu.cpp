@@ -395,7 +395,7 @@ void edu::showApp()
 
 	// Show description
 	QString description =  listView->findItem(app, 1, Qt::ExactMatch )->text(6);
-	descriptionTextBrowser->setText( "<b>"+app+"</b><br><br>"+description );
+	descriptionTextBrowser->setText( description );
 
 	// Show homepage buttons
 	QString homepage = listView->findItem(app, 1, Qt::ExactMatch )->text(7);
@@ -627,22 +627,7 @@ void edu::back()
 	categoriesListView->show();
 	widgetStack->raiseWidget(0);
 
-	//update status
-	QStringList tmpList = QStringList::split( " ", changedPackages );
-	for( QStringList::Iterator it = tmpList.begin(); it != tmpList.end(); ++it )
-	{
-		QString package = QString(*it).mid(1);
-		if( QFile::exists( "/usr/share/doc/"+package+"/copyright" ) )
-		{
-			listView->findItem(package, 3, Qt::ExactMatch )->setText(4, "installed");
-			execPushButton->show();
-		}
-		else
-		{
-			listView->findItem(package, 3, Qt::ExactMatch )->setText(4, "notinstalled");
-			execPushButton->hide();
-		}
-	}
+	importApps();
 
 	
 	// update appsListView
@@ -731,8 +716,20 @@ QString edu::getDescription(QString app)
 			QFile file( appdir+"descriptions/de/"+app+".txt" );
 			file.open( IO_ReadOnly );
 			QTextStream stream( &file );
+			bool firstLine = TRUE;
 			while ( !stream.atEnd() )
-				description += stream.readLine(); // line of text excluding '\n'prin
+			{
+				QString line = stream.readLine();
+				if( firstLine )
+				{
+					description += "<b>"+line+"</b><br>";
+					firstLine = FALSE;
+				}
+				else if( line == "." )
+					description += "<br>";
+				else
+					description += line+"<br>";
+			}
 			file.close();
 		}
 		

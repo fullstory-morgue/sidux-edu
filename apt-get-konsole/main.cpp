@@ -36,10 +36,10 @@ static KCmdLineOptions options[] =
 int main(int argc, char **argv)
 {
 	// specify data for About dialog
-	KAboutData* about = new KAboutData("kappinstaller-applyChanges", "kappinstaller-applyChanges", "");
+	KAboutData* about = new KAboutData("aptgetkonsole", "aptgetkonsole", "");
 
 	about->setProgramLogo( QImage("/usr/share/icons/hicolor/32x32/apps/kappinstaller.png") );
-	about->setShortDescription( "kappinstaller-applyChanges" );
+	about->setShortDescription( "aptgetkonsole" );
 	about->setLicense(KAboutData::License_GPL_V2);
 	about->setHomepage("http://linux.wuertz.org");
 	about->setBugAddress("xadras@sidux.com");

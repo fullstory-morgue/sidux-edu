@@ -1,1 +1,3 @@
+Kartoffelknülch
+.
 Kartoffelknülch ist ein Stempelprogramm, das 3 fertige Sets aus Hintergrundbildern und passenden Stickern enthält. Enthaltene Sets: Aquarium, Kartoffelknülch, Tux. Das Programm ist Teil von KDE und im KDE-Games Paket enthalten.
