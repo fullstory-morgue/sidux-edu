@@ -1,3 +1,0 @@
-Konversation
-.
-Konversation ist ein grafischer Klient für Internet Relay Chat (IRC). Er kann mehrere Identitäten verwalten und ermöglicht mehrere simultane Verbindungen zu Servern (wahlweise mit SSL und/oder IPv6). Konversation unterstützt UTF-8 vollständig und erkennt automatisch, ob ein Chat-Raum es verwendet. Es ist gut in KDE integriert und greift bspw. auf KIO-Slaves und DCOP zurück, mit letzerem lässt es sich auch selber steuern und automatisieren. Zusätzlich zu mehreren Reitern mit Chat-Räumen kann auch die Konsole eingebunden werden. Informationen zu Chat-Kontakten können im KDE-Adressbuch abgelegt werden. 

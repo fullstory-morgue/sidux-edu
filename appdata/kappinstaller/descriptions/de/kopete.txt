@@ -1,3 +1,0 @@
-Kopete
-.
-Kopete ist ein Sofortnachrichtenprogramm für KDE und im Paket kdenetwork3-InstantMessenger enthalten. Es kann mit nahezu allen bekannten Sofortnachrichtenprotokollen umgehen, darunter Jabber, Yahoo!, AIM, ICQ, MSN und IRC, Gadu-Gadu, Novell GroupWise, Lotus Sametime, SMS. Mehrere Zugänge eines Kontaktes können unter einem Metakontakt zusammengefasst werden, so dass die Kontaktliste übersichtlich bleibt. Für die Kontakte kann Kopete auch auf Informationen aus dem KDE-Adressbuch zugreifen. Seit Version 0.11 kann Kopete bei den Protokollen Yahoo! und MSN auch Webcams einsetzen. Ab Version 0.12 wird die Jabber-Audioerweiterung Jingle experimentell unterstützt und das Gesprächsfenster lässt sich mit Adium-kompatiblen Themen gestalten. 

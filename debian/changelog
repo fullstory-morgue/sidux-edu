@@ -31,8 +31,9 @@ dpkg-buildpackage: failure: debian/rules build gave error exit status 2
 
   [ Fabian Wuertz ]
   * kappinstaller added 7/8
+  * kappinstaller added 8/9
 
- -- Fabian Wuertz <xadras@sidux.com>  Thu, 29 May 2008 16:43:57 +0200
+ -- Fabian Wuertz <xadras@sidux.com>  Thu, 29 May 2008 17:14:11 +0200
 
 sidux-edu (0.3.1) unstable; urgency=low
 

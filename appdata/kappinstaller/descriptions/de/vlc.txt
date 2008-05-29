@@ -1,5 +1,0 @@
-VLC
-.
-Der VLC media player (anfänglich VideoLAN Client) ist ein hoch portabler, freier Medienspieler, sowohl für diverse Audio- und Videocodecs und Dateiformate, als auch für DVDs und Video-CDs, sowie für unterschiedlichste Streaming-Protokolle. Er kann auch als Server zum Streaming in Uni- oder Multicast in IPv4 und IPv6 in Netzwerken mit hoher Bandbreite verwendet werden. Er ist ein Teil der kompletten Streaming-Lösung des VideoLAN-Teams, womit beispielsweise die Versorgung eines Universitätscampus mit Fernsehen über einen einzigen Empfänger möglich ist, was auch der Anlass für die Entwicklung der Programme war.
-
-Besonders hervorzuheben ist die sehr hohe Robustheit der Anwendung, die nahezu jedes Format und jede Datei abspielt, z. B. auch unvollständige oder bruchstückhafte AVI-Dateien, was z. B. bei nicht vollständig heruntergeladenen Dateien der Fall sein kann. Dabei sind alle Standardfunktionen kommerzieller Produkte verfügbar. Zusätzlich können über Filter verschiedene Effekte in Echtzeit angewandt werden. So kann z. B. ein Video, das im Hochformat aufgenommen wurde, um 90° gedreht werden. Farbfilter usw. können angewandt werden. 

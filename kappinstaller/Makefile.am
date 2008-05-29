@@ -20,7 +20,8 @@ kappinstaller_LDADD = $(LIB_KDEUI) ../libappinstaller/libappinstaller.la
 xdg_apps_DATA = kappinstaller.desktop
 bin_PROGRAMS = kappinstaller
 
-sharedir = $(pkgdatadir)
+#sharedir = $(pkgdatadir)
+sharedir= "/usr/share"
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller

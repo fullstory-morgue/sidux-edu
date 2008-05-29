@@ -1,7 +1,0 @@
-Kalzium
-.
-Kalzium bietet Ihnen alle Informationen über das PSE (Periodensystem der Elemente). Sie können viele Informationen über die Elemente nachschlagen und die Elemente auch nach verschiedenen Kriterien farbig hervorheben. Außerdem bietet Kalzium die Möglichkeit chemische Begriffe oder Gerätschaften in einem Glossar nachzuschlagen.
-.
-Sie können im Periodensystem die Elemente nach Blöcken, Gruppen, Säureverhalten und unterschiedlichen Aggregatzuständen durch Farben markieren. Für einen Bereich von Elementen können Sie Daten graphisch darstellen (Gewicht, Masse pro Neutron, Dichte, Ionisationsenergie, zweite Ionisationsenergie, Elektronegativität). Und es gibt eine Zeitleiste, mit der Sie für ein bestimmtes Datum alle damals bekannten Elemente anzeigen lassen können.
-.
-Gerade bei Wissenschaftlern erfreut sich Kalzium großer Beliebtheit und kommt im Max-Planck-Institut für Kernphysik, der Universität von Oxford und der französischen Sorbonne zum Einsatz.

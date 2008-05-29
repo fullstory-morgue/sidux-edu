@@ -1,3 +1,0 @@
-Konsole
-.
-Konsole ist die Terminalemulation von KDE und unterstützt Registerreiter (Tabs), Verlauf, Drucken, verschiedene Ansichtsprofile, geteilte Ansichtsfenster und Lesezeichen. Sie ist gut in KDE integriert und kann über KParts in andere KDE-Programme wie Konqueror, Dolphin und Kate integriert werden. 

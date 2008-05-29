@@ -1,3 +1,0 @@
-Iceweasel (Mozilla Firefox)
-.
-Mozilla Firefox ist der Web-Browser der Mozilla Foundation, er ging als Einzelanwendung aus der Mozilla Suite hervor. Er bietet Tabbed-Browsing, also das gleichzeitige Öffnen mehrer Internetseiten innerhalb eines Anwendungsfensters, direkte Einbindung von Nachrichtenquellen, Lesezeichenverwaltung, schnelles Vor und Zurück und vieles mehr. Er lässt sich über Erweiterungen stark im Funktionsumfang ändern und ausbauen und bietet so beispielsweise auch Navigation durch Mausgesten.

@@ -1,3 +1,0 @@
-KSpread
-.
-KSpread ist eine Tabellenkalkulation, die auch komplexe mathematische Formeln und Statistik beherrscht. Ebenfalls aus dem KOffice-Projekt.

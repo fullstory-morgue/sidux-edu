@@ -1,3 +1,0 @@
-GIMP
-.
-GIMP (GNU Image Manipulation Program) ist ein Bildbearbeitungsprogramm, das als freie Software unter der GNU General Public Licence veröffentlicht wird. Der Leistungsumfang für die reine Bildbearbeitung ist vergleichbar mit der des kommerziellen Programms Adobe Photoshop. Der Schwerpunkt der Software liegt insgesamt eher bei der intensiven Bearbeitung einzelner Bilder, wofür vielfältige Effekte zur Verfügung stehen. 

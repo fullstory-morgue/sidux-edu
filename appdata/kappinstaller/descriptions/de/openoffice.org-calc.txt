@@ -1,3 +1,0 @@
-OpenOffice Calc
-.
-Calc b&auml;ndigt Ihre Zahlenkolonnen und hilft Ihnen, bei schwierigen Entscheidungen die Alternativen gegeneinander abzuw&auml;gen. Mit Calc analysieren, summieren und pr&auml;sentieren Sie Ihre Daten. Diagramme und Werkzeuge zur Auswertung verhelfen zur Transparenz Ihrer Zahlen. Ein voll integriertes Hilfesystem erleichtert Ihnen die Eingabe von komplexen Formeln. F&uuml;gen Sie externe Daten mit Hilfe des Daten-Piloten ein, sortieren und filtern Sie sie, erstellen Sie Zwischensummen und statistische Analysen. Nutzen Sie die Vorschau, um aus einer Anzahl von 13 Kategorien von 2-D und 3-D Grafiken inklusive Linien-, Fl&auml;chen-, Balken-, Kuchen-, XY- und Netz-Diagrammen mit Dutzenden von Varianten die passende Darstellung zu finden.

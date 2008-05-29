@@ -1,3 +1,0 @@
-KTorrent
-.
-KTorrent ist ein BitTorrent-P2P-Netzwerk-Klient für die KDE-Arbeitsflächenumgebung. Er ermöglicht das Herunterladen und Verteilen großer Datenmengen wie bspw. neuer Ausgaben von Debian mit Hilfe von Torrent-Dateien. Er unterstützt UPnP, UDP-Tracker, Geschwindigkeitsbegrenzungen, Internetsuche nach Torrents, das Blockieren von IP-Adressen und noch anderes mehr. 

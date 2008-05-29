@@ -1,3 +1,0 @@
-KChart
-.
-KChart ist das Diagramm-Erstellungsprogramm der KOffice-Suite. Es kann gut dazu genutzt werden, um Diagramme in Koffice-Dokumente einzubinden, z.B. in Kword dem KOffice-Textverarbeitungsprogramm oder KPresenter, dem KOffice-Pr&auml;sentationsprogramm.

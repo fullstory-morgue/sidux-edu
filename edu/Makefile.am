@@ -20,7 +20,8 @@ sidux_edu_LDADD = $(LIB_KDEUI) ../libappinstaller/libappinstaller.la
 xdg_apps_DATA = sidux-edu.desktop
 bin_PROGRAMS = sidux-edu
 
-sharedir = $(pkgdatadir)
+#sharedir = $(pkgdatadir)
+sharedir = "/usr/share"
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/edu

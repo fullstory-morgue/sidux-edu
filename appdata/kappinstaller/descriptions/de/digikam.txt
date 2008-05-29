@@ -1,3 +1,0 @@
-Digikam
-.
-digiKam ist eine fortgeschrittene Bildverwaltung für KDE. Es kann Sammlungen von Bildern sortieren und in Ordnern oder durch Kennzeichnungen organisieren. Mit Hilfe von Gphoto kann es Bilder aus fast allen Digitalkameras auslesen. Durch die kipi-plugins kann es einfache Bildoperationen und -manipulationen durchführen. digiKam unterstützt alle gängigen Bildformate, über dcraw auch RAW-Daten. Die Sammlungsdaten, sowie Bildinformationen und ausgelesene EXIF-Daten werden in einer SQLite-Datenbank gespeichert. 

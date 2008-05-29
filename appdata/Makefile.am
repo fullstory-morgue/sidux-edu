@@ -2,19 +2,21 @@ sharedir = "/usr/share"
 #sharedir = $(pkgdatadir)
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
-	$(mkinstalldirs) $(DESTDIR)$(sharedir)/edu
-	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller
-	$(mkinstalldirs) $(DESTDIR)$(sharedir)
-	cp -aR $(srcdir)/appdata/edu/* $(DESTDIR)$(sharedir)/sidux-edu/
-	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/sidux-edu/
-	cp -aR $(srcdir)/html $(DESTDIR)$(sharedir)/sidux-edu/
-	cp -aR $(srcdir)/appdata/kappinstaller/* $(DESTDIR)$(sharedir)/kappinstaller/
-	cd $(top_srcdir)/appdata/html;\
-	for potfile in *.html; do \
-		if test "$$subdir" = "."; then :; else \
-			subname=$$(basename $$potfile .html); \
-			cp $$subname.html $(DESTDIR)$(sharedir)/edu/test.fabian; \
-		fi; \
+	cp -aR $(srcdir)/sidux-edu $(DESTDIR)$(sharedir)/
+	cp -aR $(srcdir)/kappinstaller $(DESTDIR)$(sharedir)/
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/sidux-edu/descriptions
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/sidux-edu/descriptions/de
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller/descriptions; \
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de2; \
+	cd $(srcdir)/sidux-edu/pmap ;\
+	for apps in *.pmap; do \
+		subname=$$(basename $$apps .pmap); \
+		  cp -aR $(srcdir)/common/descriptions/de/$$subname.txt $(DESTDIR)$(sharedir)/sidux-edu/descriptions/de/; \
+	done; \
+	cd ../../kappinstaller/pmap ;\
+	for apps2 in *.pmap; do \
+		subname=$$(basename $$apps2 .pmap); \
+		cp ../../common/descriptions/de/$$subname.txt $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de2/; \
 	done;
 
 
