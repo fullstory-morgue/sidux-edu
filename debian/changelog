@@ -1,9 +1,5 @@
-sidux-edu (0.4.1) UNRELEASED; urgency=low
+sidux-edu (0.4.1) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Fabian Wuertz ]
   * apt-get-konsole to lib
   * long description for kappinstaller
 
