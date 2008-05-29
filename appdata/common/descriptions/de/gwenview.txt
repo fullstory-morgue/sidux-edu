@@ -1,0 +1,3 @@
+Gwenview
+.
+Gwenview ist eine KDE-Anwendung zur Bearbeitung und Verwaltung von Bildern. Es werden viele Bildforamte unterstützt, Bilder lassen sich in Alben verwalten und aus ihnen lassen sich EXIF-Daten extrahieren. Mit Hilfe der kipi-plugins lassen sich Bilder bearbeiten. Über eine Konquerorintegration werden im Bilder im Dateiverwalter direkt mit Gwenview angezeigt. 

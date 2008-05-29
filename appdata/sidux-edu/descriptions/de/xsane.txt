@@ -1,1 +1,0 @@
-xsane ist eine Anwendung zum Scannen.

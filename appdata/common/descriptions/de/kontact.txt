@@ -1,0 +1,3 @@
+Kontact
+.
+Kontact ist ein Kollaborationssoftware-Client, welcher verschiedene Programme aus der persönlichen Informationsverwaltung von KDE unter einer Oberfläche zusammenfasst. Es ist vergleichbar mit Outlook oder Evolution, jedoch können die integrierten Programme auch jeweils separat ausgeführt werden. Auf einer Übersichtsseite lassen sich Informationen aus verschiedenen Komponenten zusammengefasst darstellen. 

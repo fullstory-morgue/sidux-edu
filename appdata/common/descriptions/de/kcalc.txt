@@ -1,0 +1,3 @@
+KCalc
+.
+KCalc ist eine Software für einen wisssenschaflichen Taschenrechner auf dem Computer-Desktop. KCalc verfügt über allgemein übliche Taschenrechnerfunktionen (auch Statistikfunktionen). Das Programm ermöglicht, Dezimal-, Hexadezimal-, Oktal- und Binärzahlen einfach ineinander umzuwandeln. KCalc bringt zahlreiche mathematische und Naturkonstanten mit und bietet das Selbstdefinieren von weiteren Konstanten an. Berechnungen können in andere Applikationen kopiert werden. 

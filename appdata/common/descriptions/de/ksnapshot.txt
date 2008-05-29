@@ -1,0 +1,3 @@
+KSnapshot
+.
+Das Programm stellt auf einfache Weise Screenshots (mit Maus, ohne Maus, Vollbild, Ausz&uuml;ge) her, die f&uuml;r Demonstrationen bestimmter Bildschirmeinstellungen oder Arbeitsfortschritten hilfreich und n&uuml;tzlich sind.

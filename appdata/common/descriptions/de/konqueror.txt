@@ -1,0 +1,6 @@
+Konqueror
+.
+Konqueror ist ein vielseitiger Dateiverwalter und Web-Browser und Teil der KDE-Arbeitsumgebung. Er ist im kdebase-Paket enthalten. Als Webbrowser kann er mit Netscape-PlugIns umgehen und unterstützt Java, JavaScript und verschlüsselte Übertragung. Dabei verfügt er über starke Regelwerke zur seitenspezifischen Behandlung von Cookies, Java, JavaScript, PlugIns und Browserkennung. Konqueror besitzt einen integrierten Werbefilter und einen Pop-Up-Blocker, mit Hilfe von Web-Tastenkürzeln kann er aus der Adressleiste heraus Suchmaschinen abfragen, zusätzlich zum Suchmaschinenfeld.
+.
+Im Dateiverwaltungsmodus lassen sich alle gängigen Dateioperationen wie Erstellen, Löschen, Verschieben und Kopieren durchführen. Für viele Dateitypen werden automatisch Vorschaubilder erstellt. Bilder, Videos, Audiodateien und andere Formate können direkt im Konqueror eingebettet abgespielt werden. Die Ansicht lässt sich - ähnlich wie beim Midnight Commander - in mehrere Fenster unterteilen.
+Ab Version 4 konzentriert sich Konqueror mehr auf seine Funktion als Web-Browser, wobei er seine Fähigkeiten als Dateiverwalter allerdings beibehält. Auf die Dateiverwaltung ist in KDE4 Dolphin zugeschnitten.
