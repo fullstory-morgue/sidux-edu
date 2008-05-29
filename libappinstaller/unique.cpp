@@ -19,8 +19,6 @@
 
 
 #include "unique.h"
-#include "systray.h"
-
 #include <kcmdlineargs.h>
 #include <kdebug.h>
 

@@ -296,7 +296,7 @@ x_libraries = @x_libraries@
 xdg_appsdir = @xdg_appsdir@
 xdg_directorydir = @xdg_directorydir@
 xdg_menudir = @xdg_menudir@
-sharedir = $(pkgdatadir)
+sharedir = "/usr/share"
 #>- all: all-am
 #>+ 1
 all: docs-am  all-am
@@ -476,15 +476,23 @@ uninstall-am: uninstall-info-am
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	uninstall uninstall-am uninstall-info-am
 
+#sharedir = $(pkgdatadir)
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/edu
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
-	cp -aR $(srcdir)/appdata/edu/* $(DESTDIR)$(sharedir)/edu/
-	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/edu/
-	cp -aR $(srcdir)/html $(DESTDIR)$(sharedir)/edu/
+	cp -aR $(srcdir)/appdata/edu/* $(DESTDIR)$(sharedir)/sidux-edu/
+	cp -aR $(srcdir)/categories $(DESTDIR)$(sharedir)/sidux-edu/
+	cp -aR $(srcdir)/html $(DESTDIR)$(sharedir)/sidux-edu/
 	cp -aR $(srcdir)/appdata/kappinstaller/* $(DESTDIR)$(sharedir)/kappinstaller/
+	cd $(top_srcdir)/appdata/html;\
+	for potfile in *.html; do \
+		if test "$$subdir" = "."; then :; else \
+			subname=$$(basename $$potfile .html); \
+			cp $$subname.html $(DESTDIR)$(sharedir)/edu/test.fabian; \
+		fi; \
+	done;
 
 #cp -aR $(srcdir)/appdata/common/* $(DESTDIR)$(sharedir)/edu/
 #cp -aR $(srcdir)/appdata/common/* $(DESTDIR)$(sharedir)/kappinstaller/

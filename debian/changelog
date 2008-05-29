@@ -29,7 +29,10 @@ make[1]: Leaving directory `/tmp/buildd/sidux-edu-0.3.2/obj-x86_64-linux-gnu'
 make: *** [debian/stamp-makefile-build] Error 2
 dpkg-buildpackage: failure: debian/rules build gave error exit status 2
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 May 2008 01:30:52 +0200
+  [ Fabian Wuertz ]
+  * kappinstaller added 7/8
+
+ -- Fabian Wuertz <xadras@sidux.com>  Thu, 29 May 2008 16:43:57 +0200
 
 sidux-edu (0.3.1) unstable; urgency=low
 

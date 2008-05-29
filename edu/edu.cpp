@@ -47,9 +47,9 @@
 
 
 
-#include <fancylistviewitem.h>
+#include <../libappinstaller/fancylistviewitem.h>
 
-#include "edu.h"
+#include <edu.h>
 
 
 

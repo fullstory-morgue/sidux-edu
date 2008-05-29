@@ -655,7 +655,7 @@ install-data-local:
 # translation
 messages: rc.cpp
 	$(EXTRACTRC) `find . -name \*.ui -o -name \*.rc` > rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/sidux-edu-applyChanges.pot
+	$(XGETTEXT) *.cpp -o $(podir)/aptgetkonsole.pot
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
@@ -672,7 +672,7 @@ clean-metasources:
 	-rm -f  ac.moc
 
 #>+ 2
-KDE_DIST=apt-get-konsole Makefile.in acdialog.ui acdialog.h sidux-edu-applyChanges Makefile.am 
+KDE_DIST=Makefile.in acdialog.ui acdialog.h apt-get-konsole Makefile.am 
 
 #>+ 4
 clean-ui:

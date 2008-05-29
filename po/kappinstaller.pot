@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-05-29 16:34+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr ""
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr ""
+
+#: kappinstaller.cpp:63
+msgid "Please use this program just if your system is up-to-date!"
+msgstr ""
+
+#: kappinstaller.cpp:889 kappinstaller.cpp:891
+msgid "en"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 37
+#: kappinstallerdialog.cpp:422 kappinstallerdialog.cpp:663 rc.cpp:6
+#, no-c-format
+msgid "Category"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 339
+#. i18n: file ./kappinstallerdialog.ui line 350
+#. i18n: file ./kappinstallerdialog.ui line 361
+#: kappinstallerdialog.cpp:498 kappinstallerdialog.cpp:499
+#: kappinstallerdialog.cpp:500 kappinstallerdialog.cpp:682
+#: kappinstallerdialog.cpp:683 kappinstallerdialog.cpp:684 rc.cpp:51 rc.cpp:54
+#: rc.cpp:57
+#, no-c-format
+msgid "*"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 447
+#: kappinstallerdialog.cpp:521 kappinstallerdialog.cpp:687 rc.cpp:66
+#, no-c-format
+msgid "ID"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 458
+#: kappinstallerdialog.cpp:522 kappinstallerdialog.cpp:688 rc.cpp:69
+#, no-c-format
+msgid "Name"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 469
+#: kappinstallerdialog.cpp:523 kappinstallerdialog.cpp:689 rc.cpp:72
+#, no-c-format
+msgid "Categories"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 480
+#: kappinstallerdialog.cpp:524 kappinstallerdialog.cpp:690 rc.cpp:75
+#, no-c-format
+msgid "Package"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 491
+#: kappinstallerdialog.cpp:525 kappinstallerdialog.cpp:691 rc.cpp:78
+#, no-c-format
+msgid "Status"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 502
+#: kappinstallerdialog.cpp:526 kappinstallerdialog.cpp:692 rc.cpp:81
+#, no-c-format
+msgid "Exec"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 513
+#: kappinstallerdialog.cpp:527 kappinstallerdialog.cpp:693 rc.cpp:84
+#, no-c-format
+msgid "Description"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 524
+#: kappinstallerdialog.cpp:528 kappinstallerdialog.cpp:694 rc.cpp:87
+#, no-c-format
+msgid "Homepage"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 535
+#: kappinstallerdialog.cpp:529 kappinstallerdialog.cpp:695 rc.cpp:90
+#, no-c-format
+msgid "Terminal"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 546
+#: kappinstallerdialog.cpp:530 kappinstallerdialog.cpp:696 rc.cpp:93
+#, no-c-format
+msgid "Icon"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 557
+#: kappinstallerdialog.cpp:531 kappinstallerdialog.cpp:697 rc.cpp:96
+#, no-c-format
+msgid "DE"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 25
+#: kappinstallerdialog.cpp:662 rc.cpp:3
+#, no-c-format
+msgid "Add/Remove Applications"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 129
+#: kappinstallerdialog.cpp:665 rc.cpp:10
+#, no-c-format
+msgid "Search:"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 180
+#: kappinstallerdialog.cpp:667 rc.cpp:14
+#, no-c-format
+msgid "Minimize"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 203
+#: kappinstallerdialog.cpp:669 rc.cpp:17
+#, no-c-format
+msgid "All Applications"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 208
+#: kappinstallerdialog.cpp:670 rc.cpp:20
+#, no-c-format
+msgid "Installed only"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 213
+#: kappinstallerdialog.cpp:671 rc.cpp:23
+#, no-c-format
+msgid "Not installed only"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 237
+#: kappinstallerdialog.cpp:673 rc.cpp:26
+#, no-c-format
+msgid "KDE"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 242
+#: kappinstallerdialog.cpp:674 rc.cpp:29
+#, no-c-format
+msgid "GTK"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 247
+#: kappinstallerdialog.cpp:675 rc.cpp:32
+#, no-c-format
+msgid "ALL"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 278
+#: kappinstallerdialog.cpp:676 rc.cpp:35
+#, no-c-format
+msgid "St&art"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 281
+#: kappinstallerdialog.cpp:677 rc.cpp:38
+#, no-c-format
+msgid "Alt+A"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 295
+#: kappinstallerdialog.cpp:678 rc.cpp:41
+#, no-c-format
+msgid "H&omepage"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 298
+#. i18n: file ./kappinstallerdialog.ui line 748
+#: kappinstallerdialog.cpp:679 kappinstallerdialog.cpp:704 rc.cpp:44
+#: rc.cpp:117
+#, no-c-format
+msgid "Alt+O"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 330
+#: kappinstallerdialog.cpp:680 rc.cpp:47
+#, no-c-format
+msgid ""
+"<b>Quick Introduction</b><br><br>\n"
+"Click to a category or type an keyword into the search field to browse the "
+"applications. If you want to install an application just check the box and "
+"click on the \"Apply Changes\" button."
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 425
+#: kappinstallerdialog.cpp:685 rc.cpp:60
+#, no-c-format
+msgid "Appl&y Changes"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 428
+#: kappinstallerdialog.cpp:686 rc.cpp:63
+#, no-c-format
+msgid "Alt+Y"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 668
+#: kappinstallerdialog.cpp:698 rc.cpp:99
+#, no-c-format
+msgid "To be removed:"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 686
+#: kappinstallerdialog.cpp:699 rc.cpp:102
+#, no-c-format
+msgid "To be installed:"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 710
+#: kappinstallerdialog.cpp:700 rc.cpp:105
+#, no-c-format
+msgid "<b>Apply changes?</b>"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 726
+#: kappinstallerdialog.cpp:701 rc.cpp:108
+#, no-c-format
+msgid "&cancel"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 729
+#: kappinstallerdialog.cpp:702 rc.cpp:111
+#, no-c-format
+msgid "Alt+C"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 745
+#: kappinstallerdialog.cpp:703 rc.cpp:114
+#, no-c-format
+msgid "&ok"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 817
+#. i18n: file ./kappinstallerdialog.ui line 820
+#. i18n: file ./kappinstallerdialog.ui line 823
+#: kappinstallerdialog.cpp:705 kappinstallerdialog.cpp:706
+#: kappinstallerdialog.cpp:707 rc.cpp:120 rc.cpp:123 rc.cpp:126
+#, no-c-format
+msgid "About Kappinstaller"
+msgstr ""
+
+#. i18n: file ./kappinstallerdialog.ui line 851
+#. i18n: file ./kappinstallerdialog.ui line 854
+#: kappinstallerdialog.cpp:711 kappinstallerdialog.cpp:712 rc.cpp:136
+#: rc.cpp:139
+#, no-c-format
+msgid "About KDE"
+msgstr ""

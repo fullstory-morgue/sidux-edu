@@ -1,5 +1,5 @@
 /*
- * kappstarter.h
+ * edu.h
  *
  * Copyright (c) 2007 Fabian Wuertz <xadras@sidux.com>
  *
@@ -17,65 +17,59 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef KAPPINSTALLER_H_
-#define KAPPINSTALLER_H_
+#ifndef EDU_H_
+#define EDU_H_
 
 
+
+#include <kde_terminal_interface.h>
+#include <kparts/part.h>
 #include <kiconloader.h>
-#include <ksystemtray.h>
 
-#include "process.h"
-#include "kappinstallerdialog.h"
-#include "functions.h"
+#include <../libappinstaller/functions.h>
+#include <edudialog.h>
 
 
-class kappinstaller : public KappinstallerDialog
+
+class edu : public EduDialog
 {
 	Q_OBJECT
 
 	public:
-		kappinstaller(QWidget *parent = 0L, const char *name = 0L, const QStringList &foo = QStringList());
+		edu(QWidget *parent = 0L, const char *name = 0L, const QStringList &foo = QStringList());
+		void getCategories();
 		void importApps();
-		void importApps2();
+
 		QString appdir;
-		QString datadir;
 		QString iconpath;
 		QString changedPackages;
-		QStringList categoriesID;
-		QStringList subCategoriesID;
 		QString getDescription(QString);
-		QString getHomepage(QString);
-		QStringList getDescriptionHomepage(QString);
-		QStringList readFile(QString);
-		QPixmap getIcon(QString);
 
-		KIconLoader *loader;
 		Functions *myFunctions;
+		KIconLoader *loader;
 
-	private:
-		KSystemTray * systray;
 
 	public slots:
-		virtual void showApp();
-		virtual void changed();
 		virtual void showCategoryApps();
+		virtual void showApp();
 		virtual void execApp();
-		virtual void applyChanges1();
-		virtual void applyChanges2();
+		virtual void changed();
 		virtual void showHomepage();
-		virtual void cancel();
-		virtual void back();
+		virtual void copyExample();
 		virtual void disableButtons();
 		virtual void about();
 		virtual void aboutKDE();
-		virtual void minimize();
+		virtual void siduxManual();
+		virtual void seminarixManual();
+		virtual void homepage();
 		virtual void searchApp();
+		virtual void applyChanges1();
+		virtual void applyChanges2();
+		virtual void cancel();
+		virtual void back();
 		virtual void openUrl(const QString&);
 
-	private:
-		Process* shell;
 
 };
-
 
 #endif

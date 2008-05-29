@@ -50,10 +50,8 @@
 
 #include <klistview.h>
 #include <ksystemtray.h>
-
-
 #include <kappinstaller.h>
-#include <fancylistviewitem.h>
+#include <../libappinstaller/fancylistviewitem.h>
 
 
 

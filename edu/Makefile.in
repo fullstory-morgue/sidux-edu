@@ -16,6 +16,7 @@
 @SET_MAKE@
 
 
+
 srcdir = @srcdir@
 top_srcdir = @top_srcdir@
 VPATH = @srcdir@
@@ -41,7 +42,8 @@ host_triplet = @host@
 target_triplet = @target@
 bin_PROGRAMS = sidux-edu$(EXEEXT)
 subdir = edu
-DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
+	$(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/acinclude.m4 \
 	$(top_srcdir)/configure.in
@@ -53,10 +55,14 @@ CONFIG_CLEAN_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
-am_sidux_edu_OBJECTS = main.$(OBJEXT)
+am_sidux_edu_OBJECTS = main.$(OBJEXT) edu.$(OBJEXT) systray.$(OBJEXT)
 #>- sidux_edu_OBJECTS = $(am_sidux_edu_OBJECTS)
-#>+ 1
-sidux_edu_OBJECTS = main.$(OBJEXT)
+#>+ 5
+sidux_edu_final_OBJECTS = sidux_edu.all_cpp.o 
+sidux_edu_nofinal_OBJECTS = main.$(OBJEXT) edu.$(OBJEXT) systray.$(OBJEXT) edudialog.$(OBJEXT)\
+systray.moc.o 
+@KDE_USE_FINAL_FALSE@sidux_edu_OBJECTS = $(sidux_edu_nofinal_OBJECTS)
+@KDE_USE_FINAL_TRUE@sidux_edu_OBJECTS = $(sidux_edu_final_OBJECTS)
 am__DEPENDENCIES_1 =
 sidux_edu_DEPENDENCIES = $(am__DEPENDENCIES_1) \
 	../libappinstaller/libappinstaller.la
@@ -91,6 +97,7 @@ am__vpath_adj = case $$p in \
 am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
 xdg_appsDATA_INSTALL = $(INSTALL_DATA)
 DATA = $(xdg_apps_DATA)
+HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -345,20 +352,21 @@ xdg_menudir = @xdg_menudir@
 AM_CPPFLAGS = $(all_includes)
 
 # these are the headers for your project
-#noinst_HEADERS = edu.h unique.h systray.h
+noinst_HEADERS = edu.h systray.h
 
 # let automoc handle all of the meta source files (moc)
 #>- METASOURCES = AUTO
 KDE_ICON = AUTO
 
 # the application source, library search path, and link libraries
-sidux_edu_SOURCES = main.cpp
+#>- sidux_edu_SOURCES = main.cpp  edu.cpp edudialog.ui systray.cpp
+#>+ 1
+sidux_edu_SOURCES=main.cpp  edu.cpp  systray.cpp edudialog.cpp
 sidux_edu_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
 sidux_edu_LDADD = $(LIB_KDEUI) ../libappinstaller/libappinstaller.la
 
 # application
 xdg_apps_DATA = sidux-edu.desktop
-#bin_SCRIPTS = siduxEduInstallApp
 sharedir = $(pkgdatadir)
 #>- all: all-am
 #>+ 1
@@ -446,7 +454,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/edu.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/systray.Po@am__quote@
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	if $(CXXCOMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ $<; \
@@ -573,7 +583,7 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile $(PROGRAMS) $(DATA)
+all-am: Makefile $(PROGRAMS) $(DATA) $(HEADERS)
 installdirs:
 	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"; do \
 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
@@ -608,7 +618,7 @@ clean: kde-rpo-clean  clean-am
 
 #>- clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 #>+ 1
-clean-am: clean-bcheck  clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
+clean-am: clean-metasources clean-ui clean-bcheck clean-final  clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 
 distclean: distclean-am
 	-rm -rf ./$(DEPDIR)
@@ -674,12 +684,40 @@ install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/edu
 	cp -aR $(srcdir)/sh $(DESTDIR)$(sharedir)/edu/
+
+# translation
+messages: rc.cpp
+	$(EXTRACTRC) `find . -name \*.ui -o -name \*.rc` > rc.cpp
+	$(XGETTEXT) *.cpp -o $(podir)/siduxedu.pot
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
+#>+ 3
+edu.moc: $(srcdir)/edu.h
+	$(MOC) $(srcdir)/edu.h -o edu.moc
+
 #>+ 2
-KDE_DIST=sidux-edu.desktop Makefile.am sidux-edu Makefile.in 
+mocs: edu.moc
+
+#>+ 3
+systray.moc.cpp: $(srcdir)/systray.h
+	$(MOC) $(srcdir)/systray.h -o systray.moc.cpp
+
+#>+ 2
+mocs: systray.moc.cpp
+
+#>+ 3
+clean-metasources:
+	-rm -f  edu.moc systray.moc.cpp
+
+#>+ 2
+KDE_DIST=Makefile.in sidux-edu.desktop edudialog.h edudialog.ui Makefile.am 
+
+#>+ 4
+clean-ui:
+	-rm -f \
+	edudialog.cpp edudialog.h edudialog.moc 
 
 #>+ 2
 docs-am:
@@ -722,26 +760,63 @@ bcheck-am:
 	done
 
 
+#>+ 11
+sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/edu.cpp $(srcdir)/systray.cpp $(srcdir)/edudialog.cpp $(srcdir)/systray.moc.cpp  edu.moc edudialog.moc
+	@echo 'creating sidux_edu.all_cpp.cpp ...'; \
+	rm -f sidux_edu.all_cpp.files sidux_edu.all_cpp.final; \
+	echo "#define KDE_USE_FINAL 1" >> sidux_edu.all_cpp.final; \
+	for file in main.cpp edu.cpp systray.cpp edudialog.cpp systray.moc.cpp ; do \
+	  echo "#include \"$$file\"" >> sidux_edu.all_cpp.files; \
+	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> sidux_edu.all_cpp.final; \
+	done; \
+	cat sidux_edu.all_cpp.final sidux_edu.all_cpp.files > sidux_edu.all_cpp.cpp; \
+	rm -f sidux_edu.all_cpp.final sidux_edu.all_cpp.files
+
+#>+ 3
+clean-final:
+	-rm -f sidux_edu.all_cpp.cpp
+
 #>+ 3
 final:
-	$(MAKE) all-am
+	$(MAKE) sidux_edu_OBJECTS="$(sidux_edu_final_OBJECTS)" all-am
 
 #>+ 3
 final-install:
-	$(MAKE) install-am
+	$(MAKE) sidux_edu_OBJECTS="$(sidux_edu_final_OBJECTS)" install-am
 
 #>+ 3
 no-final:
-	$(MAKE) all-am
+	$(MAKE) sidux_edu_OBJECTS="$(sidux_edu_nofinal_OBJECTS)" all-am
 
 #>+ 3
 no-final-install:
-	$(MAKE) install-am
+	$(MAKE) sidux_edu_OBJECTS="$(sidux_edu_nofinal_OBJECTS)" install-am
 
 #>+ 3
 kde-rpo-clean:
 	-rm -f *.rpo
 
-#>+ 3
+#>+ 8
 nmcheck: 
+edu.lo: edu.moc 
+edu.o: edu.moc 
 nmcheck-am: nmcheck
+$(srcdir)/edu.cpp: edudialog.h 
+$(srcdir)/main.cpp: edudialog.h 
+$(srcdir)/systray.cpp: edudialog.h 
+
+#>+ 15
+edudialog.cpp: $(srcdir)/edudialog.ui edudialog.h edudialog.moc
+	rm -f edudialog.cpp
+	echo '#include <kdialog.h>' > edudialog.cpp
+	echo '#include <klocale.h>' >> edudialog.cpp
+	$(UIC) -tr ${UIC_TR} -i edudialog.h $(srcdir)/edudialog.ui > edudialog.cpp.temp ; ret=$$?; \
+	$(PERL) -pe "s,${UIC_TR}( \"\" ),QString::null,g" edudialog.cpp.temp | $(PERL) -pe "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | $(PERL) -pe "s,image([0-9][0-9]*)_data,img\$$1_edudialog,g" | $(PERL) -pe "s,: QWizard\(,: KWizard(,g" >> edudialog.cpp ;\
+	rm -f edudialog.cpp.temp ;\
+	if test "$$ret" = 0; then echo '#include "edudialog.moc"' >> edudialog.cpp; else rm -f edudialog.cpp ; exit $$ret ; fi
+
+edudialog.h: $(srcdir)/edudialog.ui
+	rm -rf edudialog.h;
+	$(UIC) $(srcdir)/edudialog.ui | $(PERL) -pi -e "s,public QWizard,public KWizard,g; s,#include <qwizard.h>,#include <kwizard.h>,g" >> edudialog.h ;
+edudialog.moc: edudialog.h
+	$(MOC) edudialog.h -o edudialog.moc

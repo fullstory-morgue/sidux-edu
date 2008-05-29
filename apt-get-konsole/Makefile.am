@@ -29,4 +29,4 @@ install-data-local:
 # translation
 messages: rc.cpp
 	$(EXTRACTRC) `find . -name \*.ui -o -name \*.rc` > rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/sidux-edu-applyChanges.pot
+	$(XGETTEXT) *.cpp -o $(podir)/aptgetkonsole.pot

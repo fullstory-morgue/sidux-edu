@@ -15,7 +15,6 @@
 
 @SET_MAKE@
 
-
 srcdir = @srcdir@
 top_srcdir = @top_srcdir@
 VPATH = @srcdir@
@@ -40,8 +39,7 @@ build_triplet = @build@
 host_triplet = @host@
 target_triplet = @target@
 subdir = libappinstaller
-DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
-	$(srcdir)/Makefile.in
+DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/acinclude.m4 \
 	$(top_srcdir)/configure.in
@@ -53,13 +51,13 @@ CONFIG_CLEAN_FILES =
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libappinstaller_la_DEPENDENCIES = @LIBOBJS@
 am_libappinstaller_la_OBJECTS = fancylistviewitem.lo functions.lo \
-	unique.lo process.lo edu.lo systray.lo kappinstaller.lo
+	unique.lo process.lo
 #>- libappinstaller_la_OBJECTS = $(am_libappinstaller_la_OBJECTS)
 #>+ 6
 libappinstaller_la_final_OBJECTS = libappinstaller_la.all_cpp.lo 
 libappinstaller_la_nofinal_OBJECTS = fancylistviewitem.lo functions.lo \
-	unique.lo process.lo edu.lo systray.lo kappinstaller.lo edudialog.lo kappinstallerdialog.lo\
-unique.moc.lo systray.moc.lo process.moc.lo 
+	unique.lo process.lo\
+unique.moc.lo process.moc.lo 
 @KDE_USE_FINAL_FALSE@libappinstaller_la_OBJECTS = $(libappinstaller_la_nofinal_OBJECTS)
 @KDE_USE_FINAL_TRUE@libappinstaller_la_OBJECTS = $(libappinstaller_la_final_OBJECTS)
 DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
@@ -85,7 +83,6 @@ CXXLINK = $(LIBTOOL) --tag=CXX --mode=link $(CXXLD) $(AM_CXXFLAGS) \
 	$(CXXFLAGS) $(KDE_CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
 SOURCES = $(libappinstaller_la_SOURCES)
 DIST_SOURCES = $(libappinstaller_la_SOURCES)
-HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -336,24 +333,8 @@ xdg_appsdir = @xdg_appsdir@
 xdg_directorydir = @xdg_directorydir@
 xdg_menudir = @xdg_menudir@
 noinst_LTLIBRARIES = libappinstaller.la
-noinst_HEADERS = \
- unique.h  functions.h fancylistviewitem.h process.h \
- edu.h systray.h \
- kappinstaller.h
-
-#>- libappinstaller_la_SOURCES = \
-#>-  fancylistviewitem.cpp functions.cpp unique.cpp process.cpp \
-#>-  edu.cpp edudialog.ui systray.cpp \
-#>-  kappinstaller.cpp kappinstallerdialog.ui
-#>+ 4
-libappinstaller_la_SOURCES=\
- fancylistviewitem.cpp functions.cpp unique.cpp process.cpp \
- edu.cpp  systray.cpp \
- kappinstaller.cpp  edudialog.cpp kappinstallerdialog.cpp
-
-#>- libappinstaller_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
-#>+ 1
-libappinstaller_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined $(KDE_NO_UNDEFINED)
+libappinstaller_la_SOURCES = fancylistviewitem.cpp functions.cpp unique.cpp process.cpp
+libappinstaller_la_LDFLAGS = -L/usr/lib/debug  $(all_libraries)
 libappinstaller_la_LIBADD = @LIBOBJS@ 
 INCLUDES = -I$(top_builddir) -I$(top_srcdir) $(all_includes)
 #>- METASOURCES = AUTO
@@ -414,10 +395,7 @@ clean-noinstLTLIBRARIES:
 	  echo "rm -f \"$${dir}/so_locations\""; \
 	  rm -f "$${dir}/so_locations"; \
 	done
-#>- libappinstaller.la: $(libappinstaller_la_OBJECTS) $(libappinstaller_la_DEPENDENCIES) 
-#>+ 2
-@KDE_USE_CLOSURE_TRUE@libappinstaller.la: libappinstaller.la.closure $(libappinstaller_la_OBJECTS) $(libappinstaller_la_DEPENDENCIES) 
-@KDE_USE_CLOSURE_FALSE@libappinstaller.la: $(libappinstaller_la_OBJECTS) $(libappinstaller_la_DEPENDENCIES) 
+libappinstaller.la: $(libappinstaller_la_OBJECTS) $(libappinstaller_la_DEPENDENCIES) 
 	$(CXXLINK)  $(libappinstaller_la_LDFLAGS) $(libappinstaller_la_OBJECTS) $(libappinstaller_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
@@ -426,12 +404,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/edu.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fancylistviewitem.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/functions.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kappinstaller.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/process.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/systray.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/unique.Plo@am__quote@
 
 .cpp.o:
@@ -542,7 +517,7 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile $(LTLIBRARIES) $(HEADERS)
+all-am: Makefile $(LTLIBRARIES)
 installdirs:
 install: install-am
 install-exec: install-exec-am
@@ -575,7 +550,7 @@ clean: kde-rpo-clean  clean-am
 #>- clean-am: clean-generic clean-libtool clean-noinstLTLIBRARIES \
 #>- 	mostlyclean-am
 #>+ 2
-clean-am: clean-metasources clean-ui clean-closures clean-bcheck clean-final  clean-generic clean-libtool clean-noinstLTLIBRARIES \
+clean-am: clean-metasources clean-bcheck clean-final  clean-generic clean-libtool clean-noinstLTLIBRARIES \
 	mostlyclean-am
 
 distclean: distclean-am
@@ -636,22 +611,9 @@ uninstall-am: uninstall-info-am
 	pdf pdf-am ps ps-am tags uninstall uninstall-am \
 	uninstall-info-am
 
-# translation
-messages: rc.cpp
-	$(EXTRACTRC) `find . -name \*.ui -o -name \*.rc` > rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/appinstaller.pot
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
-
-#>+ 8
-libappinstaller.la.closure: $(libappinstaller_la_OBJECTS) $(libappinstaller_la_DEPENDENCIES)
-	@echo "int main() {return 0;}" > libappinstaller_la_closure.cpp
-	@$(LTCXXCOMPILE) -c libappinstaller_la_closure.cpp
-	$(CXXLINK) libappinstaller_la_closure.lo $(libappinstaller_la_LDFLAGS) $(libappinstaller_la_OBJECTS) $(libappinstaller_la_LIBADD) $(LIBS)
-	@rm -f libappinstaller_la_closure.* libappinstaller.la.closure
-	@echo "timestamp" > libappinstaller.la.closure
-
 
 #>+ 3
 unique.moc.cpp: $(srcdir)/unique.h
@@ -659,27 +621,6 @@ unique.moc.cpp: $(srcdir)/unique.h
 
 #>+ 2
 mocs: unique.moc.cpp
-
-#>+ 3
-kappinstaller.moc: $(srcdir)/kappinstaller.h
-	$(MOC) $(srcdir)/kappinstaller.h -o kappinstaller.moc
-
-#>+ 2
-mocs: kappinstaller.moc
-
-#>+ 3
-edu.moc: $(srcdir)/edu.h
-	$(MOC) $(srcdir)/edu.h -o edu.moc
-
-#>+ 2
-mocs: edu.moc
-
-#>+ 3
-systray.moc.cpp: $(srcdir)/systray.h
-	$(MOC) $(srcdir)/systray.h -o systray.moc.cpp
-
-#>+ 2
-mocs: systray.moc.cpp
 
 #>+ 3
 process.moc.cpp: $(srcdir)/process.h
@@ -690,20 +631,10 @@ mocs: process.moc.cpp
 
 #>+ 3
 clean-metasources:
-	-rm -f  unique.moc.cpp kappinstaller.moc edu.moc systray.moc.cpp process.moc.cpp
+	-rm -f  unique.moc.cpp process.moc.cpp
 
 #>+ 2
-KDE_DIST=Makefile.in kappinstallerdialog.ui kappinstallerdialog.h edudialog.h edudialog.ui Makefile.am 
-
-#>+ 5
-clean-ui:
-	-rm -f \
-	edudialog.cpp edudialog.h edudialog.moc \
-	kappinstallerdialog.cpp kappinstallerdialog.h kappinstallerdialog.moc 
-
-#>+ 3
-clean-closures:
-	-rm -f  libappinstaller.la.closure
+KDE_DIST=unique.h Makefile.in fancylistviewitem.h process.h functions.h Makefile.am 
 
 #>+ 2
 docs-am:
@@ -747,11 +678,11 @@ bcheck-am:
 
 
 #>+ 11
-libappinstaller_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/fancylistviewitem.cpp $(srcdir)/functions.cpp $(srcdir)/unique.cpp $(srcdir)/process.cpp $(srcdir)/edu.cpp $(srcdir)/systray.cpp $(srcdir)/kappinstaller.cpp $(srcdir)/edudialog.cpp $(srcdir)/kappinstallerdialog.cpp $(srcdir)/unique.moc.cpp $(srcdir)/systray.moc.cpp $(srcdir)/process.moc.cpp  edu.moc kappinstaller.moc edudialog.moc kappinstallerdialog.moc
+libappinstaller_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/fancylistviewitem.cpp $(srcdir)/functions.cpp $(srcdir)/unique.cpp $(srcdir)/process.cpp $(srcdir)/unique.moc.cpp $(srcdir)/process.moc.cpp 
 	@echo 'creating libappinstaller_la.all_cpp.cpp ...'; \
 	rm -f libappinstaller_la.all_cpp.files libappinstaller_la.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> libappinstaller_la.all_cpp.final; \
-	for file in fancylistviewitem.cpp functions.cpp unique.cpp process.cpp edu.cpp systray.cpp kappinstaller.cpp edudialog.cpp kappinstallerdialog.cpp unique.moc.cpp systray.moc.cpp process.moc.cpp ; do \
+	for file in fancylistviewitem.cpp functions.cpp unique.cpp process.cpp unique.moc.cpp process.moc.cpp ; do \
 	  echo "#include \"$$file\"" >> libappinstaller_la.all_cpp.files; \
 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libappinstaller_la.all_cpp.final; \
 	done; \
@@ -782,48 +713,6 @@ no-final-install:
 kde-rpo-clean:
 	-rm -f *.rpo
 
-#>+ 14
-edu.lo: edu.moc 
-$(srcdir)/fancylistviewitem.cpp: edudialog.h kappinstallerdialog.h 
-kappinstaller.lo: kappinstaller.moc 
-$(srcdir)/functions.cpp: edudialog.h kappinstallerdialog.h 
-$(srcdir)/process.cpp: edudialog.h kappinstallerdialog.h 
-kappinstaller.o: kappinstaller.moc 
+#>+ 3
 nmcheck: 
-edu.o: edu.moc 
-$(srcdir)/edu.cpp: edudialog.h kappinstallerdialog.h 
 nmcheck-am: nmcheck
-$(srcdir)/unique.cpp: edudialog.h kappinstallerdialog.h 
-$(srcdir)/systray.cpp: edudialog.h kappinstallerdialog.h 
-$(srcdir)/kappinstaller.cpp: edudialog.h kappinstallerdialog.h 
-
-#>+ 30
-kappinstallerdialog.cpp: $(srcdir)/kappinstallerdialog.ui kappinstallerdialog.h kappinstallerdialog.moc
-	rm -f kappinstallerdialog.cpp
-	echo '#include <kdialog.h>' > kappinstallerdialog.cpp
-	echo '#include <klocale.h>' >> kappinstallerdialog.cpp
-	$(UIC) -tr ${UIC_TR} -i kappinstallerdialog.h $(srcdir)/kappinstallerdialog.ui > kappinstallerdialog.cpp.temp ; ret=$$?; \
-	$(PERL) -pe "s,${UIC_TR}( \"\" ),QString::null,g" kappinstallerdialog.cpp.temp | $(PERL) -pe "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | $(PERL) -pe "s,image([0-9][0-9]*)_data,img\$$1_kappinstallerdialog,g" | $(PERL) -pe "s,: QWizard\(,: KWizard(,g" >> kappinstallerdialog.cpp ;\
-	rm -f kappinstallerdialog.cpp.temp ;\
-	if test "$$ret" = 0; then echo '#include "kappinstallerdialog.moc"' >> kappinstallerdialog.cpp; else rm -f kappinstallerdialog.cpp ; exit $$ret ; fi
-
-kappinstallerdialog.h: $(srcdir)/kappinstallerdialog.ui
-	rm -rf kappinstallerdialog.h;
-	$(UIC) $(srcdir)/kappinstallerdialog.ui | $(PERL) -pi -e "s,public QWizard,public KWizard,g; s,#include <qwizard.h>,#include <kwizard.h>,g" >> kappinstallerdialog.h ;
-kappinstallerdialog.moc: kappinstallerdialog.h
-	$(MOC) kappinstallerdialog.h -o kappinstallerdialog.moc
-
-edudialog.cpp: $(srcdir)/edudialog.ui edudialog.h edudialog.moc
-	rm -f edudialog.cpp
-	echo '#include <kdialog.h>' > edudialog.cpp
-	echo '#include <klocale.h>' >> edudialog.cpp
-	$(UIC) -tr ${UIC_TR} -i edudialog.h $(srcdir)/edudialog.ui > edudialog.cpp.temp ; ret=$$?; \
-	$(PERL) -pe "s,${UIC_TR}( \"\" ),QString::null,g" edudialog.cpp.temp | $(PERL) -pe "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | $(PERL) -pe "s,image([0-9][0-9]*)_data,img\$$1_edudialog,g" | $(PERL) -pe "s,: QWizard\(,: KWizard(,g" >> edudialog.cpp ;\
-	rm -f edudialog.cpp.temp ;\
-	if test "$$ret" = 0; then echo '#include "edudialog.moc"' >> edudialog.cpp; else rm -f edudialog.cpp ; exit $$ret ; fi
-
-edudialog.h: $(srcdir)/edudialog.ui
-	rm -rf edudialog.h;
-	$(UIC) $(srcdir)/edudialog.ui | $(PERL) -pi -e "s,public QWizard,public KWizard,g; s,#include <qwizard.h>,#include <kwizard.h>,g" >> edudialog.h ;
-edudialog.moc: edudialog.h
-	$(MOC) edudialog.h -o edudialog.moc

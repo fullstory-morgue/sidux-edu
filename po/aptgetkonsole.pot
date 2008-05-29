@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-18 15:47+0200\n"
+"POT-Creation-Date: 2008-05-29 16:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,15 +41,15 @@ msgstr ""
 msgid "[Y/n]"
 msgstr ""
 
-#: ac.cpp:97
+#: ac.cpp:100
 msgid "Get"
 msgstr ""
 
-#: ac.cpp:104
+#: ac.cpp:107
 msgid "Removing"
 msgstr ""
 
-#: ac.cpp:106
+#: ac.cpp:109
 msgid "Setting up"
 msgstr ""
 

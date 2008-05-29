@@ -490,7 +490,7 @@ install-data-local:
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=hi32-app-seminarix_informatik.png hi48-app-siduxedu.png hi32-app-siduxedu.png hi64-app-siduxedu.png Makefile.in hi22-app-kappinstaller.png hi32-app-seminarix_physik.png hi32-app-seminarix_allgemein.png hi22-app-siduxedu.png hi32-app-seminarix_chemie.png hi32-app-seminarix_musik.png hi32-app-seminarix_mathematik.png hi32-app-seminarix_kunst.png hi32-app-seminarix_erdkunde.png hi32-app-kappinstaller.png hi16-app-kappinstaller.png hi32-app-seminarix_religion.png hi48-app-kappinstaller.pngu.png hi16-app-siduxedu.png hi32-app-seminarix_technik.png hi32-app-seminarix_lernspiele.png Makefile.am hi96-app-siduxedu.png hi32-app-seminarix_sprachen.png hi32-app-seminarix_start.png 
+KDE_DIST=hi32-app-seminarix_informatik.png hi48-app-siduxedu.png hi32-app-siduxedu.png hi64-app-siduxedu.png Makefile.in hi22-app-kappinstaller.png hi32-app-seminarix_physik.png hi32-app-seminarix_allgemein.png hi22-app-siduxedu.png hi32-app-seminarix_chemie.png hi32-app-seminarix_musik.png hi48-app-kappinstaller.png hi32-app-seminarix_mathematik.png hi32-app-seminarix_kunst.png hi32-app-seminarix_erdkunde.png hi32-app-kappinstaller.png hi16-app-kappinstaller.png hi32-app-seminarix_religion.png hi16-app-siduxedu.png hi32-app-seminarix_technik.png Makefile.am hi32-app-seminarix_lernspiele.png hi96-app-siduxedu.png hi32-app-seminarix_sprachen.png hi32-app-seminarix_start.png 
 
 #>+ 2
 docs-am:
@@ -523,7 +523,7 @@ install-kde-icons:
 	$(INSTALL_DATA) $(srcdir)/hi16-app-kappinstaller.png $(DESTDIR)$(kde_icondir)/hicolor/16x16/apps/kappinstaller.png
 	$(INSTALL_DATA) $(srcdir)/hi22-app-kappinstaller.png $(DESTDIR)$(kde_icondir)/hicolor/22x22/apps/kappinstaller.png
 	$(INSTALL_DATA) $(srcdir)/hi32-app-kappinstaller.png $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/kappinstaller.png
-	$(INSTALL_DATA) $(srcdir)/hi48-app-kappinstaller.pngu.png $(DESTDIR)$(kde_icondir)/hicolor/48x48/apps/kappinstaller.pngu.png
+	$(INSTALL_DATA) $(srcdir)/hi48-app-kappinstaller.png $(DESTDIR)$(kde_icondir)/hicolor/48x48/apps/kappinstaller.png
 
 uninstall-kde-icons:
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/seminarix_allgemein.png
@@ -547,7 +547,7 @@ uninstall-kde-icons:
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/16x16/apps/kappinstaller.png
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/22x22/apps/kappinstaller.png
 	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/32x32/apps/kappinstaller.png
-	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/48x48/apps/kappinstaller.pngu.png
+	-rm -f $(DESTDIR)$(kde_icondir)/hicolor/48x48/apps/kappinstaller.png
 
 #>+ 15
 force-reedit:

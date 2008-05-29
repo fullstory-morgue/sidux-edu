@@ -17,7 +17,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <../libappinstaller/kappinstaller.h>
+#include <kappinstaller.h>
 #include <../libappinstaller/unique.h>
 
 #include <kapplication.h>
@@ -25,8 +25,6 @@
 #include <kcmdlineargs.h>
 #include <klocale.h>
 #include <kdebug.h>
-
-
 
 static KCmdLineOptions options[] =
 {

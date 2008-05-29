@@ -16,6 +16,7 @@
 @SET_MAKE@
 
 
+
 srcdir = @srcdir@
 top_srcdir = @top_srcdir@
 VPATH = @srcdir@
@@ -41,7 +42,8 @@ host_triplet = @host@
 target_triplet = @target@
 bin_PROGRAMS = kappinstaller$(EXEEXT)
 subdir = kappinstaller
-DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
+	$(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/acinclude.m4 \
 	$(top_srcdir)/configure.in
@@ -53,10 +55,13 @@ CONFIG_CLEAN_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
-am_kappinstaller_OBJECTS = main.$(OBJEXT)
+am_kappinstaller_OBJECTS = main.$(OBJEXT) kappinstaller.$(OBJEXT)
 #>- kappinstaller_OBJECTS = $(am_kappinstaller_OBJECTS)
-#>+ 1
-kappinstaller_OBJECTS = main.$(OBJEXT)
+#>+ 4
+kappinstaller_final_OBJECTS = kappinstaller.all_cpp.o 
+kappinstaller_nofinal_OBJECTS = main.$(OBJEXT) kappinstaller.$(OBJEXT) kappinstallerdialog.$(OBJEXT)
+@KDE_USE_FINAL_FALSE@kappinstaller_OBJECTS = $(kappinstaller_nofinal_OBJECTS)
+@KDE_USE_FINAL_TRUE@kappinstaller_OBJECTS = $(kappinstaller_final_OBJECTS)
 am__DEPENDENCIES_1 =
 kappinstaller_DEPENDENCIES = $(am__DEPENDENCIES_1) \
 	../libappinstaller/libappinstaller.la
@@ -91,6 +96,7 @@ am__vpath_adj = case $$p in \
 am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
 xdg_appsDATA_INSTALL = $(INSTALL_DATA)
 DATA = $(xdg_apps_DATA)
+HEADERS = $(noinst_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -345,14 +351,16 @@ xdg_menudir = @xdg_menudir@
 AM_CPPFLAGS = $(all_includes)
 
 # these are the headers for your project
-#noinst_HEADERS = 
+noinst_HEADERS = kappinstaller.h
 
 # let automoc handle all of the meta source files (moc)
 #>- METASOURCES = AUTO
 KDE_ICON = AUTO
 
 # the application source, library search path, and link libraries
-kappinstaller_SOURCES = main.cpp
+#>- kappinstaller_SOURCES = main.cpp kappinstaller.cpp kappinstallerdialog.ui
+#>+ 1
+kappinstaller_SOURCES=main.cpp kappinstaller.cpp  kappinstallerdialog.cpp
 kappinstaller_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
 kappinstaller_LDADD = $(LIB_KDEUI) ../libappinstaller/libappinstaller.la
 
@@ -445,6 +453,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kappinstaller.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
 
 .cpp.o:
@@ -572,7 +581,7 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile $(PROGRAMS) $(DATA)
+all-am: Makefile $(PROGRAMS) $(DATA) $(HEADERS)
 installdirs:
 	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xdg_appsdir)"; do \
 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
@@ -607,7 +616,7 @@ clean: kde-rpo-clean  clean-am
 
 #>- clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 #>+ 1
-clean-am: clean-bcheck  clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
+clean-am: clean-metasources clean-ui clean-bcheck clean-final  clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 
 distclean: distclean-am
 	-rm -rf ./$(DEPDIR)
@@ -673,12 +682,33 @@ install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller
 	cp -aR $(srcdir)/lists $(DESTDIR)$(sharedir)/kappinstaller/
+
+# translation
+messages: rc.cpp
+	$(EXTRACTRC) `find . -name \*.ui -o -name \*.rc` > rc.cpp
+	$(XGETTEXT) *.cpp -o $(podir)/kappinstaller.pot
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
+#>+ 3
+kappinstaller.moc: $(srcdir)/kappinstaller.h
+	$(MOC) $(srcdir)/kappinstaller.h -o kappinstaller.moc
+
 #>+ 2
-KDE_DIST=kappinstaller Makefile.am Makefile.in kappinstaller.desktop 
+mocs: kappinstaller.moc
+
+#>+ 3
+clean-metasources:
+	-rm -f  kappinstaller.moc
+
+#>+ 2
+KDE_DIST=Makefile.in kappinstallerdialog.ui kappinstallerdialog.h kappinstaller.desktop Makefile.am 
+
+#>+ 4
+clean-ui:
+	-rm -f \
+	kappinstallerdialog.cpp kappinstallerdialog.h kappinstallerdialog.moc 
 
 #>+ 2
 docs-am:
@@ -721,26 +751,62 @@ bcheck-am:
 	done
 
 
+#>+ 11
+kappinstaller.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kappinstaller.cpp $(srcdir)/kappinstallerdialog.cpp  kappinstaller.moc kappinstallerdialog.moc
+	@echo 'creating kappinstaller.all_cpp.cpp ...'; \
+	rm -f kappinstaller.all_cpp.files kappinstaller.all_cpp.final; \
+	echo "#define KDE_USE_FINAL 1" >> kappinstaller.all_cpp.final; \
+	for file in main.cpp kappinstaller.cpp kappinstallerdialog.cpp ; do \
+	  echo "#include \"$$file\"" >> kappinstaller.all_cpp.files; \
+	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kappinstaller.all_cpp.final; \
+	done; \
+	cat kappinstaller.all_cpp.final kappinstaller.all_cpp.files > kappinstaller.all_cpp.cpp; \
+	rm -f kappinstaller.all_cpp.final kappinstaller.all_cpp.files
+
+#>+ 3
+clean-final:
+	-rm -f kappinstaller.all_cpp.cpp
+
 #>+ 3
 final:
-	$(MAKE) all-am
+	$(MAKE) kappinstaller_OBJECTS="$(kappinstaller_final_OBJECTS)" all-am
 
 #>+ 3
 final-install:
-	$(MAKE) install-am
+	$(MAKE) kappinstaller_OBJECTS="$(kappinstaller_final_OBJECTS)" install-am
 
 #>+ 3
 no-final:
-	$(MAKE) all-am
+	$(MAKE) kappinstaller_OBJECTS="$(kappinstaller_nofinal_OBJECTS)" all-am
 
 #>+ 3
 no-final-install:
-	$(MAKE) install-am
+	$(MAKE) kappinstaller_OBJECTS="$(kappinstaller_nofinal_OBJECTS)" install-am
 
 #>+ 3
 kde-rpo-clean:
 	-rm -f *.rpo
 
-#>+ 3
+#>+ 7
 nmcheck: 
+kappinstaller.lo: kappinstaller.moc 
 nmcheck-am: nmcheck
+$(srcdir)/main.cpp: kappinstallerdialog.h 
+kappinstaller.o: kappinstaller.moc 
+$(srcdir)/kappinstaller.cpp: kappinstallerdialog.h 
+
+#>+ 15
+kappinstallerdialog.cpp: $(srcdir)/kappinstallerdialog.ui kappinstallerdialog.h kappinstallerdialog.moc
+	rm -f kappinstallerdialog.cpp
+	echo '#include <kdialog.h>' > kappinstallerdialog.cpp
+	echo '#include <klocale.h>' >> kappinstallerdialog.cpp
+	$(UIC) -tr ${UIC_TR} -i kappinstallerdialog.h $(srcdir)/kappinstallerdialog.ui > kappinstallerdialog.cpp.temp ; ret=$$?; \
+	$(PERL) -pe "s,${UIC_TR}( \"\" ),QString::null,g" kappinstallerdialog.cpp.temp | $(PERL) -pe "s,${UIC_TR}( \"\"\, \"\" ),QString::null,g" | $(PERL) -pe "s,image([0-9][0-9]*)_data,img\$$1_kappinstallerdialog,g" | $(PERL) -pe "s,: QWizard\(,: KWizard(,g" >> kappinstallerdialog.cpp ;\
+	rm -f kappinstallerdialog.cpp.temp ;\
+	if test "$$ret" = 0; then echo '#include "kappinstallerdialog.moc"' >> kappinstallerdialog.cpp; else rm -f kappinstallerdialog.cpp ; exit $$ret ; fi
+
+kappinstallerdialog.h: $(srcdir)/kappinstallerdialog.ui
+	rm -rf kappinstallerdialog.h;
+	$(UIC) $(srcdir)/kappinstallerdialog.ui | $(PERL) -pi -e "s,public QWizard,public KWizard,g; s,#include <qwizard.h>,#include <kwizard.h>,g" >> kappinstallerdialog.h ;
+kappinstallerdialog.moc: kappinstallerdialog.h
+	$(MOC) kappinstallerdialog.h -o kappinstallerdialog.moc
