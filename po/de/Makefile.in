@@ -301,8 +301,8 @@ xdg_menudir = @xdg_menudir@
 KDE_LANG = de
 #>- POFILES = AUTO
 #>+ 2
-POFILES = siduxedu.po kappinstaller.po aptgetkonsole.po
-GMOFILES = siduxedu.gmo kappinstaller.gmo aptgetkonsole.gmo
+POFILES = siduxedu.po aptgetkonsole.po kappinstaller.po
+GMOFILES = siduxedu.gmo aptgetkonsole.gmo kappinstaller.gmo
 #>- all: all-am
 #>+ 1
 all: all-nls docs-am  all-am
@@ -496,27 +496,27 @@ clean: kde-rpo-clean
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=Makefile.in siduxedu.gmo siduxedu.po kappinstaller.po Makefile.am aptgetkonsole.po 
+KDE_DIST=Makefile.in siduxedu.gmo siduxedu.po kappinstaller.gmo kappinstaller.po Makefile.am aptgetkonsole.gmo aptgetkonsole.po 
 
 #>+ 10
 siduxedu.gmo: siduxedu.po
 	rm -f siduxedu.gmo; $(GMSGFMT) -o siduxedu.gmo $(srcdir)/siduxedu.po
 	test ! -f siduxedu.gmo || touch siduxedu.gmo
-kappinstaller.gmo: kappinstaller.po
-	rm -f kappinstaller.gmo; $(GMSGFMT) -o kappinstaller.gmo $(srcdir)/kappinstaller.po
-	test ! -f kappinstaller.gmo || touch kappinstaller.gmo
 aptgetkonsole.gmo: aptgetkonsole.po
 	rm -f aptgetkonsole.gmo; $(GMSGFMT) -o aptgetkonsole.gmo $(srcdir)/aptgetkonsole.po
 	test ! -f aptgetkonsole.gmo || touch aptgetkonsole.gmo
+kappinstaller.gmo: kappinstaller.po
+	rm -f kappinstaller.gmo; $(GMSGFMT) -o kappinstaller.gmo $(srcdir)/kappinstaller.po
+	test ! -f kappinstaller.gmo || touch kappinstaller.gmo
 
 #>+ 3
 clean-nls:
-	-rm -f  siduxedu.gmo kappinstaller.gmo aptgetkonsole.gmo
+	-rm -f  siduxedu.gmo aptgetkonsole.gmo kappinstaller.gmo
 
 #>+ 10
 install-nls:
 	$(mkinstalldirs) $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES
-	@for base in siduxedu kappinstaller aptgetkonsole ; do \
+	@for base in siduxedu aptgetkonsole kappinstaller ; do \
 	  echo $(INSTALL_DATA) $$base.gmo $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/$$base.mo ;\
 	  if test -f $$base.gmo; then $(INSTALL_DATA) $$base.gmo $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/$$base.mo ;\
 	  elif test -f $(srcdir)/$$base.gmo; then $(INSTALL_DATA) $(srcdir)/$$base.gmo $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/$$base.mo ;\
@@ -527,8 +527,8 @@ install-nls:
 #>+ 5
 uninstall-nls:
 	rm -f $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/siduxedu.mo
-	rm -f $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/kappinstaller.mo
 	rm -f $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/aptgetkonsole.mo
+	rm -f $(DESTDIR)$(kde_locale)/$(KDE_LANG)/LC_MESSAGES/kappinstaller.mo
 
 #>+ 2
 all-nls: $(GMOFILES)

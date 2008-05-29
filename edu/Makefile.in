@@ -714,7 +714,7 @@ clean-metasources:
 	-rm -f  edu.moc systray.moc.cpp
 
 #>+ 2
-KDE_DIST=Makefile.in edudialog.ui sidux-edu.desktop Makefile.am 
+KDE_DIST=Makefile.in sidux-edu.desktop edudialog.h sidux-edu edudialog.ui Makefile.am 
 
 #>+ 4
 clean-ui:
@@ -763,7 +763,7 @@ bcheck-am:
 
 
 #>+ 11
-sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/edu.cpp $(srcdir)/systray.cpp edudialog.cpp systray.moc.cpp  edu.moc edudialog.moc
+sidux_edu.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/edu.cpp $(srcdir)/systray.cpp $(srcdir)/edudialog.cpp $(srcdir)/systray.moc.cpp  edu.moc edudialog.moc
 	@echo 'creating sidux_edu.all_cpp.cpp ...'; \
 	rm -f sidux_edu.all_cpp.files sidux_edu.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> sidux_edu.all_cpp.final; \

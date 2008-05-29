@@ -28,11 +28,6 @@ install/sidux-edu::
 		debian/sidux-edu/usr/share/pixmaps/siduxedu.xpm
 	convert icons/hi16-app-siduxedu.png \
 		debian/sidux-edu/usr/share/pixmaps/siduxedu-16.xpm
-		mkdir -p debian/sidux-edu/usr/share/appinstaller/fabian
-		cd appdata/html
-		for htmlfile in *.html; do \
-		echo $${htmlfile} &> debian/sidux-edu/usr/share/appinstaller/fabian/test.txt
-		fi
-		done
+
 
 

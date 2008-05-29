@@ -705,7 +705,7 @@ clean-metasources:
 	-rm -f  kappinstaller.moc
 
 #>+ 2
-KDE_DIST=kappinstallerdialog.ui Makefile.am Makefile.in kappinstaller.desktop 
+KDE_DIST=Makefile.in kappinstallerdialog.ui kappinstallerdialog.h kappinstaller.desktop kappinstaller Makefile.am 
 
 #>+ 4
 clean-ui:
@@ -754,7 +754,7 @@ bcheck-am:
 
 
 #>+ 11
-kappinstaller.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kappinstaller.cpp kappinstallerdialog.cpp  kappinstaller.moc kappinstallerdialog.moc
+kappinstaller.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kappinstaller.cpp $(srcdir)/kappinstallerdialog.cpp  kappinstaller.moc kappinstallerdialog.moc
 	@echo 'creating kappinstaller.all_cpp.cpp ...'; \
 	rm -f kappinstaller.all_cpp.files kappinstaller.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> kappinstaller.all_cpp.final; \

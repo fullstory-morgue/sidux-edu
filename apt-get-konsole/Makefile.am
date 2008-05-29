@@ -19,7 +19,8 @@ apt_get_konsole_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
 # application
 bin_PROGRAMS = apt-get-konsole
 
-sharedir = $(pkgdatadir)
+#sharedir = $(pkgdatadir)
+sharedir = /usr/share
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/apt-get-konsole

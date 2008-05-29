@@ -657,7 +657,7 @@ merge:
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=kappinstaller.pot siduxedu.pot Makefile.am Makefile.in aptgetkonsole.pot 
+KDE_DIST=kappinstaller.pot Makefile.in siduxedu.pot Makefile.am aptgetkonsole.pot 
 
 #>+ 2
 docs-am:

@@ -297,7 +297,9 @@ xdg_appsdir = @xdg_appsdir@
 xdg_directorydir = @xdg_directorydir@
 xdg_menudir = @xdg_menudir@
 KDE_ICON = AUTO
-sharedir = $(pkgdatadir)
+
+#sharedir = $(pkgdatadir)
+sharedir = /usr/share
 #>- all: all-am
 #>+ 1
 all: docs-am  all-am
@@ -483,8 +485,8 @@ uninstall-am: uninstall-kde-icons  uninstall-info-am
 
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
-	$(mkinstalldirs) $(DESTDIR)$(sharedir)/common
-	cp -aR $(srcdir)/icons $(DESTDIR)$(sharedir)/common/
+	cp -aR $(srcdir)/icons $(DESTDIR)$(sharedir)/kappinstaller/
+	cp -aR $(srcdir)/icons $(DESTDIR)$(sharedir)/sidux-edu/
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

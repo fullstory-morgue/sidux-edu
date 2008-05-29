@@ -296,7 +296,7 @@ x_libraries = @x_libraries@
 xdg_appsdir = @xdg_appsdir@
 xdg_directorydir = @xdg_directorydir@
 xdg_menudir = @xdg_menudir@
-sharedir = "/usr/share"
+sharedir = /usr/share
 #>- all: all-am
 #>+ 1
 all: docs-am  all-am
@@ -484,26 +484,21 @@ install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/sidux-edu/descriptions
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/sidux-edu/descriptions/de
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller/descriptions; \
-	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de2; \
-	cd $(srcdir)/sidux-edu/pmap ;\
-	for apps in *.pmap; do \
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de; \
+	for apps in $(srcdir)/sidux-edu/pmap/*.pmap; do \
 		subname=$$(basename $$apps .pmap); \
-		  cp -aR $(srcdir)/common/descriptions/de/$$subname.txt $(DESTDIR)$(sharedir)/sidux-edu/descriptions/de/; \
+		cp -aR $(srcdir)/common/descriptions/de/$$subname.txt $(DESTDIR)$(sharedir)/sidux-edu/descriptions/de/; \
 	done; \
-	cd ../../kappinstaller/pmap ;\
-	for apps2 in *.pmap; do \
-		subname=$$(basename $$apps2 .pmap); \
-		cp ../../common/descriptions/de/$$subname.txt $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de2/; \
+	for apps2 in $(srcdir)/kappinstaller/pmap/*.pmap; do \
+		subname2=$$(basename $$apps2 .pmap); \
+		cp -aR  $(srcdir)/common/descriptions/de/$$subname2.txt $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de/; \
 	done;
-
-#cp -aR $(srcdir)/appdata/common/* $(DESTDIR)$(sharedir)/edu/
-#cp -aR $(srcdir)/appdata/common/* $(DESTDIR)$(sharedir)/kappinstaller/
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
 #>+ 2
-KDE_DIST=Makefile.am Makefile.in 
+KDE_DIST=Makefile.in Makefile.am 
 
 #>+ 2
 docs-am:

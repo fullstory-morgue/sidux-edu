@@ -1,0 +1,7 @@
+debian/tmp/usr/bin/apt-get-konsole                         usr/bin/
+debian/tmp/usr/share/apt-get-konsole                       usr/share/
+debian/tmp/usr/share/locale/*/LC_MESSAGES/aptgetkonsole.mo
+
+
+
+

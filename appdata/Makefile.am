@@ -1,4 +1,4 @@
-sharedir = "/usr/share"
+sharedir = /usr/share
 #sharedir = $(pkgdatadir)
 install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)
@@ -7,21 +7,16 @@ install-data-local:
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/sidux-edu/descriptions
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/sidux-edu/descriptions/de
 	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller/descriptions; \
-	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de2; \
-	cd $(srcdir)/sidux-edu/pmap ;\
-	for apps in *.pmap; do \
+	$(mkinstalldirs) $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de; \
+	for apps in $(srcdir)/sidux-edu/pmap/*.pmap; do \
 		subname=$$(basename $$apps .pmap); \
-		  cp -aR $(srcdir)/common/descriptions/de/$$subname.txt $(DESTDIR)$(sharedir)/sidux-edu/descriptions/de/; \
+		cp -aR $(srcdir)/common/descriptions/de/$$subname.txt $(DESTDIR)$(sharedir)/sidux-edu/descriptions/de/; \
 	done; \
-	cd ../../kappinstaller/pmap ;\
-	for apps2 in *.pmap; do \
-		subname=$$(basename $$apps2 .pmap); \
-		cp ../../common/descriptions/de/$$subname.txt $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de2/; \
+	for apps2 in $(srcdir)/kappinstaller/pmap/*.pmap; do \
+		subname2=$$(basename $$apps2 .pmap); \
+		cp -aR  $(srcdir)/common/descriptions/de/$$subname2.txt $(DESTDIR)$(sharedir)/kappinstaller/descriptions/de/; \
 	done;
 
-
-#cp -aR $(srcdir)/appdata/common/* $(DESTDIR)$(sharedir)/edu/
-#cp -aR $(srcdir)/appdata/common/* $(DESTDIR)$(sharedir)/kappinstaller/
 
 
 

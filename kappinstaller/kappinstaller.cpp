@@ -65,7 +65,7 @@ kappinstaller::kappinstaller(QWidget *parent, const char *name, const QStringLis
 	this->shell = new Process();
 	myFunctions = new Functions();
 	loader      =  KGlobal::iconLoader();
-	appdir      = "/usr/share/appinstaller/kappinstaller/";
+	appdir      = "/usr/share/kappinstaller/";
 
 
 	// load app data

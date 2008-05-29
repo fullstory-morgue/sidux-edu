@@ -33,7 +33,6 @@ Functions::Functions()
 {
 	loader = KGlobal::iconLoader();
 	iconpath = loader->theme()->dir();
-	appdir   = "/usr/share/appinstaller/common/";
 }
 
 
@@ -65,7 +64,12 @@ QPixmap Functions::getIcon(QString iconname)
 			else if( QFile::exists("/usr/share/"+iconname+"/pixmaps/"+iconname+".xpm") )
 				ico = QImage("/usr/share/"+iconname+"/pixmaps/"+iconname+".xpm").smoothScale( 32, 32, QImage::ScaleMin );
 			else
-				ico = QPixmap( appdir+"icons/empty.png" );
+			{
+				if( QFile::exists("/usr/share/sidux-edu/icons/empty.png") )
+					ico = QPixmap( "/usr/share/sidux-edu/icons/empty.png" );
+				else
+					ico = QPixmap( "/usr/share/kappinstaller/images/empty.png" );
+			}
 		}
 
 	}

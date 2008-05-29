@@ -353,7 +353,9 @@ KDE_ICON = AUTO
 apt_get_konsole_SOURCES=ac.cpp  main.cpp acdialog.cpp
 apt_get_konsole_LDFLAGS = -avoid-version -module -no-undefined $(all_libraries)
 apt_get_konsole_LDADD = -lkio -lknewstuff $(LIB_KDEUI)
-sharedir = $(pkgdatadir)
+
+#sharedir = $(pkgdatadir)
+sharedir = /usr/share
 #>- all: all-am
 #>+ 1
 all: docs-am  all-am
@@ -672,7 +674,7 @@ clean-metasources:
 	-rm -f  ac.moc
 
 #>+ 2
-KDE_DIST=Makefile.in acdialog.ui acdialog.h apt-get-konsole Makefile.am 
+KDE_DIST=apt-get-konsole Makefile.in acdialog.ui acdialog.h Makefile.am 
 
 #>+ 4
 clean-ui:

@@ -1,1 +1,1 @@
-Mit Hilfe dieses Programms lassen sich Tests und Abfragen zu beliebigen Inhalten als auch Multiple-Choice-Abfragen entwickeln und am Rechner durchführen. Das zu Keduca zugeh?rige Programm KEducabuilder erm?glicht das Erstellen und das Bearbeiten der Multiple-Choice-Tests.
+Mit Hilfe dieses Programms lassen sich Tests und Abfragen zu beliebigen Inhalten als auch Multiple-Choice-Abfragen entwickeln und am Rechner durchführen. Das zu Keduca zugehörige Programm KEducabuilder ermöglicht das Erstellen und das Bearbeiten der Multiple-Choice-Tests.

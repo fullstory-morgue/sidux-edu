@@ -1,0 +1,5 @@
+debian/tmp/usr/bin/kappinstaller                              usr/bin/
+debian/tmp/usr/share/applications/kde/kappinstaller.desktop   usr/share/applications/kde/
+debian/tmp/usr/share/kappinstaller                            usr/share/
+debian/tmp/usr/share/icons/hicolor/*/apps/kappinstaller*
+debian/tmp/usr/share/locale/*/LC_MESSAGES/kappinstaller.mo

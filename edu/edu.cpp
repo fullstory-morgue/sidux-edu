@@ -61,7 +61,7 @@ edu::edu(QWidget *parent, const char *name, const QStringList &)
 	myFunctions = new Functions();
 	loader      = KGlobal::iconLoader();
 	iconpath    = loader->theme()->dir();
-	appdir      = "/usr/share/appinstaller/edu/";
+	appdir      = "/usr/share/sidux-edu/";
 
 	statusBar()->hide();
 
