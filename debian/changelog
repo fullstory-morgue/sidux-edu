@@ -1,35 +1,11 @@
-sidux-edu (0.3.2) UNRELEASED; urgency=low
+sidux-edu (0.4.0) unstable; urgency=low
 
-  [ Fabian Wuertz ]
   * pmap format changed
   * kappinstaller added 1/5
   * kappinstaller added 2/5
   * kappinstaller added 3/5
   * kappinstaller added 4/5
   * kappinstaller added 6/7
-
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-  * FTBS:
-Making all in edu
-make[3]: Entering directory `/tmp/buildd/sidux-edu-0.3.2/obj-x86_64-linux-gnu/edu'
-g++ -DHAVE_CONFIG_H -I. -I/tmp/buildd/sidux-edu-0.3.2/./edu -I..  -I/usr/include/kde -I/usr/share/qt3/include -I.  -DQT_THREAD_SUPPORT  -D_REENTRANT  -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -DNDEBUG -DNO_DEBUG -O2 -g -O2 -g -Wall -O2 -Wformat-security -Wmissing-format-attribute -Wno-non-virtual-dtor -fno-exceptions -fno-check-new -fno-common  -c -o main.o /tmp/buildd/sidux-edu-0.3.2/./edu/main.cpp
-In file included from /tmp/buildd/sidux-edu-0.3.2/./edu/../libappinstaller/systray.h:29,
-                 from /tmp/buildd/sidux-edu-0.3.2/./edu/main.cpp:20:
-/tmp/buildd/sidux-edu-0.3.2/./edu/../libappinstaller/edu.h:30:23: error: edudialog.h: No such file or directory
-In file included from /tmp/buildd/sidux-edu-0.3.2/./edu/../libappinstaller/systray.h:29,
-                 from /tmp/buildd/sidux-edu-0.3.2/./edu/main.cpp:20:
-/tmp/buildd/sidux-edu-0.3.2/./edu/../libappinstaller/edu.h:35: error: expected class-name before '{' token
-make[3]: *** [main.o] Error 1
-make[3]: Leaving directory `/tmp/buildd/sidux-edu-0.3.2/obj-x86_64-linux-gnu/edu'
-make[2]: *** [all-recursive] Error 1
-make[2]: Leaving directory `/tmp/buildd/sidux-edu-0.3.2/obj-x86_64-linux-gnu'
-make[1]: *** [all] Error 2
-make[1]: Leaving directory `/tmp/buildd/sidux-edu-0.3.2/obj-x86_64-linux-gnu'
-make: *** [debian/stamp-makefile-build] Error 2
-dpkg-buildpackage: failure: debian/rules build gave error exit status 2
-
-  [ Fabian Wuertz ]
   * kappinstaller added 7/8
   * kappinstaller added 8/9
   * kappinstaller added 9/10
