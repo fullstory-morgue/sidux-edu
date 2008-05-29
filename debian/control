@@ -18,10 +18,11 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},apt-get-konsole
 Suggestions: app-install-data
 Description: KDE program to install and start applications
+ generic menu system to act dynamically on installed packages and describe 
+ their uses
 
 Package: apt-get-konsole
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, konsole
-Description: program starter and menu system for educational applications
- generic menu system to act dynamically on installed packages and describe 
- their uses for educational purposes
+Description: apt-get-konsole
+ KDE frontend for apt-get

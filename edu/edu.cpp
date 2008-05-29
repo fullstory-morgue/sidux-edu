@@ -606,7 +606,7 @@ void edu::applyChanges2()
 	
 
 	KProcess *proc = new KProcess;
-	*proc << "kdesu" << "apt-get-konsole" << changedPackages;
+	*proc << "kdesu" << "/usr/lib/apt-get-konsole/apt-get-konsole" << changedPackages;
 	proc->start();
 	setEnabled(FALSE);
 	connect(proc, SIGNAL(processExited(KProcess *)), this, SLOT( back() ));
