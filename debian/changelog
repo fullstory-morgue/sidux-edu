@@ -1,3 +1,10 @@
+sidux-edu (0.4.2+nmu1) UNRELEASED; urgency=low
+
+  * Non-maintainer upload.
+  * *changed blender pmap to new format
+
+ -- Ferdinand Thommes <devil@sidux.com>  Thu, 05 Jun 2008 08:23:29 +0200
+
 sidux-edu (0.4.2) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
