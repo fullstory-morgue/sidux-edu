@@ -16,7 +16,7 @@ Description: program starter and menu system for educational applications
 Package: kappinstaller
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},apt-get-konsole
-Suggestions: app-install-data
+Suggests: app-install-data
 Description: KDE program to install and start applications
  generic menu system to act dynamically on installed packages and describe 
  their uses
@@ -24,5 +24,5 @@ Description: KDE program to install and start applications
 Package: apt-get-konsole
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, konsole
-Description: apt-get-konsole
- KDE frontend for apt-get
+Description: KDE frontend for apt-get
+ provide a wrapper for invoking apt-get command in KDE.
