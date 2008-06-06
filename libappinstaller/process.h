@@ -2,8 +2,8 @@
 #define PROCESS_H
 
 #include <kprocess.h>
-#include <iostream.h>
-#include <fstream.h>
+#include <iostream>
+#include <fstream>
 
 
 
