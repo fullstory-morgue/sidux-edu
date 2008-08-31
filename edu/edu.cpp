@@ -190,8 +190,9 @@ void edu::importApps()
 
 			// run in terminal
 			if( terminal == "" )
-				if( file.readEntry("Terminal").contains("yes") )
-					terminal = "yes";
+				if( file.readEntry("Terminal").contains("yes") or file.readEntry("Terminal").contains("true") )
+					terminal = "true";
+
 
 			//icon
 			if( icon == "" )
@@ -496,7 +497,7 @@ void edu::execApp()
 	QString app = appsListView->selectedItem()->text(2);
 	QString exec = listView->findItem(app, 1, Qt::ExactMatch )->text(5);
 	QString terminal = listView->findItem(app, 1, Qt::ExactMatch )->text(8);
-	if( terminal == "yes" )
+	if( terminal == "true" or terminal == "yes")
 		exec = "konsole --noclose -e "+exec;
 
 	KProcess *proc = new KProcess;
