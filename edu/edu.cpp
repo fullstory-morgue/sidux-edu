@@ -1,7 +1,7 @@
 /*
  * edu.cpp
  *
- * Copyright (c) 2007 Fabian Wuertz <xadras@sidux.com>
+ * Copyright (c) 2008 Fabian Wuertz <xadras@sidux.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
@@ -691,16 +691,12 @@ void edu::aboutKDE()
 
 void edu::siduxManual()
 {
-	KProcess *proc = new KProcess;
-	*proc << "x-www-browser" << "/usr/share/sidux-manual/index.html";
-	proc->start();
+	kapp->invokeBrowser( "/usr/share/sidux-manual/index.html" );
 }
 
 void edu::seminarixManual()
 {
-	KProcess *proc = new KProcess;
-	*proc << "x-www-browser" << "/usr/share/seminarix-handbook/index.html";
-	proc->start();
+	kapp->invokeBrowser( "/usr/share/seminarix-handbook/index.html" );
 }
 
 void edu::homepage()
@@ -708,6 +704,10 @@ void edu::homepage()
 	kapp->invokeBrowser( "http://www.sidux.com/" );
 }
 
+void edu::weblinksShow()
+{
+	kapp->invokeBrowser( "/usr/share/seminarix-handbook/files/weblinks.html" );
+}
 
 QString edu::getDescription(QString app)
 {
@@ -736,5 +736,7 @@ QString edu::getDescription(QString app)
 		
 		return description;
 }
+
+
 
 #include "edu.moc"

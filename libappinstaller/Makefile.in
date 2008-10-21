@@ -615,6 +615,7 @@ uninstall-am: uninstall-info-am
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
+
 #>+ 3
 unique.moc.cpp: $(srcdir)/unique.h
 	$(MOC) $(srcdir)/unique.h -o unique.moc.cpp
@@ -634,7 +635,7 @@ clean-metasources:
 	-rm -f  unique.moc.cpp process.moc.cpp
 
 #>+ 2
-KDE_DIST=unique.h Makefile.in fancylistviewitem.h process.h functions.h Makefile.am 
+KDE_DIST=process.h unique.h Makefile.in fancylistviewitem.h functions.h Makefile.am 
 
 #>+ 2
 docs-am:
@@ -678,7 +679,7 @@ bcheck-am:
 
 
 #>+ 11
-libappinstaller_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/fancylistviewitem.cpp $(srcdir)/functions.cpp $(srcdir)/unique.cpp $(srcdir)/process.cpp $(srcdir)/unique.moc.cpp $(srcdir)/process.moc.cpp 
+libappinstaller_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/fancylistviewitem.cpp $(srcdir)/functions.cpp $(srcdir)/unique.cpp $(srcdir)/process.cpp unique.moc.cpp process.moc.cpp 
 	@echo 'creating libappinstaller_la.all_cpp.cpp ...'; \
 	rm -f libappinstaller_la.all_cpp.files libappinstaller_la.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> libappinstaller_la.all_cpp.final; \

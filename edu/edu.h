@@ -1,7 +1,7 @@
 /*
  * edu.h
  *
- * Copyright (c) 2007 Fabian Wuertz <xadras@sidux.com>
+ * Copyright (c) 2008 Fabian Wuertz <xadras@sidux.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
@@ -68,6 +68,7 @@ class edu : public EduDialog
 		virtual void cancel();
 		virtual void back();
 		virtual void openUrl(const QString&);
+    virtual void weblinksShow();
 
 
 };

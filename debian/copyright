@@ -6,7 +6,7 @@ It was downloaded from http://www.wuertz.org/downloads
 Upstream Author: Fabian Wuertz <xadras@sidux.com>
 
 Copyright:
-	© 2007 Fabian Wuertz <xadras@sidux.com>
+	© 2008 Fabian Wuertz <xadras@sidux.com>
 
 	The following icon is form kgeography
 	© Albert Astals Cid <tsdgeos@terra.es>
@@ -46,6 +46,11 @@ Copyright:
 	© 2008 cleary <bernard.gray@gmail.com>
 	
 	seminarix_logo_hp.png          in src/edudialog.ui
+
+    The following icon is from Oxygen-Icons
+	© 2008 Oxygen Icon Team <www.oxygen-icons.org>
+
+    applications_internet.png       icons/edudialog.ui
 	
 	The following files are based on the OpenSuse wiki http://de.opensuse.org, that is licensed unter GNU Free Documentation License version 1.2 ("GFDL"):
 	amarok.txt

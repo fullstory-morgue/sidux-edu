@@ -1,8 +1,11 @@
-sidux-edu (0.4.6) UNRELEASED; urgency=low
+sidux-edu (0.4.6) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * fixed copyright dates
+  * added new weblinks function
+  * shortened some lines of code, for better readability
+  * added copyright note for new weblinks icon
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 31 Aug 2008 19:20:41 +0200
+ -- Dinko Sabo <cobra@sidux.com>  Fri, 17 Oct 2008 05:29:27 +0200
 
 sidux-edu (0.4.5) unstable; urgency=low
 

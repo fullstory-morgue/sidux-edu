@@ -662,6 +662,7 @@ messages: rc.cpp
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
 
+
 #>+ 3
 ac.moc: $(srcdir)/ac.h
 	$(MOC) $(srcdir)/ac.h -o ac.moc
@@ -674,7 +675,7 @@ clean-metasources:
 	-rm -f  ac.moc
 
 #>+ 2
-KDE_DIST=apt-get-konsole Makefile.in acdialog.ui acdialog.h Makefile.am 
+KDE_DIST=Makefile.am Makefile.in acdialog.ui 
 
 #>+ 4
 clean-ui:
@@ -723,7 +724,7 @@ bcheck-am:
 
 
 #>+ 11
-apt_get_konsole.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/ac.cpp $(srcdir)/main.cpp $(srcdir)/acdialog.cpp  ac.moc acdialog.moc
+apt_get_konsole.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/ac.cpp $(srcdir)/main.cpp acdialog.cpp  ac.moc acdialog.moc
 	@echo 'creating apt_get_konsole.all_cpp.cpp ...'; \
 	rm -f apt_get_konsole.all_cpp.files apt_get_konsole.all_cpp.final; \
 	echo "#define KDE_USE_FINAL 1" >> apt_get_konsole.all_cpp.final; \
