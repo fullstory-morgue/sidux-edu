@@ -1,8 +1,9 @@
-sidux-edu (0.4.7) UNRELEASED; urgency=low
+sidux-edu (0.4.7) ORPHANED; urgency=low
 
   * NOT RELEASED YET
+  * ORPHAN PACKAGE, superseeded by eduversum.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 21 Oct 2008 21:05:06 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Feb 2009 21:32:05 +0100
 
 sidux-edu (0.4.6) unstable; urgency=low
 
